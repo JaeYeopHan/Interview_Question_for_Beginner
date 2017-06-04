@@ -41,8 +41,8 @@
 * 데이터베이스를 사용하는 이유
 * Index에 대해서
   * Index란 무엇인가
-	* Primary index 와 Secondary index의 차이
-	* Indexing과 성능, 장단점
+  * Primary index 와 Secondary index의 차이
+  * Indexing과 성능, 장단점
 * 정규화에 대해서
 * 트랜잭션에 대해서
 * Statement vs Preparestatement
