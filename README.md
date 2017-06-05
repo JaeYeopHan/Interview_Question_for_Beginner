@@ -8,7 +8,7 @@
 
 ## Part 1. 전산 기초
 
-### 자료구조
+### 자료구조 [Link]()
 * Array vs LinkedList
 * Stack and Queue
 * Binary Search Tree
