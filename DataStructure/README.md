@@ -1,18 +1,18 @@
 # Part 1. 전산 기초 - 자료구조
-* [Array vs LinkedList](#Array-vs-LinkedList)
-* [Stack and Queue](#Stack-and-Queue)
-* [Tree](#Tree)
+* [Array vs LinkedList](#array-vs-linkedlist)
+* [Stack and Queue](#stack-and-queue)
+* [Tree](#tree)
   * Binary Tree
   * Full Binary Tree
   * Complete Binary Tree
   * BST(Binary Search Tree)
-* [Heap](#Heap)
-* [Red Black Tree](#Red-Black-Tree)
+* [Heap](#heap)
+* [Red Black Tree](#red-black-tree)
   * 정의
   * 특징
   * 삽입
   * 삭제
-* [Hash](#Hash)
+* [Hash](#hash)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
