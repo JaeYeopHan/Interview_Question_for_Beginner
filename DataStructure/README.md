@@ -14,10 +14,10 @@
   * 삭제
 * [Hash](#hash)
   * hash function
-	* Resolve Collision
-	  * Open Addressing
-		* Separate Chaining
-	* Resize
+  * Resolve Collision
+    * Open Addressing
+    * Separate Chaining
+  * Resize
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-datastructure)
 
