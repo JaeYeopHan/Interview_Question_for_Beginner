@@ -21,6 +21,8 @@
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-datastructure)
 
+</br>
+
 ## Array vs LinkedList
 ### Array
 가장 기본적인 자료구조인 `Array` 자료구조는, 논리적 저장 순서와 물리적 저장 순서가 일치한다. 따라서 `인덱스`(index)로 해당 원소(element)에 접근할 수 있다. 그렇기 때문에 찾고자 하는 원소의 인덱스 값을 알고 있으면 `Big-O(1)`에 해당 원소로 접근할 수 있다. 즉 **random access** 가 가능하다는 장점이 있는 것이다.
