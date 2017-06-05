@@ -1,18 +1,27 @@
 # for_beginner
 신입 개발자들의 기술 면접 준비를 위한 Repository
 
-## 손코딩 및 알고리즘
+### 손코딩 및 코딩 테스트 대비
 대부분의 내용이 코드이기 때문에 별도의 [Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
 
 ---
 
 ## Part 1. 전산 기초
 
-### 자료구조 [Link](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
+### 자료구조  [Link](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
 * Array vs LinkedList
 * Stack and Queue
-* Binary Search Tree
+* Tree
+  * Binary Tree
+  * Full Binary Tree
+  * Complete Binary Tree
+  * BST(Binary Search Tree)
+* Heap
 * Red-Black Tree
+  * 정의
+  * 특징
+  * 삽입
+  * 삭제
 * Hash
 
 ---
