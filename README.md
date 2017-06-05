@@ -8,7 +8,7 @@
 
 ## Part 1. 전산 기초
 
-### 자료구조 [Link]()
+### 자료구조 [Link](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
 * Array vs LinkedList
 * Stack and Queue
 * Binary Search Tree
