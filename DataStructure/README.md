@@ -32,7 +32,7 @@
 결국 linked list 자료구조는 search에도  O(n)의 time complexity를 갖고, 삽입, 삭제에 대해서도  O(n)의 time complexity를 갖는다. 그렇다고 해서 아주 쓸모없는 자료구조는 아니기에, 우리가 학습하는 것이다. 이 Linked List는 Tree 구조의 근간이 되는 자료구조이며, Tree에서 사용되었을 때 그 유용성이 드러난다.
 
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-DataStructure)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-datastructure)
 
 </br>
 
