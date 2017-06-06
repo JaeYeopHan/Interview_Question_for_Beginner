@@ -4,11 +4,11 @@
 
 ## 큰 목차
 1. Part 1. 전산 기초
+* 개발상식
 * 자료구조
 * 네트워크
 * 운영체제
 * 데이터베이스
-* 개발상식
 * 디자인패턴
 
 2. Part 2. 분야별 분류
@@ -25,11 +25,22 @@
 * C++
 * Python
 
+#### [부록] 손코딩 및 코딩 테스트 대비
+
 </br>
 
 ---
 
 ## Part 1. 전산 기초
+
+## 개발상식 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
+* 객체 지향 프로그래밍이란 무엇인가?
+	* 객체 지향 개발 원칙은 무엇인가?
+* RESTFul API란?
+* TDD란 무엇이며 어떠한 장점이 있는가?
+* MVC 패턴이란 무엇인가?
+
+</br>
 
 ## 자료구조  [Link](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
 * Array vs LinkedList
@@ -46,7 +57,17 @@
   * 삽입
   * 삭제
 * Hash
+  * hash function
+  * Resolve Collision
+    * Open Addressing
+    * Separate Chaining
+  * Resize
+* Graph
+  * Graph 용어정리
+  * Graph 구현
+  * Graph 탐색
 
+</br>
 
 ## 네트워크
 * GET, POST 방식의 차이점
@@ -56,6 +77,7 @@
 * HTTP 통신의 큰 흐름
 * DNS round robin의 단점
 
+</br>
 
 ## 운영체제
 * 프로세스와 스레드의 차이
@@ -65,6 +87,7 @@
 * CPU 스케줄링 알고리즘
 * 캐시의 지역성
 
+</br>
 
 ## 데이터베이스
 * 데이터베이스를 사용하는 이유
@@ -77,14 +100,7 @@
 * Statement vs Preparestatement
 * 사용해본 데이터베이스들의 장단점
 
-
-## 개발 상식 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
-* RESTFul API란?
-* TDD란 무엇이며 어떠한 장점이 있는가?
-* 객체 지향 프로그래밍이란 무엇인가?
-	* 객체 지향 개발 원칙은 무엇인가?
-* MVC 패턴이란 무엇인가?
-
+</br>
 
 ## 디자인패턴
 * 싱글톤 패턴
@@ -98,20 +114,32 @@
 ## Front-End
 (준비중)
 
+</br>
+
 ## iOS
 (준비중)
+
+</br>
 
 ## Android
 (준비중)
 
+</br>
+
 ## Back-End
 (준비중)
+
+</br>
 
 ## Game Client
 (준비중)
 
+</br>
+
 ## Game Server
 (준비중)
+
+</br>
 
 ---
 
@@ -120,20 +148,24 @@
 ## Java
 (준비중)
 
+</br>
 
 ### JavaScript
 (준비중)
 
+</br>
 
 ### C++
 (준비중)
 
+</br>
 
 ### Python
 (준비중)
 
----
+</br>
 
+---
 
 ### 손코딩 및 코딩 테스트 대비
 대부분의 내용이 코드이기 때문에 별도의 [Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
