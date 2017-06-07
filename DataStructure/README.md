@@ -12,7 +12,7 @@
   * 특징
   * 삽입
   * 삭제
-* [Hash](#hash)
+* [HashTable](#hashtable)
   * hash function
   * Resolve Collision
     * Open Addressing
@@ -22,6 +22,9 @@
   * Graph 용어정리
   * Graph 구현
   * Graph 탐색
+  * Minimum Spanning Tree
+    * Kruskal algorithm
+    * Prim algorithm
 
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-datastructure)
@@ -49,6 +52,7 @@
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-datastructure)
 
+---
 </br>
 
 ## Stack and Queue
@@ -65,6 +69,7 @@
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-datastructure)
 
+---
 </br>
 
 ## Tree
@@ -155,9 +160,10 @@ Java Collection에서 ArrayList도 내부적으로 RBT로 이루어져 있고, H
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-datastructure)
 
+---
 </br>
 
-## Hash
+## HashTable
 `hash`는 내부적으로 `배열`을 사용하여 데이터를 저장하기 때문에 빠른 검색 속도를 갖는다. 특정한 값을 Search하는데 데이터 고유의 `인덱스`로 접근하게 되므로 average case에 대하여 Time Complexity가 O(1)이 되는 것이다.(항상 O(1)이 아니고 average case에 대해서 O(1)인 것은 collision 때문이다.) 하지만 문제는 이 인덱스로 저장되는 `key`값이 불규칙하다는 것이다.
 
 그래서 **특별한 알고리즘을 이용하여** 저장할 데이터와 연관된 **고유한 숫자를 만들어 낸 뒤** 이를 인덱스로 사용한다. 특정 데이터가 저장되는 인덱스를 그 데이터만의 고유한 위치이기 때문에 삽입 연산 시 다른 데이터의 사이에 끼어들거나 삭제 시 다른 데이터로 채울 필요가 없으므로 연산에서 추가적인 비용이 없도록 만들어진 구조이다.
@@ -185,7 +191,6 @@ Collision이 많아질 수록 Search에 필요한 Time Complexity가 O(1)에서 
 ### Resolve Conflict
 기본적인 두 가지 방법부터 알아보자. 해시 충돌을 해결하기 위한 다양한 자료가 있지만, 다음 두 가지 방법을 응용한 방법들이기 때문이다.
 
-
 #### 1. Open Address 방식 (개방주소법)
 해시 충돌이 발생하면, (즉 삽입하려는 해시 버킷이 이미 사용 중인 경우) **다른 해시 버킷에 해당 자료를 삽입하는 방식** 이다. 버킷이란 바구니와 같은 개념으로 데이터를 저장하기 위한 공간이라고 생각하면 된다. 다른 해시 버킷이란 어떤 해시 버킷을 말하는 것인가?
 
@@ -197,6 +202,7 @@ Collision이 많아질 수록 Search에 필요한 Time Complexity가 O(1)에서 
 3) Double hashing probing  
 하나의 해쉬 함수에서 충돌이 발생하면 2차 해쉬 함수를 이용해 새로운 주소를 할당한다. 위 두 가지 방법에 비해 많은 연산량을 요구하게 된다.
 
+</br>
 
 #### 2. Separate Chaining 방식 (분리 연결법)
 일반적으로 Open Addressing은 Separate Chaining보다 느리다. Open Addressing의 경우 해시 버킷을 채운 밀도가 높아질수록 Worst Case 발생 빈도가 더 높아지기 때문이다. 반면 Separate Chaining 방식의 경우 해시 충돌이 잘 발생하지 않도록 보조 해시 함수를 통해 조정할 수 있다면 Worst Case에 가까워 지는 빈도를 줄일 수 있다. Java 7에서는 Separate Chaining 방식을 사용하여 HashMap을 구현하고 있다. Separate Chaining 방식으로는 두 가지 구현 방식이 존재한다.
@@ -213,12 +219,23 @@ Collision이 많아질 수록 Search에 필요한 Time Complexity가 O(1)에서 
 **_한 가지 상황을 가정해보자._**  
 해시 버킷에 **6개** 의 key-value 쌍이 들어있었다. 그리고 하나의 값이 추가되었다. 만약 기준이 6과 7이라면 자료구조를 링크드 리스트에서 트리로 변경해야 한다. 그러다 바로 하나의 값이 삭제된다면 다시 트리에서 링크드 리스트로 자료구조를 변경해야 한다. 각각 자료구조로 넘어가는 기준이 1이라면 Switching 비용이 너무 많이 필요하게 되는 것이다. 그래서 2라는 여유를 남겨두고 기준을 잡아준 것이다. 따라서 데이터의 개수가 6개에서 7개로 증가했을 때는 링크드 리스트의 자료구조를 취하고 있을 것이고 8개에서 7개로 감소했을 때는 트리의 자료구조를 취하고 있을 것이다.
 
+### `Open Address` vs `Separate Chaining`
+일단 두 방식 모두 Worst Case 에서 O(M)이다. 하지만 `Open Address`방식은 연속된 공간에 데이터를 저장하기 때문에 `Separate Chaining`에 비해 캐시 효율이 높다. 따라서 데이터의 개수가 충분히 적다면 `Open Address`방식이 `Separate Chaining`보다 더 성능이 좋다. 한 가지 차이점이 더 존재한다. `Separate Chaining`방식에 비해 `Open Address`방식은 버킷을 계속해서 사용한다. 따라서 `Separate Chaining` 방식은 테이블의 확장을 보다 늦출 수 있다.
+
+#### 보조 해시 함수
+보조 해시 함수(supplement hash function)의 목적은 `key`의 해시 값을 변형하여 해시 충돌 가능성을 줄이는 것이다. `Separate Chaining` 방식을 사용할 때 함께 사용되며 보조 해시 함수로 Worst Case에 가까워지는 경우를 줄일 수 있다.
+
+</br>
 
 ### 해시 버킷 동적 확장(Resize)
 해시 버킷의 개수가 적다면 메모리 사용을 아낄 수 있지만 해시 충돌로 인해 성능 상 손실이 발생한다. 그래서 HashMap은 key-value 쌍 데이터 개수가 일정 개수 이상이 되면 해시 버킷의 개수를 두 배로 늘린다. 이렇게 늘리면 해시 충돌로 인한 성능 손실 문제를 어느 정도 해결할 수 있다. 또 애매모호한 '일정 개수 이상'이라는 표현이 등장했다. 해시 버킷 크기를 두 배로 확장하는 임계점은 현재 데이터 개수가 해시 버킷의 개수의 75%가 될 때이다. `0.75`라는 숫자는 load factor라고 불린다.
 
+##### Reference
+* http://d2.naver.com/helloworld/831311
+
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-datastructure)
 
+---
 </br>
 
 ## Graph
@@ -281,6 +298,27 @@ Sparse graph를 표현하는데 적당한 방법이다.
 _**! BFS로 구한 경로는 최단 경로이다.**_
 
 </br>
+
+### Minimum Spanning Tree
+그래프 G의 spanning tree 중 edge weight의 합이 최소인 `spanning tree`를 말한다. 여기서 말하는 `spanning tree`란 그래프 G의 모든 vertex가 cycle이 없이 연결된 형태를 말한다.
+
+### Kruskal Algorithm
+초기화 작업으로 **edge 없이** vertex들만으로 그래프를 구성한다. 그리고 weight가 제일 작은 edge부터 검토한다. 그러기 위해선 Edge Set을 non-decreasing 으로 sorting 해야 한다. 그리고 가장 작은 weight에 해당하는 edge를 추가하는데 추가할 때 그래프에 cycle이 생기지 않는 경우에만 추가한다. spanning tree가 완성되면 모든 vertex들이 연결된 상태로 종료가 되고 완성될 수 없는 그래프에 대해서는 모든 edge에 대해 판단이 이루어지면 종료된다.
+
+#### 어떻게 cycle 생성 여부를 판단하는가?
+Graph의 각 vertex에 `set-id`라는 것을 추가적으로 부여한다. 그리고 초기화 과정에서 모두 1~n까지의 값으로 각각의 vertex들을 초기화 한다. 여기서 0은 어떠한 edge 와도 연결되지 않았음을 의미하게 된다. 그리고 연결할 때마다 `set-id`를 하나로 통일시키는데, 값이 동일한 `set-id` 개수가 많은 `set-id` 값으로 통일시킨다.
+
+#### Time Complexity
+1. Edge의 weight를 기준으로 sorting - O(E log E)
+2. cycle 생성 여부를 검사하고 set-id를 통일 - O(E + V log V)
+=> 전체 시간 복잡도 : O(E log E)
+
+
+### Prim Algorithm
+초기화 과정에서 한 개의 vertex로 이루어진 초기 그래프 A를 구성한다. 그리고나서 그래프 A 내부에 있는 vertex로부터 외부에 있는 vertex 사이의 edge를 연결하는데 그 중 가장 작은 weight의 edge를 통해 연결되는 vertex를 추가한다. 어떤 vertex건 간에 상관없이 edge의 weight를 기준으로 연결하는 것이다. 이렇게 연결된 vertex는 그래프 A에 포함된다. 위 과정을 반복하고 모든 vertex들이 연결되면 종료한다.
+
+#### Time Complexity
+=> 전체 시간 복잡도 : O(E log V)
 
 </br>
 

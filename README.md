@@ -56,7 +56,7 @@
   * 특징
   * 삽입
   * 삭제
-* Hash
+* HashTable
   * hash function
   * Resolve Collision
     * Open Addressing
@@ -66,7 +66,9 @@
   * Graph 용어정리
   * Graph 구현
   * Graph 탐색
-
+	* Minimum Spanning Tree
+    * Kruskal algorithm
+    * Prim algorithm
 </br>
 
 ## 네트워크
