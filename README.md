@@ -88,8 +88,7 @@
   * 트랜잭션과 Lock
   * 트랜잭션의 특성
   * 트랜잭션을 사용할 때 주의할 점
-* Statement vs Preparestatement
-* 사용해본 데이터베이스들의 장단점
+* Statement vs PrepareStatement
 
 </br>
 

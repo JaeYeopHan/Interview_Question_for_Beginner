@@ -18,11 +18,9 @@
   * 트랜잭션과 Lock
   * 트랜잭션의 특성
   * 트랜잭션을 사용할 때 주의할 점
-* Statement vs Preparestatement
-* 사용해본 데이터베이스들의 장단점
+* [Statement vs PrepareStatement](#statement-vs-preparestatement)
 
-
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-5-Database)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-5-database)
 
 </br>
 
@@ -52,7 +50,7 @@
 
 </br>
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-5-Database)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-5-database)
 
 </br>
 
@@ -109,7 +107,7 @@ _결론부터 말하자면 그렇지 않다._
 
 </br>
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-5-Database)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-5-database)
 
 </br>
 
@@ -200,7 +198,7 @@ _각 정규형은 그의 선행 정규형보다 더 엄격한 조건을 갖는�
 
 </br>
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-5-Database)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-5-database)
 
 </br>
 
@@ -208,8 +206,12 @@ _각 정규형은 그의 선행 정규형보다 더 엄격한 조건을 갖는�
 ### 트랜잭션(Transaction)이란 무엇인가?
 트랜잭션은 작업의 **완전성** 을 보장해주는 것이다. 즉, 논리적인 작업 셋을 모두 완벽하게 처리하거나 또는 처리하지 못할 경우에는 원 상태로 복구해서 작업의 일부만 적용되는 현상이 발생하지 않게 만들어주는 기능이다. 사용자의 입장에서는 작업의 논리적 단위로 이해를 할 수 있고 시스템의 입장에서는 데이터들을 접근 또는 변경하는 프로그램의 단위가 된다.
 
+</br>
+
 ### 트랜잭션과 Lock
 잠금(Lock)과 트랜잭션은 서로 비슷한 개념 같지만 사실 잠금은 동시성을 제어하기 위한 기능이고 트랜잭션은 데이터의 정합성을 보장하기 위한 기능이다. 잠금은 여러 커넥션에서 동시에 동일한 자원을 요청할 경우 순서대로 한 시점에는 하나의 커넥션만 변경할 수 있게 해주는 역할을 한다. 여기서 자원은 레코드나 테이블을 말한다. 이와는 조금 다르게 트랜잭션은 꼭 여러 개의 변경 작업을 수행하는 쿼리가 조합되었을 때만 의미있는 개념은 아니다. 트랜잭션은 하나의 논리적인 작업 셋 중 하나의 쿼리가 있든 두 개 이상의 쿼리가 있든 관계없이 논리적인 작업 셋 자체가 100% 적용되거나 아무것도 적용되지 않아야 함을 보장하는 것이다. 예를 들면 HW 에러 또는 SW에러와 같은 문제로 인해 작업에 실패가 있을 경우, 특별한 대책이 필요하게 되는데 이러한 문제를 해결하는 것이다.
+
+</br>
 
 ### 트랜잭션의 특성
 _트랜잭션은 어떠한 특성을 만족해야할까?_  
@@ -226,12 +228,30 @@ Transaction은 다음의 ACID라는 4가지 특성을 만족해야 한다.
 #### 지속성(Durability)
 트랜잭션이 정상적으로 종료된 다음에는 영구적으로 데이터베이스에 작업의 결과가 저장되어야 한다.
 
+</br>
+
 ### 트랜잭션을 사용할 때 주의할 점
 트랜잭션은 꼭 필요한 최소의 코드에만 적용하는 것이 좋다. 즉 트랜잭션의 범위를 최소화하라는 의미다. 일반적으로 데이터베이스 커넥션은 개수가 제한적이다. 그런데 각 단위 프로그램이 커넥션을 소유하는 시간이 길어진다면 사용 가능한 여유 커넥션의 개수는 줄어들게 된다. 그러다 어느 순간에는 각 단위 프로그램에서 커넥션을 가져가기 위해 기다려야 하는 상황이 발생할 수도 있는 것이다.
 
 </br>
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-5-Database)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-5-database)
+
+</br>
+
+### Statement vs PrepareStatement
+우선 속도 면에서 `PreparedStatement`가 빠르다고 알려져 있다. 이유는 쿼리를 수행하기 전에 이미 쿼리가 컴파일 되어 있으며, 반복 수행의 경우 프리 컴파일된 쿼리를 통해 수행이 이루어지기 때문이다.
+
+`PreparedStatement`에는 보통 변수를 설정하고 바인딩하는 `static sql`이 사용되고 `Statement`에서는 쿼리 자체에 조건이 들어가는 `dynamic sql`이 사용된다. `PreparedStatement`가 파싱 타임을 줄여주는 것은 분명하지만 `static sql`을 사용하는데 따르는 퍼포먼스 저하를 고려하지 않을 수 없다.
+
+하지만 성능을 고려할 때 시간 부분에서 가장 큰 비중을 차지하는 것은 테이블에서 레코드(row)를 가져오는 과정이고 SQL문을 파싱하는 시간은 이 시간의 10분의 1에 불과하다. 그렇기 때문에 `SQL Injection` 등의 문제를 보완해주는 `PreparedStatement`를 사용하는 것이 옳다.
+
+#### 참고 자료
+* http://java.ihoney.pe.kr/76
+
+</br>
+
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-5-database)
 
 </br>
 
