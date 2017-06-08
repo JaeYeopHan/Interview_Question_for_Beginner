@@ -1,4 +1,4 @@
-# Part 2-1 Development common sense
+# Part 1-1 Development common sense
 * [객체 지향 프로그래밍이란 무엇인가](#object-oriented-programming)
 	* 객체 지향 개발 원칙은 무엇인가?
 * [RESTful API란](#restful-api)
@@ -6,7 +6,7 @@
 * MVC 패턴이란 무엇인가?
 
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-1-Development-common-sense)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-Development-common-sense)
 </br>
 
 ## Object Oriented Programming
@@ -34,7 +34,7 @@ OOP로 프로그래밍을 코드를 작성하면 이미 작성한 코드에 대�
 * http://asfirstalways.tistory.com/177
 
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-1-Development-common-sense)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-Development-common-sense)
 
 </br>
 
@@ -93,7 +93,7 @@ _cf) 보다 자세한 내용에 대해서는 Reference를 참고해주세요._
 * https://spoqa.github.io/2012/02/27/rest-introduction.html
 
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-1-Development-common-sense)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-Development-common-sense)
 
 </br>
 
@@ -134,7 +134,7 @@ Test-Driven Development(TDD)는 매우 짧은 개발 서클의 반복에 의존�
 ##### Reference
 * https://slipp.net/questions/16
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-1-Development-common-sense)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-Development-common-sense)
 
 </br>
 

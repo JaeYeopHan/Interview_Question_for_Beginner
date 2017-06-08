@@ -1,4 +1,4 @@
-# Part 1-1 DataStructure
+# Part 1-2 DataStructure
 * [Array vs LinkedList](#array-vs-linkedlist)
 * [Stack and Queue](#stack-and-queue)
 * [Tree](#tree)
@@ -27,7 +27,7 @@
     * Prim algorithm
 
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-datastructure)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-2-datastructure)
 
 </br>
 
@@ -50,7 +50,7 @@
 * Array를 기반으로한 LinkedList 구현
 * ArrayList를 기반으로한 LinkedList 구현
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-datastructure)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-2-datastructure)
 
 ---
 </br>
@@ -111,7 +111,7 @@
 * Binary Search Tree 구현하기
 * 주어진 트리가 Binary 트리인지 확인하는 알고리즘 구현하기
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-datastructure)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-2-datastructure)
 
 </br>
 
@@ -158,7 +158,7 @@ _RBT는 BST의 삽입, 삭제 연산 과정에서 발생할 수 있는 문제점
 
 Java Collection에서 ArrayList도 내부적으로 RBT로 이루어져 있고, HashMap에서의 `Separate Chaining`에서도 사용된다. 그만큼 효율이 좋고 중요한 자료구조이다.
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-datastructure)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-2-datastructure)
 
 ---
 </br>
@@ -233,7 +233,7 @@ Collision이 많아질 수록 Search에 필요한 Time Complexity가 O(1)에서 
 ##### Reference
 * http://d2.naver.com/helloworld/831311
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-datastructure)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-2-datastructure)
 
 ---
 </br>
@@ -323,4 +323,4 @@ Graph의 각 vertex에 `set-id`라는 것을 추가적으로 부여한다. 그�
 </br>
 
 _DataStructure.end_  
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-datastructure)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-2-datastructure)
