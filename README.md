@@ -68,14 +68,26 @@
 
 </br>
 
-## 데이터베이스
-* 데이터베이스를 사용하는 이유
-* Index에 대해서
+## 데이터베이스 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Database)
+* 데이터베이스
+  * 데이터베이스를 사용하는 이유
+  * 데이터베이스 성능
+* Index
   * Index란 무엇인가
-  * Primary index 와 Secondary index의 차이
-  * Indexing과 성능, 장단점
+  * Index의 자료구조
+  * Primary index vs Secondary index
+  * Composite index
+  * Index의 성능과 고려해야할 사항
 * 정규화에 대해서
-* 트랜잭션에 대해서
+  * 정규화 탄생 배경
+  * 정규화란 무엇인가
+  * 정규화의 종류
+  * 정규화의 장단점
+* Transaction
+  * 트랜잭션(Transaction)이란 무엇인가?
+  * 트랜잭션과 Lock
+  * 트랜잭션의 특성
+  * 트랜잭션을 사용할 때 주의할 점
 * Statement vs Preparestatement
 * 사용해본 데이터베이스들의 장단점
 
