@@ -40,7 +40,7 @@
     * Separate Chaining
   * Resize
 * Graph
-  * Graph 용어정리
+  * Graph 용어 정리
   * Graph 구현
   * Graph 탐색
 	* Minimum Spanning Tree
@@ -53,7 +53,7 @@
 * TCP와 UDP의 차이점
 * HTTP와 HTTPS의 차이점
 * TCP 3-way-handshake
-* DNS round robin의 단점
+* DNS round robin 방식
 * HTTP 통신의 큰 흐름
 
 </br>
@@ -97,7 +97,11 @@
 * 옵저버 패턴
 * 팩토리 패턴
 
+</br>
+
 ---
+
+</br>
 
 # Part 2. 분야별
 
@@ -133,6 +137,8 @@
 
 ---
 
+</br>
+
 # Part 3. Language
 
 ## Java
@@ -157,8 +163,12 @@
 
 ---
 
+</br>
+
 ### 손코딩 및 코딩 테스트 대비
 대부분의 내용이 코드이기 때문에 별도의 [Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
+
+</br>
 
 ---
 
@@ -169,6 +179,9 @@
   * 각종 알고리즘에 대한 코드와 동영상 강의 링크를 제공합니다. (영어)
 * [awesome-interview-questions](https://github.com/MaximAbramchuck/awesome-interview-questions)
   * 각종 언어, CS 기초에 대한 interview 질문들이 정리되어 있습니다. (영어)
+
+</br>
+
 ---
 
 </br>
