@@ -19,22 +19,22 @@ OOP로 프로그래밍을 코드를 작성하면 이미 작성한 코드에 대�
 객체 간의 정보 교환이 모두 메시지 교환을 통해 일어나므로 실행 시스템에 많은 overhead가 발생하게 된다. 하지만 이것은 하드웨어의 발전으로 많은 부분 보완되었다. 객체 지향 프로그래밍의 치명적인 단점은 함수형 프로그래밍 패러다임의 등장 배경을 통해서 알 수 있다. 바로 객체가 상태를 갖는다는 것이다. 변수가 존재하고 이 변수가 특정 상태를 갖게 되어 애플리케이션 내부에서 버그를 발생시킨다는 것이다. 이러한 이유로 함수형 패러다임이 현재 주목받고 있다.
 
 ### 객체 지향적 설계 원칙
-1. SRP(Single Responsibility Principle) : 단일 책임 원칙
+1. SRP(Single Responsibility Principle) : 단일 책임 원칙  
   클래스는 단 하나의 책임을 가져야 하며 클래스를 변경하는 이유는 단 하나의 이유이어야 한다.
-2. OCP(Open-Closed Principle) : 개방-폐쇄 원칙
+2. OCP(Open-Closed Principle) : 개방-폐쇄 원칙  
   확장에는 열려 있어야 하고 변경에는 닫혀 있어야 한다.
-3. LSP(Likov Substitution Principle) : 리스코프 치환 원칙
+3. LSP(Likov Substitution Principle) : 리스코프 치환 원칙  
   상위 타입의 객체를 하위 타입의 객체로 치환해도 상위 타입을 사용하는 프로그램은 정상적으로 동작해야 한다.
-4. ISP(Interface Segregation Principle) : 인터페이스 분리 원칙
+4. ISP(Interface Segregation Principle) : 인터페이스 분리 원칙  
   인터페이스는 그 인터페이스를 사용하는 클라이언트를 기준으로 분리해야 한다.
-5. DIP(Dependency Inversion Principle) : 의존 역전 원칙
+5. DIP(Dependency Inversion Principle) : 의존 역전 원칙  
   고수준 모듈은 저수준 모듈의 구현에 의존해서는 안된다.
 
 #### Reference
 * http://asfirstalways.tistory.com/177
 
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-Development-common-sense)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-development-common-sense)
 
 </br>
 
@@ -53,7 +53,7 @@ OOP로 프로그래밍을 코드를 작성하면 이미 작성한 코드에 대�
 * Caching
 * Client-Server
 * Hierachical system
-* Code on demand
+* Code on demand  
 _cf) 보다 자세한 내용에 대해서는 Reference를 참고해주세요._
 
 ### RESTful하게 API를 디자인 한다는 것은 무엇을 의미하는가.(요약)
@@ -93,13 +93,13 @@ _cf) 보다 자세한 내용에 대해서는 Reference를 참고해주세요._
 * https://spoqa.github.io/2012/02/27/rest-introduction.html
 
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-Development-common-sense)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-development-common-sense)
 
 </br>
 
 ## TDD
 ### TDD란 무엇인가
-Test-Driven Development(TDD)는 매우 짧은 개발 서클의 반복에 의존하는 소프트웨어 개발 프로세스이다. 우선 개발자는 요구되는 새로운 기능에 대한 자동화된 테스트케이스를 작성하고 해당 테스트를 통과하는 가장 간단한 코드를 작성한다. 일단 테스트 통과하는 코드를 작성하고 상황에 맞게 리팩토링하는 과정을 거치는 것이다. 말 그대로 테스트가 코드 작성을 주도하는 개발방식인 것이다.
+Test-Driven Development(TDD)는 매우 짧은 개발 사이클의 반복에 의존하는 소프트웨어 개발 프로세스이다. 우선 개발자는 요구되는 새로운 기능에 대한 자동화된 테스트케이스를 작성하고 해당 테스트를 통과하는 가장 간단한 코드를 작성한다. 일단 테스트 통과하는 코드를 작성하고 상황에 맞게 리팩토링하는 과정을 거치는 것이다. 말 그대로 테스트가 코드 작성을 주도하는 개발방식인 것이다.
 
 ### Add a test
 테스트 주도형 개발에선, 새로운 기능을 추가하기 전 테스트를 먼저 작성한다. 테스트를 작성하기 위해서, 개발자는 해당 기능의 요구사항과 명세를 분명히 이해하고 있어야 한다. 이는 사용자 케이스와 사용자 스토리 등으로 이해할 수 있으며, 이는 개발자가 코드를 작성하기 전에 보다 요구사항에 집중할 수 있도록 도와준다. 이는 정말 중요한 부분이자 테스트 주도 개발이 주는 이점이라고 볼 수 있다.
@@ -134,7 +134,7 @@ Test-Driven Development(TDD)는 매우 짧은 개발 서클의 반복에 의존�
 ##### Reference
 * https://slipp.net/questions/16
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-Development-common-sense)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-development-common-sense)
 
 </br>
 

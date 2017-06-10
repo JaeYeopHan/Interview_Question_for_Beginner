@@ -67,13 +67,13 @@
 * Queue를 사용하여 Heap 자료구조 구현하기
 * Stack 두 개로 Queue 자료구조 구현하기
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-datastructure)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-2-datastructure)
 
 ---
 </br>
 
 ## Tree
-트리는 스택이나 큐와 같은 선형 구조가 아닌 비선형 자료구조이다. 트리는 계층적 관계(Hierachical Relationship)을 표현하는 자료구조이다. 이 `트리`라는 자료구조는 표현에 집중한다. 무엇인가를 저장하고 꺼내야 한다는 사고에서 벗어나 트리라는 자료구조를 바라보자.
+트리는 스택이나 큐와 같은 선형 구조가 아닌 비선형 자료구조이다. 트리는 계층적 관계(Hierarchical Relationship)을 표현하는 자료구조이다. 이 `트리`라는 자료구조는 표현에 집중한다. 무엇인가를 저장하고 꺼내야 한다는 사고에서 벗어나 트리라는 자료구조를 바라보자.
 
 #### 트리를 구성하고 있는 구성요소들(용어)
 * Node (노드) : 트리를 구성하고 있는 각각의 요소를 의미한다.
@@ -82,6 +82,7 @@
 * Terminal Node ( = leaf Node, 단말 노드) : 하위에 다른 노드가 연결되어 있지 않은 노드를 의미한다.
 * Internal Node (내부노드, 비단말 노드) : 단말 노드를 제외한 모든 노드로 루트 노드를 포함한다.
 
+</br>
 
 ### Binary Tree (이진 트리)
 루트 노드를 중심으로 두 개의 서브 트리(큰 트리에 속하는 작은 트리)로 나뉘어 진다. 또한 나뉘어진 두 서브 트리도 모두 이진 트리어야 한다. 재귀적인 정의라 맞는듯 하면서도 이해가 쉽지 않을 듯하다. 한 가지 덧붙이자면 공집합도 이진 트리로 포함시켜야 한다. 그래야 재귀적으로 조건을 확인해갔을 때, leaf node에 다 달았을 때, 정의가 만족되기 때문이다. 자연스럽게 노드가 하나 뿐인 것도 이진 트리 정의에 만족하게 된다.
@@ -89,9 +90,7 @@
 트리에서는 각 `층별로` 숫자를 매겨서 이를 트리의 `Level(레벨)`이라고 한다. 레벨의 값은 0부터 시작하고 따라서 루트 노트의 레벨은 0이다. 그리고 트리의 최고 레벨을 가리켜 해당 트리의 `height(높이)`라고 한다.
 
 #### Full Binary Tree (포화 이진 트리), Complete Binary Tree (완전 이진 트리)
-모든 레벨이 꽉 찬 이진 트리를 가리켜 포화 이진 트리라고 한다. 위에서 아래로, 왼쪽에서 오른쪽으로 순서대로 차곡차곡 채워진 이진 트리를 가리켜 완전 이진 트리라고 한다.
-
-`Full Binary Tree`와 `complete binary tree`는 노드의 개수가 n개 일 때, i번째 노드에 대해서 parent(i) = i/2 , left_child(i) = 2i , right_child(i) = 2i + 1 의 index 값을 갖는다.
+모든 레벨이 꽉 찬 이진 트리를 가리켜 포화 이진 트리라고 한다. 위에서 아래로, 왼쪽에서 오른쪽으로 순서대로 차곡차곡 채워진 이진 트리를 가리켜 완전 이진 트리라고 한다. 배열로 구성된 `Full Binary Tree`와 `complete binary tree`는 노드의 개수가 n개 일 때, i번째 노드에 대해서 parent(i) = i/2 , left_child(i) = 2i , right_child(i) = 2i + 1 의 index 값을 갖는다.
 
 </br>
 
@@ -125,7 +124,7 @@
 #### Personal Recommendation
 * Heapify 구현하기
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-datastructure)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-2-datastructure)
 
 </br>
 
@@ -166,7 +165,7 @@ Java Collection에서 ArrayList도 내부적으로 RBT로 이루어져 있고, H
 ## HashTable
 `hash`는 내부적으로 `배열`을 사용하여 데이터를 저장하기 때문에 빠른 검색 속도를 갖는다. 특정한 값을 Search하는데 데이터 고유의 `인덱스`로 접근하게 되므로 average case에 대하여 Time Complexity가 O(1)이 되는 것이다.(항상 O(1)이 아니고 average case에 대해서 O(1)인 것은 collision 때문이다.) 하지만 문제는 이 인덱스로 저장되는 `key`값이 불규칙하다는 것이다.
 
-그래서 **특별한 알고리즘을 이용하여** 저장할 데이터와 연관된 **고유한 숫자를 만들어 낸 뒤** 이를 인덱스로 사용한다. 특정 데이터가 저장되는 인덱스를 그 데이터만의 고유한 위치이기 때문에 삽입 연산 시 다른 데이터의 사이에 끼어들거나 삭제 시 다른 데이터로 채울 필요가 없으므로 연산에서 추가적인 비용이 없도록 만들어진 구조이다.
+그래서 **특별한 알고리즘을 이용하여** 저장할 데이터와 연관된 **고유한 숫자를 만들어 낸 뒤** 이를 인덱스로 사용한다. 특정 데이터가 저장되는 인덱스는 그 데이터만의 고유한 위치이기 때문에, 삽입 연산 시 다른 데이터의 사이에 끼어들거나, 삭제 시 다른 데이터로 채울 필요가 없으므로 연산에서 추가적인 비용이 없도록 만들어진 구조이다.
 
 </br>
 
@@ -272,14 +271,10 @@ Directed Graph에서는 간선에 방향성이 존재하기 때문에 Degree가 
 
 ### 그래프를 구현하는 두 방법
 #### 인접 행렬(adjacent matrix) : 정방 행렬을 사용하는 방법
-해당하는 위치의 value 값을 통해서 vertex간의 연결 관계를 O(1) 으로 파악할 수 있다.
-Edge개수와는 무관하게 V^2의 Space Complexity를 갖는다.
-=> Dense graph를 표현할 때 적절할 방법이다.
+해당하는 위치의 value 값을 통해서 vertex간의 연결 관계를 O(1) 으로 파악할 수 있다. Edge개수와는 무관하게 V^2의 Space Complexity를 갖는다. Dense graph를 표현할 때 적절할 방법이다.
 
 #### 인접 리스트(adjacent list) : 연결 리스트를 사용하는 방법
-vertex의 adjacent list를 확인해봐야 하므로 vertex간 연결되어있는지 확인하는데 오래 걸린다.
-Space Complexity 는 O(E + V)이다.
-Sparse graph를 표현하는데 적당한 방법이다.
+vertex의 adjacent list를 확인해봐야 하므로 vertex간 연결되어있는지 확인하는데 오래 걸린다. Space Complexity 는 O(E + V)이다. Sparse graph를 표현하는데 적당한 방법이다.
 
 </br>
 
