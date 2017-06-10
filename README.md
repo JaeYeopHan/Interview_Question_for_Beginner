@@ -48,12 +48,12 @@
     * Prim algorithm
 </br>
 
-## 네트워크 [Link]()
+## 네트워크 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Network)
 * GET, POST 방식의 차이점
 * TCP 3-way-handshake
 * TCP와 UDP의 차이점
 * HTTP와 HTTPS의 차이점
-  * HTTP의 문제점들 
+  * HTTP의 문제점들
 * DNS round robin 방식
 * 웹 통신의 큰 흐름
 
