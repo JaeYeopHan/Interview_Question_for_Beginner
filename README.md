@@ -59,7 +59,7 @@
 
 </br>
 
-## 운영체제 [Link]()
+## 운영체제 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/OS)
 * 프로세스와 스레드의 차이
 * 스케줄러의 종류
   * 장기 스케줄러
@@ -74,7 +74,6 @@
 * 동기와 비동기의 차이
 * 멀티스레드
   * 장점과 단점
-  * Thread 동기화 방법과 각각의 장단점
 * 캐시의 지역성
   * Locality
   * Caching line
