@@ -104,10 +104,8 @@
 
 </br>
 
-## 디자인패턴
-* 싱글톤 패턴
-* 옵저버 패턴
-* 팩토리 패턴
+## Design Pattern [Link]()
+* Singleton
 
 </br>
 
@@ -135,16 +133,6 @@
 
 </br>
 
-### C++
-(준비중)
-
-</br>
-
-### Python
-(준비중)
-
-</br>
-
 ---
 
 </br>
@@ -152,32 +140,7 @@
 # Part 3. 분야별
 
 ## Front-End
-(준비중)
-
-</br>
-
-## iOS
-(준비중)
-
-</br>
-
-## Android
-(준비중)
-
-</br>
-
-## Back-End
-(준비중)
-
-</br>
-
-## Game Client
-(준비중)
-
-</br>
-
-## Game Server
-(준비중)
+* https://github.com/h5bp/Front-end-Developer-Interview-Questions
 
 </br>
 
