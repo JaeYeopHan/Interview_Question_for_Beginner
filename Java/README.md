@@ -1,5 +1,5 @@
 # Part 2-1 Java
-* [JVM에 대해서 / GC의 원리](#jvm에-대해서-/-gc의-원리)
+* [JVM에 대해서, GC의 원리](#jvm에-대해서,-gc의-원리)
 * [Collection](#collection)
 * [Annotation](#annotation)
 * [Generic](#generic)
@@ -13,7 +13,7 @@
 
 </br>
 
-## JVM에 대해서 / GC의 원리
+## JVM에 대해서, GC의 원리
 그림과 함께 설명해야 하는 부분이 많아 링크를 첨부합니다.  
 * [Java Virtual Machine에 대해서](http://asfirstalways.tistory.com/158)
 * [Garbage Collection 에 대해서](http://asfirstalways.tistory.com/159)

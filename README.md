@@ -117,7 +117,7 @@
 
 # Part 2. Language
 
-## Java [Link]()
+## Java [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Java)
 * JVM에 대해서 / GC의 원리
 * Collection
 * Annotation
