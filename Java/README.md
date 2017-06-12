@@ -75,9 +75,9 @@ DataStructure 부분의 설명을 참고하면 된다.
 </br>
 
 ## Overriding vs Overloading
-* 오버라이딩(Overriding)
+* 오버라이딩(Overriding)  
 상속받은 클래스에 존재하는 메소드를 하위 클래스에서 필요에 맞게 재정의하는 것을 의미한다.
-* 오버로딩(Overloading)
+* 오버로딩(Overloading)  
 같은 클래스 내에 return value와 메소드명이 동일한 메소드를 매개변수만 다르게 만들어 다양한 상황에 메소드가 호출될 수 있도록 하는 것입니다.
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-1-java)
