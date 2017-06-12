@@ -104,7 +104,7 @@
 
 </br>
 
-## Design Pattern [Link]()
+## Design Pattern [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/DesignPattern)
 * Singleton
 
 </br>
