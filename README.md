@@ -140,7 +140,7 @@
 # Part 3. 분야별
 
 ## Front-End
-* https://github.com/h5bp/Front-end-Developer-Interview-Questions
+* https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Korean
 
 </br>
 
