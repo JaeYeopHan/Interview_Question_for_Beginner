@@ -17,7 +17,7 @@
   * Locality
   * Caching line
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-4-운영체제)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)
 
 </br>
 

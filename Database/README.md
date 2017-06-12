@@ -20,7 +20,7 @@
   * 트랜잭션을 사용할 때 주의할 점
 * [Statement vs PrepareStatement](#statement-vs-preparestatement)
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-5-database)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)
 
 </br>
 

@@ -27,7 +27,7 @@
     * Prim algorithm
 
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-2-datastructure)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)
 
 </br>
 

@@ -7,7 +7,7 @@
 * [DNS Round Robin 방식](#dns-round-robin-방식)
 * [웹 통신의 큰 흐름](#웹-통신의-큰-흐름)
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-3-network)
+[뒤로](https://github.com/JaeYeopHan/for_beginner)
 
 </br>
 

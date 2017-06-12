@@ -5,8 +5,8 @@
 * [TDD란 무엇이며 어떠한 장점이 있는가](#tdd)
 * MVC 패턴이란 무엇인가?
 
+[뒤로](https://github.com/JaeYeopHan/for_beginner)
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-Development-common-sense)
 </br>
 
 ## Object Oriented Programming
@@ -33,6 +33,9 @@ OOP로 프로그래밍을 코드를 작성하면 이미 작성한 코드에 대�
 #### Reference
 * http://asfirstalways.tistory.com/177
 
+#### Personal Recommendation
+* (도서) [객체 지향의 사실과 오해](http://www.yes24.com/24/Goods/18249021)
+* (도서) [객체 지향과 디자인 패턴](http://www.yes24.com/24/Goods/9179120?Acode=101)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-development-common-sense)
 

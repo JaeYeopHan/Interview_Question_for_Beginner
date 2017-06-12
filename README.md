@@ -115,7 +115,41 @@
 
 </br>
 
-# Part 2. 분야별
+# Part 2. Language
+
+## Java [Link]()
+* JVM에 대해서 / GC의 원리
+* Collection
+* Annotation
+* Generic
+* final
+* Overriding vs Overloading
+* Access Modifier
+* Wrapper class
+* Multi-Thread 환경에서의 개발
+
+</br>
+
+### JavaScript
+(준비중)
+
+</br>
+
+### C++
+(준비중)
+
+</br>
+
+### Python
+(준비중)
+
+</br>
+
+---
+
+</br>
+
+# Part 3. 분야별
 
 ## Front-End
 (준비중)
@@ -143,32 +177,6 @@
 </br>
 
 ## Game Server
-(준비중)
-
-</br>
-
----
-
-</br>
-
-# Part 3. Language
-
-## Java
-(준비중)
-
-</br>
-
-### JavaScript
-(준비중)
-
-</br>
-
-### C++
-(준비중)
-
-</br>
-
-### Python
 (준비중)
 
 </br>
