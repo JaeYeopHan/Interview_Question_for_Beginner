@@ -129,7 +129,11 @@
 </br>
 
 ### JavaScript
-(준비중)
+* Hoisting
+* Closure
+* variable scope
+* prototype based
+* Array-Like Object에 대해서
 
 </br>
 
@@ -140,6 +144,14 @@
 # Part 3. 분야별
 
 ## Front-End
+* 브라우저의 작동 원리
+* 이벤트 버블링과 캡처링
+* Event delegation(이벤트 위임)이란 무엇인가
+* CORS
+
+* normalize.css vs reset.css
+* CSS 방법론
+
 * https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Korean
 
 </br>

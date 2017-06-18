@@ -66,6 +66,7 @@
 * Stack을 사용하여 미로찾기 구현하기
 * Queue를 사용하여 Heap 자료구조 구현하기
 * Stack 두 개로 Queue 자료구조 구현하기
+* Stack으로 괄호 유효성 체크 코드 구현하기
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-2-datastructure)
 
@@ -218,7 +219,7 @@ Collision이 많아질 수록 Search에 필요한 Time Complexity가 O(1)에서 
 **_한 가지 상황을 가정해보자._**  
 해시 버킷에 **6개** 의 key-value 쌍이 들어있었다. 그리고 하나의 값이 추가되었다. 만약 기준이 6과 7이라면 자료구조를 링크드 리스트에서 트리로 변경해야 한다. 그러다 바로 하나의 값이 삭제된다면 다시 트리에서 링크드 리스트로 자료구조를 변경해야 한다. 각각 자료구조로 넘어가는 기준이 1이라면 Switching 비용이 너무 많이 필요하게 되는 것이다. 그래서 2라는 여유를 남겨두고 기준을 잡아준 것이다. 따라서 데이터의 개수가 6개에서 7개로 증가했을 때는 링크드 리스트의 자료구조를 취하고 있을 것이고 8개에서 7개로 감소했을 때는 트리의 자료구조를 취하고 있을 것이다.
 
-### `Open Address` vs `Separate Chaining`
+#### `Open Address` vs `Separate Chaining`
 일단 두 방식 모두 Worst Case 에서 O(M)이다. 하지만 `Open Address`방식은 연속된 공간에 데이터를 저장하기 때문에 `Separate Chaining`에 비해 캐시 효율이 높다. 따라서 데이터의 개수가 충분히 적다면 `Open Address`방식이 `Separate Chaining`보다 더 성능이 좋다. 한 가지 차이점이 더 존재한다. `Separate Chaining`방식에 비해 `Open Address`방식은 버킷을 계속해서 사용한다. 따라서 `Separate Chaining` 방식은 테이블의 확장을 보다 늦출 수 있다.
 
 #### 보조 해시 함수
