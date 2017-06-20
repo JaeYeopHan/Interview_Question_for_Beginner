@@ -152,7 +152,7 @@
 * normalize.css vs reset.css
 * CSS 방법론
 
-* https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Korean
+* [Front-end-Developer-Interview-Questions (한국어)](https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Korean)
 
 </br>
 
