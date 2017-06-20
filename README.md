@@ -126,7 +126,7 @@
 
 </br>
 
-### JavaScript
+## JavaScript
 * Hoisting
 * Closure
 * variable scope
