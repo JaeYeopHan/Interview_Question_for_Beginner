@@ -1,5 +1,5 @@
 # Beginner_for_interview
-예비 개발자들의 기술 면접 준비를 위한 자료를 정리해놓은 Repository입니다. 제가 개인적으로 면접을 준비하면서 정리한 내용이라 잘못된 부분이 있을 수 있습니다. 이런 부분들에 대해서는 `Pull Request` or `Issue`로 참여해주시면 정말 감사하겠습니다. 또한 주제와 관련된 좋은 Reference를 추가하는 것도 가능합니다.(참여해주시면 Contributor 등록됩니다!) 해당 Repository에서 학습을 하시다가 생기는 질문은 `Issue`에 올려주세요.  
+예비 개발자들의 기술 면접 준비를 위한 자료를 정리해놓은 Repository입니다. 공부할 것이 정말 많은 개발이라는 분야를 모두 담지는 못했습니다. 그저 가이드라인으로 참고해주시면 감사하겠습니다. 제가 개인적으로 면접을 준비하면서 정리한 내용이라 잘못된 부분이 있을 수 있습니다. 이런 부분들에 대해서는 `Pull Request` or `Issue`로 참여해주시면 정말 감사하겠습니다. 또한 주제와 관련된 좋은 참고 자료를 추가하는 것도 가능합니다. 해당 Repository에서 학습을 하시다가 생기는 질문은 `Issue`에 올려주세요.  
 > 취준생 여러분의 건승을 기원합니다 :)
 
 [HOW TO CONTRIBUTE](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/issues/1)
@@ -14,7 +14,7 @@
 
 ## Algorithm [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
 * 손코딩 및 코딩 테스트 대비  
-대부분의 내용이 코드이기 때문에 별도의 [Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
+=> 대부분의 내용이 코드이기 때문에 별도의 [Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
 * 코딩 테스트를 위한 Tip
 * 문제 해결을 위한 전략적 접근
 * Sorting Algorithm
@@ -42,7 +42,7 @@
   * Full Binary Tree
   * Complete Binary Tree
   * BST(Binary Search Tree)
-* Heap
+* Binary Heap
 * Red-Black Tree
   * 정의
   * 특징
@@ -58,9 +58,10 @@
   * Graph 용어 정리
   * Graph 구현
   * Graph 탐색
-	* Minimum Spanning Tree
+  * Minimum Spanning Tree
     * Kruskal algorithm
     * Prim algorithm
+
 </br>
 
 ## 네트워크 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Network)
@@ -184,6 +185,7 @@
 * CORS
 * normalize.css vs reset.css
 * CSS 방법론
+* 웹 성능과 관련된 Issues
 
 #### 추가 자료
 * [Front-end-Developer-Interview-Questions (한국어)](https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Korean)

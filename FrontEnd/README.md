@@ -5,7 +5,7 @@
 * [CORS](#cors)
 * normalize.css vs reset.css
 * CSS 방법론
-
+* 웹 성능과 관련된 Issues
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
