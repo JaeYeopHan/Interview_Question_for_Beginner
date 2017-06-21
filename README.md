@@ -116,6 +116,16 @@
   * 트랜잭션의 특성
   * 트랜잭션을 사용할 때 주의할 점
 * Statement vs PrepareStatement
+* NoSQL
+  * 정의
+  * CAP 이론
+    * 일관성
+    * 가용성
+    * 네트워크 분할 허용성
+  * 저장방식에 따른 분류
+    * Key-Value Model
+    * Document Model
+    * Column Model
 
 </br>
 

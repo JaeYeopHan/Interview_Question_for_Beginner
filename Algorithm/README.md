@@ -7,7 +7,7 @@
 
 
 ## 코딩 테스트를 위한 Tip
-> Translate below this article: [How-to-rock-an-algorithms-interview](http://www.palantir.com/2011/09/how-to-rock-an-algorithms-interview/)
+> Translate this article: [How-to-rock-an-algorithms-interview](http://www.palantir.com/2011/09/how-to-rock-an-algorithms-interview/)
 
 ### 1. 칠판에 글쓰기를 시작하십시오.
 이것은 당연하게 들릴지 모르지만, 빈 벽을 쳐다 보면서 수십 명의 후보자가 붙어 있습니다. 나는 아무것도 보지 않는 것보다 문제의 예를 응시하는 것이 더 생산적이라고 생각합니다. 관련성이있는 그림을 생각할 수 있다면 그 그림을 그립니다. 중간 크기의 예제가 있으면 작업 할 수 있습니다. (중간 크기는 작은 것보다 낫습니다.) 때로는 작은 예제에 대한 솔루션이 일반화되지 않기 때문입니다. 또는 알고있는 몇 가지 명제를 적어 두십시오. 뭐라도 하는 것이 아무것도 안 하는 것보다 낫습니다.
@@ -25,7 +25,7 @@
 * Algorithms associated with a specific data structure (which brings us to our fourth suggestion...)
 
 ### 4. 데이터 구조를 생각하십시오.
-상위 10 개 데이터 구조가 실제 세계에서 사용되는 모든 데이터 구조의 99 %를 차지한다는 것을 알고 계셨습니까? 아마 그 번호를 만들었 기 때문에 아마 그렇지 않을 것입니다. 예, 때로는 최적의 솔루션이 블룸 필터 또는 접미어 트리를 필요로하는 문제를 묻습니다.하지만 이러한 문제조차도 훨씬 더 일상적인 데이터 구조를 사용하는 최적의 솔루션을 사용하는 경향이 있습니다. 가장 자주 표시 될 데이터 구조는 다음과 같습니다.
+상위 10 개 데이터 구조가 실제 세계에서 사용되는 모든 데이터 구조의 99 %를 차지한다는 것을 알고 계셨습니까? 때로는 최적의 솔루션이 블룸 필터 또는 접미어 트리를 필요로하는 문제를 묻습니다. 하지만 이러한 문제조차도 훨씬 더 일상적인 데이터 구조를 사용하는 최적의 솔루션을 사용하는 경향이 있습니다. 가장 자주 표시 될 데이터 구조는 다음과 같습니다.
 * Array
 * Stack / Queue
 * HashSet / HashMap / HashTable / Dictionary
