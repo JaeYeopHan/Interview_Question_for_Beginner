@@ -5,12 +5,12 @@
 </br>
 
 </br>
+
 ---
 
 </br>
 
-# Part 0. 알고리즘
-## Algorithm [Link]()
+## Algorithm [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
 * 손코딩 및 코딩 테스트 대비  
 대부분의 내용이 코드이기 때문에 별도의 [Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
 * 코딩 테스트를 위한 Tip
@@ -145,7 +145,7 @@
 
 </br>
 
-## JavaScript
+## JavaScript [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
 * JavaScript Event Loop
 * Hoisting
 * Closure
