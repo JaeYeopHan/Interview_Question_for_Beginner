@@ -30,6 +30,7 @@ Cross-Origin Resource Sharing
 
 최근에는 XHR2의 경우 타 도메인간 통신이 가능해졌다. 이럴 경우 보안 상에는 문제가 없을지 고민해봐야 한다. 아무나 다 요청을 보내면 서버는 모두 응답을 줘야 하나?
 
+(작성중...)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-1-front-end)
 

@@ -5,6 +5,21 @@
 </br>
 
 </br>
+---
+
+</br>
+
+# Part 0. 알고리즘
+## Algorithm [Link]()
+* 손코딩 및 코딩 테스트 대비  
+대부분의 내용이 코드이기 때문에 별도의 [Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
+* 코딩 테스트를 위한 Tip
+* 문제 해결을 위한 전략적 접근
+* Sorting Algorithm
+
+</br>
+
+---
 
 # Part 1. 전산 기초
 
@@ -124,14 +139,23 @@
 * Wrapper class
 * Multi-Thread 환경에서의 개발
 
+#### 추가 자료
+* [Java 기본서 비교](http://asfirstalways.tistory.com/146)
+
+
 </br>
 
 ## JavaScript
+* JavaScript Event Loop
 * Hoisting
 * Closure
 * variable scope
 * prototype based
-* Array-Like Object에 대해서
+* Array-Like Object
+
+#### 추가 자료
+* [JavaScript 기본서 비교](http://asfirstalways.tistory.com/246)
+* [ECMAScript6 정리](https://jaeyeophan.github.io/categories/ECMAScript6)
 
 </br>
 
@@ -151,15 +175,6 @@
 
 #### 추가 자료
 * [Front-end-Developer-Interview-Questions (한국어)](https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Korean)
-
-</br>
-
----
-
-</br>
-
-### 손코딩 및 코딩 테스트 대비
-대부분의 내용이 코드이기 때문에 별도의 [Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
 
 </br>
 
