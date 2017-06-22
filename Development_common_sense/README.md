@@ -3,7 +3,7 @@
 	* 객체 지향 개발 원칙은 무엇인가?
 * [RESTful API란](#restful-api)
 * [TDD란 무엇이며 어떠한 장점이 있는가](#tdd)
-* MVC 패턴이란 무엇인가?
+* [MVC 패턴이란 무엇인가?](http://asfirstalways.tistory.com/180)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
@@ -135,6 +135,13 @@ Test-Driven Development(TDD)는 매우 짧은 개발 사이클의 반복에 의�
 
 ##### Reference
 * [TDD에 대한 토론 - slipp](https://slipp.net/questions/16)
+
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-development-common-sense)
+
+</br>
+
+## MVC 패턴이란 무엇인가?
+그림과 함께 설명하는 것이 더 좋다고 판단하여 [포스팅](http://asfirstalways.tistory.com/180)으로 대체한다.
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-development-common-sense)
 
