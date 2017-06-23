@@ -17,6 +17,10 @@
 4. 렌더링 트리에서 레이아웃을 실행하여 각 노드의 기하학적 형태를 계산한다. (**"Box-Model"** 을 생성한다.)
 5. 개별 노드를 화면에 페인트한다.(or 래스터화)
 
+#### Reference
+* [Naver D2 - 브라우저의 작동 원리](http://d2.naver.com/helloworld/59361)
+* [Web fundamentals - Critical-rendering-path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=ko)
+
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-1-front-end)
 
 </br>
