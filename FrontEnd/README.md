@@ -3,6 +3,7 @@
 * 이벤트 버블링과 캡처링
 * Event delegation(이벤트 위임)이란 무엇인가
 * [CORS](#cors)
+* 크로스 브라우징
 * normalize.css vs reset.css
 * CSS 방법론
 * 웹 성능과 관련된 Issues
