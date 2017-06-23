@@ -3,7 +3,7 @@
 > 취준생 여러분의 건승을 기원합니다 :)
 
 [HOW TO CONTRIBUTE](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/issues/1)
-
+[미세먼지 같은 면접 팁]()
 </br>
 
 </br>
@@ -30,7 +30,7 @@
 	* 객체 지향 개발 원칙은 무엇인가?
 * RESTFul API란?
 * TDD란 무엇이며 어떠한 장점이 있는가?
-* 함수형 프로그래밍
+* 함수형 프로그래밍이란?
 * MVC 패턴이란 무엇인가?
 
 </br>
@@ -182,12 +182,12 @@
 ## Front-End [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
 * 브라우저의 작동 원리
 * 이벤트 버블링과 캡처링
-* Event delegation(이벤트 위임)
+* Event delegation
 * CORS
 * 크로스 브라우징
-* normalize.css vs reset.css
-* CSS 방법론
 * 웹 성능과 관련된 Issues
+* CSS Methodology
+* normalize.css vs reset.css
 
 #### 추가 자료
 * [Front-end-Developer-Interview-Questions (한국어)](https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Korean)
@@ -212,3 +212,5 @@
 </br>
 
 ## Contributor
+
+</br>
