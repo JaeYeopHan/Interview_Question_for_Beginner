@@ -2,8 +2,8 @@
 예비 개발자들의 기술 면접 준비를 위한 자료를 정리해놓은 Repository입니다. 공부할 것이 정말 많은 개발이라는 분야를 모두 담지는 못했습니다. 그저 가이드라인으로 참고해주시면 감사하겠습니다. 제가 개인적으로 면접을 준비하면서 정리한 내용이라 잘못된 부분이 있을 수 있습니다. 이런 부분들에 대해서는 `Pull Request` or `Issue`로 참여해주시면 정말 감사하겠습니다. 또한 주제와 관련된 좋은 참고 자료를 추가하는 것도 가능합니다. 해당 Repository에서 학습을 하시다가 생기는 질문은 `Issue`에 올려주세요.  
 > 취준생 여러분의 건승을 기원합니다 :)
 
-[HOW TO CONTRIBUTE](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/issues/1)
-[미세먼지 같은 면접 팁]()
+* [HOW TO CONTRIBUTE](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/issues/1)
+* [미세먼지 같은 면접 팁](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Tip)
 </br>
 
 </br>
@@ -199,11 +199,11 @@
 </br>
 
 ### 그 외 좋은 자료
+* [주니어 개발자를 위한 취업 정보](https://github.com/jojoldu/junior-recruit-scheduler)
 * [mission-peace/interview repository](https://github.com/mission-peace/interview)  
 => 각종 알고리즘에 대한 코드와 동영상 강의 링크를 제공합니다. (영어)
 * [awesome-interview-questions](https://github.com/MaximAbramchuck/awesome-interview-questions)  
 => 각종 언어, CS 기초에 대한 interview 질문들이 정리되어 있습니다. (영어)
-* [주니어 개발자를 위한 취업 정보](https://github.com/jojoldu/junior-recruit-scheduler)
 
 </br>
 
