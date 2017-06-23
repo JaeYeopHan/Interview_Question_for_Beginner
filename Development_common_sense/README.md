@@ -3,8 +3,8 @@
 	* 객체 지향 개발 원칙은 무엇인가?
 * [RESTful API란](#restful-api)
 * [TDD란 무엇이며 어떠한 장점이 있는가](#tdd)
+* [함수형 프로그래밍](#함수형-프로그래밍)
 * [MVC 패턴이란 무엇인가?](http://asfirstalways.tistory.com/180)
-* 함수형 프로그래밍
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
@@ -136,6 +136,33 @@ Test-Driven Development(TDD)는 매우 짧은 개발 사이클의 반복에 의�
 
 ##### Reference
 * [TDD에 대한 토론 - slipp](https://slipp.net/questions/16)
+
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-development-common-sense)
+
+</br>
+
+## 함수형 프로그래밍
+_아직 저도 잘 모르는 부분이라서 정말 간단한 내용만 정리하고 관련 링크를 첨부합니다._
+함수형 프로그래밍의 가장 큰 특징 두 가지는 `immutable data`와 `first class citizen으로서의 function`이다.
+
+### immutable vs mutable
+우선 `immutable`과 `mutable`의 차이에 대해서 이해를 하고 있어야 한다. `immutable`이란 말 그대로 변경 불가능함을 의미한다. `immutable` 객체는 객체가 가지고 있는 값을 변경할 수 없는 객체를 의미하여 값이 변경될 경우, 새로운 객체를 생성하고 변경된 값을 주입하여 반환해야 한다. 이와는 달리, `mutable` 객체는 해당 객체의 값이 변경될 경우 값을 변경한다.
+
+### first-citizen
+함수형 프로그래밍 패러다임을 따르고 있는 언어에서의 `함수(function)`는 `일급 객체(first class citizen)`로 간주된다. 일급 객체라 함은 다음과 같다.
+* 변수나 데이터 구조안에 함수를 담을 수 있어서 함수의 파라미터로 전달할 수 있고, 함수의 반환값으로 사용할 수 있다.
+* 할당에 사용된 이름과 관계없이 고유한 구별이 가능하다.
+* 함수를 리터럴로 바로 정의할 수 있다.
+
+### Reactive Programming
+반응형 프로그래밍(Reactive Programming)은 선언형 프로그래밍(declarative programming)이라고도 불리며, 명령형 프로그래밍(imperative programming)의 반대말이다. 또 함수형 프로그래밍 패러다임을 활용하는 것을 말한다. 반응형 프로그래밍은 기본적으로 모든 것을 스트림(stream)으로 본다. 스트림이란 값들의 집합으로 볼 수 있으며 제공되는 함수형 메소드를 통해 데이터를 immutable하게 관리할 수 있다.
+
+#### Reference
+* [함수형 프로그래밍 소개](https://medium.com/@jooyunghan/%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%86%8C%EA%B0%9C-5998a3d66377)
+* [반응형 프로그래밍이란 무엇인가](https://brunch.co.kr/@yudong/33)
+* [What-I-Learned-About-RP](https://github.com/CoderK/What-I-Learned-About-RP)
+* [Reactive Programming](http://sculove.github.io/blog/2016/06/22/Reactive-Programming)
+* [MS는 ReactiveX를 왜 만들었을까?](http://huns.me/development/2051)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-development-common-sense)
 
