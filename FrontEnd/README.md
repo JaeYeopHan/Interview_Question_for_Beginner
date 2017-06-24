@@ -158,13 +158,14 @@ element 스타일의 default 값을 지정해주는 것이다. 선택자로는 �
 ####  BEM의 M는 “Modifier”이다.
 블록이나 요소의 모양, 상태를 정의한다. `block_element-modifier`, `block—modifier` 형태로 사용한다. 수식어에는 불리언 타입과 키-값 타입이 있다.
 
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-1-front-end)
-
+</br>
 
 #### Reference
 * [CSS 방법론에 대해서](http://wit.nts-corp.com/2015/04/16/3538)
 * [CSS 방법론 SMACSS에 대해 알아보자](https://brunch.co.kr/@larklark/1)
 * [BEM에 대해서](https://en.bem.info/)
+
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-1-front-end)
 
 </br>
 
@@ -178,6 +179,10 @@ element 스타일의 default 값을 지정해주는 것이다. 선택자로는 �
 `normalize.css`는 브라우저 간 일관된 스타일링을 목표로 한다. `<H1>~<H6>`과 같은 요소는 브라우저간에 일관된 방식으로 굵게 표시됩니다. 추가적인 디자인에 필요한 style만 CSS로 작성해주면 된다.
 
 즉, `normalize.css`는 모든 것을 "해제"하기보다는 유용한 기본값을 보존하는 것이다. 예를 들어, sup 또는 sub와 같은 요소는 `normalize.css`가 적용된 후 바로 기대하는 스타일을 보여준다. 반면 `reset.css`를 포함하면 시각적으로 일반 텍스트와 구별 할 수 없다. 또한 normalize.css는 reset.css보다 넓은 범위를 가지고 있으며 HTML5 요소의 표시 설정, 양식 요소의 글꼴 상속 부족, pre-font 크기 렌더링 수정, IE9의 SVG 오버플로 및 iOS의 버튼 스타일링 버그 등에 대한 이슈를 해결해준다.
+
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-1-front-end)
+
+</br>
 
 </br>
 
