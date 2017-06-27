@@ -27,7 +27,6 @@
 
 ## 개발상식 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
 * 객체 지향 프로그래밍이란 무엇인가?
-	* 객체 지향 개발 원칙은 무엇인가?
 * RESTFul API란?
 * TDD란 무엇이며 어떠한 장점이 있는가?
 * 함수형 프로그래밍이란?

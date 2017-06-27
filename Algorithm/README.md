@@ -241,6 +241,23 @@ Count Sort는 말 그대로 몇 개인지 개수를 세어 정렬하는 방식�
 
 </br>
 
+#### Time Complexity
+O(1) < O(log N) < O(N) < O(N log N) < O(N^2) < O(N^3)
+O(2^N) : 크기가 N인 집합의 부분 집합
+O(N!) : 크기가 N인 순열
+
+
+#### 알고리즘 문제 연습 사이트
+* https://algospot.com/
+* https://codeforces.com
+* http://topcoder.com
+* https://www.acmicpc.net/
+* https://leetcode.com/problemset/algorithms/
+
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#algorithm)
+
+</br>
+
 </br>
 
 _Algorithm.end_  
