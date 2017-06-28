@@ -19,7 +19,30 @@ Commit Message는 `Update`라고만 해주셔도 되고, 원하시는 메세지�
 
 </br>
 
-_Pull Request example>_
-## Edit typo or link path
-DataStructure Link 수정
-(Label: Edit typo or link path)
+---
+
+### ISSUE_TEMPLATE
+```
+### This issue is...
+* [ ] Edit typos or links
+* [ ] Inaccurate information
+* [ ] New Resources
+* [ ] Suggestions
+* [ ] Questions
+
+#### Description
+(say something...)
+```
+
+---
+
+### PULL_REQUEST_TEMPLATE
+```
+### This Pull Request is...
+* [ ] Edit typos or links
+* [ ] Inaccurate information
+* [ ] New Resources
+
+#### Description
+(say something...)
+```
