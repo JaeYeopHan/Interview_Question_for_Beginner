@@ -1,6 +1,6 @@
 # Part 3-1 Front-End
 * [브라우저의 동작 원리](#브라우저의-동작-원리)
-* Document Object Model
+* Document Object Model(작성중)
   * Event bubbling and Capturing
   * Event delegation
 * [CORS](#cors)
