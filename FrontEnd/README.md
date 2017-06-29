@@ -1,7 +1,8 @@
 # Part 3-1 Front-End
 * [브라우저의 동작 원리](#브라우저의-동작-원리)
-* 이벤트 버블링과 캡처링
-* Event delegation(이벤트 위임)이란 무엇인가
+* Document Object Model
+  * Event bubbling and Capturing
+  * Event delegation
 * [CORS](#cors)
 * [크로스 브라우징](#크로스-브라우징)
 * [웹 성능과 관련된 Issues](#웹-성능과-관련된-issue-정리)

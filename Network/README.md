@@ -212,6 +212,8 @@ _우리가 Chrome을 실행시켜 주소창에 특정 URL 값을 입력시키면
 #### Personal Recommendation
 * (도서) [성공과 실패를 결정하는 1% 네트워크 원리](http://www.yes24.com/24/Goods/17286237?Acode=101)
 * (도서) [그림으로 배우는 Http&Network basic](http://www.yes24.com/24/Goods/15894097?Acode=101)
+* (도서) [HTTP 완벽 가이드](http://www.yes24.com/24/Goods/15381085?Acode=101)
+* Socket programming (Multi-chatting program)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-3-network)
 

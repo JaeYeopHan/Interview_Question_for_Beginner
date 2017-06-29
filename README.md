@@ -1,5 +1,5 @@
 # Beginner_for_interview
-예비 개발자들의 기술 면접 준비를 위한 자료를 정리해놓은 Repository입니다. 공부할 것이 정말 많은 개발이라는 분야를 모두 담지는 못했습니다. 그저 가이드라인으로 참고해주시면 감사하겠습니다. 제가 개인적으로 면접을 준비하면서 정리한 내용이라 잘못된 부분이 있을 수 있습니다. 이런 부분들에 대해서는 `Pull Request` or `Issue`로 참여해주시면 정말 감사하겠습니다. 또한 주제와 관련된 좋은 참고 자료를 추가하는 것도 가능합니다. 해당 Repository에서 학습을 하시다가 생기는 질문은 `Issue`에 올려주세요.  
+예비 개발자들의 기술 면접 준비를 위한 자료를 정리해놓은 Repository입니다. 개발이라는 분야를 모두 담지는 못했습니다. 그저 가이드라인으로 참고해주시면 감사하겠습니다. 또한 제가 개인적으로 면접을 준비하면서 정리한 내용이라 잘못된 부분이 있을 수 있습니다. 이런 부분들에 대해서는 `Pull Request` or `Issue`로 참여해주시면 정말 감사하겠습니다. 주제와 관련된 좋은 참고 자료를 추가하는 것도 가능합니다. 해당 Repository에서 학습을 하시다가 생기는 질문은 `Issue`에 올려주세요.  
 > 취준생 여러분의 건승을 기원합니다 :)
 
 * [미세먼지 같은 면접 팁](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Tip)
@@ -7,8 +7,6 @@
 </br>
 
 </br>
-
----
 
 </br>
 
@@ -178,8 +176,9 @@
 
 ## Front-End [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
 * 브라우저의 작동 원리
-* 이벤트 버블링과 캡처링
-* Event delegation
+* Document Object Model
+  * Event bubbling and Capturing
+  * Event delegation
 * CORS
 * 크로스 브라우징
 * 웹 성능과 관련된 Issues
