@@ -7,7 +7,7 @@
 * [크로스 브라우징](#크로스-브라우징)
 * [웹 성능과 관련된 Issues](#웹-성능과-관련된-issue-정리)
 * [CSS Methodology](#css-methodology)
-* [normalize.css vs reset.css](#normalize.css-vs-reset.css)
+* [normalize.css vs reset.css](#normalize-vs-reset)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
@@ -175,7 +175,7 @@ element 스타일의 default 값을 지정해주는 것이다. 선택자로는 �
 
 </br>
 
-## normalize.css vs reset.css
+## normalize vs reset
 브라우저마다 기본적으로 제공하는 element의 style을 통일시키기 위해 사용하는 두 `css`에 대해 알아본다.
 
 ### reset.css
