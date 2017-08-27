@@ -1,5 +1,7 @@
 <div align=center>
+
 ![](/assets/images/tech_interview_main.png)
+
 </div>
 
 
