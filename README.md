@@ -5,7 +5,7 @@
 </div>
 
 
-# Beginner for interview (기술 면접 가이드라인)
+# Technical Interview Guidelines for beginners
 예비 개발자들의 기술 면접 준비를 위한 자료를 정리해놓은 Repository입니다. 개발이라는 분야를 모두 담지는 못했습니다. 그저 가이드라인으로 참고해주시면 감사하겠습니다. 또한 제가 개인적으로 면접을 준비하면서 정리한 내용이라 잘못된 부분이 있을 수 있습니다. 이런 부분들에 대해서는 `Pull Request` or `Issue`로 참여해주시면 정말 감사하겠습니다. 주제와 관련된 좋은 참고 자료를 추가하는 것도 가능합니다. 해당 Repository에서 학습을 하시다가 생기는 질문은 `Issue`에 올려주세요.  
 > 취준생 여러분의 건승을 기원합니다 :)
 
@@ -14,15 +14,6 @@
 </br>
 
 </br>
-
-</br>
-
-## Algorithm (알고리즘) [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
-* 손코딩 및 코딩 테스트 대비  
-=> 대부분의 내용이 코드이기 때문에 별도의 [Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
-* 코딩 테스트를 위한 Tip
-* 문제 해결을 위한 전략적 접근
-* Sorting Algorithm
 
 </br>
 
@@ -140,6 +131,17 @@
 
 </br>
 
+
+## Algorithm (알고리즘) [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
+* 손코딩 및 코딩 테스트 대비  
+=> 대부분의 내용이 코드이기 때문에 별도의 [Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
+* 코딩 테스트를 위한 Tip
+* 문제 해결을 위한 전략적 접근
+* Sorting Algorithm
+
+</br>
+
+
 ---
 
 </br>
@@ -207,6 +209,8 @@
 => 각종 알고리즘에 대한 코드와 동영상 강의 링크를 제공합니다. (영어)
 * [awesome-interview-questions](https://github.com/MaximAbramchuck/awesome-interview-questions)  
 => 각종 언어, CS 기초에 대한 interview 질문들이 정리되어 있습니다. (영어)
+* [coding-interview-university](https://github.com/jwasham/coding-interview-university/blob/master/translations/README-ko.md)  
+=> (한국어 version) 구글 인터뷰를 준비하면서 정리한 자료가 한국어로 번역되어 있는 자료입니다. 
 
 </br>
 
