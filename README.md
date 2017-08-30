@@ -203,6 +203,7 @@
 
 #### 추가 자료
 * [Front-end-Developer-Interview-Questions (한국어)](https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Korean)
+* [Front-end Interview (영어)](http://thatjsdude.com/interview/index.html)
 
 </br>
 
