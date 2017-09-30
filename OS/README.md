@@ -48,10 +48,10 @@ _프로세스를 스케줄링하기 위한 Queue에는 세 가지 종류가 존�
 * Ready queue : 현재 메모리 내에 있으면서 CPU를 잡아서 실행되기를 기다리는 프로세스의 집합
 * Device queue : Device I/O 작업을 대기하고 있는 프로세스의 집합
 
-각각의 Queue에 프로세스들을 넣고 빼주는 스케줄러에도 크게 세 가지 종류가 존재한다.
+각각의 Queue에 프로세스들을 넣고 빼주는 스케줄러에도 크게 __세 가지 종류가__ 존재한다.
 
 ### 장기스케줄러(Long-term scheduler or job scheduler)
-메모리는 한정되어 있는데 많은 프로세스들이 한꺼번에 메모리에 올라올 경우, 대용량 메모리에 임시로 저장된다. 이 pool에 저장되어 있는 프로세스 중 어떤 프로세스에 메모리를 할당하여 ready queue로 보낼지 결정하는 역할을 한다.
+메모리는 한정되어 있는데 많은 프로세스들이 한꺼번에 메모리에 올라올 경우, 대용량 메모리(일반적으로 디스크)에 임시로 저장된다. 이 pool에 저장되어 있는 프로세스 중 어떤 프로세스에 메모리를 할당하여 ready queue로 보낼지 결정하는 역할을 한다.
 * 메모리와 디스크 사이의 스케줄링을 담당.
 * 프로세스에 memory(및 각종 리소스)를 할당(admit)
 * degree of Multiprogramming 제어  
@@ -93,7 +93,7 @@ _스케줄링 대상은 Ready Queue에 있는 프로세스들이다._
 ### FCFS(First Come First Served)
 #### 특징
 * 먼저 온 고객을 먼저 서비스해주는 방식, 즉 먼저 온 순서대로 처리.
-* 비선점형(Nonpreemtive) 스케줄링  
+* 비선점형(Non-Preemptive) 스케줄링
 일단 CPU를 잡으면 CPU burst가 완료될 때까지 CPU를 반환하지 않는다. 할당되었던 CPU가 반환될 때만 스케줄링이 이루어진다.
 #### 문제점
 * convoy effect  
@@ -104,7 +104,7 @@ _스케줄링 대상은 Ready Queue에 있는 프로세스들이다._
 ### SJF(Shortest - Job - First)
 #### 특징
 * 다른 프로세스가 먼저 도착했어도 CPU burst time이 짧은 프로세스에게 선 할당
-* 비선점형(Nonpreemtive) 스케줄링
+* 비선점형(Non-Preemptive) 스케줄링
 #### 문제점
 * starvation
 효율성을 추구하는게 가장 중요하지만 특정 프로세스가 지나치게 차별받으면 안되는 것이다. 이 스케줄링은 극단적으로 CPU사용이 짧은 job을 선호한다. 그래서 사용 시간이 긴 프로세스는 거의 영원히 CPU를 할당받을 수 없다.
@@ -114,10 +114,10 @@ _스케줄링 대상은 Ready Queue에 있는 프로세스들이다._
 ### SRT(Shortest Remaining time First)
 #### 특징
 * 새로운 프로세스가 도착할 때마다 새로운 스케줄링이 이루어진다.
-* 선점형 (preemtive) 스케줄링  
+* 선점형 (Preemptive) 스케줄링
 현재 수행중인 프로세스의 남은 burst time보다 더 짧은 CPU burst time을 가지는 새로운 프로세스가 도착하면 CPU를 뺏긴다.
 
-#### 문제
+#### 문제점
 * starvation
 * 새로운 프로세스가 도달할 때마다 스케줄링을 다시하기 때문에 CPU burst time(CPU 사용시간)을 측정할 수가 없다.
 
@@ -126,11 +126,16 @@ _스케줄링 대상은 Ready Queue에 있는 프로세스들이다._
 ### Priority Scheduling
 #### 특징
 * 우선순위가 가장 높은 프로세스에게 CPU를 할당하겠다. 우선순위란 정수로 표현하게 되고 작은 숫자가 우선순위가 높다.
-* 선점형 스케줄링  
-더 높은 우선순위의 프로세스가 도착하면 뺏는다.
+* 선점형 스케줄링(Preemptive) 방식
+더 높은 우선순위의 프로세스가 도착하면 실행중인 프로세스를 멈추고 CPU를 선점한다.
+* 비선점형 스케줄링(Non-Preemptive) 방식
+더 높은 우선순위의 프로세스가 도착하면 Ready Queue의 Head에 넣는다.
+
 
 #### 문제점
 * starvation
+* 무기한 봉쇄(Indefinite blocking)
+실행 준비는 되어있으나 CPU를 사용못하는 프로세스를 CPU가 무기한 대기하는 상태
 #### 해결책
 * aging  
 아무리 우선순위가 낮은 프로세스라도 오래 기다리면 우선순위를 높여주자.
@@ -152,7 +157,9 @@ n개의 프로세스가 ready queue에 있고 할당시간이 q(time quantum)인
 공정한 스케줄링이라고 할 수 있다.
 
 #### 주의할 점
-설정한 `time quantum`이 너무 커지만 `FCFS`와 같아진다. 또 너무 작아지만 스케줄링 알고리즘의 목적에는 이상적이지만 잦은 context switch로 overhead가 발생한다.그렇기 때문에 적당한 `time quantum`을 설정하는 것이 중요하다.
+설정한 `time quantum`이 너무 커지면 `FCFS`와 같아진다.
+또 너무 작아지면 스케줄링 알고리즘의 목적에는 이상적이지만 잦은 context switch로 overhead가 발생한다.
+그렇기 때문에 적당한 `time quantum`을 설정하는 것이 중요하다.
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-4-운영체제)
 
