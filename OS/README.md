@@ -93,7 +93,7 @@ _스케줄링 대상은 Ready Queue에 있는 프로세스들이다._
 ### FCFS(First Come First Served)
 #### 특징
 * 먼저 온 고객을 먼저 서비스해주는 방식, 즉 먼저 온 순서대로 처리.
-* 비선점형(Non-Preemptive) 스케줄링
+* 비선점형(Non-Preemptive) 스케줄링  
 일단 CPU를 잡으면 CPU burst가 완료될 때까지 CPU를 반환하지 않는다. 할당되었던 CPU가 반환될 때만 스케줄링이 이루어진다.
 #### 문제점
 * convoy effect  
@@ -106,7 +106,7 @@ _스케줄링 대상은 Ready Queue에 있는 프로세스들이다._
 * 다른 프로세스가 먼저 도착했어도 CPU burst time이 짧은 프로세스에게 선 할당
 * 비선점형(Non-Preemptive) 스케줄링
 #### 문제점
-* starvation
+* starvation  
 효율성을 추구하는게 가장 중요하지만 특정 프로세스가 지나치게 차별받으면 안되는 것이다. 이 스케줄링은 극단적으로 CPU사용이 짧은 job을 선호한다. 그래서 사용 시간이 긴 프로세스는 거의 영원히 CPU를 할당받을 수 없다.
 
 </br>
@@ -126,15 +126,15 @@ _스케줄링 대상은 Ready Queue에 있는 프로세스들이다._
 ### Priority Scheduling
 #### 특징
 * 우선순위가 가장 높은 프로세스에게 CPU를 할당하겠다. 우선순위란 정수로 표현하게 되고 작은 숫자가 우선순위가 높다.
-* 선점형 스케줄링(Preemptive) 방식
+* 선점형 스케줄링(Preemptive) 방식  
 더 높은 우선순위의 프로세스가 도착하면 실행중인 프로세스를 멈추고 CPU를 선점한다.
-* 비선점형 스케줄링(Non-Preemptive) 방식
+* 비선점형 스케줄링(Non-Preemptive) 방식  
 더 높은 우선순위의 프로세스가 도착하면 Ready Queue의 Head에 넣는다.
 
 
 #### 문제점
 * starvation
-* 무기한 봉쇄(Indefinite blocking)
+* 무기한 봉쇄(Indefinite blocking)  
 실행 준비는 되어있으나 CPU를 사용못하는 프로세스를 CPU가 무기한 대기하는 상태
 #### 해결책
 * aging  
