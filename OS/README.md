@@ -114,7 +114,7 @@ _스케줄링 대상은 Ready Queue에 있는 프로세스들이다._
 ### SRT(Shortest Remaining time First)
 #### 특징
 * 새로운 프로세스가 도착할 때마다 새로운 스케줄링이 이루어진다.
-* 선점형 (Preemptive) 스케줄링
+* 선점형 (Preemptive) 스케줄링  
 현재 수행중인 프로세스의 남은 burst time보다 더 짧은 CPU burst time을 가지는 새로운 프로세스가 도착하면 CPU를 뺏긴다.
 
 #### 문제점
