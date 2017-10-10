@@ -48,10 +48,10 @@ _프로세스를 스케줄링하기 위한 Queue에는 세 가지 종류가 존�
 * Ready queue : 현재 메모리 내에 있으면서 CPU를 잡아서 실행되기를 기다리는 프로세스의 집합
 * Device queue : Device I/O 작업을 대기하고 있는 프로세스의 집합
 
-각각의 Queue에 프로세스들을 넣고 빼주는 스케줄러에도 크게 세 가지 종류가 존재한다.
+각각의 Queue에 프로세스들을 넣고 빼주는 스케줄러에도 크게 __세 가지 종류가__ 존재한다.
 
 ### 장기스케줄러(Long-term scheduler or job scheduler)
-메모리는 한정되어 있는데 많은 프로세스들이 한꺼번에 메모리에 올라올 경우, 대용량 메모리에 임시로 저장된다. 이 pool에 저장되어 있는 프로세스 중 어떤 프로세스에 메모리를 할당하여 ready queue로 보낼지 결정하는 역할을 한다.
+메모리는 한정되어 있는데 많은 프로세스들이 한꺼번에 메모리에 올라올 경우, 대용량 메모리(일반적으로 디스크)에 임시로 저장된다. 이 pool에 저장되어 있는 프로세스 중 어떤 프로세스에 메모리를 할당하여 ready queue로 보낼지 결정하는 역할을 한다.
 * 메모리와 디스크 사이의 스케줄링을 담당.
 * 프로세스에 memory(및 각종 리소스)를 할당(admit)
 * degree of Multiprogramming 제어  
@@ -93,7 +93,7 @@ _스케줄링 대상은 Ready Queue에 있는 프로세스들이다._
 ### FCFS(First Come First Served)
 #### 특징
 * 먼저 온 고객을 먼저 서비스해주는 방식, 즉 먼저 온 순서대로 처리.
-* 비선점형(Nonpreemtive) 스케줄링  
+* 비선점형(Non-Preemptive) 스케줄링  
 일단 CPU를 잡으면 CPU burst가 완료될 때까지 CPU를 반환하지 않는다. 할당되었던 CPU가 반환될 때만 스케줄링이 이루어진다.
 #### 문제점
 * convoy effect  
@@ -104,9 +104,9 @@ _스케줄링 대상은 Ready Queue에 있는 프로세스들이다._
 ### SJF(Shortest - Job - First)
 #### 특징
 * 다른 프로세스가 먼저 도착했어도 CPU burst time이 짧은 프로세스에게 선 할당
-* 비선점형(Nonpreemtive) 스케줄링
+* 비선점형(Non-Preemptive) 스케줄링
 #### 문제점
-* starvation
+* starvation  
 효율성을 추구하는게 가장 중요하지만 특정 프로세스가 지나치게 차별받으면 안되는 것이다. 이 스케줄링은 극단적으로 CPU사용이 짧은 job을 선호한다. 그래서 사용 시간이 긴 프로세스는 거의 영원히 CPU를 할당받을 수 없다.
 
 </br>
@@ -114,10 +114,10 @@ _스케줄링 대상은 Ready Queue에 있는 프로세스들이다._
 ### SRT(Shortest Remaining time First)
 #### 특징
 * 새로운 프로세스가 도착할 때마다 새로운 스케줄링이 이루어진다.
-* 선점형 (preemtive) 스케줄링  
+* 선점형 (Preemptive) 스케줄링  
 현재 수행중인 프로세스의 남은 burst time보다 더 짧은 CPU burst time을 가지는 새로운 프로세스가 도착하면 CPU를 뺏긴다.
 
-#### 문제
+#### 문제점
 * starvation
 * 새로운 프로세스가 도달할 때마다 스케줄링을 다시하기 때문에 CPU burst time(CPU 사용시간)을 측정할 수가 없다.
 
@@ -126,11 +126,16 @@ _스케줄링 대상은 Ready Queue에 있는 프로세스들이다._
 ### Priority Scheduling
 #### 특징
 * 우선순위가 가장 높은 프로세스에게 CPU를 할당하겠다. 우선순위란 정수로 표현하게 되고 작은 숫자가 우선순위가 높다.
-* 선점형 스케줄링  
-더 높은 우선순위의 프로세스가 도착하면 뺏는다.
+* 선점형 스케줄링(Preemptive) 방식  
+더 높은 우선순위의 프로세스가 도착하면 실행중인 프로세스를 멈추고 CPU를 선점한다.
+* 비선점형 스케줄링(Non-Preemptive) 방식  
+더 높은 우선순위의 프로세스가 도착하면 Ready Queue의 Head에 넣는다.
+
 
 #### 문제점
 * starvation
+* 무기한 봉쇄(Indefinite blocking)  
+실행 준비는 되어있으나 CPU를 사용못하는 프로세스를 CPU가 무기한 대기하는 상태
 #### 해결책
 * aging  
 아무리 우선순위가 낮은 프로세스라도 오래 기다리면 우선순위를 높여주자.
@@ -152,7 +157,9 @@ n개의 프로세스가 ready queue에 있고 할당시간이 q(time quantum)인
 공정한 스케줄링이라고 할 수 있다.
 
 #### 주의할 점
-설정한 `time quantum`이 너무 커지만 `FCFS`와 같아진다. 또 너무 작아지만 스케줄링 알고리즘의 목적에는 이상적이지만 잦은 context switch로 overhead가 발생한다.그렇기 때문에 적당한 `time quantum`을 설정하는 것이 중요하다.
+설정한 `time quantum`이 너무 커지면 `FCFS`와 같아진다.
+또 너무 작아지면 스케줄링 알고리즘의 목적에는 이상적이지만 잦은 context switch로 overhead가 발생한다.
+그렇기 때문에 적당한 `time quantum`을 설정하는 것이 중요하다.
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-4-운영체제)
 
@@ -190,6 +197,50 @@ _글로만 설명하기가 어려운 것 같아 그림과 함께 설명된 링�
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-4-운영체제)
 
 </br>
+
+## 프로세스 동기화
+### Critical Section(임계영역)
+멀티 스레딩에 문제점에서 나오듯, 동일한 자원을 동시에 접근하는 작업(e.g. 공유하는 변수 사용, 동일 파일을 사용하는 등)을 실행하는 코드 영역을 Critical Section이라 칭한다.
+
+### Critical Section Problem(임계영역 문제)
+프로세스들이 Critical Section을 함께 사용할 수 있는 프로토콜을 설계하는 것이다.
+#### Requirements(해결을 위한 기본조건)
++ Mutual Exclusion(상호 배제)  
+프로세스 P1이 Critical Section에서 실행중이라면, 다른 프로세스들은 그들이 가진 Critical Section에서 실행될 수 없다.
++ Progress(진행)  
+Critical Section에서 실행중인 프로세스가 없고, 별도의 동작이 없는 프로세스들만 Critical Section 진입 후보로서 참여될 수 있다.
++ Bounded Waiting(한정된 대기)  
+P1가 Critical Section에 진입 신청 후 부터 받아들여질 때가지, 다른 프로세스들이 Critical Section에 진입하는 횟수는 제한이 있어야 한다.
+
+## 해결책
+### Lock
++ 하드웨어 기반 해결책으로써, 동시에 공유 자원에 접근하는 것을 막기 위해 Critical Section에 진입하는 프로세스는 Lock을 획득하고 Critical Section을 빠져나올 때, Lock을 방출함으로써 동시에 접근이 되지 않도록 한다.
+#### 한계
++ 다중처리기 환경에서는 시간적인 효율성 측면에서 적용할 수 없다.
+
+### Semaphores(세마포)
++ 소프트웨어상에서 Critical Section 문제를 해결하기 위한 동기화 도구
+#### 종류
+OS는 Counting/Binary 세마포를 구분한다
++ 카운팅 세마포  
+__가용한 개수를 가진 자원__ 에 대해 접근을 제어하는데 사용되며, 세마포는 그 가용한 __자원의 개수__ 로 초기화 된다.
+자원을 사용하면 세마포가 감소, 방출하면 세마포가 증가 한다.
+
++ 이진 세마포
+MUTEX라고도 부르며, 상호배제의 (Mutual Exclusion)의 머릿글자를 따서 만들어졌다.
+이름 그대로 0과 1 사이의 값만 가능하며, 다중 프로세스들 사이의 Critical Section문제를 해결하기 위해 사용한다.
+
+#### 단점
++ Busy Waiting(바쁜 대기)  
+Critical Section에 진입해야하는 프로세스는 진입 코드를 계속 반복 실행해야 하며, CPU 시간을 낭비하게 된다.
+
+#### Deadlock(교착상태)
++ 세마포가 Ready Queue를 가지고 있고, 둘 이상의 프로세스가 Critical Section 진입을 무한정 기다리고 있고, Critical Section 에서 실행되는 프로세스는 진입 대기 중인 프로세스가 실행되야만 빠져나올 수 있는 상황을 지칭한다.
+
+### 모니터
++ 고급 언어의 설계 구조물로서, 개발자의 코드를 상호배제 하게끔 만든 추상화된 데이터 형태이다.
+
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-4-운영체제)
 
 ## 캐시의 지역성
 ### 캐시의 지역성 원리
