@@ -204,6 +204,8 @@
 #### 추가 자료
 * [Front-end-Developer-Interview-Questions (한국어)](https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Korean)
 * [Front-end Interview (영어)](http://thatjsdude.com/interview/index.html)
+* [Front-end Checklist](https://github.com/thedaviddias/Front-End-Checklist)
+  * 면접 시 물어보기 가장 좋은 것들이 '기본'에 대한 내용이라고 생각되는데요, 그 '기본'에 대해 체크리스트 형식으로 잘 정리되어 있는 문서를 공유합니다.
 
 </br>
 
