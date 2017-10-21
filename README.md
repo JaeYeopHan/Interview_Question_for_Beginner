@@ -93,6 +93,9 @@
 * 동기와 비동기의 차이
 * 멀티스레드
   * 장점과 단점
+* 프로세스 동기화
+  * Critical Section
+  * 해결책
 * 캐시의 지역성
   * Locality
   * Caching line
