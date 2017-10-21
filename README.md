@@ -204,6 +204,8 @@
 #### 추가 자료
 * [Front-end-Developer-Interview-Questions (한국어)](https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Korean)
 * [Front-end Interview (영어)](http://thatjsdude.com/interview/index.html)
+* [Front-end Checklist](https://github.com/thedaviddias/Front-End-Checklist)
+  * 면접 시 물어보기 가장 좋은 것들이 '기본'에 대한 내용이라고 생각되는데요, 그 '기본'에 대해 체크리스트 형식으로 잘 정리되어 있는 문서를 공유합니다.
 
 </br>
 
@@ -221,7 +223,8 @@
 => (한국어 version) 구글 인터뷰를 준비하면서 정리한 자료가 한국어로 번역되어 있는 자료입니다.
 * [코딩 인터뷰 완전분석](http://www.yes24.com/24/Goods/44305533?Acode=101)
 => (도서) 코딩 인터뷰에 관련된 도서 중 가장 유명한 책이라고 생각되는데요, 최근 개정판이 발간되었습니다.
-
+* [tech-interview-handbook Github repository](https://github.com/yangshun/tech-interview-handbook)  
+=> (영어) 코딩 인터뷰에 관련되어 정리되어있는 respository 입니다.
 </br>
 
 ---
@@ -229,6 +232,9 @@
 </br>
 
 ## Contributor
+해당 Repository에 기여를 해주신 분들입니다 :)
+* [joshua-qa](https://github.com/joshua-qa)
+* [yoonsubKim](https://github.com/yoonsubKim)
 
 </br>
 
