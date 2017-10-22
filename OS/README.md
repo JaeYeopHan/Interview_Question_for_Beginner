@@ -282,6 +282,7 @@ __단편화__ (__Fragmentation__) : 프로세스들이 메모리에 적재되고
 ### Segmentation(세그멘테이션)
 
 
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-4-운영체제)
 
 ## 캐시의 지역성
 ### 캐시의 지역성 원리
