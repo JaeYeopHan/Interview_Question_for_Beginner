@@ -92,7 +92,7 @@ _cf) 보다 자세한 내용에 대해서는 Reference를 참고해주세요._
 위 내용은 간단히 요약된 내용이므로 보다 자세한 내용은 다음 Reference를 참고하시면 됩니다 :)
 ##### Reference
 * [REST API 제대로 알고 사용하기 - TOAST](http://meetup.toast.com/posts/92)
-* [바쁜 개발자들을 위핸 RESTFul api 논문 요약](https://blog.npcode.com/2017/03/02/%EB%B0%94%EC%81%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%93%A4%EC%9D%84-%EC%9C%84%ED%95%9C-rest-%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD/)
+* [바쁜 개발자들을 위한 RESTFul api 논문 요약](https://blog.npcode.com/2017/03/02/%EB%B0%94%EC%81%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%93%A4%EC%9D%84-%EC%9C%84%ED%95%9C-rest-%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD/)
 * [REST 아키텍처를 훌륭하게 적용하기 위한 몇 가지 디자인 팁 - spoqa](https://spoqa.github.io/2012/02/27/rest-introduction.html)
 
 
