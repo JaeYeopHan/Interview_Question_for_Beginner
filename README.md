@@ -96,6 +96,10 @@
 * 프로세스 동기화
   * Critical Section
   * 해결책
+* 메모리 관리 전략
+  * 배경
+  * Paging
+  * Segmentation
 * 캐시의 지역성
   * Locality
   * Caching line
