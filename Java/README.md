@@ -28,20 +28,19 @@
 </br>
 
 ## Collection
-Java Collection에는 `List`, `Map`, `Set` 인터페이스를 기준으로 여러 구현체가 존재한다. 이에 더해 `Stack`과 `Queue` 인터페이스도 존재한다.
+Java Collection에는 `List`, `Map`, `Set` 인터페이스를 기준으로 여러 구현체가 존재한다. 이에 더해 `Stack`과 `Queue` 인터페이스도 존재한다. 왜 이러한 Collection을 사용하는 것일까? 그것은 다수의 Data를 다루는데 표준화된 클래스들을 제공해주기 때문에 편하게 DataStructure를 직접 구현하지 않고 사용할 수 있는 것이다.
 * List  
-대표적인 구현체로는 `ArrayList`가 존재한다. DataStructure 부분에서 설명한 Array라고 생각하면 쉽지만 내부적으로는 `Red-Black tree`로 구성되어 있다. 이외에도 `LinkedList` 등의 구현체가 존재한다.
+  `List` 인터페이스를 직접 `@Override`를 통해 사용자가 정의하여 사용할 수도 있으며, 대표적인 구현체로는 `ArrayList`가 존재하며, 이는  기존에 있었던 `Vector`를 개선한 것이다. DataStructure 부분에서 설명한 Array라고 생각하면 쉽지만 내부적으로는 `Red-Black tree`로 구성되어 있다. 이외에도 `LinkedList` 등의 구현체가 존재한다. 
 
 * Map  
-대표적인 구현체로는 `HashMap`이 존재한다. (밑에서 살펴볼 멀티스레드 환경에서의 개발 부분에서 HashTable과의 차이점에 대해 살펴본다.) key-value의 구조로 이루어져 있으며 Map에 대한 구체적인 내용은 DataStructure부분의 hashtable과 일치한다. key를 기준으로 중복된 값을 저장하지 않으며 순서를 보장하지 않는다. key에 대해서 순서를 보장하기 위해서는 `LinkedHashMap`을 사용한다.
-
+  대표적인 구현체로는 `HashMap`이 존재한다. (밑에서 살펴볼 멀티스레드 환경에서의 개발 부분에서 HashTable과의 차이점에 대해 살펴본다.) key-value의 구조로 이루어져 있으며 Map에 대한 구체적인 내용은 DataStructure부분의 hashtable과 일치한다. key를 기준으로 중복된 값을 저장하지 않으며 순서를 보장하지 않는다. key에 대해서 순서를 보장하기 위해서는 `LinkedHashMap`을 사용한다.
 * Set  
-대표적인 구현체로는 `HashSet`이 존재한다. `value`에 대해서 중복된 값을 저장하지 않는다. 사실 Set 자료구조는 Map의 key-value 구조에서 key 대신에 value가 들어가 value를 key로 하는 자료구조일 뿐이다. 마찬가지로 순서를 보장하지 않으며 순서를 보장해주기 위해서는 `LinkedHashSet`을 사용한다.
-
+  대표적인 구현체로는 `HashSet`이 존재한다. `value`에 대해서 중복된 값을 저장하지 않는다. 사실 Set 자료구조는 Map의 key-value 구조에서 key 대신에 value가 들어가 value를 key로 하는 자료구조일 뿐이다. 마찬가지로 순서를 보장하지 않으며 순서를 보장해주기 위해서는 `LinkedHashSet`을 사용한다.
 * Stack과 Queue  
-DataStructure 부분의 설명을 참고하면 된다.
-
-
+  `Stack` 과 `Queue` 객체를 직접 구현하여 사용할 수 있으며, 자세한 부분은 DataStructure 부분의 설명을 참고하면 된다.
+* Arrays  
+ `Arrays`는 자신이 만든 배열을 다루는데 유용한 메서드가 정의되어 있다. `Arrays.sort()`, `Arrays.binarySearch()` 등을 통해 배열을 편하게 정렬시키고 검색할 수 있으며, `asList()` 를 이용하여 `List` 를 반환할 수도 있다.
+ 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-1-java)
 
 </br>
@@ -66,20 +65,20 @@ DataStructure 부분의 설명을 참고하면 된다.
 
 ## final keyword
 * final class  
-다른 클래스에서 상속하지 못한다.
+  다른 클래스에서 상속하지 못한다.
 
 * final method  
-다른 메소드에서 오버라이딩하지 못한다.
+  다른 메소드에서 오버라이딩하지 못한다.
 
 * final variable  
-변하지 않는 상수값이 되어 새로 할당할 수 없는 변수가 된다.
+  변하지 않는 상수값이 되어 새로 할당할 수 없는 변수가 된다.
 
 추가적으로 혼동할 수 있는 두 가지를 추가해봤다.
 * finally  
-`try-catch` or `try-catch-resource` 구문을 사용할 때, 정상적으로 작업을 한 경우와 에러가 발생했을 경우를 포함하여 마무리 해줘야하는 작업이 존재하는 경우에 해당하는 코드를 작성해주는 코드 블록이다.
+  `try-catch` or `try-catch-resource` 구문을 사용할 때, 정상적으로 작업을 한 경우와 에러가 발생했을 경우를 포함하여 마무리 해줘야하는 작업이 존재하는 경우에 해당하는 코드를 작성해주는 코드 블록이다.
 
 * finalize()  
-keyword도 아니고 code block도 아닌 메소드이다. `GC`에 의해 호출되는 함수로 절대 호출해서는 안 되는 함수이다. `Object` 클래스에 정의되어 있으며 GC가 발생하는 시점이 불분명하기 때문에 해당 메소드가 실행된다는 보장이 없다. 또한 `finalize()` 메소드가 오버라이딩 되어 있으면 GC가 이루어질 때 바로 Garbage Collecting 되지 않는다. GC가 지연되면서 OOME(Out of Memory Exception)이 발생할 수 있다.
+  keyword도 아니고 code block도 아닌 메소드이다. `GC`에 의해 호출되는 함수로 절대 호출해서는 안 되는 함수이다. `Object` 클래스에 정의되어 있으며 GC가 발생하는 시점이 불분명하기 때문에 해당 메소드가 실행된다는 보장이 없다. 또한 `finalize()` 메소드가 오버라이딩 되어 있으면 GC가 이루어질 때 바로 Garbage Collecting 되지 않는다. GC가 지연되면서 OOME(Out of Memory Exception)이 발생할 수 있다.
 
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-1-java)
@@ -88,9 +87,9 @@ keyword도 아니고 code block도 아닌 메소드이다. `GC`에 의해 호출
 
 ## Overriding vs Overloading
 * 오버라이딩(Overriding)  
-상속받은 클래스에 존재하는 메소드를 하위 클래스에서 필요에 맞게 재정의하는 것을 의미한다.
+  상속받은 클래스에 존재하는 메소드를 하위 클래스에서 필요에 맞게 재정의하는 것을 의미한다.
 * 오버로딩(Overloading)  
-같은 클래스 내에 return value와 메소드명이 동일한 메소드를 매개변수만 다르게 만들어 다양한 상황에 메소드가 호출될 수 있도록 하는 것입니다.
+  같은 클래스 내에 return value와 메소드명이 동일한 메소드를 매개변수만 다르게 만들어 다양한 상황에 메소드가 호출될 수 있도록 하는 것입니다.
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-1-java)
 
@@ -100,16 +99,16 @@ keyword도 아니고 code block도 아닌 메소드이다. `GC`에 의해 호출
 변수 또는 메소드의 접근 범위를 설정해주기 위해서 사용하는 Java의 예약어를 의미하며 총 네 가지 종류가 존재한다.
 
 * public  
-어떤 클래스에서라도 접근이 가능하다.
+  어떤 클래스에서라도 접근이 가능하다.
 
 * protected  
-클래스가 정의되어 있는 해당 패키지 내 그리고 해당 클래스를 상속받은 외부 패키지의 클래스에서 접근이 가능하다.
+  클래스가 정의되어 있는 해당 패키지 내 그리고 해당 클래스를 상속받은 외부 패키지의 클래스에서 접근이 가능하다.
 
 * (default)  
-클래스가 정의되어 있는 해당 패키지 내에서만 접근이 가능하도록 접근 범위를 제한한다.
+  클래스가 정의되어 있는 해당 패키지 내에서만 접근이 가능하도록 접근 범위를 제한한다.
 
 * private  
-정의된 해당 클래스에서만 접근이 가능하도록 접근 범위를 제한한다.
+  정의된 해당 클래스에서만 접근이 가능하도록 접근 범위를 제한한다.
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-1-java)
 
