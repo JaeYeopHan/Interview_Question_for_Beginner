@@ -4,6 +4,7 @@
 * [ ] New Resources
 * [ ] Suggestions
 * [ ] Questions
+* [ ] Comments
 
 #### Description
 (say something...)
