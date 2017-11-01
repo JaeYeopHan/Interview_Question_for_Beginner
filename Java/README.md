@@ -28,19 +28,16 @@
 </br>
 
 ## Collection
-Java Collection에는 `List`, `Map`, `Set` 인터페이스를 기준으로 여러 구현체가 존재한다. 이에 더해 `Stack`과 `Queue` 인터페이스도 존재한다. 왜 이러한 Collection을 사용하는 것일까? 그것은 다수의 Data를 다루는데 표준화된 클래스들을 제공해주기 때문에 편하게 DataStructure를 직접 구현하지 않고 사용할 수 있는 것이다.
+Java Collection에는 `List`, `Map`, `Set` 인터페이스를 기준으로 여러 구현체가 존재한다. 이에 더해 `Stack`과 `Queue` 인터페이스도 존재한다. 왜 이러한 Collection을 사용하는 것일까? 그것은 다수의 Data를 다루는데 표준화된 클래스들을 제공해주기 때문에 편하게 DataStructure를 직접 구현하지 않고 사용할 수 있는 것이며, 배열과는 다르게 객체를 보관하기 위한 공간을 미리 정하지 않아도 되므로, 상황에 따라 객체의 수를 동적으로 정할 수 있음으로서 프로그램의 공간적인 효율성 또한 높여준다.
 * List  
   `List` 인터페이스를 직접 `@Override`를 통해 사용자가 정의하여 사용할 수도 있으며, 대표적인 구현체로는 `ArrayList`가 존재하며, 이는  기존에 있었던 `Vector`를 개선한 것이다. DataStructure 부분에서 설명한 Array라고 생각하면 쉽지만 내부적으로는 `Red-Black tree`로 구성되어 있다. 이외에도 `LinkedList` 등의 구현체가 존재한다. 
-
 * Map  
   대표적인 구현체로는 `HashMap`이 존재한다. (밑에서 살펴볼 멀티스레드 환경에서의 개발 부분에서 HashTable과의 차이점에 대해 살펴본다.) key-value의 구조로 이루어져 있으며 Map에 대한 구체적인 내용은 DataStructure부분의 hashtable과 일치한다. key를 기준으로 중복된 값을 저장하지 않으며 순서를 보장하지 않는다. key에 대해서 순서를 보장하기 위해서는 `LinkedHashMap`을 사용한다.
 * Set  
   대표적인 구현체로는 `HashSet`이 존재한다. `value`에 대해서 중복된 값을 저장하지 않는다. 사실 Set 자료구조는 Map의 key-value 구조에서 key 대신에 value가 들어가 value를 key로 하는 자료구조일 뿐이다. 마찬가지로 순서를 보장하지 않으며 순서를 보장해주기 위해서는 `LinkedHashSet`을 사용한다.
 * Stack과 Queue  
-  `Stack` 과 `Queue` 객체를 직접 구현하여 사용할 수 있으며, 자세한 부분은 DataStructure 부분의 설명을 참고하면 된다.
-* Arrays  
- `Arrays`는 자신이 만든 배열을 다루는데 유용한 메서드가 정의되어 있다. `Arrays.sort()`, `Arrays.binarySearch()` 등을 통해 배열을 편하게 정렬시키고 검색할 수 있으며, `asList()` 를 이용하여 `List` 를 반환할 수도 있다.
- 
+  `Stack` 객체는 직접 `new` 키워드로 사용할 수 있으며, `Queue` 인터페이스는 JDK 1.5부터 `LinkedList` 객체를 통해 `new`  키워드를 통해 사용할 수 있다. 자세한 부분은 DataStructure 부분의 설명을 참고하면 된다.
+
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-1-java)
 
 </br>
