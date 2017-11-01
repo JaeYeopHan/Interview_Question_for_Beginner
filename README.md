@@ -244,6 +244,7 @@
 * [yoonsubKim](https://github.com/yoonsubKim)
 * [joeunha](https://github.com/joeunha)
 * [jhleed](https://github.com/jhleed)
+* [StiKuan](https://github.com/StiKuan)
 
 </br>
 
