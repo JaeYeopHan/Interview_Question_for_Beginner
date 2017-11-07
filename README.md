@@ -241,8 +241,18 @@
 ## Contributor
 해당 Repository에 기여를 해주신 분들입니다 :)
 * [joshua-qa](https://github.com/joshua-qa)
+  * `New resource`: 유용한 알고리즘 연습 사이트 추가
 * [yoonsubKim](https://github.com/yoonsubKim)
+  * `New resource`: **Part 1 - 운영체제**
 * [joeunha](https://github.com/joeunha)
+  * `Fix typo`
+* [jhleed](https://github.com/jhleed)
+  * `Fix typo`
+* [StiKuan](https://github.com/StiKuan)
+  * `New resource`: **Part 2 - Java**
+* [hb1love](https://github.com/hb1love)
+  * `New resource`: **Part 1 - 운영체제**
+
 
 </br>
 
