@@ -25,7 +25,10 @@
   * Paging
   * Segmentation
 * [가상 메모리](#가상-메모리)
-* 배경
+  * 배경
+  * 가상 메모리가 하는 일
+  * Demand Paging(요구 페이징)
+  * 페이지 교체 알고리즘
 * [캐시의 지역성](#캐시의-지역성)
   * Locality
   * Caching line
