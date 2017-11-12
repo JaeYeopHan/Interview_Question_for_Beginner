@@ -1,0 +1,121 @@
+
+    <!DOCTYPE html>
+    <html>
+      <meta charset="UTF-8" />
+      <title>Readme</title>
+      <meta
+        name="description"
+        content="Part 1-6 Design Pattern
+
+Singleton
+
+뒤로
+
+
+
+Singleton
+
+필요성
+
+Singleton pattern(싱글턴 패턴)이란 애플리케이션에서 인스턴스를"
+      />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <link
+        href="//fonts.googleapis.com/css?family=Rubik|Unica+One"
+        rel="stylesheet"
+      />
+      <link rel="stylesheet" href="../static/css/normalize.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="../static/css/flexboxgrid.min.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="../static/css/github-flavored-markdown.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="../static/css/light.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css" />
+      <style>
+        body, .markdown-body {
+          font-family: "Rubik|Unica+One", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+      </style>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+      <script src="../static/main.js?a18b8814b45fe1c0"></script>
+      <body>
+        <div id="root"><div class="wrap container-fluid"><header class="site-header"><h1><a href="/">interview</a></h1><nav class="nav-link"><a href="/">Home</a><a href="https://github.com/JaeYeopHan/Interview_Question_for_Beginner">Git</a><a href="#" class="more"><svg aria-hidden="true" class="octicon" height="24" version="1.1" viewBox="0 0 12 16" width="18"><path d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"></path></svg></a></nav></header><section class="row main"><aside class="col-xs-12 col-sm-3 col-md-3 col-lg-3"><div class="chap"><span class="chap-title">Algorithm</span><ul><li class="active"><a href="../Algorithm/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title"></span><ul><li class=""><a href="../CONTRIBUTING.html">Contributing</a></li><li class="active"><a href="../README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Database</span><ul><li class="active"><a href="../Database/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Datastructure</span><ul><li class="active"><a href="../DataStructure/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Designpattern</span><ul><li class="active"><a href="../DesignPattern/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Development Common Sense</span><ul><li class="active"><a href="../Development_common_sense/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Frontend</span><ul><li class="active"><a href="../FrontEnd/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Java</span><ul><li class="active"><a href="../Java/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Javascript</span><ul><li class="active"><a href="../JavaScript/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Network</span><ul><li class="active"><a href="../Network/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Os</span><ul><li class="active"><a href="../OS/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Tip</span><ul><li class="active"><a href="../Tip/README.html">Readme</a></li></ul></div></aside><article class="col-xs-12 col-sm-9 col-md-9 col-lg-9"><div class="markdown-body"><h1 id="part-1-6-design-pattern"><a href="#part-1-6-design-pattern" aria-hidden="true"><span class="icon icon-link"></span></a>Part 1-6 Design Pattern</h1>
+<ul>
+<li><a href="#singleton">Singleton</a></li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a></p>
+</br>
+<h2 id="singleton"><a href="#singleton" aria-hidden="true"><span class="icon icon-link"></span></a>Singleton</h2>
+<h3 id="필요성"><a href="#%ED%95%84%EC%9A%94%EC%84%B1" aria-hidden="true"><span class="icon icon-link"></span></a>필요성</h3>
+<p><code>Singleton pattern(싱글턴 패턴)</code>이란 애플리케이션에서 인스턴스를 하나만 만들어 사용하기 위한 패턴이다. 커넥션 풀, 스레드 풀, 디바이스 설정 객체 등의 경우, 인스턴스를 여러 개 만들게 되면 자원을 낭비하게 되거나 버그를 발생시킬 수 있으므로 오직 하나만 생성하고 그 인스턴스를 사용하도록 하는 것이 이 패턴의 목적이다.</p>
+<h3 id="구현"><a href="#%EA%B5%AC%ED%98%84" aria-hidden="true"><span class="icon icon-link"></span></a>구현</h3>
+<p>하나의 인스턴스만을 유지하기 위해 인스턴스 생성에 특별한 제약을 걸어둬야 한다. new를 실행할 수 없도록 생성자에 private 접근 제어자를 지정하고, 유일한 단일 객체를 반환할 수 있도록 정적 메소드를 지원해야 한다. 또한 유일한 단일 객체를 참조할 정적 참조변수가 필요하다.</p>
+<pre><code class="language-java">public class Singleton {
+    private static Singleton singletonObject;
+
+    private Singleton() {}
+
+    public static Singleton getInstance() {
+        if (singletonObject == null) {
+            singletonObject = new Singleton();
+        }
+        return singletonObject;
+    }
+}
+</code></pre>
+<p>이 코드는 정말 위험하다. 멀티스레딩 환경에서 싱글턴 패턴을 적용하다보면 문제가 발생할 수 있다. 동시에 접근하다가 하나만 생성되어야 하는 인스턴스가 두 개 생성될 수 있는 것이다. 그렇게 때문에 <code>getSingletonObject()</code> 메소드를 동기화시켜야 멀티스레드 환경에서의 문제가 해결된다.</p>
+<pre><code class="language-java">public class Singleton {
+    private static Singleton singletonObject;
+
+    private Singleton() {}
+
+    public static synchronized Singleton getInstance() {
+        if (singletonObject == null) {
+            singletonObject = new Singleton();
+        }
+        return singletonObject;
+    }
+}
+</code></pre>
+<p><code>synchronized</code> 키워드를 사용하게 되면 성능상에 문제점이 존재한다. 좀 더 효율적으로 제어할 수는 없을까?</p>
+<pre><code class="language-java">public class Singleton {
+    private static volatile Singleton singletonObject;
+
+    private Singleton() {}
+
+    public static Singleton getInstance() {
+        if (singletonObject == null) {
+            synchronized (Singleton.class) {
+                if(singletonObject == null) {
+                    singletonObject = new Singleton();
+                }
+            }
+        }
+        return singletonObject;
+    }
+}
+</code></pre>
+<p><code>DCL(Double Checking Locking)</code>을 써서 <code>getInstance()</code>에서 <strong>동기화 되는 영역을 줄일 수 있다.</strong> 초기에 객체를 생성하지 않으면서도 동기화하는 부분을 작게 만들었다. 그러나 이 코드는 <strong>멀티코어 환경에서 동작할 때,</strong> 하나의 CPU를 제외하고는 다른 CPU가 lock이 걸리게 된다. 그렇기 때문에 다른 방법이 필요하다.</p>
+<pre><code class="language-java">public class Singleton {
+    private static volatile Singleton singletonObject = new Singleton();
+
+    private Singleton() {}
+
+    public static Singleton getSingletonObject() {
+        return singletonObject;
+    }
+}
+</code></pre>
+<p>클래스가 로딩되는 시점에 미리 객체를 생성해두고 그 객체를 반환한다.</p>
+<p><em>cf) <code>volatile</code> : 컴파일러가 특정 변수에 대해 옵티마이져가 캐싱을 적용하지 못하도록 하는 키워드이다.</em></p>
+<h4 id="reference"><a href="#reference" aria-hidden="true"><span class="icon icon-link"></span></a>Reference</h4>
+<ul>
+<li><a href="http://asfirstalways.tistory.com/335">http://asfirstalways.tistory.com/335</a></li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-1-6-design-pattern">위로</a></p>
+</br>
+</br>
+<p><em>Design pattern.end</em>  </p>
+</div></article></section><footer>© 2017 <a>interview</a>. All rights reserved.</footer></div></div>
+      </body>
+    </html>
+  

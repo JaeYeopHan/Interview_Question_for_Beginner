@@ -1,0 +1,199 @@
+
+    <!DOCTYPE html>
+    <html>
+      <meta charset="UTF-8" />
+      <title>Readme</title>
+      <meta
+        name="description"
+        content="Part 2-1 Java
+
+JVM에 대해서, GC의 원리
+
+Collection
+
+Annotation
+
+Generic
+
+final
+
+Overriding vs Overloading
+
+"
+      />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <link
+        href="//fonts.googleapis.com/css?family=Rubik|Unica+One"
+        rel="stylesheet"
+      />
+      <link rel="stylesheet" href="../static/css/normalize.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="../static/css/flexboxgrid.min.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="../static/css/github-flavored-markdown.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="../static/css/light.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css" />
+      <style>
+        body, .markdown-body {
+          font-family: "Rubik|Unica+One", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+      </style>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+      <script src="../static/main.js?a18b8814b45fe1c0"></script>
+      <body>
+        <div id="root"><div class="wrap container-fluid"><header class="site-header"><h1><a href="/">interview</a></h1><nav class="nav-link"><a href="/">Home</a><a href="https://github.com/JaeYeopHan/Interview_Question_for_Beginner">Git</a><a href="#" class="more"><svg aria-hidden="true" class="octicon" height="24" version="1.1" viewBox="0 0 12 16" width="18"><path d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"></path></svg></a></nav></header><section class="row main"><aside class="col-xs-12 col-sm-3 col-md-3 col-lg-3"><div class="chap"><span class="chap-title">Algorithm</span><ul><li class="active"><a href="../Algorithm/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title"></span><ul><li class=""><a href="../CONTRIBUTING.html">Contributing</a></li><li class="active"><a href="../README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Database</span><ul><li class="active"><a href="../Database/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Datastructure</span><ul><li class="active"><a href="../DataStructure/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Designpattern</span><ul><li class="active"><a href="../DesignPattern/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Development Common Sense</span><ul><li class="active"><a href="../Development_common_sense/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Frontend</span><ul><li class="active"><a href="../FrontEnd/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Java</span><ul><li class="active"><a href="../Java/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Javascript</span><ul><li class="active"><a href="../JavaScript/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Network</span><ul><li class="active"><a href="../Network/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Os</span><ul><li class="active"><a href="../OS/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Tip</span><ul><li class="active"><a href="../Tip/README.html">Readme</a></li></ul></div></aside><article class="col-xs-12 col-sm-9 col-md-9 col-lg-9"><div class="markdown-body"><h1 id="part-2-1-java"><a href="#part-2-1-java" aria-hidden="true"><span class="icon icon-link"></span></a>Part 2-1 Java</h1>
+<ul>
+<li><a href="#jvm%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C,-gc%EC%9D%98-%EC%9B%90%EB%A6%AC">JVM에 대해서, GC의 원리</a></li>
+<li><a href="#collection">Collection</a></li>
+<li><a href="#annotation">Annotation</a></li>
+<li><a href="#generic">Generic</a></li>
+<li><a href="#final">final</a></li>
+<li><a href="#overriding-vs-overloading">Overriding vs Overloading</a></li>
+<li><a href="#access-modifier">Access Modifier</a></li>
+<li><a href="#wrapper-class">Wrapper class</a></li>
+<li>
+<p><a href="#multi-thread-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EA%B0%9C%EB%B0%9C">Multi-Thread 환경에서의 개발</a></p>
+<ul>
+<li>Field member</li>
+<li>Synchronized</li>
+<li>ThreadLocal</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a></p>
+</br>
+<h2 id="jvm에-대해서-gc의-원리"><a href="#jvm%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-gc%EC%9D%98-%EC%9B%90%EB%A6%AC" aria-hidden="true"><span class="icon icon-link"></span></a>JVM에 대해서, GC의 원리</h2>
+<p>그림과 함께 설명해야 하는 부분이 많아 링크를 첨부합니다.  </p>
+<ul>
+<li><a href="http://asfirstalways.tistory.com/158">Java Virtual Machine에 대해서</a></li>
+<li><a href="http://asfirstalways.tistory.com/159">Garbage Collection 에 대해서</a></li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-2-1-java">위로</a></p>
+</br>
+<h2 id="collection"><a href="#collection" aria-hidden="true"><span class="icon icon-link"></span></a>Collection</h2>
+<p>Java Collection에는 <code>List</code>, <code>Map</code>, <code>Set</code> 인터페이스를 기준으로 여러 구현체가 존재한다. 이에 더해 <code>Stack</code>과 <code>Queue</code> 인터페이스도 존재한다. 왜 이러한 Collection을 사용하는 것일까? 그것은 다수의 Data를 다루는데 표준화된 클래스들을 제공해주기 때문에 편하게 DataStructure를 직접 구현하지 않고 사용할 수 있는 것이며, 배열과는 다르게 객체를 보관하기 위한 공간을 미리 정하지 않아도 되므로, 상황에 따라 객체의 수를 동적으로 정할 수 있음으로서 프로그램의 공간적인 효율성 또한 높여준다.</p>
+<ul>
+<li>List<br>
+<code>List</code> 인터페이스를 직접 <code>@Override</code>를 통해 사용자가 정의하여 사용할 수도 있으며, 대표적인 구현체로는 <code>ArrayList</code>가 존재하며, 이는  기존에 있었던 <code>Vector</code>를 개선한 것이다. DataStructure 부분에서 설명한 Array라고 생각하면 쉽지만 내부적으로는 <code>Red-Black tree</code>로 구성되어 있다. 이외에도 <code>LinkedList</code> 등의 구현체가 존재한다. </li>
+<li>Map<br>
+대표적인 구현체로는 <code>HashMap</code>이 존재한다. (밑에서 살펴볼 멀티스레드 환경에서의 개발 부분에서 HashTable과의 차이점에 대해 살펴본다.) key-value의 구조로 이루어져 있으며 Map에 대한 구체적인 내용은 DataStructure부분의 hashtable과 일치한다. key를 기준으로 중복된 값을 저장하지 않으며 순서를 보장하지 않는다. key에 대해서 순서를 보장하기 위해서는 <code>LinkedHashMap</code>을 사용한다.</li>
+<li>Set<br>
+대표적인 구현체로는 <code>HashSet</code>이 존재한다. <code>value</code>에 대해서 중복된 값을 저장하지 않는다. 사실 Set 자료구조는 Map의 key-value 구조에서 key 대신에 value가 들어가 value를 key로 하는 자료구조일 뿐이다. 마찬가지로 순서를 보장하지 않으며 순서를 보장해주기 위해서는 <code>LinkedHashSet</code>을 사용한다.</li>
+<li>Stack과 Queue<br>
+<code>Stack</code> 객체는 직접 <code>new</code> 키워드로 사용할 수 있으며, <code>Queue</code> 인터페이스는 JDK 1.5부터 <code>LinkedList</code> 객체를 통해 <code>new</code>  키워드를 통해 사용할 수 있다. 자세한 부분은 DataStructure 부분의 설명을 참고하면 된다.</li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-2-1-java">위로</a></p>
+</br>
+<h2 id="annotation"><a href="#annotation" aria-hidden="true"><span class="icon icon-link"></span></a>Annotation</h2>
+<p>어노테이션이란 본래 주석이란 뜻으로, 인터페이스를 기반으로 한 문법이다. 주석과는 그 역할이 다르지만 주석처럼 코드에 달아 클래스에 특별한 의미를 부여하거나 기능을 주입할 수 있다. 또 해석되는 시점을 정할 수도 있다.(Retention Policy) 어노테이션에는 크게 세 가지 종류가 존재한다. JDK에 내장되어 있는 <code>built-in annotation</code>과 어노테이션에 대한 정보를 나타내기 위한 어노테이션인 <code>Meta annotation</code> 그리고 개발자가 직접 만들어 내는 <code>Custom Annotation</code>이 있다. built-in annotation은 상속받아서 메소드를 오버라이드 할 때 나타나는 @Override 어노테이션이 그 대표적인 예이다. 어노테이션의 동작 대상을 결정하는 Meta-Annotation에도 여러 가지가 존재한다.</p>
+<h4 id="reference"><a href="#reference" aria-hidden="true"><span class="icon icon-link"></span></a>Reference</h4>
+<ul>
+<li><a href="http://asfirstalways.tistory.com/309">http://asfirstalways.tistory.com/309</a></li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-2-1-java">위로</a></p>
+</br>
+<h2 id="generic"><a href="#generic" aria-hidden="true"><span class="icon icon-link"></span></a>Generic</h2>
+<p>제네릭은 자바에서 안정성을 맡고 있다고 할 수 있다.  다양한 타입의 객체들을 다루는 메서드나 컬렉션 클래스에서 사용하는 것으로, 컴파일 과정에서 타입체크를 해주는 기능이다. 객체의 타입을 컴파일 시에 체크하기 때문에 객체의 타입 안전성을 높이고 형변환의 번거로움이 줄어든다. 자연스럽게 코드도 더 간결해진다. 예를 들면, Collection에 특정 객체만 추가될 수 있도록, 또는 특정한 클래스의 특징을 갖고 있는 경우에만 추가될 수 있도록 하는 것이 제네릭이다. 이로 인한 장점은 collection 내부에서 들어온 값이 내가 원하는 값인지 별도의 로직처리를 구현할 필요가 없어진다. 또한 api를 설계하는데 있어서 보다 명확한 의사전달이 가능해진다.</p>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-2-1-java">위로</a></p>
+</br>
+<h2 id="final-keyword"><a href="#final-keyword" aria-hidden="true"><span class="icon icon-link"></span></a>final keyword</h2>
+<ul>
+<li>
+<p>final class<br>
+다른 클래스에서 상속하지 못한다.</p>
+</li>
+<li>
+<p>final method<br>
+다른 메소드에서 오버라이딩하지 못한다.</p>
+</li>
+<li>
+<p>final variable<br>
+변하지 않는 상수값이 되어 새로 할당할 수 없는 변수가 된다.</p>
+</li>
+</ul>
+<p>추가적으로 혼동할 수 있는 두 가지를 추가해봤다.</p>
+<ul>
+<li>
+<p>finally<br>
+<code>try-catch</code> or <code>try-catch-resource</code> 구문을 사용할 때, 정상적으로 작업을 한 경우와 에러가 발생했을 경우를 포함하여 마무리 해줘야하는 작업이 존재하는 경우에 해당하는 코드를 작성해주는 코드 블록이다.</p>
+</li>
+<li>
+<p>finalize()<br>
+keyword도 아니고 code block도 아닌 메소드이다. <code>GC</code>에 의해 호출되는 함수로 절대 호출해서는 안 되는 함수이다. <code>Object</code> 클래스에 정의되어 있으며 GC가 발생하는 시점이 불분명하기 때문에 해당 메소드가 실행된다는 보장이 없다. 또한 <code>finalize()</code> 메소드가 오버라이딩 되어 있으면 GC가 이루어질 때 바로 Garbage Collecting 되지 않는다. GC가 지연되면서 OOME(Out of Memory Exception)이 발생할 수 있다.</p>
+</li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-2-1-java">위로</a></p>
+</br>
+<h2 id="overriding-vs-overloading"><a href="#overriding-vs-overloading" aria-hidden="true"><span class="icon icon-link"></span></a>Overriding vs Overloading</h2>
+<ul>
+<li>오버라이딩(Overriding)<br>
+상속받은 클래스에 존재하는 메소드를 하위 클래스에서 필요에 맞게 재정의하는 것을 의미한다.</li>
+<li>오버로딩(Overloading)<br>
+같은 클래스 내에 return value와 메소드명이 동일한 메소드를 매개변수만 다르게 만들어 다양한 상황에 메소드가 호출될 수 있도록 하는 것입니다.</li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-2-1-java">위로</a></p>
+</br>
+<h2 id="access-modifier"><a href="#access-modifier" aria-hidden="true"><span class="icon icon-link"></span></a>Access Modifier</h2>
+<p>변수 또는 메소드의 접근 범위를 설정해주기 위해서 사용하는 Java의 예약어를 의미하며 총 네 가지 종류가 존재한다.</p>
+<ul>
+<li>
+<p>public<br>
+어떤 클래스에서라도 접근이 가능하다.</p>
+</li>
+<li>
+<p>protected<br>
+클래스가 정의되어 있는 해당 패키지 내 그리고 해당 클래스를 상속받은 외부 패키지의 클래스에서 접근이 가능하다.</p>
+</li>
+<li>
+<p>(default)<br>
+클래스가 정의되어 있는 해당 패키지 내에서만 접근이 가능하도록 접근 범위를 제한한다.</p>
+</li>
+<li>
+<p>private<br>
+정의된 해당 클래스에서만 접근이 가능하도록 접근 범위를 제한한다.</p>
+</li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-2-1-java">위로</a></p>
+</br>
+<h2 id="wrapper-class"><a href="#wrapper-class" aria-hidden="true"><span class="icon icon-link"></span></a>Wrapper class</h2>
+<p>기본 자료형(Primitive data type)에 대한 클래스 표현을 Wrapper class라고 한다. <code>Integer</code>, <code>Float</code>, <code>Boolean</code> 등이 Wrapper class의 예이다. int를 Integer라는 객체로 감싸서 저장해야 하는 이유가 있을까? 일단 컬렉션에서 제네릭을 사용하기 위해서는 Wrapper class를 사용해줘야 한다. 또한 <code>null</code> 값을 반환해야만 하는 경우에는 return type을 Wrapper class로 지정하여 <code>null</code>을 반환하도록 할 수 있다. 하지만 이러한 상황을 제외한 일반적인 상황에서는 Wrapper class를 사용해야 하는 이유는 객체지향적인 프로그래밍을 위한 프로그래밍이 아니고서야 없다. 일단 해당 값을 비교할 때, Primitive data type인 경우에는 <code>==</code>로 바로 비교해줄 수 있다. 하지만 Wrapper class인 경우에는 <code>.intValue()</code> 메소드를 통해 해당 Wrapper class의 값을 가져와 비교해줘야 한다.</p>
+<h3 id="autoboxing"><a href="#autoboxing" aria-hidden="true"><span class="icon icon-link"></span></a>AutoBoxing</h3>
+<p>JDK 1.5 부터는 <code>AutoBoxing</code>과 <code>AutoUnBoxing</code>을 제공한다. 이 기능은 각 Wrapper class에 상응하는 Primitive data type일 경우에만 가능하다.</p>
+<pre><code class="language-java">List&#x3C;Integer> lists = new ArrayList&#x3C;>();
+lists.add(1);
+</code></pre>
+<p>우린 <code>Integer</code>라는 Wrapper class로 설정한 collection에 데이터를 add할 때 Integer 객체로 감싸서 넣지 않는다. 자바 내부에서 <code>AutoBoxing</code>해주기 때문이다.</p>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-2-1-java">위로</a></p>
+</br>
+<h2 id="multi-thread-환경에서의-개발"><a href="#multi-thread-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EA%B0%9C%EB%B0%9C" aria-hidden="true"><span class="icon icon-link"></span></a>Multi-Thread 환경에서의 개발</h2>
+<p>개발을 시작하는 입장에서 멀티 스레드를 고려한 프로그램을 작성할 일이 별로 없고 실제로 부딪히기 힘든 문제이기 때문에 많은 입문자들이 잘 모르고 있는 부분 중 하나라고 생각한다. 하지만 이 부분은 정말 중요하며 고려하지 않았을 경우 엄청난 버그를 양산할 수 있기 때문에 정말 중요하다.</p>
+<h3 id="field-member"><a href="#field-member" aria-hidden="true"><span class="icon icon-link"></span></a>Field member</h3>
+<p><code>필드(field)</code>란 클래스에 변수를 정의하는 공간을 의미한다. 이곳에 변수를 만들어두면 메소드 끼리 변수를 주고 받는 데 있어서 참조하기 쉬우므로 정말 편리한 공간 중 하나이다. 하지만 객체가 여러 스레드가 접근하는 싱글톤 객체라면 field에서 상태값을 갖고 있으면 안된다. 모든 변수를 parameter로 넘겨받고 return 하는 방식으로 코드를 구성해야 한다.</p>
+</br>
+<h3 id="동기화synchronized"><a href="#%EB%8F%99%EA%B8%B0%ED%99%94synchronized" aria-hidden="true"><span class="icon icon-link"></span></a>동기화(Synchronized)</h3>
+<p>필드에 Collection이 불가피하게 필요할 때는 어떠한 방법을 사용할까? Java에서는 <code>synchronized</code> 키워드를 사용하여 스레드 간 race condition을 통제한다. 이 키워드를 기반으로 구현된 Collection들도 많이 존재한다. <code>List</code>를 대신하여 <code>Vector</code>를 사용할 수 있고, <code>Map</code>을 대신하여 <code>HashTable</code>을 사용할 수 있다. 하지만 이 Collection들은 제공하는 API가 적고 성능도 좋지 않다.</p>
+<p>기본적으로는 <code>Collections</code>라는 util 클래스에서 제공되는 static 메소드를 통해 이를 해결할 수 있다. <code>Collections.synchroziedList()</code>, <code>Collections.synchroziedSet()</code>, <code>Collections.synchroziedMap()</code> 등이 존재한다.
+JDK 1.7 부터는 <code>concurrent package</code>를 통해 <code>ConcurrentHashMap</code>이라는 구현체를 제공한다. Collections util을 사용하는 것보다 <code>synchronized</code> 키워드가 적용된 범위가 좁아서 보다 좋은 성능을 낼 수 있는 자료구조이다.</p>
+</br>
+<h3 id="threadlocal"><a href="#threadlocal" aria-hidden="true"><span class="icon icon-link"></span></a>ThreadLocal</h3>
+<p>스레드 사이에 간섭이 없어야 하는 데이터에 사용한다. 멀티스레드 환경에서는 클래스의 필드에 멤버를 추가할 수 없고 매개변수로 넘겨받아야 하기 때문이다. 즉, 스레드 내부의 싱글톤을 사용하기 위해 사용한다. 주로 사용자 인증, 세션 정보, 트랜잭션 컨텍스트에 사용한다.</p>
+<p>스레드 풀 환경에서 ThreadLocal을 사용하는 경우 ThreadLocal 변수에 보관된 데이터의 사용이 끝나면 반드시 해당 데이터를 삭제해 주어야 한다. 그렇지 않을 경우 재사용되는 쓰레드가 올바르지 않은 데이터를 참조할 수 있다.</p>
+<p><em>ThreadLocal을 사용하는 방법은 간단하다.</em>
+1. ThreadLocal 객체를 생성한다.
+2. ThreadLocal.set() 메서드를 이용해서 현재 스레드의 로컬 변수에 값을 저장한다.
+3. ThreadLocal.get() 메서드를 이용해서 현재 스레드의 로컬 변수 값을 읽어온다.
+4. ThreadLocal.remove() 메서드를 이용해서 현재 스레드의 로컬 변수 값을 삭제한다.</p>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-2-1-java">위로</a></p>
+</br>
+<h4 id="personal-recommendation"><a href="#personal-recommendation" aria-hidden="true"><span class="icon icon-link"></span></a>Personal Recommendation</h4>
+<ul>
+<li>(도서) <a href="http://www.yes24.com/24/goods/14283616?scode=032&#x26;OzSrank=9">Effective Java 2nd Edition</a></li>
+<li>(도서) <a href="http://www.yes24.com/24/Goods/17350624?Acode=101">스프링 입문을 위한 자바 객체 지향의 원리와 이해</a></li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-2-1-java">위로</a></p>
+</br>
+</br>
+<p><em>Java.end</em>  </p>
+</div></article></section><footer>© 2017 <a>interview</a>. All rights reserved.</footer></div></div>
+      </body>
+    </html>
+  

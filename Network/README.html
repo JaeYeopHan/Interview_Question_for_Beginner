@@ -1,0 +1,228 @@
+
+    <!DOCTYPE html>
+    <html>
+      <meta charset="UTF-8" />
+      <title>Readme</title>
+      <meta
+        name="description"
+        content="Part 1-3 Network
+
+GET, POST 비교
+
+TCP 3-way-handshake
+
+TCP와 UDP의 비교
+
+HTTP와 HTTPS
+
+HTTP의 문제점들
+
+DNS Roun"
+      />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <link
+        href="//fonts.googleapis.com/css?family=Rubik|Unica+One"
+        rel="stylesheet"
+      />
+      <link rel="stylesheet" href="../static/css/normalize.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="../static/css/flexboxgrid.min.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="../static/css/github-flavored-markdown.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="../static/css/light.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css" />
+      <style>
+        body, .markdown-body {
+          font-family: "Rubik|Unica+One", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+      </style>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+      <script src="../static/main.js?a18b8814b45fe1c0"></script>
+      <body>
+        <div id="root"><div class="wrap container-fluid"><header class="site-header"><h1><a href="/">interview</a></h1><nav class="nav-link"><a href="/">Home</a><a href="https://github.com/JaeYeopHan/Interview_Question_for_Beginner">Git</a><a href="#" class="more"><svg aria-hidden="true" class="octicon" height="24" version="1.1" viewBox="0 0 12 16" width="18"><path d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"></path></svg></a></nav></header><section class="row main"><aside class="col-xs-12 col-sm-3 col-md-3 col-lg-3"><div class="chap"><span class="chap-title">Algorithm</span><ul><li class="active"><a href="../Algorithm/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title"></span><ul><li class=""><a href="../CONTRIBUTING.html">Contributing</a></li><li class="active"><a href="../README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Database</span><ul><li class="active"><a href="../Database/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Datastructure</span><ul><li class="active"><a href="../DataStructure/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Designpattern</span><ul><li class="active"><a href="../DesignPattern/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Development Common Sense</span><ul><li class="active"><a href="../Development_common_sense/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Frontend</span><ul><li class="active"><a href="../FrontEnd/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Java</span><ul><li class="active"><a href="../Java/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Javascript</span><ul><li class="active"><a href="../JavaScript/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Network</span><ul><li class="active"><a href="../Network/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Os</span><ul><li class="active"><a href="../OS/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Tip</span><ul><li class="active"><a href="../Tip/README.html">Readme</a></li></ul></div></aside><article class="col-xs-12 col-sm-9 col-md-9 col-lg-9"><div class="markdown-body"><h1 id="part-1-3-network"><a href="#part-1-3-network" aria-hidden="true"><span class="icon icon-link"></span></a>Part 1-3 Network</h1>
+<ul>
+<li><a href="#http%EC%9D%98-get%EA%B3%BC-post-%EB%B9%84%EA%B5%90">GET, POST 비교</a></li>
+<li><a href="#tcp-3-way-handshake">TCP 3-way-handshake</a></li>
+<li><a href="#tcp%EC%99%80-udp%EC%9D%98-%EB%B9%84%EA%B5%90">TCP와 UDP의 비교</a></li>
+<li>
+<p><a href="#http%EC%99%80-https">HTTP와 HTTPS</a></p>
+<ul>
+<li>HTTP의 문제점들</li>
+</ul>
+</li>
+<li><a href="#dns-round-robin-%EB%B0%A9%EC%8B%9D">DNS Round Robin 방식</a></li>
+<li><a href="#%EC%9B%B9-%ED%86%B5%EC%8B%A0%EC%9D%98-%ED%81%B0-%ED%9D%90%EB%A6%84">웹 통신의 큰 흐름</a></li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a></p>
+</br>
+<h2 id="http의-get과-post-비교"><a href="#http%EC%9D%98-get%EA%B3%BC-post-%EB%B9%84%EA%B5%90" aria-hidden="true"><span class="icon icon-link"></span></a>HTTP의 GET과 POST 비교</h2>
+<p>둘 다 HTTP프로토콜을 이용해서 서버에 무엇인가를 요청할 때 사용하는 방식이다. 하지만 둘의 특징을 제대로 이해하여 기술의 목적에 맞게 알맞은 용도에 사용해야한다.</p>
+<h3 id="get"><a href="#get" aria-hidden="true"><span class="icon icon-link"></span></a>GET</h3>
+<p>우선 GET 방식은 요청하는 데이터가 <code>HTTP Request Message</code>의 Header 부분의 url에 담겨서 전송된다. 때문에 url 상에 <code>?</code> 뒤에 데이터가 붙어 request를 보내게 되는 것이다. 이러한 방식은 url이라는 공간에 담겨가기 때문에 전송할 수 있는 데이터의 크기가 제한적이다. 또 보안이 필요한 데이터에 대해서는 데이터가 그대로 url에 노출되므로 <code>GET</code>방식은 적절하지 않다. (ex. password)</p>
+<h3 id="post"><a href="#post" aria-hidden="true"><span class="icon icon-link"></span></a>POST</h3>
+<p>POST 방식의 request는 <code>HTTP Message의 Body</code> 부분에 데이터가 담겨서 전송된다. 때문에 바이너리 데이터를 요청하는 경우 POST 방식으로 보내야 하는 것처럼 데이터 크기가 GET 방식보다 크고 보안면에서 낫다.(하지만 보안적인 측면에서는 암호화를 하지 않는 이상 고만고만하다.)</p>
+<p><em>그렇다면 이러한 특성을 이해한 뒤에는 어디에 적용되는지를 알아봐야 그 차이를 극명하게 이해할 수 있다.</em><br>
+우선 GET은 가져오는 것이다. 서버에서 어떤 데이터를 가져와서 보여준다거나 하는 용도이지 서버의 값이나 상태 등을 변경하지 않는다. SELECT 적인 성향을 갖고 있다고 볼 수 있는 것이다. 반면에 POST는 서버의 값이나 상태를 변경하기 위해서 또는 추가하기 위해서 사용된다.</p>
+<p>부수적인 차이점을 좀 더 살펴보자면 GET 방식의 요청은 브라우저에서 Caching 할 수 있다. 때문에 POST 방식으로 요청해야 할 것을 보내는 데이터의 크기가 작고 보안적인 문제가 없다는 이유로 GET 방식으로 요청한다면 기존에 caching 되었던 데이터가 요청될 가능성이 존재한다. 때문에 목적에 맞는 기술을 사용해야 하는 것이다.</p>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-1-3-network">위로</a></p>
+</br>
+<h2 id="tcp-3-way-handshake"><a href="#tcp-3-way-handshake" aria-hidden="true"><span class="icon icon-link"></span></a>TCP 3-way-handshake</h2>
+<p>일부 그림이 포함되어야 하는 설명이므로 링크를 대신 첨부합니다.</p>
+<h4 id="reference"><a href="#reference" aria-hidden="true"><span class="icon icon-link"></span></a>Reference</h4>
+<ul>
+<li><a href="http://asfirstalways.tistory.com/356">http://asfirstalways.tistory.com/356</a></li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-1-3-network">위로</a></p>
+</br>
+<h2 id="tcp와-udp의-비교"><a href="#tcp%EC%99%80-udp%EC%9D%98-%EB%B9%84%EA%B5%90" aria-hidden="true"><span class="icon icon-link"></span></a>TCP와 UDP의 비교</h2>
+<h3 id="udp"><a href="#udp" aria-hidden="true"><span class="icon icon-link"></span></a>UDP</h3>
+<p><code>UDP(User Datagram Protocol, 사용자 데이터그램 프로토콜)</code>는 <strong>비연결형 프로토콜</strong> 이다. IP 데이터그램을 캡슐화하여 보내는 방법과 연결 설정을 하지 않고 보내는 방법을 제공한다. <code>UDP</code>는 흐름제어, 오류제어 또는 손상된 세그먼트의 수신에 대한 재전송을 <strong>하지 않는다.</strong> 이 모두가 사용자 프로세스의 몫이다. <code>UDP</code>가 행하는 것은 포트들을 사용하여 IP 프로토콜에 인터페이스를 제공하는 것이다.</p>
+<p>종종 클라이언트는 서버로 짧은 요청을 보내고, 짧은 응답을 기대한다. 만약 요청 또는 응답이 손실된다면, 클라이언트는 time out되고 다시 시도할 수 있으면 된다. 코드가 간단할 뿐만 아니라 TCP처럼 초기설정(initial setup)에서 요구되는 프로토콜보다 적은 메시지가 요구된다.</p>
+<p><code>UDP</code>를 사용한 것들에는 <code>DNS</code>가 있다. 어떤 호스트 네임의 IP 주소를 찾을 필요가 있는 프로그램은, DNS서버로 호스트 네임을 포함한 UDP 패킷을 보낸다. 이 서버는 호스트의 IP  주소를 포함한 UDP 패킷으로 응답한다. 사전에 설정이 필요하지 않으며 그 후에 해제가 필요하지 않다.</p>
+</br>
+<h3 id="tcp"><a href="#tcp" aria-hidden="true"><span class="icon icon-link"></span></a>TCP</h3>
+<p>대부분의 인터넷 응용 분야들은 <strong>신뢰성</strong> 과 <strong>순차적인 전달</strong> 을 필요로 한다. UDP로는 이를 만족시킬 수 없으므로 다른 프로토콜이 필요하여 탄생한 것이 <code>TCP</code>이다. <code>TCP(Transmission Control Protocol, 전송제어 프로토콜)</code>는 신뢰성이 없는 인터넷을 통해 종단간에 신뢰성 있는 <strong>바이트 스트림을 전송</strong> 하도록 특별히 설계되었다. TCP 서비스는 송신자와 수신자 모두가 소켓이라고 부르는 종단점을 생성함으로써 이루어진다. TCP에서 연결 설정(connection establishment)는 <code>3-way-handshake</code>를 통해 행해진다.</p>
+<p>모든 TCP 연결은 전이중(full-duplex), 점대점(point to point)방식이다. 전이중이란 전송이 양방향으로 동시에 일어날 수 있음을 의미하며 점대점이란 각 연결이 정확히 2개의 종단점을 가지고 있음을 의미한다. TCP는 멀티캐스팅이나 브로드캐스팅을 지원하지 않는다.</p>
+<h4 id="reference-1"><a href="#reference-1" aria-hidden="true"><span class="icon icon-link"></span></a>Reference</h4>
+<ul>
+<li><a href="http://d2.naver.com/helloworld/47667">http://d2.naver.com/helloworld/47667</a></li>
+<li><a href="http://asfirstalways.tistory.com/327">http://asfirstalways.tistory.com/327</a></li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-1-3-network">위로</a></p>
+</br>
+<h2 id="http와-https"><a href="#http%EC%99%80-https" aria-hidden="true"><span class="icon icon-link"></span></a>HTTP와 HTTPS</h2>
+<h3 id="http의-문제점"><a href="#http%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90" aria-hidden="true"><span class="icon icon-link"></span></a>HTTP의 문제점</h3>
+<ul>
+<li>HTTP는 평문 통신이기 때문에 도청이 가능하다.</li>
+<li>통신 상대를 확인하지 않기 때문에 위장이 가능하다.</li>
+<li>완전성을 증명할 수 없기 때문에 변조가 가능하다.</li>
+</ul>
+<p><em>위 세 가지는 다른 암호화하지 않은 프로토콜에도 공통되는 문제점들이다.</em></p>
+<h3 id="tcpip는-도청-가능한-네트워크이다"><a href="#tcpip%EB%8A%94-%EB%8F%84%EC%B2%AD-%EA%B0%80%EB%8A%A5%ED%95%9C-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%9D%B4%EB%8B%A4" aria-hidden="true"><span class="icon icon-link"></span></a>TCP/IP는 도청 가능한 네트워크이다.</h3>
+<p>TCP/IP 구조의 통신은 전부 통신 경로 상에서 엿볼 수 있다. 패킷을 수집하는 것만으로 도청할 수 있다. 평문으로 통신을 할 경우 메시지의 의미를 파악할 수 있기 때문에 암호화하여 통신해야 한다.</p>
+<h4 id="보안-방법"><a href="#%EB%B3%B4%EC%95%88-%EB%B0%A9%EB%B2%95" aria-hidden="true"><span class="icon icon-link"></span></a>보안 방법</h4>
+<ol>
+<li>
+<p>통신 자체를 암호화<br>
+<code>SSL(Secure Socket Layer)</code> or <code>TLS(Transport Layer Security)</code>라는 다른 프로토콜을 조합함으로써 HTTP의 통신 내용을 암호화할 수 있다. SSL을 조합한 HTTP를 <code>HTTPS(HTTP Secure)</code> or <code>HTTP over SSL</code>이라고 부른다.</p>
+</li>
+<li>
+<p>콘텐츠를 암호화<br>
+말 그대로 HTTP를 사용해서 운반하는 내용인, HTTP 메시지에 포함되는 콘텐츠만 암호화하는 것이다. 암호화해서 전송하면 받은 측에서는 그 암호를 해독하여 출력하는 처리가 필요하다.</p>
+</li>
+</ol>
+</br>
+<h3 id="통신-상대를-확인하지-않기-때문에-위장이-가능하다"><a href="#%ED%86%B5%EC%8B%A0-%EC%83%81%EB%8C%80%EB%A5%BC-%ED%99%95%EC%9D%B8%ED%95%98%EC%A7%80-%EC%95%8A%EA%B8%B0-%EB%95%8C%EB%AC%B8%EC%97%90-%EC%9C%84%EC%9E%A5%EC%9D%B4-%EA%B0%80%EB%8A%A5%ED%95%98%EB%8B%A4" aria-hidden="true"><span class="icon icon-link"></span></a>통신 상대를 확인하지 않기 때문에 위장이 가능하다.</h3>
+<p>HTTP에 의한 통신에는 상대가 누구인지 확인하는 처리는 없기 때문에 누구든지 리퀘스트를 보낼 수 있다. IP 주소나 포트 등에서 그 웹 서버에 액세스 제한이 없는 경우 리퀘스트가 오면 상대가 누구든지 무언가의 리스폰스를 반환한다. 이러한 특징은 여러 문제점을 유발한다.
+1. 리퀘스트를 보낸 곳의 웹 서버가 원래 의도한 리스폰스를 보내야 하는 웹 서버인지를 확인할 수 없다.
+2. 리스폰스를 반환한 곳의 클라이언트가 원래 의도한 리퀘스트를 보낸 클라이언트인지를 확인할 수 없다.
+3. 통신하고 있는 상대가 접근이 허가된 상대인지를 확인할 수 없다.
+4. 어디의 누가 리퀘스트 했는지 확인할 수 없다.
+5. 의미없는 리퀘스트도 수신한다. —> DoS 공격을 방지할 수 없다.</p>
+<h4 id="보완-방법"><a href="#%EB%B3%B4%EC%99%84-%EB%B0%A9%EB%B2%95" aria-hidden="true"><span class="icon icon-link"></span></a>보완 방법</h4>
+<p>위 암호화 방법으로 언급된 <code>SSL</code>로 상대를 확인할 수 있다. SSL은 상대를 확인하는 수단으로 <strong>증명서</strong> 를 제공하고 있다. 증명서는 신뢰할 수 있는 <strong>제 3자 기관에 의해</strong> 발행되는 것이기 때문에 서버나 클라이언트가 실재하는 사실을 증명한다. 이 증명서를 이용함으로써 통신 상대가 내가 통신하고자 하는 서버임을 나타내고 이용자는 개인 정보 누설 등의 위험성이 줄어들게 된다. 한 가지 이점을 더 꼽자면 클라이언트는 이 증명서로 본인 확인을 하고 웹 사이트 인증에서도 이용할 수 있다.</p>
+</br>
+<h3 id="완전성을-증명할-수-없기-때문에-변조가-가능하다"><a href="#%EC%99%84%EC%A0%84%EC%84%B1%EC%9D%84-%EC%A6%9D%EB%AA%85%ED%95%A0-%EC%88%98-%EC%97%86%EA%B8%B0-%EB%95%8C%EB%AC%B8%EC%97%90-%EB%B3%80%EC%A1%B0%EA%B0%80-%EA%B0%80%EB%8A%A5%ED%95%98%EB%8B%A4" aria-hidden="true"><span class="icon icon-link"></span></a>완전성을 증명할 수 없기 때문에 변조가 가능하다</h3>
+<p>여기서 완전성이란 <strong>정보의 정확성</strong> 을 의미한다. 서버 또는 클라이언트에서 수신한 내용이 송신측에서 보낸 내용과 일치한다라는 것을 보장할 수 없는 것이다. 리퀘스트나 리스폰스가 발신된 후에 상대가 수신하는 사이에 누군가에 의해 변조되더라도 이 사실을 알 수가 없는 것이다. 이와 같이 공격자가 도중에 리퀘스트나 리스폰스를 빼앗아 변조하는 공격을 중간자 공격(Man-in-the-Middle)이라고 부른다.</p>
+<h4 id="보완-방법-1"><a href="#%EB%B3%B4%EC%99%84-%EB%B0%A9%EB%B2%95-1" aria-hidden="true"><span class="icon icon-link"></span></a>보완 방법</h4>
+<p><code>MD5</code>, <code>SHA-1</code> 등의 해시 값을 확인하는 방법과 파일의 디지털 서명을 확인하는 방법이 존재하지만 확실히 확인할 수 있는 것은 아니다. 확실히 방지하기에는 <code>HTTPS</code>를 사용해야 한다. SSL에는 인증이나 암호화, 그리고 다이제스트 기능을 제공하고 있다.</p>
+</br>
+<h3 id="https"><a href="#https" aria-hidden="true"><span class="icon icon-link"></span></a>HTTPS</h3>
+<blockquote>
+<p>HTTP에 암호화와 인증, 그리고 완전성 보호를 더한 HTTPS</p>
+</blockquote>
+<p><code>HTTPS</code>는 SSL의 껍질을 덮어쓴 HTTP라고 할 수 있다. 즉, HTTPS는 새로운 애플리케이션 계층의 프로토콜이 아니라는 것이다. HTTP 통신하는 소켓 부분을 <code>SSL(Secure Socket Layer)</code> or <code>TLS(Transport Layer Security)</code>라는 프로토콜로 대체하는 것 뿐이다. HTTP는 원래 TCP와 직접 통신했지만, HTTPS에서 HTTP는 SSL과 통신하고 <strong>SSL이 TCP와 통신</strong> 하게 된다. SSL을 사용한 HTTPS는 암호화와 증명서와 안전성 보호를 이용할 수 있게 된다.  </p>
+<p>HTTPS의 SSL에서는 공통키 암호화 방식과 공개키 암호화 방식을 혼합한 하이브리드 암호 시스템을 사용한다. 공통키를 공개키 암호화 방식으로 교환한 다음에 다음부터의 통신은 공통키 암호를 사용하는 방식이다.</p>
+<h4 id="모든-웹-페이지에서-https를-사용하지-않는-이유"><a href="#%EB%AA%A8%EB%93%A0-%EC%9B%B9-%ED%8E%98%EC%9D%B4%EC%A7%80%EC%97%90%EC%84%9C-https%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94-%EC%9D%B4%EC%9C%A0" aria-hidden="true"><span class="icon icon-link"></span></a>모든 웹 페이지에서 HTTPS를 사용하지 않는 이유</h4>
+<p>평문 통신에 비해서 암호화 통신은 CPU나 메모리 등 리소스가 많이 필요하다. 통신할 때마다 암호화를 하면 많은 리소스를 소비하기 때문에 서버 한 대당 처리할 수 있는 리퀘스트의 수가 줄어들게 된다. 그렇기 때문에 민감한 정보를 다룰 때만 HTTPS에 의한 암호화 통신을 사용한다.</p>
+<p><em>cf) HTTP 2.0이 발전되면서 HTTPS가 HTTP보다 빠르다는 사실이 나왔는데요, 다음 링크를 통해 보다 자세한 내용을 확인하실 수 있습니다.</em><br>
+관련 링크 : <a href="https://tech.ssut.me/2017/05/07/https-is-faster-than-http/">HTTPS가 HTTP보다 빠르다.</a></p>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-1-3-network">위로</a></p>
+</br>
+<h2 id="dns-round-robin-방식"><a href="#dns-round-robin-%EB%B0%A9%EC%8B%9D" aria-hidden="true"><span class="icon icon-link"></span></a>DNS round robin 방식</h2>
+<h3 id="dns-round-robin-방식의-문제점"><a href="#dns-round-robin-%EB%B0%A9%EC%8B%9D%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90" aria-hidden="true"><span class="icon icon-link"></span></a>DNS Round Robin 방식의 문제점</h3>
+<ol>
+<li>
+<p>서버의 수 만큼 공인 IP 주소가 필요함<br>
+부하 분산을 위해 서버의 대수를 늘리기 위해서는 그 만큼의 공인 IP가 필요하다.</p>
+</li>
+<li>
+<p>균등하게 분산되지 않음<br>
+모바일 사이트 등에서 문제가 될 수 있는데, 스마트폰의 접속은 캐리어 게이트웨이 라고 하는 프록시 서버를 경유 한다. 프록시 서버에서는 이름변환 결과가 일정 시간 동안 캐싱되므로 같은 프록시 서버를 경유 하는 접속은 항상 같은 서버로 접속된다. 또한 PC용 웹 브라우저도 DNS 질의 결과를 캐싱하기 때문에 균등하게 부하분산 되지 않는다. DNS 레코드의 TTL 값을 짧게 설정함으로써 어느 정도 해소가 되지만, TTL에 따라 캐시를 해제하는 것은 아니므로 반드시 주의가 필요하다.</p>
+</li>
+<li>
+<p>서버가 다운되도 확인 불가<br>
+DNS 서버는 웹 서버의 부하나 접속 수 등의 상황에 따라 질의결과를 제어할 수 없다. 웹 서버의 부하가 높아서 응답이 느려지거나 접속수가 꽉 차서 접속을 처리할 수 없는 상황인 지를 전혀 감지할 수가 없기 때문에 어떤 원인으로 다운되더라도 이를 검출하지 못하고 유저들에게 제공한다. 이때문에 유저들은 간혹 다운된 서버로 연결이 되기도 한다. DNS 라운드 로빈은 어디까지나 부하분산 을 위한 방법이지 다중화 방법은 아니므로 다른 S/W와 조합해서 관리할 필요가 있다.</p>
+</li>
+</ol>
+<p><em>Round Robin 방식을 기반으로 단점을 해소하는 DNS 스케줄링 알고리즘이 존재한다. (일부만 소개)</em></p>
+<h4 id="weighted-round-robin"><a href="#weighted-round-robin" aria-hidden="true"><span class="icon icon-link"></span></a>weighted round-robin</h4>
+<p>각각의 웹 서버에 가중치를 가미해서 분산 비율을 변경한다. 물론 가중치가 큰 서버일수록 빈번하게 선택되므로 처리능력이 높은 서버는 가중치를 높게 설정하는 것이 좋다.</p>
+<h4 id="least-connection"><a href="#least-connection" aria-hidden="true"><span class="icon icon-link"></span></a>least-connection</h4>
+<p>접속 클라이언트 수가 가장 적은 서버를 선택한다. 로드밸런서에서 실시간으로 connection 수를 관리하거나 각 서버에서 주기적으로 알려주는 것이 필요하다.</p>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-1-3-network">위로</a></p>
+</br>
+<h2 id="웹-통신의-큰-흐름"><a href="#%EC%9B%B9-%ED%86%B5%EC%8B%A0%EC%9D%98-%ED%81%B0-%ED%9D%90%EB%A6%84" aria-hidden="true"><span class="icon icon-link"></span></a>웹 통신의 큰 흐름</h2>
+<p><em>우리가 Chrome을 실행시켜 주소창에 특정 URL 값을 입력시키면 어떤 일이 일어나는가?</em></p>
+<h3 id="in-브라우저"><a href="#in-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80" aria-hidden="true"><span class="icon icon-link"></span></a>in 브라우저</h3>
+<ol>
+<li>url에 입력된 값을 브라우저 내부에서 결정된 규칙에 따라 그 의미를 조사한다.</li>
+<li>조사된 의미에 따라 Request 메시지를 만든다.</li>
+<li>만들어진 메시지를 웹 서버로 전송한다.</li>
+</ol>
+<p>이 때 전송하는 과정은 브라우저가 직접하는 것이 아니라 위에서 설명한 운반 구조에 의뢰하여 메시지를 전달한다. 우리가 택배를 보낼 때 직접 보내는게 아니라, 이미 서비스가 이루어지고 있는 택배 시스템(택배 회사)을 이용하여 보내는 것과 같은 이치이다.</p>
+</br>
+<h3 id="in-프로토콜-스택-lan-어댑터"><a href="#in-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C-%EC%8A%A4%ED%83%9D-lan-%EC%96%B4%EB%8C%91%ED%84%B0" aria-hidden="true"><span class="icon icon-link"></span></a>in 프로토콜 스택, LAN 어댑터</h3>
+<ol>
+<li>프로토콜 스택(운영체제에 내장된 네트워크 제어용 소프트웨어)이 브라우저로부터 메시지를 받는다.</li>
+<li>브라우저로부터 받은 메시지를 패킷 속에 저장한다.</li>
+<li>그리고 수신처 주소 등의 제어정보를 덧붙인다.</li>
+<li>그런 다음, 패킷을 LAN 어댑터에 넘긴다.</li>
+<li>LAN 어댑터는 패킷을(?) 전기신호로 변환시킨다.</li>
+<li>신호를 LAN 케이블에 송출시킨다.</li>
+</ol>
+<p>프로토콜 스택은 통신 중 오류가 발생했을 때, 이 제어 정보를 사용하여 고쳐 보내거나, 각종 상황을 조절하는 등 다양한 역할을 하게 된다. 네트워크 세계에서는 비서가 있어서 우리가 비서에게 물건만 건네주면, 받는 사람의 주소와 각종 유의사항을 써준다! 여기서는 프로토콜 스택이 비서의 역할을 한다고 볼 수 있다.</p>
+</br>
+<h3 id="in-허브-스위치-라우터"><a href="#in-%ED%97%88%EB%B8%8C-%EC%8A%A4%EC%9C%84%EC%B9%98-%EB%9D%BC%EC%9A%B0%ED%84%B0" aria-hidden="true"><span class="icon icon-link"></span></a>in 허브, 스위치, 라우터</h3>
+<ol>
+<li>LAN 어댑터가 송신한 패킷은 스위칭 허브를 경우하여 인터넷 접속용 라우터에 도착한다.</li>
+<li>라우터는 패킷을 프로바이더(통신사)에게 전달한다.</li>
+<li>인터넷으로 들어가게 된다.</li>
+</ol>
+</br>
+<h3 id="in-액세스-회선-프로바이더"><a href="#in-%EC%95%A1%EC%84%B8%EC%8A%A4-%ED%9A%8C%EC%84%A0-%ED%94%84%EB%A1%9C%EB%B0%94%EC%9D%B4%EB%8D%94" aria-hidden="true"><span class="icon icon-link"></span></a>in 액세스 회선, 프로바이더</h3>
+<ol>
+<li>패킷은 인터넷의 입구에 있는 액세스 회선(통신 회선)에 의해 POP(Point Of Presence, 통신사용 라우터)까지 운반된다.</li>
+<li>POP를 거쳐 인터넷의 핵심부로 들어가게 된다.</li>
+<li>수 많은 고속 라우터들 사이로 패킷이 목적지를 향해 흘러가게 된다.</li>
+</ol>
+</br>
+<h3 id="in-방화벽-캐시서버"><a href="#in-%EB%B0%A9%ED%99%94%EB%B2%BD-%EC%BA%90%EC%8B%9C%EC%84%9C%EB%B2%84" aria-hidden="true"><span class="icon icon-link"></span></a>in 방화벽, 캐시서버</h3>
+<ol>
+<li>패킷은 인터넷 핵심부를 통과하여 웹 서버측의 LAN에 도착한다.</li>
+<li>기다리고 있던 방화벽이 도착한 패킷을 검사한다.</li>
+<li>패킷이 웹 서버까지 가야하는지 가지 않아도 되는지를 판단하는 캐시서버가 존재한다.</li>
+</ol>
+<p>굳이 서버까지 가지 않아도 되는 경우를 골라낸다. 액세스한 페이지의 데이터가 캐시서버에 있으면 웹 서버에 의뢰하지 않고 바로 그 값을 읽을 수 있다.  페이지의 데이터 중에 다시 이용할 수 있는 것이 있으면 캐시 서버에 저장된다.</p>
+</br>
+<h3 id="in-웹-서버"><a href="#in-%EC%9B%B9-%EC%84%9C%EB%B2%84" aria-hidden="true"><span class="icon icon-link"></span></a>in 웹 서버</h3>
+<ol>
+<li>패킷이 물리적인 웹 서버에 도착하면 웹 서버의 프로토콜 스택은 패킷을 추출하여 메시지를 복원하고 웹 서버 애플리케이션에 넘긴다.</li>
+<li>메시지를 받은 웹 서버 애플리케이션은 요청 메시지에 따른 데이터를 응답 메시지에 넣어 클라이언트로 회송한다.</li>
+<li>왔던 방식대로 응답 메시지가 클라이언트에게 전달된다.</li>
+</ol>
+</br>
+<h4 id="personal-recommendation"><a href="#personal-recommendation" aria-hidden="true"><span class="icon icon-link"></span></a>Personal Recommendation</h4>
+<ul>
+<li>(도서) <a href="http://www.yes24.com/24/Goods/17286237?Acode=101">성공과 실패를 결정하는 1% 네트워크 원리</a></li>
+<li>(도서) <a href="http://www.yes24.com/24/Goods/15894097?Acode=101">그림으로 배우는 Http&#x26;Network basic</a></li>
+<li>(도서) <a href="http://www.yes24.com/24/Goods/15381085?Acode=101">HTTP 완벽 가이드</a></li>
+<li>Socket programming (Multi-chatting program)</li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-1-3-network">위로</a></p>
+</br>
+</br>
+<p><em>Network.end</em>  </p>
+</div></article></section><footer>© 2017 <a>interview</a>. All rights reserved.</footer></div></div>
+      </body>
+    </html>
+  

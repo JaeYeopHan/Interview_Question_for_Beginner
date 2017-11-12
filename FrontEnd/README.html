@@ -1,0 +1,210 @@
+
+    <!DOCTYPE html>
+    <html>
+      <meta charset="UTF-8" />
+      <title>Readme</title>
+      <meta
+        name="description"
+        content="Part 3-1 Front-End
+
+브라우저의 동작 원리
+
+Document Object Model(작성중)
+
+Event bubbling and Capturing
+
+Event del"
+      />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <link
+        href="//fonts.googleapis.com/css?family=Rubik|Unica+One"
+        rel="stylesheet"
+      />
+      <link rel="stylesheet" href="../static/css/normalize.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="../static/css/flexboxgrid.min.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="../static/css/github-flavored-markdown.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="../static/css/light.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css" />
+      <style>
+        body, .markdown-body {
+          font-family: "Rubik|Unica+One", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+      </style>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+      <script src="../static/main.js?a18b8814b45fe1c0"></script>
+      <body>
+        <div id="root"><div class="wrap container-fluid"><header class="site-header"><h1><a href="/">interview</a></h1><nav class="nav-link"><a href="/">Home</a><a href="https://github.com/JaeYeopHan/Interview_Question_for_Beginner">Git</a><a href="#" class="more"><svg aria-hidden="true" class="octicon" height="24" version="1.1" viewBox="0 0 12 16" width="18"><path d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"></path></svg></a></nav></header><section class="row main"><aside class="col-xs-12 col-sm-3 col-md-3 col-lg-3"><div class="chap"><span class="chap-title">Algorithm</span><ul><li class="active"><a href="../Algorithm/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title"></span><ul><li class=""><a href="../CONTRIBUTING.html">Contributing</a></li><li class="active"><a href="../README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Database</span><ul><li class="active"><a href="../Database/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Datastructure</span><ul><li class="active"><a href="../DataStructure/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Designpattern</span><ul><li class="active"><a href="../DesignPattern/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Development Common Sense</span><ul><li class="active"><a href="../Development_common_sense/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Frontend</span><ul><li class="active"><a href="../FrontEnd/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Java</span><ul><li class="active"><a href="../Java/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Javascript</span><ul><li class="active"><a href="../JavaScript/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Network</span><ul><li class="active"><a href="../Network/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Os</span><ul><li class="active"><a href="../OS/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Tip</span><ul><li class="active"><a href="../Tip/README.html">Readme</a></li></ul></div></aside><article class="col-xs-12 col-sm-9 col-md-9 col-lg-9"><div class="markdown-body"><h1 id="part-3-1-front-end"><a href="#part-3-1-front-end" aria-hidden="true"><span class="icon icon-link"></span></a>Part 3-1 Front-End</h1>
+<ul>
+<li><a href="#%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98-%EB%8F%99%EC%9E%91-%EC%9B%90%EB%A6%AC">브라우저의 동작 원리</a></li>
+<li>
+<p>Document Object Model(작성중)</p>
+<ul>
+<li>Event bubbling and Capturing</li>
+<li>Event delegation</li>
+</ul>
+</li>
+<li><a href="#cors">CORS</a></li>
+<li><a href="#%ED%81%AC%EB%A1%9C%EC%8A%A4-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A7%95">크로스 브라우징</a></li>
+<li><a href="#%EC%9B%B9-%EC%84%B1%EB%8A%A5%EA%B3%BC-%EA%B4%80%EB%A0%A8%EB%90%9C-issue-%EC%A0%95%EB%A6%AC">웹 성능과 관련된 Issues</a></li>
+<li><a href="#css-methodology">CSS Methodology</a></li>
+<li><a href="#normalize-vs-reset">normalize.css vs reset.css</a></li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a></p>
+<h2 id="브라우저의-동작-원리"><a href="#%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98-%EB%8F%99%EC%9E%91-%EC%9B%90%EB%A6%AC" aria-hidden="true"><span class="icon icon-link"></span></a>브라우저의 동작 원리</h2>
+<ol>
+<li>HTML 마크업을 처리하고 DOM 트리를 빌드한다. (<strong>"무엇을"</strong> 그릴지 결정한다.)</li>
+<li>CSS 마크업을 처리하고 CSSOM 트리를 빌드한다. (<strong>"어떻게"</strong> 그릴지 결정한다.)</li>
+<li>DOM 및 CSSOM을 결합하여 렌더링 트리를 형성한다. (<strong>"화면에 그려질 것만"</strong> 결정)</li>
+<li>렌더링 트리에서 레이아웃을 실행하여 각 노드의 기하학적 형태를 계산한다. (<strong>"Box-Model"</strong> 을 생성한다.)</li>
+<li>개별 노드를 화면에 페인트한다.(or 래스터화)</li>
+</ol>
+<h4 id="reference"><a href="#reference" aria-hidden="true"><span class="icon icon-link"></span></a>Reference</h4>
+<ul>
+<li><a href="http://d2.naver.com/helloworld/59361">Naver D2 - 브라우저의 작동 원리</a></li>
+<li><a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=ko">Web fundamentals - Critical-rendering-path</a></li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-3-1-front-end">위로</a></p>
+</br>
+<h2 id="cors"><a href="#cors" aria-hidden="true"><span class="icon icon-link"></span></a>CORS</h2>
+<p>다른 도메인으로부터 리소스가 요청될 경우 해당 리소스는 <strong>cross-origin HTTP 요청</strong> 에 의해 요청된다. 하지만 대부분의 브라우저들은 보안 상의 이유로 스크립트에서의 cross-origin HTTP 요청을 제한한다. 이것을 <code>Same-Origin-Policy(동일 근원 정책)</code>이라고 한다. 요청을 보내기 위해서는 요청을 보내고자 하는 대상과 프로토콜도 같아야 하고, 포트도 같아야 함을 의미한다.<em>(이 때, 서브 도메인 네임은 상관없다.)</em></p>
+<p>이러한 문제를 해결하기 위해 과거에는 flash를 proxy로 두고 타 도메인간 통신을 했다. 하지만 모바일 운영체제의 등장으로 flash로는 힘들어졌다. (iOS는 전혀 플래시를 지원하지 않는다.) 대체제로 나온 기술이 <code>JSONP(JSON-padding)</code>이다. jQuery v.1.2 이상부터 <code>jsonp</code>형태가 지원되 ajax를 호출할 때 타 도메인간 호출이 가능해졌다. <code>JSONP</code>에는 타 도메인간 자원을 공유할 수 있는 몇 가지 태그가 존재한다. 예를들어 <code>img</code>, <code>iframe</code>, <code>anchor</code>, <code>script</code>, <code>link</code> 등이 존재한다.</p>
+<p>여기서 <code>CORS</code>는 타 도메인 간에 자원을 공유할 수 있게 해주는 것이다. <code>Cross-Origin Resource Sharing</code> 표준은 웹 브라우저가 사용하는 정보를 읽을 수 있도록 허가된 <strong>출처 집합</strong> 를 서버에게 알려주도록 허용하는 특정 HTTP 헤더를 추가함으로써 동작한다.
+|HTTP Header|Description|
+|:-:|:-:|
+|Access-Control-Allow-Origin|접근 가능한 <code>url</code> 설정|
+|Access-Control-Allow-Credentials|접근 가능한 <code>쿠키</code> 설정|
+|Access-Control-Allow-Headers|접근 가능한 <code>헤더</code> 설정|
+|Access-Control-Allow-Methods|접근 가능한 <code>http method</code> 설정|</p>
+<h3 id="preflight-request"><a href="#preflight-request" aria-hidden="true"><span class="icon icon-link"></span></a>Preflight Request</h3>
+<p>실제 요청을 보내도 안전한지 판단하기 위해 preflight 요청을 먼저 보내는 방법을 말한다. 즉, <code>Preflight Request</code>는 실제 요청 전에 인증 헤더를 전송하여 서버의 허용 여부를 미리 체크하는 테스트 요청이다. 이 요청으로 트래픽이 증가할 수 있는데 서버의 헤더 설정으로 캐쉬가 가능하다. 서버 측에서는 브라우저가 해당 도메인에서 CORS 를 허용하는지 알아보기 위해 preflight 요청을 보내는데 이에 대한 처리가 필요하다. preflight 요청은 HTTP의 <code>OPTIONS</code> 메서드를 사용하며 <code>Access-Control-Request-*</code> 형태의 헤더로 전송한다.</p>
+<p>이는 브라우저가 강제하며 HTTP <code>OPTION</code> 요청 메서드를 이용해 서버로부터 지원 중인 메서드들을 내려 받은 뒤, 서버에서 <code>approval(승인)</code> 시에 실제 HTTP 요청 메서드를 이용해 실제 요청을 전송하는 것이다.</p>
+<h4 id="reference-1"><a href="#reference-1" aria-hidden="true"><span class="icon icon-link"></span></a>Reference</h4>
+<ul>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Access_control_CORS">MDN - HTTP 접근 제어 CORS</a></li>
+<li><a href="http://homoefficio.github.io/2015/07/21/Cross-Origin-Resource-Sharing/">Cross-Origin-Resource-Sharing에 대해서</a></li>
+<li><a href="http://wiki.gurubee.net/display/SWDEV/CORS+%28Cross-Origin+Resource+Sharing%29">구루비 - CORS에 대해서</a></li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-3-1-front-end">위로</a></p>
+</br>
+<h2 id="크로스-브라우징"><a href="#%ED%81%AC%EB%A1%9C%EC%8A%A4-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A7%95" aria-hidden="true"><span class="icon icon-link"></span></a>크로스 브라우징</h2>
+<p>웹 표준에 따라 개발을 하여 서로 다른 OS 또는 플랫폼에 대응하는 것을 말한다. 즉, 브라우저의 렌더링 엔진이 다른 경우에 인터넷이 이상없이 구현되도록 하는 기술이다. 웹 사이트를 서로 비슷하게 만들어 어떤 <strong>환경</strong> 에서도 이상없이 작동되게 하는데 그 목적이 있다. 즉, 어느 한쪽에 최적화되어 치우치지 않도록 공통요소를 사용하여 웹 페이지를 제작하는 방법을 말한다.</p>
+<h3 id="참고자료"><a href="#%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C" aria-hidden="true"><span class="icon icon-link"></span></a>참고자료</h3>
+<ul>
+<li><a href="http://asfirstalways.tistory.com/237">크로스 브라우징 이슈에 대응하는 프론트엔드 개발자들의 전략</a></li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-3-1-front-end">위로</a></p>
+</br>
+<h2 id="웹-성능과-관련된-issue-정리"><a href="#%EC%9B%B9-%EC%84%B1%EB%8A%A5%EA%B3%BC-%EA%B4%80%EB%A0%A8%EB%90%9C-issue-%EC%A0%95%EB%A6%AC" aria-hidden="true"><span class="icon icon-link"></span></a>웹 성능과 관련된 Issue 정리</h2>
+<h3 id="1-네트워크-요청에-빠르게-응답하자"><a href="#1-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%9A%94%EC%B2%AD%EC%97%90-%EB%B9%A0%EB%A5%B4%EA%B2%8C-%EC%9D%91%EB%8B%B5%ED%95%98%EC%9E%90" aria-hidden="true"><span class="icon icon-link"></span></a>1. 네트워크 요청에 빠르게 응답하자</h3>
+<ul>
+<li><code>3.xx</code> 리다이렉트를 피할 것</li>
+<li><code>meta-refresh</code> 사용금지</li>
+<li><code>CDN(content delivery network)</code>을 사용할 것</li>
+<li>동시 커넥션 수를 최소화 할 것</li>
+<li>커넥션을 재활용할 것</li>
+</ul>
+<h3 id="2-자원을-최소한의-크기로-내려받자"><a href="#2-%EC%9E%90%EC%9B%90%EC%9D%84-%EC%B5%9C%EC%86%8C%ED%95%9C%EC%9D%98-%ED%81%AC%EA%B8%B0%EB%A1%9C-%EB%82%B4%EB%A0%A4%EB%B0%9B%EC%9E%90" aria-hidden="true"><span class="icon icon-link"></span></a>2. 자원을 최소한의 크기로 내려받자</h3>
+<ul>
+<li>777K</li>
+<li><code>gzip</code> 압축을 사용할 것</li>
+<li><code>HTML5 App cache</code>를 활용할 것</li>
+<li>자원을 캐시 가능하게 할 것</li>
+<li>조건 요청을 보낼 것</li>
+</ul>
+<h3 id="3-효율적인-마크업-구조를-구축하자"><a href="#3-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%A7%88%ED%81%AC%EC%97%85-%EA%B5%AC%EC%A1%B0%EB%A5%BC-%EA%B5%AC%EC%B6%95%ED%95%98%EC%9E%90" aria-hidden="true"><span class="icon icon-link"></span></a>3. 효율적인 마크업 구조를 구축하자</h3>
+<ul>
+<li>레거시 IE 모드는 http 헤더를 사용할 것</li>
+<li>@import 의 사용을 피할 것</li>
+<li>inline 스타일과 embedded 스타일은 피할 것</li>
+<li>사용하는 스타일만 CSS에 포함할 것</li>
+<li>중복되는 코드를 최소화 할 것</li>
+<li>단일 프레임워크를 사용할 것</li>
+<li>Third Party 스크립트를 삽입하지 말 것</li>
+</ul>
+<h3 id="4-미디어-사용을-개선하자"><a href="#4-%EB%AF%B8%EB%94%94%EC%96%B4-%EC%82%AC%EC%9A%A9%EC%9D%84-%EA%B0%9C%EC%84%A0%ED%95%98%EC%9E%90" aria-hidden="true"><span class="icon icon-link"></span></a>4. 미디어 사용을 개선하자</h3>
+<ul>
+<li>이미지 스프라이트를 사용할 것 ( 하나의 이미지로 편집해서 요청을 한번만 보낸다의 의미인가? )</li>
+<li>실제 이미지 해상도를 사용할 것</li>
+<li>CSS3를 활용할 것</li>
+<li>하나의 작은 크기의 이미지는 DataURL을 사용할 것</li>
+<li>비디오의 미리보기 이미지를 만들 것</li>
+</ul>
+<h3 id="5-빠른-자바스크립트-코드를-작성하자"><a href="#5-%EB%B9%A0%EB%A5%B8-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%9E%91%EC%84%B1%ED%95%98%EC%9E%90" aria-hidden="true"><span class="icon icon-link"></span></a>5. 빠른 자바스크립트 코드를 작성하자</h3>
+<ul>
+<li>코드를 최소화할 것</li>
+<li>필요할 때만 스크립트를 가져올 것 : flag 사용</li>
+<li>DOM에 대한 접근을 최소화 할 것 : Dom manipulate는 느리다.</li>
+<li>다수의 엘리먼트를 찾을 때는 selector api를 사용할 것.</li>
+<li>마크업의 변경은 한번에 할 것 : temp 변수를 활용</li>
+<li>DOM의 크기를 작게 유지할 것.</li>
+<li>내장 JSON 메서드를 사용할 것.</li>
+</ul>
+<h3 id="6-애플리케이션의-작동원리를-알고-있자"><a href="#6-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%EC%9D%98-%EC%9E%91%EB%8F%99%EC%9B%90%EB%A6%AC%EB%A5%BC-%EC%95%8C%EA%B3%A0-%EC%9E%88%EC%9E%90" aria-hidden="true"><span class="icon icon-link"></span></a>6. 애플리케이션의 작동원리를 알고 있자.</h3>
+<ul>
+<li>Timer 사용에 유의할 것.</li>
+<li><code>requestAnimationFrame</code> 을 사용할 것</li>
+<li>활성화될 때를 알고 있을 것</li>
+</ul>
+<h4 id="reference-2"><a href="#reference-2" aria-hidden="true"><span class="icon icon-link"></span></a>Reference</h4>
+<ul>
+<li><a href="https://www.slideshare.net/mixed/html5-50">HTML5 앱과 웹사이트를 보다 빠르게 하는 50가지 - yongwoo Jeon</a></li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-3-1-front-end">위로</a></p>
+</br>
+<h2 id="css-methodology"><a href="#css-methodology" aria-hidden="true"><span class="icon icon-link"></span></a>CSS Methodology</h2>
+<p><code>SMACSS</code>, <code>OOCSS</code>, <code>BEM</code>에 대해서 소개한다.</p>
+<h3 id="smacssscalable-and-modular-architecture-for-css"><a href="#smacssscalable-and-modular-architecture-for-css" aria-hidden="true"><span class="icon icon-link"></span></a>SMACSS(Scalable and Modular Architecture for CSS)</h3>
+<p><code>SMACSS</code>의 핵심은 범주화이며(<code>categorization</code>) 스타일을 다섯 가지 유형으로 분류하고, 각 유형에 맞는 선택자(selector)와 작명법(naming convention)을 제시한다.</p>
+<h4 id="기초base"><a href="#%EA%B8%B0%EC%B4%88base" aria-hidden="true"><span class="icon icon-link"></span></a>기초(Base)</h4>
+<p>element 스타일의 default 값을 지정해주는 것이다. 선택자로는 요소 선택자를 사용한다.</p>
+<h4 id="레이아웃layout"><a href="#%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83layout" aria-hidden="true"><span class="icon icon-link"></span></a>레이아웃(Layout)</h4>
+<p>구성하고자 하는 페이지를 컴포넌트를 나누고 어떻게 위치해야하는지를 결정한다. <code>id</code>는 CSS에서 클래스와 성능 차이가 없는데, CSS에서 사용하게 되면 재사용성이 떨어지기 때문에 클래스를 주로 사용한다.</p>
+<h4 id="모듈module"><a href="#%EB%AA%A8%EB%93%88module" aria-hidden="true"><span class="icon icon-link"></span></a>모듈(Module)</h4>
+<p>레이아웃 요소 안에 들어가는 더 작은 부분들에 대한 스타일을 정의한다. 클래스 선택자를 사용하며 요소 선택자는 가급적 피한다. 클래스 이름은 적용되는 스타일의 내용을 담는다.</p>
+<h4 id="상태states"><a href="#%EC%83%81%ED%83%9Cstates" aria-hidden="true"><span class="icon icon-link"></span></a>상태(States)</h4>
+<p>다른 스타일에 덧붙이거나 덮어씌워서 상태를 나타낸다. 그렇기 때문에 자바스크립트에 의존하는 스타일이 된다. <code>is-</code> prefix를 붙여 상태를 제어하는 스타일임을 나타낸다. 특정 모듈에 한정된 상태는 모듈 이름도 이름에 포함시킨다.</p>
+<h4 id="테마theme"><a href="#%ED%85%8C%EB%A7%88theme" aria-hidden="true"><span class="icon icon-link"></span></a>테마(Theme)</h4>
+<p>테마는 프로젝트에서 잘 사용되지 않는 카테고리이다. 사용자의 설정에 따라서 css를 변경할 수 있는 css를 설정할 때 사용하게 되며 접두어로는 <code>theme-</code>를 붙여 표시한다.</p>
+</br>
+<h3 id="oocssobject-oriented-css"><a href="#oocssobject-oriented-css" aria-hidden="true"><span class="icon icon-link"></span></a>OOCSS(Object Oriented CSS)</h3>
+<p>객체지향 CSS 방법론으로 2 가지 기본원칙을 갖고 있다.</p>
+<h4 id="원칙-1-구조와-모양을-분리한다"><a href="#%EC%9B%90%EC%B9%99-1-%EA%B5%AC%EC%A1%B0%EC%99%80-%EB%AA%A8%EC%96%91%EC%9D%84-%EB%B6%84%EB%A6%AC%ED%95%9C%EB%8B%A4" aria-hidden="true"><span class="icon icon-link"></span></a>원칙 1. 구조와 모양을 분리한다.</h4>
+<p>반복적인 시각적 기능을 별도의 스킨으로 정의하여 다양한 객체와 혼합해 중복코드를 없앤다.</p>
+<h4 id="원칙-2-컨테이너와-컨텐츠를-분리한다"><a href="#%EC%9B%90%EC%B9%99-2-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%99%80-%EC%BB%A8%ED%85%90%EC%B8%A0%EB%A5%BC-%EB%B6%84%EB%A6%AC%ED%95%9C%EB%8B%A4" aria-hidden="true"><span class="icon icon-link"></span></a>원칙 2. 컨테이너와 컨텐츠를 분리한다.</h4>
+<p>스타일을 정의할 때 위치에 의존적인 스타일을 사용하지 않는다. 사물의 모양은 어디에 위치하든지 동일하게 보여야 한다.</p>
+</br>
+<h3 id="bemblock-element-modifier"><a href="#bemblock-element-modifier" aria-hidden="true"><span class="icon icon-link"></span></a>BEM(Block Element Modifier)</h3>
+<p>웹 페이지를 각각의 컴포넌트의 조합으로 바라보고 접근한 방법론이자 규칙(Rule)이다. SMACSS가 가이드라인이라는 것에 비해서 좀 더 범위가 좁은 반면 강제성 측면에서 다소 강하다고 볼 수 있다. BEM은 CSS로 스타일을 입힐 때 id를 사용하는 것을 막는다. 또한 요소 셀렉터를 통해서 직접 스타일을 적용하는 것도 불허한다. 하나를 더 불허하는데 그것은 바로 자손 선택자 사용이다. 이러한 규칙들은 재사용성을 높이기 위함이다.</p>
+<h4 id="naming-convention"><a href="#naming-convention" aria-hidden="true"><span class="icon icon-link"></span></a>Naming Convention</h4>
+<p>소문자와 숫자만을 이용해 작명하고 여러 단어의 조합은 하이픈(<code>-</code>)과 언더바(<code>_</code>)를 사용하여 연결한다.</p>
+<h4 id="bem의-b는-block이다"><a href="#bem%EC%9D%98-b%EB%8A%94-block%EC%9D%B4%EB%8B%A4" aria-hidden="true"><span class="icon icon-link"></span></a>BEM의 B는 “Block”이다.</h4>
+<p>블록(block)이란 재사용 할 수 있는 독립적인 페이지 구성 요소를 말하며, HTML에서 블록은 class로 표시된다. 블록은 주변 환경에 영향을 받지 않아야 하며, 여백이나 위치를 설정하면 안된다.</p>
+<h4 id="bem의-e는-element이다"><a href="#bem%EC%9D%98-e%EB%8A%94-element%EC%9D%B4%EB%8B%A4" aria-hidden="true"><span class="icon icon-link"></span></a>BEM의 E는 “Element”이다.</h4>
+<p>블록 안에서 특정 기능을 담당하는 부분으로 block_element 형태로 사용한다. 요소는 중첩해서 작성될 수 있다.</p>
+<h4 id="bem의-m는-modifier이다"><a href="#bem%EC%9D%98-m%EB%8A%94-modifier%EC%9D%B4%EB%8B%A4" aria-hidden="true"><span class="icon icon-link"></span></a>BEM의 M는 “Modifier”이다.</h4>
+<p>블록이나 요소의 모양, 상태를 정의한다. <code>block_element-modifier</code>, <code>block—modifier</code> 형태로 사용한다. 수식어에는 불리언 타입과 키-값 타입이 있다.</p>
+</br>
+<h4 id="reference-3"><a href="#reference-3" aria-hidden="true"><span class="icon icon-link"></span></a>Reference</h4>
+<ul>
+<li><a href="http://wit.nts-corp.com/2015/04/16/3538">CSS 방법론에 대해서</a></li>
+<li><a href="https://brunch.co.kr/@larklark/1">CSS 방법론 SMACSS에 대해 알아보자</a></li>
+<li><a href="https://en.bem.info/">BEM에 대해서</a></li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-3-1-front-end">위로</a></p>
+</br>
+<h2 id="normalize-vs-reset"><a href="#normalize-vs-reset" aria-hidden="true"><span class="icon icon-link"></span></a>normalize vs reset</h2>
+<p>브라우저마다 기본적으로 제공하는 element의 style을 통일시키기 위해 사용하는 두 <code>css</code>에 대해 알아본다.</p>
+<h3 id="resetcss"><a href="#resetcss" aria-hidden="true"><span class="icon icon-link"></span></a>reset.css</h3>
+<p><code>reset.css</code>는 기본적으로 제공되는 브라우저 스타일 전부를 <strong>제거</strong> 하기 위해 사용된다. <code>reset.css</code>가 적용되면 <code>&#x3C;H1>~&#x3C;H6></code>, <code>&#x3C;p></code>, <code>&#x3C;strong></code>, <code>&#x3C;em></code> 등 과 같은 표준 요소는 완전히 똑같이 보이며 브라우저가 제공하는 기본적인 styling이 전혀 없다.</p>
+<h3 id="normalizecss"><a href="#normalizecss" aria-hidden="true"><span class="icon icon-link"></span></a>normalize.css</h3>
+<p><code>normalize.css</code>는 브라우저 간 일관된 스타일링을 목표로 한다. <code>&#x3C;H1>~&#x3C;H6></code>과 같은 요소는 브라우저간에 일관된 방식으로 굵게 표시됩니다. 추가적인 디자인에 필요한 style만 CSS로 작성해주면 된다.</p>
+<p>즉, <code>normalize.css</code>는 모든 것을 "해제"하기보다는 유용한 기본값을 보존하는 것이다. 예를 들어, sup 또는 sub와 같은 요소는 <code>normalize.css</code>가 적용된 후 바로 기대하는 스타일을 보여준다. 반면 <code>reset.css</code>를 포함하면 시각적으로 일반 텍스트와 구별 할 수 없다. 또한 normalize.css는 reset.css보다 넓은 범위를 가지고 있으며 HTML5 요소의 표시 설정, 양식 요소의 글꼴 상속 부족, pre-font 크기 렌더링 수정, IE9의 SVG 오버플로 및 iOS의 버튼 스타일링 버그 등에 대한 이슈를 해결해준다.</p>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-3-1-front-end">위로</a></p>
+</br>
+</br>
+<p><em>Front-End.end</em>  </p>
+</div></article></section><footer>© 2017 <a>interview</a>. All rights reserved.</footer></div></div>
+      </body>
+    </html>
+  

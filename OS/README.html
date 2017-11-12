@@ -1,0 +1,626 @@
+
+    <!DOCTYPE html>
+    <html>
+      <meta charset="UTF-8" />
+      <title>Readme</title>
+      <meta
+        name="description"
+        content="Part 1-4 운영체제
+
+프로세스와 스레드의 차이
+
+멀티스레드
+
+장점과 단점
+
+멀티스레드 vs 멀티프로세스
+
+스케줄러
+
+장기 스케줄러
+
+단기 스케줄러
+
+중기 스케줄러
+
+CPU 스"
+      />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <link
+        href="//fonts.googleapis.com/css?family=Rubik|Unica+One"
+        rel="stylesheet"
+      />
+      <link rel="stylesheet" href="../static/css/normalize.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="../static/css/flexboxgrid.min.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="../static/css/github-flavored-markdown.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="../static/css/light.css?a18b8814b45fe1c0" />
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css" />
+      <style>
+        body, .markdown-body {
+          font-family: "Rubik|Unica+One", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+      </style>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+      <script src="../static/main.js?a18b8814b45fe1c0"></script>
+      <body>
+        <div id="root"><div class="wrap container-fluid"><header class="site-header"><h1><a href="/">interview</a></h1><nav class="nav-link"><a href="/">Home</a><a href="https://github.com/JaeYeopHan/Interview_Question_for_Beginner">Git</a><a href="#" class="more"><svg aria-hidden="true" class="octicon" height="24" version="1.1" viewBox="0 0 12 16" width="18"><path d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"></path></svg></a></nav></header><section class="row main"><aside class="col-xs-12 col-sm-3 col-md-3 col-lg-3"><div class="chap"><span class="chap-title">Algorithm</span><ul><li class="active"><a href="../Algorithm/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title"></span><ul><li class=""><a href="../CONTRIBUTING.html">Contributing</a></li><li class="active"><a href="../README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Database</span><ul><li class="active"><a href="../Database/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Datastructure</span><ul><li class="active"><a href="../DataStructure/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Designpattern</span><ul><li class="active"><a href="../DesignPattern/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Development Common Sense</span><ul><li class="active"><a href="../Development_common_sense/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Frontend</span><ul><li class="active"><a href="../FrontEnd/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Java</span><ul><li class="active"><a href="../Java/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Javascript</span><ul><li class="active"><a href="../JavaScript/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Network</span><ul><li class="active"><a href="../Network/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Os</span><ul><li class="active"><a href="../OS/README.html">Readme</a></li></ul></div><div class="chap"><span class="chap-title">Tip</span><ul><li class="active"><a href="../Tip/README.html">Readme</a></li></ul></div></aside><article class="col-xs-12 col-sm-9 col-md-9 col-lg-9"><div class="markdown-body"><h1 id="part-1-4-운영체제"><a href="#part-1-4-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C" aria-hidden="true"><span class="icon icon-link"></span></a>Part 1-4 운영체제</h1>
+<ul>
+<li><a href="#%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%99%80-%EC%8A%A4%EB%A0%88%EB%93%9C%EC%9D%98-%EC%B0%A8%EC%9D%B4">프로세스와 스레드의 차이</a></li>
+<li>
+<p><a href="#%EB%A9%80%ED%8B%B0%EC%8A%A4%EB%A0%88%EB%93%9C">멀티스레드</a></p>
+<ul>
+<li>장점과 단점</li>
+<li>멀티스레드 vs 멀티프로세스</li>
+</ul>
+</li>
+<li>
+<p><a href="#%EC%8A%A4%EC%BC%80%EC%A4%84%EB%9F%AC">스케줄러</a></p>
+<ul>
+<li>장기 스케줄러</li>
+<li>단기 스케줄러</li>
+<li>중기 스케줄러</li>
+</ul>
+</li>
+<li>
+<p><a href="#cpu-%EC%8A%A4%EC%BC%80%EC%A4%84%EB%9F%AC">CPU 스케줄러</a></p>
+<ul>
+<li>FCFS</li>
+<li>SJF</li>
+<li>SRT</li>
+<li>Priority scheduling</li>
+<li>RR</li>
+</ul>
+</li>
+<li><a href="#%EB%8F%99%EA%B8%B0%EC%99%80-%EB%B9%84%EB%8F%99%EA%B8%B0%EC%9D%98-%EC%B0%A8%EC%9D%B4">동기와 비동기의 차이</a></li>
+<li>
+<p><a href="#%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EB%8F%99%EA%B8%B0%ED%99%94">프로세스 동기화</a></p>
+<ul>
+<li>Critical Section</li>
+<li>
+<p>해결책</p>
+<ul>
+<li>Lock</li>
+<li>Semaphores</li>
+<li>모니터</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC-%EC%A0%84%EB%9E%B5">메모리 관리 전략</a></p>
+<ul>
+<li>메모리 관리 배경</li>
+<li>Paging</li>
+<li>Segmentation</li>
+</ul>
+</li>
+<li>
+<p><a href="#%EA%B0%80%EC%83%81-%EB%A9%94%EB%AA%A8%EB%A6%AC">가상 메모리</a></p>
+<ul>
+<li>배경</li>
+<li>가상 메모리가 하는 일</li>
+<li>Demand Paging(요구 페이징)</li>
+<li>페이지 교체 알고리즘</li>
+</ul>
+</li>
+<li>
+<p><a href="#%EC%BA%90%EC%8B%9C%EC%9D%98-%EC%A7%80%EC%97%AD%EC%84%B1">캐시의 지역성</a></p>
+<ul>
+<li>Locality</li>
+<li>Caching line</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a></p>
+</br>
+<hr>
+<h2 id="프로세스와-스레드의-차이"><a href="#%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%99%80-%EC%8A%A4%EB%A0%88%EB%93%9C%EC%9D%98-%EC%B0%A8%EC%9D%B4" aria-hidden="true"><span class="icon icon-link"></span></a>프로세스와 스레드의 차이</h2>
+<h3 id="프로세스process"><a href="#%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4process" aria-hidden="true"><span class="icon icon-link"></span></a>프로세스(Process)</h3>
+<p>프로세스는 실행 중인 프로그램으로 디스크로부터 메모리에 적재되어 CPU의 할당을 받을 수 있는 것을 말한다. 운영체제로부터 주소 공간, 파일, 메모리 등을 할당받으며 이것들을 총칭하여 프로세스라고 한다. 구체적으로 살펴보면 프로세스는 함수의 매개변수, 복귀 주소와 로컬 변수와 같은 임시 자료를 갖는 프로세스 스택과 전역 변수들을 수록하는 데이터 섹션을 포함한다. 또한 프로세스는 프로세스 실행 중에 동적으로 할당되는 메모리인 힙을 포함한다.</p>
+<h4 id="프로세스-제어-블록process-control-block-pcb"><a href="#%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EC%A0%9C%EC%96%B4-%EB%B8%94%EB%A1%9Dprocess-control-block-pcb" aria-hidden="true"><span class="icon icon-link"></span></a>프로세스 제어 블록(Process Control Block, PCB)</h4>
+<p>PCB는 특정 <strong>프로세스에 대한 중요한 정보를 저장</strong> 하고 있는 운영체제의 자료구조이다. 운영체제는 프로세스를 관리하기 위해 <strong>프로세스의 생성과 동시에 고유한 PCB를 생성</strong> 한다. 프로세스는 CPU를 할당받아 작업을 처리하다가도 프로세스 전환이 발생하면 진행하던 작업을 저장하고 CPU를 반환해야 하는데, 이때 작업의 진행 상황을 모두 PCB에 저장하게 된다. 그리고 다시 CPU를 할당받게 되면 PCB에 저장되어있던 내용을 불러와 이전에 종료됐던 시점부터 다시 작업을 수행한다.</p>
+<p><em>PCB에 저장되는 정보</em></p>
+<ul>
+<li>프로세스 식별자(Process ID, PID) : 프로세스 식별번호</li>
+<li>프로세스 상태 : new, ready, running, waiting, terminated 등의 상태를 저장</li>
+<li>프로그램 카운터 : 프로세스가 다음에 실행한 명령어의 주소</li>
+<li>CPU 레지스터</li>
+<li>CPU 스케쥴링 정보 : 프로세스의 우선순위, 스케줄 큐에 대한 포인터 등</li>
+<li>메모리 관리 정보 : 페이지 테이블 또는 세그먼트 테이블 등과 같은 정보를 포함</li>
+<li>입출력 상태 정보 : 프로세스에 할당된 입출력장치들과 열린 파일 목록</li>
+<li>어카운팅 정보 : 사용된 CPU시간, 시간제한, 계정번호 등</li>
+</ul>
+</br>
+<h3 id="스레드thread"><a href="#%EC%8A%A4%EB%A0%88%EB%93%9Cthread" aria-hidden="true"><span class="icon icon-link"></span></a>스레드(Thread)</h3>
+<p>스레드는 프로세스의 실행 단위라고 할 수 있다. 한 프로세스 내에서 동작되는 여러 실행 흐름으로 프로세스 내의 주소 공간이나 자원을 공유할 수 있다.
+스레드는 스레드 ID, 프로그램 카운터, 레지스터 집합, 그리고 스택으로 구성된다. 같은 프로세스에 속한 다른 스레드와 코드, 데이터 섹션, 그리고 열린 파일이나 신호와 같은 운영체제 자원들을 공유한다.
+하나의 프로세스를 다수의 실행 단위로 구분하여 자원을 공유하고 자원의 생성과 관리의 중복성을 최소화하여 수행 능력을 향상시키는 것을 멀티스레딩이라고 한다. 이 경우 각각의 스레드는 독립적인 작업을 수행해야 하기 때문에 각자의 스택과 PC 레지스터 값을 갖고 있다.</p>
+<h4 id="스택을-스레드마다-독립적으로-할당하는-이유"><a href="#%EC%8A%A4%ED%83%9D%EC%9D%84-%EC%8A%A4%EB%A0%88%EB%93%9C%EB%A7%88%EB%8B%A4-%EB%8F%85%EB%A6%BD%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%A0%EB%8B%B9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0" aria-hidden="true"><span class="icon icon-link"></span></a>스택을 스레드마다 독립적으로 할당하는 이유</h4>
+<p>스택은 함수 호출 시 전달되는 인자, 되돌아갈 주소값 및 함수 내에서 선언하는 변수 등을 저장하기 위해 사용되는 메모리 공간이므로 스택 메모리 공간이 독립적이라는 것은 독립적인 함수 호출이 가능하다는 것이고 이는 독립적인 실행 흐름이 추가되는 것이다. 따라서 스레드의 정의에 따라 독립적인 실행 흐름을 추가하기 위한 최소 조건으로 독립된 스택을 할당한다.</p>
+<h4 id="pc-resister를-스레드마다-독립적으로-할당하는-이유"><a href="#pc-resister%EB%A5%BC-%EC%8A%A4%EB%A0%88%EB%93%9C%EB%A7%88%EB%8B%A4-%EB%8F%85%EB%A6%BD%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%A0%EB%8B%B9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0" aria-hidden="true"><span class="icon icon-link"></span></a>PC Resister를 스레드마다 독립적으로 할당하는 이유</h4>
+<p>PC 값은 스레드가 명령어의 어디까지 수행하였는지를 나타나게 된다. 스레드는 CPU를 할당받았다가 스케줄러에 의해 다시 선점당한다. 그렇기 때문에 명령어가 연속적으로 수행되지 못하고 어느 부분까지 수행했는지 기억할 필요가 있다. 따라서 PC 레지스터를 독립적으로 할당한다.</p>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-1-4-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C">위로</a></p>
+</br>
+<hr>
+<h2 id="멀티-스레드"><a href="#%EB%A9%80%ED%8B%B0-%EC%8A%A4%EB%A0%88%EB%93%9C" aria-hidden="true"><span class="icon icon-link"></span></a>멀티 스레드</h2>
+<h3 id="멀티-스레딩의-장점"><a href="#%EB%A9%80%ED%8B%B0-%EC%8A%A4%EB%A0%88%EB%94%A9%EC%9D%98-%EC%9E%A5%EC%A0%90" aria-hidden="true"><span class="icon icon-link"></span></a>멀티 스레딩의 장점</h3>
+<p>프로세스를 이용하여 동시에 처리하던 일을 스레드로 구현할 경우 메모리 공간과 시스템 자원 소모가 줄어들게 된다. 스레드 간의 통신이 필요한 경우에도 별도의 자원을 이용하는 것이 아니라 전역 변수의 공간 또는 동적으로 할당된 공간인 Heap 영역을 이용하여 데이터를 주고받을 수 있다. 그렇기 때문에 프로세스 간 통신 방법에 비해 스레드 간의 통신 방법이 훨씬 간단하다. 심지어 스레드의 문맥 교환은 프로세스 문맥 교환과는 달리 캐시 메모리를 비울 필요가 없기 때문에 더 빠르다. 따라서 시스템의 throughtput이 향상되고 자원 소모가 줄어들며 자연스럽게 프로그램의 응답 시간이 단축된다. 이러한 장점 때문에 여러 프로세스로 할 수 있는 작업들을 하나의 프로세스에서 스레드로 나눠 수행하는 것이다.</p>
+</br>
+<h3 id="멀티-스레딩의-문제점"><a href="#%EB%A9%80%ED%8B%B0-%EC%8A%A4%EB%A0%88%EB%94%A9%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90" aria-hidden="true"><span class="icon icon-link"></span></a>멀티 스레딩의 문제점</h3>
+<p>멀티 프로세스 기반으로 프로그래밍할 때는 프로세스 간 공유하는 자원이 없기 때문에 동일한 자원에 동시에 접근하는 일이 없었지만 멀티 스레딩을 기반으로 프로그래밍할 때는 이 부분을 신경써줘야 한다. 서로 다른 스레드가 데이터와 힙 영역을 공유하기 때문에 어떤 스레드가 다른 스레드에서 사용중인 변수나 자료구조에 접근하여 엉뚱한 값을 읽어오거나 수정할 수 있다.</p>
+<p>그렇기 때문에 멀티스레딩 환경에서는 동기화 작업이 필요하다. 동기화를 통해 작업 처리 순서를 컨트롤 하고 공유 자원에 대한 접근을 컨트롤 하는 것이다. 하지만 이로 인해 병목현상이 발생하여 성능이 저하될 가능성이 높다. 그러므로 과도한 락으로 인한 병목현상을 줄여야 한다.</p>
+</br>
+<h3 id="멀티-스레드-vs-멀티-프로세스"><a href="#%EB%A9%80%ED%8B%B0-%EC%8A%A4%EB%A0%88%EB%93%9C-vs-%EB%A9%80%ED%8B%B0-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4" aria-hidden="true"><span class="icon icon-link"></span></a>멀티 스레드 vs 멀티 프로세스</h3>
+<p>멀티 스레드는 멀티 프로세스보다 적은 메모리 공간을 차지하고 문맥 전환이 빠르다는 장점이 있지만, 오류로 인해 하나의 스레드가 종료되면 전체 스레드가 종료될 수 있다는 점과 동기화 문제를 안고 있다. 반면 멀티 프로세스 방식은 하나의 프로세스가 죽더라도 다른 프로세스에는 영향을 끼치지 않고 정상적으로 수행된다는 장점이 있지만, 멀티 스레드보다 많은 메모리 공간과 CPU 시간을 차지한다는 단점이 존재한다. 이 두 가지는 동시에 여러 작업을 수행한다는 점에서 같지만 적용해야 하는 시스템에 따라 적합/부적합이 구분된다. 따라서 대상 시스템의 특징에 따라 적합한 동작 방식을 선택하고 적용해야 한다.</p>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-1-4-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C">위로</a></p>
+</br>
+<hr>
+<h2 id="스케줄러"><a href="#%EC%8A%A4%EC%BC%80%EC%A4%84%EB%9F%AC" aria-hidden="true"><span class="icon icon-link"></span></a>스케줄러</h2>
+<p><em>프로세스를 스케줄링하기 위한 Queue에는 세 가지 종류가 존재한다.</em></p>
+<ul>
+<li>Job Queue : 현재 시스템 내에 있는 모든 프로세스의 집합</li>
+<li>Ready Queue : 현재 메모리 내에 있으면서 CPU를 잡아서 실행되기를 기다리는 프로세스의 집합</li>
+<li>Device Queue : Device I/O 작업을 대기하고 있는 프로세스의 집합</li>
+</ul>
+<p>각각의 Queue에 프로세스들을 넣고 빼주는 스케줄러에도 크게 <strong>세 가지 종류가</strong> 존재한다.</p>
+<h3 id="장기스케줄러long-term-scheduler-or-job-scheduler"><a href="#%EC%9E%A5%EA%B8%B0%EC%8A%A4%EC%BC%80%EC%A4%84%EB%9F%AClong-term-scheduler-or-job-scheduler" aria-hidden="true"><span class="icon icon-link"></span></a>장기스케줄러(Long-term scheduler or job scheduler)</h3>
+<p>메모리는 한정되어 있는데 많은 프로세스들이 한꺼번에 메모리에 올라올 경우, 대용량 메모리(일반적으로 디스크)에 임시로 저장된다. 이 pool에 저장되어 있는 프로세스 중 어떤 프로세스에 메모리를 할당하여 ready queue로 보낼지 결정하는 역할을 한다.</p>
+<ul>
+<li>메모리와 디스크 사이의 스케줄링을 담당.</li>
+<li>프로세스에 memory(및 각종 리소스)를 할당(admit)</li>
+<li>degree of Multiprogramming 제어<br>
+메모리에 여러 프로그램이 올라가는 것) 몇 개의 프로그램이 올라갈 것인지를 제어</li>
+<li>프로세스의 상태<br>
+new -> ready(in memory)</li>
+</ul>
+<p><em>cf) 메모리에 프로그램이 너무 많이 올라가도, 너무 적게 올라가도 성능이 좋지 않은 것이다. 참고로 time sharing system 에서는 장기 스케줄러가 없다. 그냥 곧바로 메모리에 올라가 ready 상태가 된다.</em></p>
+</br>
+<h3 id="단기스케줄러short-term-scheduler-or-cpu-scheduler"><a href="#%EB%8B%A8%EA%B8%B0%EC%8A%A4%EC%BC%80%EC%A4%84%EB%9F%ACshort-term-scheduler-or-cpu-scheduler" aria-hidden="true"><span class="icon icon-link"></span></a>단기스케줄러(Short-term scheduler or CPU scheduler)</h3>
+<ul>
+<li>CPU와 메모리 사이의 스케줄링을 담당.</li>
+<li>Ready Queue에 존재하는 프로세스 중 어떤 프로세스를 running 시킬지 결정.</li>
+<li>프로세스에 CPU를 할당(scheduler dispatch)</li>
+<li>프로세스의 상태<br>
+ready -> running -> waiting -> ready</li>
+</ul>
+</br>
+<h3 id="중기스케줄러medium-term-scheduler-or-swapper"><a href="#%EC%A4%91%EA%B8%B0%EC%8A%A4%EC%BC%80%EC%A4%84%EB%9F%ACmedium-term-scheduler-or-swapper" aria-hidden="true"><span class="icon icon-link"></span></a>중기스케줄러(Medium-term scheduler or Swapper)</h3>
+<ul>
+<li>여유 공간 마련을 위해 프로세스를 통째로 메모리에서 디스크로 쫓아냄 (swapping)</li>
+<li>프로세스에게서 memory를 deallocate</li>
+<li>degree of Multiprogramming 제어</li>
+<li>현 시스템에서 메모리에 너무 많은 프로그램이 동시에 올라가는 것을 조절하는 스케줄러.</li>
+<li>프로세스의 상태<br>
+ready -> suspended</li>
+</ul>
+<h4 id="process-state---suspended"><a href="#process-state---suspended" aria-hidden="true"><span class="icon icon-link"></span></a>Process state - suspended</h4>
+<p>Suspended(stopped) : 외부적인 이유로 프로세스의 수행이 정지된 상태로 메모리에서 내려간 상태를 의미한다. 프로세스 전부 디스크로 swap out된다. blocked 상태는 다른 I/O 작업을 기다리는 상태이기 때문에 스스로 ready state로 돌아갈 수 있지만 이 상태는 외부적인 이유로 suspending되었기 때문에 스스로 돌아갈 수 없다.</p>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-1-4-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C">위로</a></p>
+</br>
+<hr>
+<h2 id="cpu-스케줄러"><a href="#cpu-%EC%8A%A4%EC%BC%80%EC%A4%84%EB%9F%AC" aria-hidden="true"><span class="icon icon-link"></span></a>CPU 스케줄러</h2>
+<p><em>스케줄링 대상은 Ready Queue에 있는 프로세스들이다.</em></p>
+<h3 id="fcfsfirst-come-first-served"><a href="#fcfsfirst-come-first-served" aria-hidden="true"><span class="icon icon-link"></span></a>FCFS(First Come First Served)</h3>
+<h4 id="특징"><a href="#%ED%8A%B9%EC%A7%95" aria-hidden="true"><span class="icon icon-link"></span></a>특징</h4>
+<ul>
+<li>먼저 온 고객을 먼저 서비스해주는 방식, 즉 먼저 온 순서대로 처리.</li>
+<li>
+<p>비선점형(Non-Preemptive) 스케줄링<br>
+일단 CPU를 잡으면 CPU burst가 완료될 때까지 CPU를 반환하지 않는다. 할당되었던 CPU가 반환될 때만 스케줄링이 이루어진다.</p>
+<h4 id="문제점"><a href="#%EB%AC%B8%EC%A0%9C%EC%A0%90" aria-hidden="true"><span class="icon icon-link"></span></a>문제점</h4>
+</li>
+<li>convoy effect<br>
+소요시간이 긴 프로세스가 먼저 도달하여 효율성을 낮추는 현상이 발생한다.</li>
+</ul>
+</br>
+<h3 id="sjfshortest---job---first"><a href="#sjfshortest---job---first" aria-hidden="true"><span class="icon icon-link"></span></a>SJF(Shortest - Job - First)</h3>
+<h4 id="특징-1"><a href="#%ED%8A%B9%EC%A7%95-1" aria-hidden="true"><span class="icon icon-link"></span></a>특징</h4>
+<ul>
+<li>다른 프로세스가 먼저 도착했어도 CPU burst time이 짧은 프로세스에게 선 할당</li>
+<li>
+<p>비선점형(Non-Preemptive) 스케줄링</p>
+<h4 id="문제점-1"><a href="#%EB%AC%B8%EC%A0%9C%EC%A0%90-1" aria-hidden="true"><span class="icon icon-link"></span></a>문제점</h4>
+</li>
+<li>starvation<br>
+효율성을 추구하는게 가장 중요하지만 특정 프로세스가 지나치게 차별받으면 안되는 것이다. 이 스케줄링은 극단적으로 CPU사용이 짧은 job을 선호한다. 그래서 사용 시간이 긴 프로세스는 거의 영원히 CPU를 할당받을 수 없다.</li>
+</ul>
+</br>
+<h3 id="srtshortest-remaining-time-first"><a href="#srtshortest-remaining-time-first" aria-hidden="true"><span class="icon icon-link"></span></a>SRT(Shortest Remaining time First)</h3>
+<h4 id="특징-2"><a href="#%ED%8A%B9%EC%A7%95-2" aria-hidden="true"><span class="icon icon-link"></span></a>특징</h4>
+<ul>
+<li>새로운 프로세스가 도착할 때마다 새로운 스케줄링이 이루어진다.</li>
+<li>선점형 (Preemptive) 스케줄링<br>
+현재 수행중인 프로세스의 남은 burst time보다 더 짧은 CPU burst time을 가지는 새로운 프로세스가 도착하면 CPU를 뺏긴다.</li>
+</ul>
+<h4 id="문제점-2"><a href="#%EB%AC%B8%EC%A0%9C%EC%A0%90-2" aria-hidden="true"><span class="icon icon-link"></span></a>문제점</h4>
+<ul>
+<li>starvation</li>
+<li>새로운 프로세스가 도달할 때마다 스케줄링을 다시하기 때문에 CPU burst time(CPU 사용시간)을 측정할 수가 없다.</li>
+</ul>
+</br>
+<h3 id="priority-scheduling"><a href="#priority-scheduling" aria-hidden="true"><span class="icon icon-link"></span></a>Priority Scheduling</h3>
+<h4 id="특징-3"><a href="#%ED%8A%B9%EC%A7%95-3" aria-hidden="true"><span class="icon icon-link"></span></a>특징</h4>
+<ul>
+<li>우선순위가 가장 높은 프로세스에게 CPU를 할당하겠다. 우선순위란 정수로 표현하게 되고 작은 숫자가 우선순위가 높다.</li>
+<li>선점형 스케줄링(Preemptive) 방식<br>
+더 높은 우선순위의 프로세스가 도착하면 실행중인 프로세스를 멈추고 CPU를 선점한다.</li>
+<li>비선점형 스케줄링(Non-Preemptive) 방식<br>
+더 높은 우선순위의 프로세스가 도착하면 Ready Queue의 Head에 넣는다.</li>
+</ul>
+<h4 id="문제점-3"><a href="#%EB%AC%B8%EC%A0%9C%EC%A0%90-3" aria-hidden="true"><span class="icon icon-link"></span></a>문제점</h4>
+<ul>
+<li>starvation</li>
+<li>
+<p>무기한 봉쇄(Indefinite blocking)<br>
+실행 준비는 되어있으나 CPU를 사용못하는 프로세스를 CPU가 무기한 대기하는 상태</p>
+<h4 id="해결책"><a href="#%ED%95%B4%EA%B2%B0%EC%B1%85" aria-hidden="true"><span class="icon icon-link"></span></a>해결책</h4>
+</li>
+<li>aging<br>
+아무리 우선순위가 낮은 프로세스라도 오래 기다리면 우선순위를 높여주자.</li>
+</ul>
+</br>
+<h3 id="round-robin"><a href="#round-robin" aria-hidden="true"><span class="icon icon-link"></span></a>Round Robin</h3>
+<h4 id="특징-4"><a href="#%ED%8A%B9%EC%A7%95-4" aria-hidden="true"><span class="icon icon-link"></span></a>특징</h4>
+<ul>
+<li>현대적인 CPU 스케줄링</li>
+<li>각 프로세스는 동일한 크기의 할당 시간(time quantum)을 갖게 된다.</li>
+<li>할당 시간이 지나면 프로세스는 선점당하고 ready queue의 제일 뒤에 가서 다시 줄을 선다.</li>
+<li><code>RR</code>은 CPU사용시간이 랜덤한 프로세스들이 섞여있을 경우에 효율적</li>
+<li><code>RR</code>이 가능한 이유는 프로세스의 context를 save할 수 있기 때문이다.</li>
+</ul>
+<h4 id="장점"><a href="#%EC%9E%A5%EC%A0%90" aria-hidden="true"><span class="icon icon-link"></span></a>장점</h4>
+<ul>
+<li><code>Response time</code>이 빨라진다.<br>
+n개의 프로세스가 ready queue에 있고 할당시간이 q(time quantum)인 경우 각 프로세스는 q단위로 CPU시간의 1/n을 얻는다. 즉, 어떤 프로세스도 (n-1)q time unit 이상 기다리지 않는다.</li>
+<li>프로세스가 기다리는 시간이 CPU를 사용할 만큼 증가한다.<br>
+공정한 스케줄링이라고 할 수 있다.</li>
+</ul>
+<h4 id="주의할-점"><a href="#%EC%A3%BC%EC%9D%98%ED%95%A0-%EC%A0%90" aria-hidden="true"><span class="icon icon-link"></span></a>주의할 점</h4>
+<p>설정한 <code>time quantum</code>이 너무 커지면 <code>FCFS</code>와 같아진다.
+또 너무 작아지면 스케줄링 알고리즘의 목적에는 이상적이지만 잦은 context switch로 overhead가 발생한다.
+그렇기 때문에 적당한 <code>time quantum</code>을 설정하는 것이 중요하다.</p>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-1-4-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C">위로</a></p>
+</br>
+<hr>
+<h2 id="동기와-비동기의-차이"><a href="#%EB%8F%99%EA%B8%B0%EC%99%80-%EB%B9%84%EB%8F%99%EA%B8%B0%EC%9D%98-%EC%B0%A8%EC%9D%B4" aria-hidden="true"><span class="icon icon-link"></span></a>동기와 비동기의 차이</h2>
+<h3 id="비유를-통한-쉬운-설명"><a href="#%EB%B9%84%EC%9C%A0%EB%A5%BC-%ED%86%B5%ED%95%9C-%EC%89%AC%EC%9A%B4-%EC%84%A4%EB%AA%85" aria-hidden="true"><span class="icon icon-link"></span></a>비유를 통한 쉬운 설명</h3>
+<p>해야할 일(task)가 빨래, 설거지, 청소 세 가지가 있다고 가정한다. 이 일들을 동기적으로 처리한다면 빨래를 하고 설거지를 하고 청소를 한다.
+비동기적으로 일을 처리한다면 빨래하는 업체에게 빨래를 시킨다. 설거지 대행 업체에 설거지를 시킨다. 청소 대행 업체에 청소를 시킨다. 셋 중 어떤 것이 먼저 완료될지는 알 수 없다. 일을 모두 마친 업체는 나에게 알려주기로 했으니 나는 다른 작업을 할 수 있다. 이 때는 백그라운드 스레드에서 해당 작업을 처리하는 경우의 비동기를 의미한다.</p>
+<h3 id="sync-vs-async"><a href="#sync-vs-async" aria-hidden="true"><span class="icon icon-link"></span></a>Sync vs Async</h3>
+<p>일반적으로 동기와 비동기의 차이는 메소드를 실행시킴과 <code>동시에</code> 반환 값이 기대되는 경우를 <strong>동기</strong> 라고 표현하고 그렇지 않은 경우에 대해서 <strong>비동기</strong> 라고 표현한다. 동시에라는 말은 실행되었을 때 값이 반환되기 전까지는 <code>blocking</code>되어 있다는 것을 의미한다. 비동기의 경우, <code>blocking</code>되지 않고 이벤트 큐에 넣거나 백그라운드 스레드에게 해당 task를 위임하고 바로 다음 코드를 실행하기 때문에 기대되는 값이 바로 반환되지 않는다.</p>
+<p><em>글로만 설명하기가 어려운 것 같아 그림과 함께 설명된 링크를 첨부합니다.</em></p>
+<h4 id="reference"><a href="#reference" aria-hidden="true"><span class="icon icon-link"></span></a>Reference</h4>
+<ul>
+<li><a href="http://asfirstalways.tistory.com/348">http://asfirstalways.tistory.com/348</a></li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-1-4-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C">위로</a></p>
+</br>
+<hr>
+<h2 id="프로세스-동기화"><a href="#%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EB%8F%99%EA%B8%B0%ED%99%94" aria-hidden="true"><span class="icon icon-link"></span></a>프로세스 동기화</h2>
+<h3 id="critical-section임계영역"><a href="#critical-section%EC%9E%84%EA%B3%84%EC%98%81%EC%97%AD" aria-hidden="true"><span class="icon icon-link"></span></a>Critical Section(임계영역)</h3>
+<p>멀티 스레딩에 문제점에서 나오듯, 동일한 자원을 동시에 접근하는 작업(e.g. 공유하는 변수 사용, 동일 파일을 사용하는 등)을 실행하는 코드 영역을 Critical Section이라 칭한다.</p>
+<h3 id="critical-section-problem임계영역-문제"><a href="#critical-section-problem%EC%9E%84%EA%B3%84%EC%98%81%EC%97%AD-%EB%AC%B8%EC%A0%9C" aria-hidden="true"><span class="icon icon-link"></span></a>Critical Section Problem(임계영역 문제)</h3>
+<p>프로세스들이 Critical Section을 함께 사용할 수 있는 프로토콜을 설계하는 것이다.</p>
+<h4 id="requirements해결을-위한-기본조건"><a href="#requirements%ED%95%B4%EA%B2%B0%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B8%B0%EB%B3%B8%EC%A1%B0%EA%B1%B4" aria-hidden="true"><span class="icon icon-link"></span></a>Requirements(해결을 위한 기본조건)</h4>
+<ul>
+<li>Mutual Exclusion(상호 배제)<br>
+프로세스 P1이 Critical Section에서 실행중이라면, 다른 프로세스들은 그들이 가진 Critical Section에서 실행될 수 없다.</li>
+<li>Progress(진행)<br>
+Critical Section에서 실행중인 프로세스가 없고, 별도의 동작이 없는 프로세스들만 Critical Section 진입 후보로서 참여될 수 있다.</li>
+<li>Bounded Waiting(한정된 대기)<br>
+P1가 Critical Section에 진입 신청 후 부터 받아들여질 때가지, 다른 프로세스들이 Critical Section에 진입하는 횟수는 제한이 있어야 한다.</li>
+</ul>
+<h3 id="해결책-1"><a href="#%ED%95%B4%EA%B2%B0%EC%B1%85-1" aria-hidden="true"><span class="icon icon-link"></span></a>해결책</h3>
+<h3 id="lock"><a href="#lock" aria-hidden="true"><span class="icon icon-link"></span></a>Lock</h3>
+<ul>
+<li>
+<p>하드웨어 기반 해결책으로써, 동시에 공유 자원에 접근하는 것을 막기 위해 Critical Section에 진입하는 프로세스는 Lock을 획득하고 Critical Section을 빠져나올 때, Lock을 방출함으로써 동시에 접근이 되지 않도록 한다.</p>
+<h4 id="한계"><a href="#%ED%95%9C%EA%B3%84" aria-hidden="true"><span class="icon icon-link"></span></a>한계</h4>
+</li>
+<li>다중처리기 환경에서는 시간적인 효율성 측면에서 적용할 수 없다.</li>
+</ul>
+<h3 id="semaphores세마포"><a href="#semaphores%EC%84%B8%EB%A7%88%ED%8F%AC" aria-hidden="true"><span class="icon icon-link"></span></a>Semaphores(세마포)</h3>
+<ul>
+<li>
+<p>소프트웨어상에서 Critical Section 문제를 해결하기 위한 동기화 도구</p>
+<h4 id="종류"><a href="#%EC%A2%85%EB%A5%98" aria-hidden="true"><span class="icon icon-link"></span></a>종류</h4>
+<p>OS는 Counting/Binary 세마포를 구분한다</p>
+</li>
+<li>
+<p>카운팅 세마포<br>
+<strong>가용한 개수를 가진 자원</strong> 에 대해 접근을 제어하는데 사용되며, 세마포는 그 가용한 <strong>자원의 개수</strong> 로 초기화 된다.
+자원을 사용하면 세마포가 감소, 방출하면 세마포가 증가 한다.</p>
+</li>
+<li>
+<p>이진 세마포
+MUTEX라고도 부르며, 상호배제의 (Mutual Exclusion)의 머릿글자를 따서 만들어졌다.
+이름 그대로 0과 1 사이의 값만 가능하며, 다중 프로세스들 사이의 Critical Section문제를 해결하기 위해 사용한다.</p>
+</li>
+</ul>
+<h4 id="단점"><a href="#%EB%8B%A8%EC%A0%90" aria-hidden="true"><span class="icon icon-link"></span></a>단점</h4>
+<ul>
+<li>Busy Waiting(바쁜 대기)<br>
+Critical Section에 진입해야하는 프로세스는 진입 코드를 계속 반복 실행해야 하며, CPU 시간을 낭비하게 된다.</li>
+</ul>
+<h4 id="deadlock교착상태"><a href="#deadlock%EA%B5%90%EC%B0%A9%EC%83%81%ED%83%9C" aria-hidden="true"><span class="icon icon-link"></span></a>Deadlock(교착상태)</h4>
+<ul>
+<li>세마포가 Ready Queue를 가지고 있고, 둘 이상의 프로세스가 Critical Section 진입을 무한정 기다리고 있고, Critical Section 에서 실행되는 프로세스는 진입 대기 중인 프로세스가 실행되야만 빠져나올 수 있는 상황을 지칭한다.</li>
+</ul>
+<h3 id="모니터"><a href="#%EB%AA%A8%EB%8B%88%ED%84%B0" aria-hidden="true"><span class="icon icon-link"></span></a>모니터</h3>
+<ul>
+<li>고급 언어의 설계 구조물로서, 개발자의 코드를 상호배제 하게끔 만든 추상화된 데이터 형태이다.</li>
+</ul>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-1-4-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C">위로</a></p>
+<hr>
+<h2 id="메모리-관리-전략"><a href="#%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC-%EC%A0%84%EB%9E%B5" aria-hidden="true"><span class="icon icon-link"></span></a>메모리 관리 전략</h2>
+<h3 id="메모리-관리-배경"><a href="#%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC-%EB%B0%B0%EA%B2%BD" aria-hidden="true"><span class="icon icon-link"></span></a>메모리 관리 배경</h3>
+<p>각각의 <strong>프로세스</strong> 는 독립된 메모리 공간을 갖고, 운영체제 혹은 다른 프로세스의 메모리 공간에 접근할 수 없는 제한이 걸려있다. 단지, <strong>운영체제</strong> 만이 운영체제 메모리 영역과 사용자 메모리 영역의 접근에 제약을 받지 않는다.</p>
+<p><strong>Swapping</strong> : 메모리의 관리를 위해 사용되는 기법. 표준 Swapping방식으로는 round-robin과 같은 스케줄링의 다중 프로그래밍 환경에서 CPU 할당 시간이 끝난 프로세스의 메모리를 보조 기억장치(e.g. 하드디스크)로 내보내고 다른 프로세스의 메모리를 불러 들일 수 있다.</p>
+<blockquote>
+<p>이 과정을 <strong>swap</strong> (<strong>스왑시킨다</strong>) 이라 한다. 주 기억장치(RAM)으로 불러오는 과정을 <strong>swap-in</strong>, 보조 기억장치로 내보내는 과정을 <strong>swap-out</strong> 이라 한다. swap에는 큰 디스크 전송시간이 필요하기 때문에 현재에는 메모리 공간이 부족할때 Swapping이 시작된다.</p>
+</blockquote>
+<p><strong>단편화</strong> (<strong>Fragmentation</strong>) : 프로세스들이 메모리에 적재되고 제거되는 일이 반복되다보면, 프로세스들이 차지하는 메모리 틈 사이에 사용 못할 만큼의 작은 조각의 자유공간들이 늘어나게 되고, 이것이 <strong>단편화</strong> 이다. 단편화는 2가지 종류로 나뉜다.</p>
+<table>
+<thead>
+<tr>
+<th><code>Process A</code></th>
+<th>free</th>
+<th><code>Process B</code></th>
+<th>free</th>
+<th><code>Process C</code></th>
+<th align="center"> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  free 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </th>
+<th><code>Process D</code></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<ul>
+<li>외부 단편화: 메모리 공간 중 일부 사용 못하게 되는 부분. 물리 메모리(RAM)에서 사이사이 남는 공간들을 모두 합치면 충분한 공간이 되는 부분들이 <strong>분산되어 있을때 발생한다고 볼 수 있다.</strong></li>
+<li>내부 단편화: 프로세스가 사용하는 메모리 공간 에 포함된 남는 부분. 예를들어 <strong>메모리 분할 자유 공간이 10,000B 있고 Process A가 9,998B 사용하게되면 2B라는 차이</strong> 가 존재하고, 이 현상을 내부 단편화라 칭한다.</li>
+</ul>
+<p>압축 : 외부 단편화를 해소하기 위해 프로세스가 사용하는 공간들을 한쪽으로 몰아, 자유공간을 확보하는 방법론 이지만, 작업효율이 좋지 않다. (위의 메모리 현황이 압축을 통해 아래의 그림 처럼 바뀌는 효과를 가질 수 있다)</p>
+<table>
+<thead>
+<tr>
+<th><code>Process A</code></th>
+<th><code>Process B</code></th>
+<th><code>Process C</code></th>
+<th align="center"><code>Process D</code></th>
+<th> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  free 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<h3 id="paging페이징"><a href="#paging%ED%8E%98%EC%9D%B4%EC%A7%95" aria-hidden="true"><span class="icon icon-link"></span></a>Paging(페이징)</h3>
+<p>하나의 프로세스가 사용하는 메모리 공간이 연속적이어야 한다는 제약을 없애는 메모리 관리 방법이다.
+외부 단편화와 압축 작업을 해소 하기 위해 생긴 방법론으로, 물리 메모리는 Frame이라는 고정 크기로 분리되어 있고, 논리 메모리(프로세스가 점유하는)는 페이지는 고정 크기의 블록으로 분리된다.(페이지 교체 알고리즘에 들어가는 페이지)</p>
+<p>페이징 기법을 사용함으로써 논리 메모리는 물리 메모리에 저장될 때, 연속되어 저장될 필요가 없고 물리 메모리의 남는 프레임에 적절히 배치됨으로 외부 단편화를 해결할 수 있는 큰 장점이 있다.</p>
+<p>하나의 프로세스가 사용하는 공간은 여러개의 페이지로 나뉘어서 관리되고(논리 메모리에서), 개별 페이지는 <strong>순서에 상관없이</strong> 물리메모리에 있는 프레임에 mapping되어 저장된다고 볼 수 있다.</p>
+<ul>
+<li>단점 : 내부 단편화 문제의 비중이 늘어나게 된다. 예를들어 페이지 크기가 1,024B 이고 <strong>프로세스 A</strong> 가 3,172B의 메모리를 요구한다면 3개의 페이지 프레임(1,024 * 3 = 3,072) 하고도 100B가 남기때문에 총 4개의 페이지 프레임이 필요한 것이다. 결론적으로 4번째 페이지 프레임에는 924B(1,024 - 100)의 여유 공간이 남게 되는 내부 단편화 문제가 발생하는 것이다.</li>
+</ul>
+<h3 id="segmentation세그멘테이션"><a href="#segmentation%EC%84%B8%EA%B7%B8%EB%A9%98%ED%85%8C%EC%9D%B4%EC%85%98" aria-hidden="true"><span class="icon icon-link"></span></a>Segmentation(세그멘테이션)</h3>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-1-4-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C">위로</a></p>
+<hr>
+<h2 id="가상-메모리"><a href="#%EA%B0%80%EC%83%81-%EB%A9%94%EB%AA%A8%EB%A6%AC" aria-hidden="true"><span class="icon icon-link"></span></a>가상 메모리</h2>
+<p>다중 프로그래밍을 실현하기 위해서는 많은 프로세스들을 동시에 메모리에 올려두어야 한다. 가상메모리는 <strong>프로세스 전체가 메모리 내에 올라오지 않더라도 실행이 가능하도록 하는 기법</strong> 이며, 주요 장점 중 하나로서 프로그램이 물리 메모리보다 커도 된다는 지점이 있다.</p>
+<h3 id="가상-메모리-개발-배경"><a href="#%EA%B0%80%EC%83%81-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B0%9C%EB%B0%9C-%EB%B0%B0%EA%B2%BD" aria-hidden="true"><span class="icon icon-link"></span></a>가상 메모리 개발 배경</h3>
+<p>실행되는 <strong>코드의 전부를 물리 메모리에 존재시켜야</strong> 했고, <strong>메모리 용량보다 큰 프로그램은 실행시킬 수 없었다.</strong> 또한, 여러 프로그램을 동시에 메모리에 올리기에는 용량의 한계와, 페이지 교체등의 성능 이슈가 발생하게 된다.
+또한, 가끔만 사용되는 코드가 차지하는 메모리들을 확인할 수 있다는 점에서, 불필요하게 전체의 프로그램 전체가 메모리에 올라와 있어야 하는게 아니라는 것을 알 수 있다.</p>
+<h4 id="프로그램의-일부분만-메모리에-올릴-수-있다면"><a href="#%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%98-%EC%9D%BC%EB%B6%80%EB%B6%84%EB%A7%8C-%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%97%90-%EC%98%AC%EB%A6%B4-%EC%88%98-%EC%9E%88%EB%8B%A4%EB%A9%B4" aria-hidden="true"><span class="icon icon-link"></span></a>프로그램의 일부분만 메모리에 올릴 수 있다면...</h4>
+<ul>
+<li>물리 메모리 크기에 제약받지 않게 된다.</li>
+<li>더 많은 프로그램을 동시에 실행할 수 있게 된다. 이에 따라 <code>응답시간</code>은 유지되고, <code>CPU 이용률</code>과 <code>처리율</code>은 높아진다.</li>
+<li><a href="#%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC-%EB%B0%B0%EA%B2%BD">swap</a>에 필요한 입출력이 줄어들기 때문에 프로그램들이 빠르게 실행된다.</li>
+</ul>
+<h3 id="가상-메모리가-하는-일"><a href="#%EA%B0%80%EC%83%81-%EB%A9%94%EB%AA%A8%EB%A6%AC%EA%B0%80-%ED%95%98%EB%8A%94-%EC%9D%BC" aria-hidden="true"><span class="icon icon-link"></span></a>가상 메모리가 하는 일</h3>
+<p>가상 메모리는 실제의 물리 메모리 개념과 사용자의 논리 메모리 개념을 분리한 것으로 정리할 수 있다. 이로써 작은 메모리를 가지고도 얼마든지 큰 <code>가상 주소 공간</code>을 프로그래머에게 제공할 수 있다.</p>
+<h4 id="가상-주소-공간"><a href="#%EA%B0%80%EC%83%81-%EC%A3%BC%EC%86%8C-%EA%B3%B5%EA%B0%84" aria-hidden="true"><span class="icon icon-link"></span></a>가상 주소 공간</h4>
+<ul>
+<li>한 프로세스가 메모리에 저장되는 논리적인 모습을 가상메모리에 구현한 공간이다.
+프로세스가 요구하는 메모리 공간을 가상메모리에서 제공함으로서 현재 직접적으로 필요치 않은 메모리 공간은 실제 물리 메모리에 올리지 않는 것으로 물리 메모리를 절약할 수 있다.</li>
+<li>예를 들어, 한 프로그램이 실행되며 논리 메모리로 100KB가 요구되었다고 하자.
+하지만 실행까지에 필요한 메모리 공간<code>(Heap영역, Stack 영역, 코드, 데이터)</code>의 합이 40KB라면, 실제 물리 메모리에는 40KB만 올라가 있고, 나머지 60KB 만큼은 필요시에 물리메모리에 요구한다고 이해할 수 있겠다.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><code>Stack</code></th>
+<th> 
+ 
+ 
+ free (60KB) 
+ 
+ 
+ 
+ </th>
+<th align="center"><code>Heap</code></th>
+<th><code>Data</code></th>
+<th><code>Code</code></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<h4 id="프로세스간의-페이지-공유"><a href="#%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EA%B0%84%EC%9D%98-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B3%B5%EC%9C%A0" aria-hidden="true"><span class="icon icon-link"></span></a>프로세스간의 페이지 공유</h4>
+<p>가상 메모리는...</p>
+<ul>
+<li><code>시스템 라이브러리</code>가 여러 프로세스들 사이에 공유될 수 있도록 한다.
+각 프로세스들은 <code>공유 라이브러리</code>를 자신의 가상 주소 공간에 두고 사용하는 것처럼 인식하지만, 라이브러리가 올라가있는 <code>물리 메모리 페이지</code>들은 모든 프로세스에 공유되고 있다.</li>
+<li>프로세스들이 메모리를 공유하는 것을 가능하게 하고, 프로세스들은 공유 메모리를 통해 통신할 수 있다.
+이 또한, 각 프로세스들은 각자 자신의 주소 공간처럼 인식하지만, 실제 물리 메모리는 공유되고 있다.</li>
+<li><code>fork()</code>를 통한 프로세스 생성 과정에서 페이지들이 공유되는 것을 가능하게 한다.</li>
+</ul>
+<h3 id="demand-paging요구-페이징"><a href="#demand-paging%EC%9A%94%EA%B5%AC-%ED%8E%98%EC%9D%B4%EC%A7%95" aria-hidden="true"><span class="icon icon-link"></span></a>Demand Paging(요구 페이징)</h3>
+<p>프로그램 실행 시작 시에 프로그램 전체를 디스크에서 물리 메모리에 적재하는 대신, 초기에 필요한 것들만 적재하는 전략을 <code>요구 페이징</code>이라 하며, 가상 메모리 시스템에서 많이 사용된다. 그리고 가상 메모리는 대개 <a href="#paging%ED%8E%98%EC%9D%B4%EC%A7%95">페이지</a>로 관리된다.
+요구 페이징을 사용하는 가상 메모리에서는 실행과정에서 필요해질 때 페이지들이 적재된다. <strong>한 번도 접근되지 않은 페이지는 물리 메모리에 적재되지 않는다.</strong></p>
+<p>프로세스 내의 개별 페이지들은 <code>페이저(pager)</code>에 의해 관리된다. 페이저는 프로세스 실행에 실제 필요한 페이지들만 메모리로 읽어 옮으로서, <strong>사용되지 않을 페이지를 가져오는 시간낭비와 메모리 낭비를 줄일 수 있다.</strong></p>
+<h4 id="page-fault-trap페이지-부재-트랩"><a href="#page-fault-trap%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%B6%80%EC%9E%AC-%ED%8A%B8%EB%9E%A9" aria-hidden="true"><span class="icon icon-link"></span></a>Page fault trap(페이지 부재 트랩)</h4>
+<h3 id="페이지-교체"><a href="#%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%90%EC%B2%B4" aria-hidden="true"><span class="icon icon-link"></span></a>페이지 교체</h3>
+<p><code>요구 페이징</code> 에서 언급된대로 프로그램 실행시에 모든 항목이 물리 메모리에 올라오지 않기 때문에, 프로세스의 동작에 필요한 페이지를 요청하는 과정에서 <code>page fault(페이지 부재)</code>가 발생하게 되면, 원하는 페이지를 보조저장장치에서 가져오게 된다. 하지만, 만약 물리 메모리가 모두 사용중인 상황이라면, 페이지 교체가 이뤄져야 한다.(또는, 운영체제가 프로세스를 강제 종료하는 방법이 있다.)</p>
+<h4 id="기본적인-방법"><a href="#%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9D%B8-%EB%B0%A9%EB%B2%95" aria-hidden="true"><span class="icon icon-link"></span></a>기본적인 방법</h4>
+<p>물리 메모리가 모두 사용중인 상황에서의 메모리 교체 흐름이다.</p>
+<ol>
+<li>디스크에서 필요한 페이지의 위치를 찾는다</li>
+<li>
+<p>빈 페이지 프레임을 찾는다.</p>
+<ol>
+<li><code>페이지 교체 알고리즘</code>을 통해 희생될(victim) 페이지를 고른다.</li>
+<li>희생될 페이지를 디스크에 기록하고, 관련 페이지 테이블을 수정한다.</li>
+</ol>
+</li>
+<li>새롭게 비워진 페이지 테이블 내 프레임에 새 페이지를 읽어오고, 프레임 테이블을 수정한다.</li>
+<li>사용자 프로세스 재시작</li>
+</ol>
+<h4 id="페이지-교체-알고리즘"><a href="#%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%90%EC%B2%B4-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98" aria-hidden="true"><span class="icon icon-link"></span></a>페이지 교체 알고리즘</h4>
+<h5 id="fifo-페이지-교체"><a href="#fifo-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%90%EC%B2%B4" aria-hidden="true"><span class="icon icon-link"></span></a>FIFO 페이지 교체</h5>
+<p>가장 간단한 페이지 교체 알고리즘으로 FIFO(first-in first-out)의 흐름을 가진다. 즉, 먼저 물리 메모리에 들어온 페이지 순서대로 페이지 교체 시점에 먼저 나가게 된다는 것이다.</p>
+<ul>
+<li>
+<p>장점</p>
+<ul>
+<li>이해하기도 쉽고, 프로그램하기도 쉽다.</li>
+</ul>
+</li>
+<li>
+<p>단점</p>
+<ul>
+<li>오래된 페이지가 항상 불필요하지 않은 정보를 포함하지 않을 수 있다(초기 변수 등)</li>
+<li>처음부터 활발하게 사용되는 페이지를 교체해서 페이지 부재율을 높이는 부작용을 초래할 수 있다.</li>
+<li><code>Belady의 모순</code>: 페이지를 저장할 수 있는 페이지 프레임의 갯수를 늘려도 되려 페이지 부재가 더 많이 발생하는 모순이 존재한다.</li>
+</ul>
+</li>
+</ul>
+<h5 id="최적-페이지-교체optimal-page-replacement"><a href="#%EC%B5%9C%EC%A0%81-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%90%EC%B2%B4optimal-page-replacement" aria-hidden="true"><span class="icon icon-link"></span></a>최적 페이지 교체(Optimal Page Replacement)</h5>
+<p><code>Belady의 모순</code>을 확인한 이후 최적 교체 알고리즘에 대한 탐구가 진행되었고, 모든 알고리즘보다 낮은 페이지 부재율을 보이며 <code>Belady의 모순</code>이 발생하지 않는다. 이 알고리즘의 핵심은 <code>앞으로 가장 오랫동안 사용되지 않을 페이지를 찾아 교체</code>하는 것이다.
+주로 비교 연구 목적을 위해 사용한다.</p>
+<ul>
+<li>
+<p>장점</p>
+<ul>
+<li>알고리즘 중 가장 낮은 페이지 부재율을 보장한다.</li>
+</ul>
+</li>
+<li>
+<p>단점</p>
+<ul>
+<li>구현의 어려움이 있다. 모든 프로세스의 메모리 참조의 계획을 미리 파악할 방법이 없기 때문이다.</li>
+</ul>
+</li>
+</ul>
+<h5 id="lru-페이지-교체lru-page-replacement"><a href="#lru-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%90%EC%B2%B4lru-page-replacement" aria-hidden="true"><span class="icon icon-link"></span></a>LRU 페이지 교체(LRU Page Replacement)</h5>
+<p><code>LRU: Least-Recently-Used</code><br>
+최적 알고리즘의 근사 알고리즘으로, 가장 오랫동안 사용되지 않은 페이지를 선택하여 교체한다.</p>
+<ul>
+<li>
+<p>특징</p>
+<ul>
+<li>대체적으로 <code>FIFO 알고리즘</code>보다 우수하고, <code>OPT알고리즘</code>보다는 그렇지 못한 모습을 보인다.</li>
+</ul>
+</li>
+</ul>
+<h5 id="lfu-페이지-교체lfu-page-replacement"><a href="#lfu-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%90%EC%B2%B4lfu-page-replacement" aria-hidden="true"><span class="icon icon-link"></span></a>LFU 페이지 교체(LFU Page Replacement)</h5>
+<p><code>LFU: Least Frequently Used</code><br>
+참조 회수가 가장 작은 페이지를 교체하는 방법이다. 활발하게 사용되는 페이지는 참조 횟수가 많아질 거라는 가정에서 만들어진 알고리즘이다.</p>
+<ul>
+<li>
+<p>특징</p>
+<ul>
+<li>어떤 프로세스가 특정 페이지를 집중적으로 사용하다, 다른 기능을 사용하게되면 더 이상 사용하지 않아도 계속 메모리에 머물게 되어 초기 가정에 어긋나는 시점이 발생할 수 있다</li>
+<li>최적(OPT) 페이지 교체를 제대로 근사하지 못하기 때문에, 잘 쓰이지 않는다.</li>
+</ul>
+</li>
+</ul>
+<h5 id="mfu-페이지-교체mfu-page-replacement"><a href="#mfu-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%90%EC%B2%B4mfu-page-replacement" aria-hidden="true"><span class="icon icon-link"></span></a>MFU 페이지 교체(MFU Page Replacement)</h5>
+<p><code>MFU: Most Frequently Used</code><br>
+참조 회수가 가장 작은 페이지가 최근에 메모리에 올라왔고, 앞으로 계속 사용될 것이라는 가정에 기반한다.</p>
+<ul>
+<li>
+<p>특징</p>
+<ul>
+<li>최적(OPT) 페이지 교체를 제대로 근사하지 못하기 때문에, 잘 쓰이지 않는다.</li>
+</ul>
+</li>
+</ul>
+</br>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-1-4-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C">위로</a></p>
+<hr>
+<h2 id="캐시의-지역성"><a href="#%EC%BA%90%EC%8B%9C%EC%9D%98-%EC%A7%80%EC%97%AD%EC%84%B1" aria-hidden="true"><span class="icon icon-link"></span></a>캐시의 지역성</h2>
+<h3 id="캐시의-지역성-원리"><a href="#%EC%BA%90%EC%8B%9C%EC%9D%98-%EC%A7%80%EC%97%AD%EC%84%B1-%EC%9B%90%EB%A6%AC" aria-hidden="true"><span class="icon icon-link"></span></a>캐시의 지역성 원리</h3>
+<p>캐시 메모리는 속도가 빠른 장치와 느린 장치간의 속도차에 따른 병목 현상을 줄이기 위한 범용 메모리이다. 이러한 역할을 수행하기 위해서는 CPU가 어떤 데이터를 원할 것인가를 어느 정도 예측할 수 있어야 한다. 캐시의 성능은 작은 용량의 캐시 메모리에 CPU가 이후에 참조할, 쓸모 있는 정보가 어느 정도 들어있느냐에 따라 좌우되기 때문이다.</p>
+<p>이 때 <code>적중율(Hit rate)</code>을 극대화 시키기 위해 데이터 <code>지역성(Locality)의 원리</code>를 사용한다. 지역성의 전제조건으로 프로그램은 모든 코드나 데이터를 균등하게 Access하지 않는다는 특성을 기본으로 한다. 즉, <code>Locality</code>란 기억 장치 내의 정보를 균일하게 Access하는 것이 아닌 어느 한 순간에 특정 부분을 집중적으로 참조하는 특성인 것이다.</p>
+<p>이 데이터 지역성은 대표적으로 시간 지역성(Temporal Locality)과 공간 지역성(Spatial Locality)으로 나뉜다.</p>
+<ul>
+<li>시간 지역성 : 최근에 참조된 주소의 내용은 곧 다음에 다시 참조되는 특성.</li>
+<li>공간 지역성 : 대부분의 실제 프로그램이 참조된 주소와 인접한 주소의 내용이 다시 참조되는 특성</li>
+</ul>
+</br>
+<h3 id="caching-line"><a href="#caching-line" aria-hidden="true"><span class="icon icon-link"></span></a>Caching line</h3>
+<p>언급했듯이 캐시(cache)는 프로세서 가까이에 위치하면서 빈번하게 사용되는 데이터를 놔두는 장소이다. 하지만 캐시가 아무리 가까이 있더라도 찾고자 하는 데이터가 어느 곳에 저장되어 있는지 몰라 모든 데이터를 순회해야 한다면 시간이 오래 걸리게 된다. 즉, 캐시에 목적 데이터가 저장되어 있다면 바로 접근하여 출력할 수 있어야 캐시가 의미 있어진다는 것이다.</p>
+<p>그렇기 때문에 캐시에 데이터를 저장할 때 특정 자료구조를 사용하여 <code>묶음</code>으로 저장하게 되는데 이를 <strong>캐싱 라인</strong> 이라고 한다. 다양한 주소에 있는 데이터를 사용하므로 빈번하게 사용하는 데이터의 주소는 흩어져 있다. 따라서 캐시에 저장하는 데이터에는 데이터의 메모리 주소 등을 기록해 둔 태그를 달아놓을 필요가 있다. 이러한 태그들의 묶음을 캐싱 라인이라고 하고 메모리로부터 가져올 때도 캐싱 라인을 기준으로 가져온다.
+종류로는 대표적으로 세 가지 방식이 존재한다.
+1) Full Associative
+2) Set Associative
+3) Direct Map</p>
+<p><a href="https://github.com/JaeYeopHan/for_beginner">뒤로</a>/<a href="#part-1-4-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C">위로</a></p>
+</br>
+<hr>
+</br>
+<p><em>OS.end</em>  </p>
+</div></article></section><footer>© 2017 <a>interview</a>. All rights reserved.</footer></div></div>
+      </body>
+    </html>
+  
