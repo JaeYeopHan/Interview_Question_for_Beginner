@@ -4,6 +4,7 @@
 * [ ] New Resources
 * [ ] Suggestions
 * [ ] Questions
+* [ ] Enhancement
 * [ ] Comments
 
 #### Description
