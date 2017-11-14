@@ -257,7 +257,8 @@
   * `New resource`: **Part 2 - Java**
 * [hb1love](https://github.com/hb1love)
   * `New resource`: **Part 1 - 운영체제**
-
+* [keyakoto](https://github.com/keyakoto)
+  * `New resource`: 알고리즘 연습 사이트 추가
 
 </br>
 
