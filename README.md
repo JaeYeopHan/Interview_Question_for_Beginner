@@ -259,6 +259,8 @@
   * `New resource`: **Part 1 - 운영체제**
 * [keyakoto](https://github.com/keyakoto)
   * `New resource`: 알고리즘 연습 사이트 추가
+* [getsolaris](https://github.com/getsolaris)
+  * `New resource`: 알고리즘 연습 사이트 추가
 
 </br>
 
