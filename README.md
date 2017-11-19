@@ -4,21 +4,35 @@
 
 </div>
 
-
 # Technical Interview Guidelines for beginners
-예비 개발자들의 기술 면접 준비를 위한 자료를 정리해놓은 Repository입니다. 개발이라는 분야를 모두 담지는 못했습니다. 그저 가이드라인으로 참고해주시면 감사하겠습니다. 또한 제가 개인적으로 면접을 준비하면서 정리한 내용이라 잘못된 부분이 있을 수 있습니다. 이런 부분들에 대해서는 `Pull Request` or `Issue`로 참여해주시면 정말 감사하겠습니다. 주제와 관련된 좋은 참고 자료를 추가하는 것도 가능합니다. 해당 Repository에서 학습을 하시다가 생기는 질문은 `Issue`에 올려주세요.  
-> 취준생 여러분의 건승을 기원합니다 :)
+<div align=center>
 
-* [미세먼지 같은 면접 팁](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Tip)
+[![author](https://img.shields.io/badge/author-jbee-ff69b4.svg?style=flat-square)](http://friendly-belief.surge.sh/)
+[![CONTRIBUTORS](https://img.shields.io/badge/contributors-8-green.svg?style=flat-square)]()
+[![LICENSE](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)]()
+
+</div>
 
 </br>
 
-### Content
+### Table of Contents
+* [What is this?](#what-is-this?)
 * [Part 1. CS](#part-1-전산-기초)
 * [Part 2. Language](#part-2-language)
 * [Part 3. 분야별 정리](#part-3-분야별)
 * [그 외 좋은 자료 추천](#그-외-좋은-자료)
 * [Contributor](#contributor)
+
+</br>
+
+</br>
+
+# What is this?
+예비 개발자들의 기술 면접 준비를 위한 자료를 정리해놓은 Repository입니다. 개발이라는 분야를 모두 담지는 못했습니다. 그저 가이드라인으로 참고해주시면 감사하겠습니다. 또한 제가 개인적으로 면접을 준비하면서 정리한 내용이라 잘못된 부분이 있을 수 있습니다. 이런 부분들에 대해서는 `Pull Request` or `Issue`로 참여해주시면 정말 감사하겠습니다. 주제와 관련된 좋은 참고 자료를 추가하는 것도 가능합니다. 해당 Repository에서 학습을 하시다가 생기는 질문은 `Issue`에 올려주세요!
+
+> 취준생 여러분의 건승을 기원합니다 :)
+
+#### [미세먼지 같은 면접 팁](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Tip)
 
 </br>
 
@@ -225,7 +239,7 @@
 
 </br>
 
-### 그 외 좋은 자료
+## 그 외 좋은 자료
 * [주니어 개발자를 위한 취업 정보](https://github.com/jojoldu/junior-recruit-scheduler)
 * [mission-peace/interview repository](https://github.com/mission-peace/interview)  
 => 각종 알고리즘에 대한 코드와 동영상 강의 링크를 제공합니다. (영어)
@@ -243,7 +257,9 @@
 
 </br>
 
-## Contributor
+</br>
+
+## Contribute
 해당 Repository에 기여를 해주신 분들입니다 :)
 * [joshua-qa](https://github.com/joshua-qa)
   * `New resource`: 유용한 알고리즘 연습 사이트 추가
@@ -267,3 +283,6 @@
 #### [HOW TO CONTRIBUTE](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/master/CONTRIBUTING.md)
 
 </br>
+
+### LICENSE
+[MIT](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/master/LICENSE)
