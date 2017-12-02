@@ -15,13 +15,23 @@
 
 </br>
 
-### Table of Contents
+## :memo: Table of Contents
 * [What is this?](#what-is-this?)
 * [Part 1. CS](#part-1-전산-기초)
+  * [개발상식](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
+  * [자료구조](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
+  * [네트워크](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Network)
+  * [운영체제](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/OS)
+  * [데이터베이스](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Database)
+  * [디자인패턴](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/DesignPattern)
+  * [알고리즘](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
 * [Part 2. Language](#part-2-language)
+  * [Java](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Java)
+  * [JavaScript](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
 * [Part 3. 분야별 정리](#part-3-분야별)
+  * [FrontEnd](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
 * [그 외 좋은 자료 추천](#그-외-좋은-자료)
-* [Contributor](#contributor)
+* [Contribute](#contribute)
 
 </br>
 
@@ -30,9 +40,11 @@
 # What is this?
 예비 개발자들의 기술 면접 준비를 위한 자료를 정리해놓은 Repository입니다. 개발이라는 분야를 모두 담지는 못했습니다. 그저 가이드라인으로 참고해주시면 감사하겠습니다. 또한 제가 개인적으로 면접을 준비하면서 정리한 내용이라 잘못된 부분이 있을 수 있습니다. 이런 부분들에 대해서는 `Pull Request` or `Issue`로 참여해주시면 정말 감사하겠습니다. 주제와 관련된 좋은 참고 자료를 추가하는 것도 가능합니다. 해당 Repository에서 학습을 하시다가 생기는 질문은 `Issue`에 올려주세요!
 
-> 취준생 여러분의 건승을 기원합니다 :)
+> 취준생 여러분의 건승을 기원합니다 :thumbsup:
 
-#### [미세먼지 같은 면접 팁](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Tip)
+### :sparkles: HELP
+##### :pray: [HOW TO CONTRIBUTE](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/master/CONTRIBUTING.md)
+##### :star: 이 저장소는 PR과 star를 먹고 자랍니다.
 
 </br>
 
@@ -42,7 +54,7 @@
 
 # Part 1. 전산 기초
 
-## 개발상식 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
+## :bulb: 개발상식 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
 * 객체 지향 프로그래밍이란 무엇인가?
 * RESTFul API란?
 * TDD란 무엇이며 어떠한 장점이 있는가?
@@ -51,7 +63,7 @@
 
 </br>
 
-## 자료구조  [Link](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
+## :bulb: 자료구조  [Link](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
 * Array vs LinkedList
 * Stack and Queue
 * Tree
@@ -81,7 +93,7 @@
 
 </br>
 
-## 네트워크 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Network)
+## :bulb: 네트워크 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Network)
 * GET, POST 방식의 차이점
 * TCP 3-way-handshake
 * TCP와 UDP의 차이점
@@ -92,7 +104,7 @@
 
 </br>
 
-## 운영체제 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/OS)
+## :bulb: 운영체제 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/OS)
 * 프로세스와 스레드의 차이
 * 스케줄러의 종류
   * 장기 스케줄러
@@ -125,7 +137,7 @@
 
 </br>
 
-## 데이터베이스 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Database)
+## :bulb: 데이터베이스 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Database)
 * 데이터베이스
   * 데이터베이스를 사용하는 이유
   * 데이터베이스 성능
@@ -159,13 +171,13 @@
 
 </br>
 
-## Design Pattern [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/DesignPattern)
+## :bulb: Design Pattern [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/DesignPattern)
 * Singleton
 
 </br>
 
 
-## Algorithm (알고리즘) [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
+## :bulb: Algorithm (알고리즘) [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
 * 손코딩 및 코딩 테스트 대비  
 => 대부분의 내용이 코드이기 때문에 별도의 [Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
 * 코딩 테스트를 위한 Tip
@@ -174,6 +186,9 @@
 
 </br>
 
+<sup>[(목차로 돌아가기)](#technical-interview-guidelines-for-beginners)</sup>
+
+</br>
 
 ---
 
@@ -181,7 +196,7 @@
 
 # Part 2. Language
 
-## Java [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Java)
+## :gem: Java [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Java)
 * JVM에 대해서 / GC의 원리
 * Collection
 * Annotation
@@ -197,7 +212,7 @@
 
 </br>
 
-## JavaScript [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
+## :gem: JavaScript [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
 * JavaScript Event Loop
 * Hoisting
 * Closure
@@ -210,13 +225,17 @@
 
 </br>
 
+<sup>[(목차로 돌아가기)](#technical-interview-guidelines-for-beginners)</sup>
+
+</br>
+
 ---
 
 </br>
 
 # Part 3. 분야별
 
-## Front-End [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
+## :large_orange_diamond: Front-End [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
 * 브라우저의 작동 원리
 * Document Object Model
   * Event bubbling and Capturing
@@ -235,11 +254,16 @@
 
 </br>
 
+<sup>[(목차로 돌아가기)](#technical-interview-guidelines-for-beginners)</sup>
+
+</br>
+
 ---
 
 </br>
 
 ## 그 외 좋은 자료
+* [미세먼지 같은 면접 팁](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Tip)
 * [주니어 개발자를 위한 취업 정보](https://github.com/jojoldu/junior-recruit-scheduler)
 * [mission-peace/interview repository](https://github.com/mission-peace/interview)  
 => 각종 알고리즘에 대한 코드와 동영상 강의 링크를 제공합니다. (영어)
@@ -251,6 +275,7 @@
 => (도서) 코딩 인터뷰에 관련된 도서 중 가장 유명한 책이라고 생각되는데요, 최근 개정판이 발간되었습니다.
 * [tech-interview-handbook Github repository](https://github.com/yangshun/tech-interview-handbook)  
 => (영어) 코딩 인터뷰에 관련되어 정리되어있는 respository 입니다.
+
 </br>
 
 ---
@@ -260,23 +285,18 @@
 </br>
 
 ## Contribute
-해당 Repository에 기여를 해주신 분들입니다 :)
-* [joshua-qa](https://github.com/joshua-qa)
-  * `New resource`: 유용한 알고리즘 연습 사이트 추가
-* [yoonsubKim](https://github.com/yoonsubKim)
-  * `New resource`: **Part 1 - 운영체제**
-* [joeunha](https://github.com/joeunha)
-  * `Fix typo`
-* [jhleed](https://github.com/jhleed)
-  * `Fix typo`
-* [StiKuan](https://github.com/StiKuan)
-  * `New resource`: **Part 2 - Java**
-* [hb1love](https://github.com/hb1love)
-  * `New resource`: **Part 1 - 운영체제**
-* [keyakoto](https://github.com/keyakoto)
-  * `New resource`: 알고리즘 연습 사이트 추가
-* [getsolaris](https://github.com/getsolaris)
-  * `New resource`: 알고리즘 연습 사이트 추가
+해당 Repository에 기여를 해주신 분들입니다. 감사합니다. :pray:
+
+| |Contributor|Description|
+|---|---|---|
+| |[joshua-qa](https://github.com/joshua-qa)|`New resource`: 알고리즘 연습 사이트 추가|
+| |[yoonsubKim](https://github.com/yoonsubKim)|`New resource`: **Part 1 - 운영체제**|
+| |[joeunha](https://github.com/joeunha)|`Fix typo`|
+| |[jhleed](https://github.com/jhleed)|`Fix typo`|
+| |[StiKuan](https://github.com/StiKuan)|`New resource`: **Part 2 - Java**|
+| |[hb1love](https://github.com/hb1love)|`New resource`: **Part 1 - 운영체제**|
+| |[keyakoto](https://github.com/keyakoto)|`New resource`: 알고리즘 연습 사이트 추가|
+| |[getsolaris](https://github.com/getsolaris)|`New resource`: 알고리즘 연습 사이트 추가|
 
 </br>
 
