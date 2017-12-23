@@ -6,6 +6,7 @@
 * [CORS](#cors)
 * [크로스 브라우징](#크로스-브라우징)
 * [웹 성능과 관련된 Issues](#웹-성능과-관련된-issue-정리)
+* [서버 사이드 렌더링 vs 클라이언트 사이드 렌더링](#서버-사이드-렌더링-vs-클라이언트-사이드-렌더링)
 * [CSS Methodology](#css-methodology)
 * [normalize.css vs reset.css](#normalize-vs-reset)
 
@@ -110,6 +111,14 @@
 
 #### Reference
 * [HTML5 앱과 웹사이트를 보다 빠르게 하는 50가지 - yongwoo Jeon](https://www.slideshare.net/mixed/html5-50)
+
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-1-front-end)
+
+</br>
+
+## 서버 사이드 렌더링 vs 클라이언트 사이드 렌더링
+* 그림과 함께 설명하기 위해 일단 블로그 링크를 추가한다.
+* http://asfirstalways.tistory.com/244
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-1-front-end)
 
