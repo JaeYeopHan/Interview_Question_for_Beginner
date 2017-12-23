@@ -5,6 +5,7 @@
 * [TDD란 무엇이며 어떠한 장점이 있는가](#tdd)
 * [함수형 프로그래밍](#함수형-프로그래밍)
 * [MVC 패턴이란 무엇인가?](http://asfirstalways.tistory.com/180)
+* [Git과 GitHub에 대해서](#git과-github에-대해서)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
@@ -170,6 +171,18 @@ _아직 저도 잘 모르는 부분이라서 정말 간단한 내용만 정리�
 
 ## MVC 패턴이란 무엇인가?
 그림과 함께 설명하는 것이 더 좋다고 판단하여 [포스팅](http://asfirstalways.tistory.com/180)으로 대체한다.
+
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-development-common-sense)
+
+</br>
+
+## Git과 GitHub에 대해서
+(work in progress)
+
+### Git
+
+### GitHub
+
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-development-common-sense)
 
