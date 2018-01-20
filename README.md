@@ -224,6 +224,9 @@
 #### 추가 자료
 * [JavaScript 기본서 비교](http://asfirstalways.tistory.com/246)
 * [ECMAScript6 정리](https://jaeyeophan.github.io/categories/ECMAScript6)
+* [Interview Algorithm Question in JavaScript (영어)](https://github.com/kennymkchan/interview-questions-in-javascript)
+  * JavaScript와 관련된 인터뷰 관련 내용들을 정리해놓은 자료입니다.
+
 
 </br>
 
