@@ -281,6 +281,8 @@
 => (도서) 코딩 인터뷰에 관련된 도서 중 가장 유명한 책이라고 생각되는데요, 최근 개정판이 발간되었습니다.
 * [tech-interview-handbook Github repository](https://github.com/yangshun/tech-interview-handbook)  
 => (영어) 코딩 인터뷰에 관련되어 정리되어있는 respository 입니다.
+* [A perfect guide for cracking a javascript interview a developers perspective](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
+=> [@JayJin](https://github.com/milooy)님이 추천하신 자바스크립트 인터뷰 아티클입니다.
 
 </br>
 
