@@ -253,6 +253,7 @@
 * normalize.css vs reset.css
 
 #### 추가 자료
+* [신입 프론트엔드 개발자가 되려면 무엇을 학습해야 하나요?](https://medium.com/@Jbee_/%EC%8B%A0%EC%9E%85-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EB%90%98%EB%A0%A4%EB%A9%B4-%EB%AC%B4%EC%97%87%EC%9D%84-%ED%95%99%EC%8A%B5%ED%95%B4%EC%95%BC-%ED%95%98%EB%82%98%EC%9A%94-1dd59a14e084)
 * [Front-end-Developer-Interview-Questions (한국어)](https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Korean)
 * [Front-end Interview (영어)](http://thatjsdude.com/interview/index.html)
 * [Front-end Checklist](https://github.com/thedaviddias/Front-End-Checklist)
