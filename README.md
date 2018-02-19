@@ -307,6 +307,7 @@
 | |[keyakoto](https://github.com/keyakoto)|`New resource`: 알고리즘 연습 사이트 추가|
 | |[getsolaris](https://github.com/getsolaris)|`New resource`: 알고리즘 연습 사이트 추가|
 | |[yunitto](https://github.com/yunitto)|`Fix typo`|
+| |[bactoria](https://github.com/bactoria)|`Fix inaccurate information`|
 
 </br>
 
