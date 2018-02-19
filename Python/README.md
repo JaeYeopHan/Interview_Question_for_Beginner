@@ -142,6 +142,402 @@ GIL은 스레드에서 사용되는 Lock을 인터프리터 레벨로 확장한 
 </br>
 
 ## GC 작동 방식
+파이썬에선 기본적으로 [garbage collection](https://docs.python.org/3/glossary.html#term-garbage-collection)(가비지 컬렉션)과 [reference counting](https://docs.python.org/3/glossary.html#term-reference-count)(레퍼런스 카운팅)을 통해 할당 된 메모리를 관리한다. 기본적으로 참조 횟수가 0이된 객체를 메모리에서 해제하는 레퍼런스 카운팅 방식을 사용하지만, 참조 횟수가 0은 아니지만 도달할 수 없지만 상태인 reference cycles(순환 참조)가 발생했을 때는 가비지 컬렉션으로 그 상황을 해결한다.
+
+> 엄밀히 말하면 레퍼런스 카운팅 방식을 통해 객체를 메모리에서 해제하는 행위가 가비지 컬렉션의 한 형태지만 여기서는 순환 참조가 발생했을 때 cyclic garbage collector를 통한 **가비지 컬렉션**과 **레퍼런스 카운팅**을 통한 가비지 컬렉션을 구분했다.
+
+여기서 '순환 참조가 발생한건 어떻게 탐지하지?', '주기적으로 감시한다면 그 주기의 기준은 뭘까?', '가비지 컬렉션은 언제 발생하지?' 같은 의문이 들 수 있는데 이 의문을 해결하기 전에 잠시 레퍼런스 카운팅, 순환 참조, 파이썬의 가비지 컬렉터에 대한 간단한 개념을 짚고 넘어가자. 이 개념을 알고 있다면 바로 [가비지 컬렉션의 작동 방식 단락](#가비지-컬렉션의-작동-방식)을 읽으면 된다.
+
+#### 레퍼런스 카운팅
+모든 객체는 참조당할 때 레퍼런스 카운터를 증가시키고 참조가 없어질 때 카운터를 감소시킨다. 이 카운터가 0이 되면 객체가 메모리에서 해제한다. 어떤 객체의 레퍼런스 카운트를 보고싶다면 `sys.getrefcount()`로 확인할 수 있다.
+
+<details>
+    <summary>
+        <code>Py_INCREF()</code>와 <code>Py_DECREF()</code>를 통한 카운터 증감
+    </summary>
+<br>
+
+
+카운터를 증감시키는 명령은 아래와 같이 [object.h](https://github.com/python/cpython/blob/master/Include/object.h)에 선언되어있는데 카운터를 증가시킬 때는 단순히 `ob_refcnt`를 1 증가시키고 감소시킬때는 1 감소시킴과 동시에 카운터가 0이되면 메모리에서 객체를 해제하는 것을 확인할 수 있다.
+
+```c
+#define Py_INCREF(op) (                         \
+    _Py_INC_REFTOTAL  _Py_REF_DEBUG_COMMA       \
+    ((PyObject *)(op))->ob_refcnt++)
+
+#define Py_DECREF(op)                                   \
+    do {                                                \
+        PyObject *_py_decref_tmp = (PyObject *)(op);    \
+        if (_Py_DEC_REFTOTAL  _Py_REF_DEBUG_COMMA       \
+        --(_py_decref_tmp)->ob_refcnt != 0)             \
+            _Py_CHECK_REFCNT(_py_decref_tmp)            \
+        else                                            \
+            _Py_Dealloc(_py_decref_tmp);                \
+    } while (0)
+```
+
+더 정확한 정보는 [파이썬 공식 문서](https://docs.python.org/3/extending/extending.html#reference-counting-in-python)를 참고하면 자세하게 설명되어있다.
+
+
+</details>
+
+
+#### 순환 참조
+순환 참조의 간단한 예제는 자기 자신을 참조하는 객체다.
+
+```python
+>>> l = []
+>>> l.append(l)
+>>> del l
+```
+
+`l`의 참조 횟수는 1 이지만 이 객체는 더이상 접근할 수 없으며 레퍼런스 카운팅 방식으로는 메모리에서 해제될 수 없다.
+
+또 다른 예로는 서로를 참조하는 객체다.
+
+```python
+>>> a = Foo()  # 0x60
+>>> b = Foo()  # 0xa8
+>>> a.x = b  # 0x60의 x는 0xa8를 가리킨다.
+>>> b.x = a  # 0xa8의 x는 0x60를 가리킨다.
+# 이 시점에서 0x60의 레퍼런스 카운터는 a와 b.x로 2
+# 0xa8의 레퍼런스 카운터는 b와 a.x로 2다.
+>>> del a  # 0x60은 1로 감소한다. 0xa8은 b와 0x60.x로 2다.
+>>> del b  # 0xa8도 1로 감소한다.
+```
+
+이 상태에서 `0x60.x`와 `0xa8.x`가 서로를 참조하고 있기 때문에 레퍼런스 카운트는 둘 다 1이지만 도달할 수 없는 가비지가 된다.
+
+#### 가비지 컬렉터
+파이썬의 `gc` 모듈을 통해 가비지 컬렉터를 직접 제어할 수 있다. `gc` 모듈은 [cyclic garbage collection을 지원](https://docs.python.org/3/c-api/gcsupport.html)하는데 이를 통해 reference cycles(순환 참조)를 해결할 수 있다. gc모듈은 오로지 순환 참조를 탐지하고 해결하기위해 존재한다. [`gc` 파이썬 공식문서](https://docs.python.org/3/library/gc.html)에서도 순환 참조를 만들지 않는다고 확신할 수 있으면 `gc.disable()`을 통해 garbage collector를 비활성화 시켜도 된다고 언급하고 있다.
+
+> Since the collector supplements the reference counting already used in Python, you can disable the collector if you are sure your program does not create reference cycles.
+
+### 가비지 컬렉션의 작동 방식
+순환 참조 상태도 해결할 수 있는 cyclic garbage collection이 어떤 방식으로 동작하는지는 결국 **어떤 기준으로 가비지 컬렉션이 발생**하고 **어떻게 순환 참조를 감지**하는지에 관한 내용이다. 이에 대해 차근차근 알아보자.
+
+#### 어떤 기준으로 가비지 컬렉션이 일어나는가
+앞에서 제기했던 의문은 결국 발생 기준에 관한 의문이다. 가비지 컬렉터는 내부적으로 `generation`(세대)과 `threshold`(임계값)로 가비지 컬렉션 주기와 객체를 관리한다. 세대는 0세대, 1세대, 2세대로 구분되는데 최근에 생성된 객체는 0세대(young)에 들어가고 오래된 객체일수록 2세대(old)에 존재한다. 더불어 한 객체는 단 하나의 세대에만 속한다. 가비지 컬렉터는 0세대일수록 더 자주 가비지 컬렉션을 하도록 설계되었는데 이는 [generational hypothesis](http://www.memorymanagement.org/glossary/g.html#term-generational-hypothesis)에 근거한다.
+
+<details>
+    <summary>generational hypothesis의 두 가지 가설</summary>
+<br>
+
+
+- 대부분의 객체는 금방 도달할 수 없는 상태(unreachable)가 된다.
+- 오래된 객체(old)에서 젊은 객체(young)로의 참조는 아주 적게 존재한다.
+
+![](https://plumbr.io/wp-content/uploads/2015/05/object-age-based-on-GC-generation-generational-hypothesis.png)
+<sup> _출처 [plumbr.io](https://plumbr.io/handbook/garbage-collection-in-java/generational-hypothesis)_ </sup>
+
+- [Reference: Naver D2 - Java Garbage Collection](http://d2.naver.com/helloworld/1329)
+
+
+<hr>
+</details>
+
+
+주기는 threshold와 관련있는데 `gc.get_threshold()`로 확인해 볼 수 있다.
+
+```python
+>>> gc.get_threshold()
+(700, 10, 10)
+```
+
+각각 `threshold 0`, `threshold 1`, `threshold 2`을 의미하는데 n세대에 객체를 할당한 횟수가 `threshold n`을 초과하면 가비지 컬렉션이 수행되며 이 값은 변경될 수 있다.
+
+0세대의 경우 메모리에 객체가 할당된 횟수에서 해제된 횟수를 뺀 값, 즉 객체 수가 `threshold 0`을 초과하면 실행된다. 다만 그 이후 세대부터는 조금 다른데 0세대 가비지 컬렉션이 일어난 후 0세대 객체를 1세대로 이동시킨 후 카운터를 1 증가시킨다. 이 1세대 카운터가 `threshold 1`을 초과하면 그 때 1세대 가비지 컬렉션이 일어난다. 러프하게 말하자면 0세대 가비지 컬렉션이 객체 생성 700번만에 일어난다면 1세대는 7000번만에, 2세대는 7만번만에 일어난다는 뜻이다.
+
+이를 말로 풀어서 설명하려니 조금 복잡해졌지만 간단하게 말하면 메모리 할당시 `generation[0].count++`, 해제시 `generation[1].count--`가 발생하고, `generation[0].count > threshold[0]`이면 `genreation[0].count = 0`, `generation[1].count++`이 발생하고 `generation[1].count > 10`일 때 0세대, 1세대 count를 0으로 만들고 `generation[2].count++`을 한다는 뜻이다.
+
+[gcmodule.c 코드로 보기](https://github.com/python/cpython/blob/master/Modules/gcmodule.c#L832-L836)
+
+#### 라이프 사이클
+이렇듯 가비지 컬렉터는 세대와 임계값을 통해 가비지 컬렉션의 주기를 관리한다. 이제 가비지 컬렉터가 어떻게 순환 참조를 발견하는지 알아보기에 앞서 가비지 컬렉션의 실행 과정(라이프 사이클)을 간단하게 알아보자.
+
+새로운 객체가 만들어 질 때 파이썬은 객체를 메모리와 0세대에 할당한다. 만약 0세대의 객체 수가 `threshold 0`보다 크면 `collect_generations()`를 실행한다.
+
+<details>
+    <summary>코드와 함께하는 더 자세한 설명</summary>
+<br>
+
+
+새로운 객체가 만들어 질 때 파이썬은 `_PyObject_GC_Alloc()`을 호출한다. 이 메서드는 객체를 메모리에 할당하고, 가비지 컬렉터의 0세대의 카운터를 증가시킨다. 그 다음 0세대의 객체 수가 `threshold 0`보다 큰지, `gc.enabled`가 true인지, `threshold 0`이 0이 아닌지, 가비지 컬렉션 중이 아닌지 확인하고, 모든 조건을 만족하면 `collect_generations()`를 실행한다.
+
+다음은 `_PyObject_GC_Alloc()`을 간략화 한 소스며 메서드 전체 내용은 [여기](https://github.com/python/cpython/blob/master/Modules/gcmodule.c#L1681-L1710)에서 확인할 수 있다.
+
+```c
+_PyObject_GC_Alloc() {
+    // ...
+
+    gc.generations[0].count++; /* 0세대 카운터 증가 */
+    if (gc.generations[0].count > gc.generations[0].threshold && /* 임계값을 초과하며 */
+        gc.enabled &&  /* 사용가능하며 */
+        gc.generations[0].threshold &&  /* 임계값이 0이 아니고 */
+        !gc.collecting)  /* 컬렉션 중이 아니면 */
+    {
+        gc.collecting = 1;
+        collect_generations();
+        gc.collecting = 0;
+    }
+    // ...
+}
+```
+
+
+참고로 `gc`를 끄고싶으면 `gc.disable()`보단 `gc.set_threshold(0)`이 더 확실하다. `disable()`의 경우 서드 파티 라이브러리에서 `enable()`하는 경우가 있다고 한다.
+
+
+<hr>
+</details>
+
+`collect_generations()`이 호출되면 모든 세대(기본적으로 3개의 세대)를 검사하는데 가장 오래된 세대(2세대)부터 역으로 확인한다. 해당 세대에 객체가 할당된 횟수가 각 세대에 대응되는 `threshold n`보다 크면 `collect()`를 호출해 가비지 컬렉션을 수행한다.
+
+<details>
+    <summary>코드</summary>
+<br>
+
+
+`collect()`가 호출될 때 해당 세대보다 어린 세대들은 모두 통합되어 가비지 컬렉션이 수행되기 때문에 `break`를 통해 검사를 중단한다.
+
+다음은 `collect_generations()`을 간략화 한 소스며 메서드 전체 내용은 [여기](https://github.com/python/cpython/blob/master/Modules/gcmodule.c#L1020-L1056)에서 확인할 수 있다.
+
+```c
+static Py_ssize_t
+collect_generations(void)
+{
+    int i;
+    for (i = NUM_GENERATIONS-1; i >= 0; i--) {
+        if (gc.generations[i].count > gc.generations[i].threshold) {
+            collect_with_callback(i);
+            break;
+        }
+    }
+}
+
+static Py_ssize_t
+collect_with_callback(int generation)
+{
+    // ...
+    result = collect(generation, &collected, &uncollectable, 0);
+    // ...
+}
+```
+
+
+<hr>
+</details>
+
+`collect()` 메서드는 **순환 참조 탐지 알고리즘**을 수행하고 특정 세대에서 도달할 수 있는 객체(reachable)와 도달할 수 없는 객체(unreachable)를 구분하고 도달할 수 없는 객체 집합을 찾는다. 도달할 수 있는 객체 집합을 다음 상위 세대로 합쳐지고(0세대에서 수행되었으면 1세대로 이동), 도달할 수 없는 객체 집합은 콜백을 수행 한 후 메모리에서 해제한다.
+
+이제 정말 **순환 참조 탐지 알고리즘**을 알아볼 때가 됐다.
+
+#### 어떻게 순환 참조를 감지하는가
+먼저 순환 참조는 컨테이너 객체(e.g. `tuple`, `list`, `set`, `dict`, `class`)에 의해서만 발생할 수 있음을 알아야한다. 컨테이너 객체는 다른 객체에 대한 참조를 보유할 수 있다. 그러므로 정수, 문자열은 무시한채 관심사를 컨테이너 객체에만 집중할 수 있다.
+
+순환 참조를 해결하기 위한 아이디어로 모든 컨테이너 객체를 추적한다. 여러 방법이 있겠지만 객체 내부의 링크 필드에 더블 링크드 리스트를 사용하는 방법이 가장 좋다. 이렇게 하면 추가적인 메모리 할당 없이도 **컨테이너 객체 집합**에서 객체를 빠르게 추가하고 제거할 수 있다. 컨테이너 객체가 생성될 때 이 집합에 추가되고 제거될 때 집합에서 삭제된다.
+
+<details>
+    <summary>
+        <code>PyGC_Head</code>에 선언된 더블 링크드 리스트
+    </summary>
+<br>
+
+
+더블 링크드 리스트는 다음과 같이 선언되어 있으며 [objimpl.h 코드](https://github.com/python/cpython/blob/master/Include/objimpl.h#L250-L259)에서 확인해볼 수 있다.
+
+```c
+#ifndef Py_LIMITED_API
+typedef union _gc_head {
+    struct {
+        union _gc_head *gc_next;
+        union _gc_head *gc_prev;
+        Py_ssize_t gc_refs;
+    } gc;
+    double dummy;  /* force worst-case alignment */
+} PyGC_Head;
+```
+
+
+<hr>
+</details>
+
+이제 모든 컨테이터 객체에 접근할 수 있으니 순환 참조를 찾을 수 있어야 한다. 순환 참조를 찾는 과정은 다음과 같다.
+
+1. 객체에 `gc_refs` 필드를 레퍼런스 카운트와 같게 설정한다.
+2. 각 객체에서 참조하고 있는 다른 컨테이너 객체를 찾고, 참조되는 컨테이너의 `gc_refs`를 감소시킨다.
+3. `gc_refs`가 0이면 그 객체는 컨테이너 집합 내부에서 자기들끼리 참조하고 있다는 뜻이다.
+4. 그 객체를 unreachable 하다고 표시한 뒤 메모리에서 해제한다.
+
+이제 우리는 가비지 콜렉터가 어떻게 순환 참조 객체를 탐지하고 메모리에서 해제하는지 알았다.
+
+#### 예제
+> 아래 예제는 보기 쉽게 가공한 예제이며 실제 `collect()`의 동작과는 차이가 있다. 정확한 작동 방식은 아래에서 다시 서술한다. 혹은 [`collect()` 코드](https://github.com/python/cpython/blob/master/Modules/gcmodule.c#L797-L981)를 참고하자.
+
+아래의 예제를 통해 가비지 컬렉터가 어떤 방법으로 순환 참조 객체인 `Foo(0)`과 `Foo(1)`을 해제하는지 알아보겠다.
+
+```python
+a = [1]
+# Set: a:[1]
+b = ['a']
+# Set: a:[1] <-> b:['a']
+c = [a, b]
+# Set: a:[1] <-> b:['a'] <-> c:[a, b]
+d = c
+# Set: a:[1] <-> b:['a'] <-> c,d:[a, b]
+# 컨테이너 객체가 생성되지 않았기에 레퍼런스 카운트만 늘어난다.
+e = Foo(0)
+# Set: a:[1] <-> b:['a'] <-> c:[a, b] <-> e:Foo(0)
+f = Foo(1)
+# Set: a:[1] <-> b:['a'] <-> c:[a, b] <-> e:Foo(0) <-> f:Foo(1)
+e.x = f
+# Set: a:[1] <-> b:['a'] <-> c:[a, b] <-> e:Foo(0) <-> f,Foo(0).x:Foo(1)
+f.x = e
+# Set: a:[1] <-> b:['a'] <-> c:[a, b] <-> e,Foo(1).x:Foo(0) <-> f,Foo(0).x:Foo(1)
+del e
+# Set: a:[1] <-> b:['a'] <-> c:[a, b] <-> Foo(1).x:Foo(0) <-> f,Foo(0).x:Foo(1)
+del f
+# Set: a:[1] <-> b:['a'] <-> c:[a, b] <-> Foo(1).x:Foo(0) <-> Foo(0).x:Foo(1)
+```
+
+위 상황에서 각 컨테이너 객체의 레퍼런스 카운트는 다음과 같다.
+
+```py
+# ref count
+[1]     <- a,c      = 2
+['a']   <- b,c      = 2
+[a, b]  <- c,d      = 2
+Foo(0)  <- Foo(1).x = 1
+Foo(1)  <- Foo(0).x = 1
+```
+
+1번 과정에서 각 컨테이너 객체의 `gc_refs`가 설정된다.
+
+```py
+# gc_refs
+[1]    = 2
+['a']  = 2
+[a, b] = 2
+Foo(0) = 1
+Foo(1) = 1
+```
+
+2번 과정에서 컨테이너 집합을 순회하며 `gc_refs`을 감소시킨다.
+
+```py
+[1]     = 1  # [a, b]에 의해 참조당하므로 1 감소
+['a']   = 1  # [a, b]에 의해 참조당하므로 1 감소
+[a, b]  = 2  # 참조당하지 않으므로 그대로
+Foo(0)  = 0  # Foo(1)에 의해 참조당하므로 1 감소
+Foo(1)  = 0  # Foo(0)에 의해 참조당하므로 1 감소
+```
+3번 과정을 통해 `gc_refs`가 0인 순환 참조 객체를 발견했다. 이제 이 객체를 unreachable 집합에 옮겨주자.
+
+```py
+ unreachable |  reachable
+             |    [1] = 1
+ Foo(0) = 0  |  ['a'] = 1
+ Foo(1) = 0  | [a, b] = 2
+```
+
+이제 `Foo(0)`와 `Foo(1)`을 메모리에서 해제하면 가비지 컬렉션 과정이 끝난다.
+
+### 더 정확하고 자세한 설명
+`collect()` 메서드는 현재 세대와 어린 세대를 합쳐 순환 참조를 검사한다. 이 합쳐진 세대를 `young`으로 이름 붙이고 다음의 과정을 거치며 최종적으로 도달 할 수 없는 객체가 모인 unreachable 리스트를 메모리에서 해제하고 young에 남아있는 객체를 다음 세대에 할당한다.
+
+```c
+update_refs(young)
+subtract_refs(young)
+gc_init_list(&unreachable)
+move_unreachable(young, &unreachable)
+```
+
+`update_refs()`는 모든 객체의 레퍼런스 카운트 사본을 만든다. 이는 가비지 컬렉터가 실제 레퍼런스 카운트를 건드리지 않게 하기 위함이다.
+
+`subtract_refs()`는 각 객체 i에 대해 i에 의해 참조되는 객체 j의 `gc_refs`를 감소시킨다. 이 과정이 끝나면 (young 세대에 남아있는 객체의 레퍼런스 카운트) - (남아있는 `gc_refs`) 값이 old 세대에서 young 세대를 참조하는 수와 같다.
+
+`move_unreachable()` 메서드는 young 세대를 스캔하며 `gc_refs`가 0인 객체를 `unreachable` 리스트로 이동시키고 `GC_TENTATIVELY_UNREACHABLE`로 설정한다. 왜 완전히 `unreachable`이 아닌 임시로(Tentatively) 설정하냐면 나중에 스캔될 객체로부터 도달할 수도 있기 때문이다.
+
+
+<details>
+    <summary>예제 보기</summary>
+<br>
+
+
+```py
+a, b = Foo(0), Foo(1)
+a.x = b
+b.x = a
+c = b
+del a
+del b
+
+# 위 상황을 요약하면 다음과 같다.
+Foo(0).x = Foo(1)
+Foo(1).x = Foo(0)
+c = Foo(1)
+```
+
+이 때 상황은 다음과 같은데 `Foo(1)`의 `gc_refs`가 0이어도 뒤에 나올 `Foo(0)`을 통해 도달 할 수 있다.
+
+|   young  | ref count | gc_refs | reachable |
+|:--------:|:---------:|:-------:|:---------:|
+| `Foo(0)` |     1     |    0    |   `c.x`   |
+| `Foo(1)` |     2     |    1    |    `c`    |
+
+
+<hr>
+</details>
+
+0이 아닌 객체는 `GC_REACHABLE`로 설정하고 그 객체가 참조하고 있는 객체 또한 찾아가(traverse) `GC_REACHABLE`로 설정한다. 만약 그 객체가 `unreachable` 리스트에 있던 객체라면 `young` 리스트의 끝으로 보낸다. 굳이 `young`의 끝으로 보내는 이유는 그 객체 또한 다른 `gc_refs`가 0인 객체를 참조하고 있을 수 있기 때문이다.
+
+<details>
+    <summary>예제 보기</summary>
+<br>
+
+
+```py
+a, b = Foo(0), Foo(1)
+a.x = b
+b.x = a
+c = b
+d = Foo(2)
+d.x = d
+a.y = d
+del d
+del a
+del b
+
+# 위 상황을 요약하면 다음과 같다.
+Foo(0).x = Foo(1)
+Foo(1).x = Foo(0)
+c = Foo(1)
+Foo(0).y = Foo(2)
+```
+
+|   young  | ref count | gc_refs | reachable |
+|:--------:|:---------:|:-------:|:---------:|
+| `Foo(0)` |     1     |    0    |   `c.x`   |
+| `Foo(1)` |     2     |    1    |    `c`    |
+| `Foo(2)` |     1     |    0    |  `c.x.y`  |
+
+이 상황에서 `Foo(0)`은 `unreachable` 리스트에 있다가 `Foo(1)`을 조사하며 다시 `young` 리스트의 맨 뒤로 돌아왔고, `Foo(2)`도 `unreachable` 리스트에 갔지만 곧 `Foo(0)`에 의해 참조될 수 있음을 알고 다시 `young` 리스트로 돌아온다.
+
+
+<hr>
+</details>
+
+`young` 리스트의 전체 스캔이 끝나면 이제 `unreachable` 리스트에 있는 객체는 **정말 도달할 수 없다**. 이제 이 객체들을 메모리에서 해제되고 `young` 리스트의 객체들은 상위 세대로 합쳐진다.
+
+#### Reference
+* [Instagram이 gc를 없앤 이유](https://b.luavis.kr/python/dismissing-python-garbage-collection-at-instagram)
+* [파이썬 Garbage Collection](http://weicomes.tistory.com/277)
+* [Finding reference cycle](https://www.kylev.com/2009/11/03/finding-my-first-python-reference-cycle/)
+* [Naver D2 - Java Garbage Collection](http://d2.naver.com/helloworld/1329)
+* [gc의 threshold](https://docs.python.org/3/library/gc.html#gc.set_threshold)
+* [Garbage Collection for Python](http://www.arctrix.com/nas/python/gc/)
+* [How does garbage collection in Python work](https://www.quora.com/How-does-garbage-collection-in-Python-work-What-are-the-pros-and-cons)
+* [gcmodule.c](https://github.com/python/cpython/blob/master/Modules/gcmodule.c)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-3-python)
 
