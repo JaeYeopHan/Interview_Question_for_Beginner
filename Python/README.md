@@ -248,7 +248,7 @@ GIL은 스레드에서 사용되는 Lock을 인터프리터 레벨로 확장한 
 
 0세대의 경우 메모리에 객체가 할당된 횟수에서 해제된 횟수를 뺀 값, 즉 객체 수가 `threshold 0`을 초과하면 실행된다. 다만 그 이후 세대부터는 조금 다른데 0세대 가비지 컬렉션이 일어난 후 0세대 객체를 1세대로 이동시킨 후 카운터를 1 증가시킨다. 이 1세대 카운터가 `threshold 1`을 초과하면 그 때 1세대 가비지 컬렉션이 일어난다. 러프하게 말하자면 0세대 가비지 컬렉션이 객체 생성 700번만에 일어난다면 1세대는 7000번만에, 2세대는 7만번만에 일어난다는 뜻이다.
 
-이를 말로 풀어서 설명하려니 조금 복잡해졌지만 간단하게 말하면 메모리 할당시 `generation[0].count++`, 해제시 `generation[1].count--`가 발생하고, `generation[0].count > threshold[0]`이면 `genreation[0].count = 0`, `generation[1].count++`이 발생하고 `generation[1].count > 10`일 때 0세대, 1세대 count를 0으로 만들고 `generation[2].count++`을 한다는 뜻이다.
+이를 말로 풀어서 설명하려니 조금 복잡해졌지만 간단하게 말하면 메모리 할당시 `generation[0].count++`, 해제시 `generation[0].count--`가 발생하고, `generation[0].count > threshold[0]`이면 `genreation[0].count = 0`, `generation[1].count++`이 발생하고 `generation[1].count > 10`일 때 0세대, 1세대 count를 0으로 만들고 `generation[2].count++`을 한다는 뜻이다.
 
 [gcmodule.c 코드로 보기](https://github.com/python/cpython/blob/master/Modules/gcmodule.c#L832-L836)
 
@@ -328,7 +328,7 @@ collect_with_callback(int generation)
 <hr>
 </details>
 
-`collect()` 메서드는 **순환 참조 탐지 알고리즘**을 수행하고 특정 세대에서 도달할 수 있는 객체(reachable)와 도달할 수 없는 객체(unreachable)를 구분하고 도달할 수 없는 객체 집합을 찾는다. 도달할 수 있는 객체 집합을 다음 상위 세대로 합쳐지고(0세대에서 수행되었으면 1세대로 이동), 도달할 수 없는 객체 집합은 콜백을 수행 한 후 메모리에서 해제한다.
+`collect()` 메서드는 **순환 참조 탐지 알고리즘**을 수행하고 특정 세대에서 도달할 수 있는 객체(reachable)와 도달할 수 없는 객체(unreachable)를 구분하고 도달할 수 없는 객체 집합을 찾는다. 도달할 수 있는 객체 집합은 다음 상위 세대로 합쳐지고(0세대에서 수행되었으면 1세대로 이동), 도달할 수 없는 객체 집합은 콜백을 수행 한 후 메모리에서 해제된다.
 
 이제 정말 **순환 참조 탐지 알고리즘**을 알아볼 때가 됐다.
 
@@ -387,17 +387,17 @@ d = c
 # Set: a:[1] <-> b:['a'] <-> c,d:[a, b]
 # 컨테이너 객체가 생성되지 않았기에 레퍼런스 카운트만 늘어난다.
 e = Foo(0)
-# Set: a:[1] <-> b:['a'] <-> c:[a, b] <-> e:Foo(0)
+# Set: a:[1] <-> b:['a'] <-> c,d:[a, b] <-> e:Foo(0)
 f = Foo(1)
-# Set: a:[1] <-> b:['a'] <-> c:[a, b] <-> e:Foo(0) <-> f:Foo(1)
+# Set: a:[1] <-> b:['a'] <-> c,d:[a, b] <-> e:Foo(0) <-> f:Foo(1)
 e.x = f
-# Set: a:[1] <-> b:['a'] <-> c:[a, b] <-> e:Foo(0) <-> f,Foo(0).x:Foo(1)
+# Set: a:[1] <-> b:['a'] <-> c,d:[a, b] <-> e:Foo(0) <-> f,Foo(0).x:Foo(1)
 f.x = e
-# Set: a:[1] <-> b:['a'] <-> c:[a, b] <-> e,Foo(1).x:Foo(0) <-> f,Foo(0).x:Foo(1)
+# Set: a:[1] <-> b:['a'] <-> c,d:[a, b] <-> e,Foo(1).x:Foo(0) <-> f,Foo(0).x:Foo(1)
 del e
-# Set: a:[1] <-> b:['a'] <-> c:[a, b] <-> Foo(1).x:Foo(0) <-> f,Foo(0).x:Foo(1)
+# Set: a:[1] <-> b:['a'] <-> c,d:[a, b] <-> Foo(1).x:Foo(0) <-> f,Foo(0).x:Foo(1)
 del f
-# Set: a:[1] <-> b:['a'] <-> c:[a, b] <-> Foo(1).x:Foo(0) <-> Foo(0).x:Foo(1)
+# Set: a:[1] <-> b:['a'] <-> c,d:[a, b] <-> Foo(1).x:Foo(0) <-> Foo(0).x:Foo(1)
 ```
 
 위 상황에서 각 컨테이너 객체의 레퍼런스 카운트는 다음과 같다.
@@ -478,7 +478,7 @@ Foo(1).x = Foo(0)
 c = Foo(1)
 ```
 
-이 때 상황은 다음과 같은데 `Foo(1)`의 `gc_refs`가 0이어도 뒤에 나올 `Foo(0)`을 통해 도달 할 수 있다.
+이 때 상황은 다음과 같은데 `Foo(0)`의 `gc_refs`가 0이어도 뒤에 나올 `Foo(1)`을 통해 도달 할 수 있다.
 
 |   young  | ref count | gc_refs | reachable |
 |:--------:|:---------:|:-------:|:---------:|
