@@ -309,6 +309,7 @@
 | |[yunitto](https://github.com/yunitto)|`Fix typo`|
 | |[bactoria](https://github.com/bactoria)|`Fix inaccurate information`|
 | |[KSH-code](https://github.com/KSH-code)|`New resource`: DP 내용 추가|
+| |[rationality6](https://github.com/rationality6)|`New resource`: 알고리즘 연습 사이트 추가|
 
 </br>
 
