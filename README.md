@@ -261,6 +261,22 @@
 
 </br>
 
+## :large_orange_diamond: iOS [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
+* App Life Cycle
+* View Life Cycle
+* Delegate vs Block vs Notification
+* Memory Management
+* assign vs weak
+* Frame vs Bounds
+* 기타 질문
+
+#### 추가 자료
+
+* [iOS 면접 질문 정리 사이트 1](https://github.com/MaximAbramchuck/awesome-interview-questions#objective-c)
+* [iOS 면접 질문 정리 사이트 2](https://github.com/MaximAbramchuck/awesome-interview-questions#ios)
+
+</br>
+
 <sup>[(목차로 돌아가기)](#technical-interview-guidelines-for-beginners)</sup>
 
 </br>
