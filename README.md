@@ -31,6 +31,7 @@
   * [JavaScript](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
 * [Part 3. 분야별 정리](#part-3-분야별)
   * [FrontEnd](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
+  * [iOS](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
 * [그 외 좋은 자료 추천](#그-외-좋은-자료)
 * [Contribute](#contribute)
 
@@ -274,6 +275,7 @@
 
 * [iOS 면접 질문 정리 사이트 1](https://github.com/MaximAbramchuck/awesome-interview-questions#objective-c)
 * [iOS 면접 질문 정리 사이트 2](https://github.com/MaximAbramchuck/awesome-interview-questions#ios)
+* [Swift를 공부하기 위한 정보 링크 모음 레포](https://github.com/ClintJang/awesome-swift-korean-lecture)
 
 </br>
 

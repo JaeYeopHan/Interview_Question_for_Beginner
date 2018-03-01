@@ -2,7 +2,7 @@
 
 > 면접에서 나왔던 질문들을 정리했으며 디테일한 모든 내용을 다루기보단 전체적인 틀을 다뤘으며, 틀린 내용이 있을 수도 있으니 비판적으로 찾아보면서 공부하는 것을 추천드립니다. iOS 면접을 준비하시는 분들에게 조금이나마 도움이 되길 바라겠습니다.
 
-- App Life Cycle
+- [App Life Cycle]
 - View Life Cycle
 - Delegate vs Block vs Notification
 - Memory Management
@@ -51,6 +51,10 @@ A : 넵! 안됩니다^^
 
 </br>
 
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-2-ios)
+
+</br>
+
 ## View Life Cycle
 
 앱은 하나 이상의 뷰로 구성이 되어 있으며, 각각의 뷰들은 라이프 사이클을 가지고 있습니다. 따라서 뷰의 라이프 사이클을 고려해서 로직을 넣고, 구성해야 합니다.
@@ -75,6 +79,10 @@ A : 넵! 안됩니다^^
 
 </br>
 
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-2-ios)
+
+</br>
+
 ## Delegate vs Block vs Notification
 
 Delegate는 객체 간의 데이터 통신을 할 경우 전달자 역할을 합니다. 델리게이트는 이벤트 처리할 때 많이 사용하게 되는데 특정 객체에서 발생한 이벤트를 다른 객체에게 통보할 수 있도록 해줍니다. Delegate에게 알릴 수 있는 것은 여러 이벤트가 있거나 클래스가 델리게이트로부터 데이터를 가져와야 할 때 사용하게 됩니다.  가장 기본적인 예는 `UITableView` 입니다.
@@ -87,10 +95,18 @@ Notification은 이벤트에 대해 여러 리스너가 있을 때 사용하면 
 
 </br>
 
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-2-ios)
+
+</br>
+
 ## Memory Management
 
 - 정리해놓은 글을 통해 설명하는 것이 좋다고 판단되어 예전에 정리한 글을 공유합니다.
 - https://github.com/Yongjai/TIL/blob/master/iOS/Objective-C/MemoryManagement.md/
+
+</br>
+
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-2-ios)
 
 </br>
 
@@ -106,6 +122,10 @@ A : 마지막 강한 참조가 더 이상 객체를 가리키지 않으면 객�
 
 </br>
 
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-2-ios)
+
+</br>
+
 ## Frame vs Bounds
 
 - Frame : 부모뷰의 상대적인 위치(x, y) 및 크기 (너비, 높이)로 표현되는 사각형입니다.
@@ -113,43 +133,59 @@ A : 마지막 강한 참조가 더 이상 객체를 가리키지 않으면 객�
 
 </br>
 
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-2-ios)
+
+</br>
+
 ## 기타 질문
 
-- MVC
-
-> MVC가 무엇인가? 어떻게 사용하는가? 단점은 무엇인가?
-
 - 블록 객체는 어디에 생성되는가?
+  - 힙 vs 스택
 
-> 힙 vs 스택
 
 - 오토레이아웃을 코드로 작성해보았는가?
 
-> 비쥬얼 포맷
+  * 실제 면접에서 다음과 같이 답변하였습니다. 
+
+    ```
+    코드로 작성해본 적은 없지만 비쥬얼 포맷을 이용해서 작성할 수 있다는 것을 알고 있습니다.
+    ```
 
 - @property로 프로퍼티를 선언했을때, _와 .연산자로 접근하는 것의 차이점
 
-> 직접 vs getter
+  * _  는 인스턴스 변수에 직접 접근하는 연산자 입니다.
+  * .  은 getter 메소드 호출을  간단하게 표현한 것 입니다.
 
 - Init 메소드에서 .연산자를 써도 될까요?
 
-> 간단한거니 고민해보시는 것을 추천드립니다.
+  * 불가능 합니다. 객체가 초기화도 안되어 있기 때문에 getter 메소드 호출 불가합니다.
 
 - 데이터를 저장하는 방법
 
-> 각각의 방법들에 대한 장단점과 언제 어떻게 사용해야 하는지를 이해하는 것이 필요합니다.
+  >  각각의 방법들에 대한 장단점과 언제 어떻게 사용해야 하는지를 이해하는 것이 필요합니다.
 
-- Server/Cloud
-- Property List
-- Archive
-- SQLite
-- File
-- CoreData
-- Etc...
+  - Server/Cloud	
+  - Property List
+  - Archive
+  - SQLite
+  - File
+  - CoreData
+  - Etc...
+
 - Dynamic Binding
 
-> 무엇인지 설명
+  > 동적 바인딩은 컴파일 타임이 아닌 런타임에 메시지 메소드 연결을 이동시킵니다. 그래서 이 기능을 사용하면 응답하지 않을 수도 있는 객체로 메시지를 보낼 수 있습니다. 개발에 유연성을 가져다 주지만 런타임에는 가끔 충돌을 발생시킵니다. 
 
 - Block에서의 순환 참조 관련 질문
+
+  > 순환 참조에서 weak self로만 처리하면 되는가에 대한 문제였는데 자세한 내용은 기억이 나지 않습니다.
+
 - 손코딩
 
+  > 일반적인 코딩 문제와 iOS와 관련된 문제들
+
+</br>
+
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-2-ios)
+
+</br>
