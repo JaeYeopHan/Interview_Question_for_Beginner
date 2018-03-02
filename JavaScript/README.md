@@ -8,8 +8,9 @@
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
 ## JavaScript Event Loop
-그림과 함께 설명을 하면 좀 더 이해가 쉬울 것 같아 따로 정리한 포스팅으로 대체합니다.  
-[JavaScript 이벤트 루프에 대해서](http://asfirstalways.tistory.com/362)
+그림과 함께 설명을 하면 좀 더 이해가 쉬울 것 같아 따로 정리한 포스팅으로 대체합니다.
+- [JavaScript 이벤트 루프에 대해서](http://asfirstalways.tistory.com/362)
+- [자바스크립트의 비동기 처리 과정](http://sculove.github.io/blog/2018/01/18/javascriptflow/)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-2-javascript)
 
