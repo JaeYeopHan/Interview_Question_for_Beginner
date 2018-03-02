@@ -272,7 +272,6 @@
 * 기타 질문
 
 #### 추가 자료
-
 * [iOS 면접 질문 정리 사이트 1](https://github.com/MaximAbramchuck/awesome-interview-questions#objective-c)
 * [iOS 면접 질문 정리 사이트 2](https://github.com/MaximAbramchuck/awesome-interview-questions#ios)
 * [Swift를 공부하기 위한 정보 링크 모음 레포](https://github.com/ClintJang/awesome-swift-korean-lecture)
@@ -316,6 +315,7 @@
 
 | |Contributor|Description|
 |---|---|---|
+| |[yongjai](https://github.com/Yongjai)|`New Resources`: iOS 관련 면접 질문 추가|
 | |[joshua-qa](https://github.com/joshua-qa)|`New resource`: 알고리즘 연습 사이트 추가|
 | |[yoonsubKim](https://github.com/yoonsubKim)|`New resource`: **Part 1 - 운영체제**|
 | |[joeunha](https://github.com/joeunha)|`Fix typo`|

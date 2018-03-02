@@ -22,6 +22,7 @@
 #### Reference
 * [Naver D2 - 브라우저의 작동 원리](http://d2.naver.com/helloworld/59361)
 * [Web fundamentals - Critical-rendering-path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=ko)
+* [브라우저의 Critical path (한글)](http://m.post.naver.com/viewer/postView.nhn?volumeNo=8431285&memberNo=34176766)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-1-front-end)
 

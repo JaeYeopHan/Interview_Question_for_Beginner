@@ -182,6 +182,7 @@ Git을 사용하기 위한 각종 전략(strategy)들이 존재한다. 해당 �
 
 많은 회사들이 GitHub을 기반으로 협업을 하게 되는데, (BitBucket이라는 훌륭한 도구도 존재합니다.) GitHub에서 어떤 일을 할 수 있는지, 어떻게 GitHub Repository에 기여를 하는지 정리한 글을 첨부한다.
 - [오픈소스 프로젝트에 컨트리뷰트 하기](http://guruble.com/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%9D%98-%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%ED%84%B0%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%90%98%EB%8A%94-%EA%B2%83/)
+- [GitHub Cheetsheet](https://github.com/tiimgreen/github-cheat-sheet)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-1-development-common-sense)
 
