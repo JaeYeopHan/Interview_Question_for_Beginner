@@ -177,6 +177,9 @@ _아직 저도 잘 모르는 부분이라서 정말 간단한 내용만 정리�
 </br>
 
 ## Git과 GitHub에 대해서
+Git이란 VCS(Version Control System)에 대해서 기본적인 이해를 요구하고 있다.
+- [Git을 조금 더 알아보자 slide share](https://www.slideshare.net/ky200223/git-89251791)
+
 Git을 사용하기 위한 각종 전략(strategy)들이 존재한다. 해당 전략들에 대한 이해를 기반으로 Git을 사용해야 하기 때문에 면접에서 자주 물어본다. 주로 사용되는 strategy 중심으로 질문이 들어오며 유명한 세 가지를 비교한 글을 첨부한다.
 - [Gitflow vs GitHub flow vs GitLab flow](https://ujuc.github.io/2015/12/16/git-flow-github-flow-gitlab-flow/)
 
