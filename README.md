@@ -31,6 +31,7 @@
   * [JavaScript](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
 * [Part 3. 분야별 정리](#part-3-분야별)
   * [FrontEnd](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
+  * [iOS](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
 * [그 외 좋은 자료 추천](#그-외-좋은-자료)
 * [Contribute](#contribute)
 
@@ -258,6 +259,23 @@
 * [Front-end Interview (영어)](http://thatjsdude.com/interview/index.html)
 * [Front-end Checklist](https://github.com/thedaviddias/Front-End-Checklist)
   * 면접 시 물어보기 가장 좋은 것들이 '기본'에 대한 내용이라고 생각되는데요, 그 '기본'에 대해 체크리스트 형식으로 잘 정리되어 있는 문서를 공유합니다.
+
+</br>
+
+## :large_orange_diamond: iOS [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
+* App Life Cycle
+* View Life Cycle
+* Delegate vs Block vs Notification
+* Memory Management
+* assign vs weak
+* Frame vs Bounds
+* 기타 질문
+
+#### 추가 자료
+
+* [iOS 면접 질문 정리 사이트 1](https://github.com/MaximAbramchuck/awesome-interview-questions#objective-c)
+* [iOS 면접 질문 정리 사이트 2](https://github.com/MaximAbramchuck/awesome-interview-questions#ios)
+* [Swift를 공부하기 위한 정보 링크 모음 레포](https://github.com/ClintJang/awesome-swift-korean-lecture)
 
 </br>
 
