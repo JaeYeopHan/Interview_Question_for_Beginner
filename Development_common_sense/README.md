@@ -64,7 +64,7 @@ _cf) 보다 자세한 내용에 대해서는 Reference를 참고해주세요._
 ### RESTful하게 API를 디자인 한다는 것은 무엇을 의미하는가.(요약)
 1. **리소스** 와 **행위** 를 명시적이고 직관적으로 분리한다.
   * 리소스는 `URI`로 표현되는데 리소스가 가리키는 것은 `명사`로 표현되어야 한다.
-  * 행위는 `HTTP Method`로 표현해고, `GET(조회)`, `POST(생성)`, `PUT(기존 entity 전체 수정)`, `PATCH(기존 entity 일부 수정)`, `DELETE(삭제)`을 분명한 목적으로 사용한다.
+  * 행위는 `HTTP Method`로 표현하고, `GET(조회)`, `POST(생성)`, `PUT(기존 entity 전체 수정)`, `PATCH(기존 entity 일부 수정)`, `DELETE(삭제)`을 분명한 목적으로 사용한다.
 
 2. Message는 Header와 Body를 명확하게 분리해서 사용한다.
   * Entity에 대한 내용은 body에 담는다.
