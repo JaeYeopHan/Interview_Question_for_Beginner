@@ -544,6 +544,12 @@ Foo(0).y = Foo(2)
 </br>
 
 ## Celery
+[Celery](http://www.celeryproject.org/)는 메시지 패싱 방식의 분산 비동기 작업 큐다. 작업(Task)은 브로커(Broker)를 통해 메시지(Message)로 워커(Worker)에 전달되어 처리된다. 작업은 멀티프로세싱, eventlet, gevent를 사용해 하나 혹은 그 이상의 워커에서 동시적으로 실행되며 백그라운드에서 비동기적으로 실행될 수 있다.
+
+#### Reference
+* [Spoqa - Celery를 이용한 긴 작업 처리](https://spoqa.github.io/2012/05/29/distribute-task-with-celery.html)
+* [[번역]셀러리 입문하기](https://beomi.github.io/2017/03/19/Introduction-to-Celery/)
+* [Python Celery with Redis](http://dgkim5360.tistory.com/entry/python-celery-asynchronous-system-with-redis)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-3-python)
 
