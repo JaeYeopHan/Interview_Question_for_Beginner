@@ -556,6 +556,26 @@ Foo(0).y = Foo(2)
 </br>
 
 ## PyPy가 CPython보다 빠른 이유
+간단히 말하면 CPython은 일반적인 인터프리터인데 반해 PyPy는 [실행 추적 JIT(Just In Time) 컴파일](https://en.wikipedia.org/wiki/Tracing_just-in-time_compilation)을 제공하는 인터프리터기 때문이다. PyPy는 RPython으로 컴파일된 인터프리터인데, C로 작성된 RPython 툴체인으로 인터프리터 소스에 JIT 컴파일을 위한 힌트를 추가해 CPython보다 빠른 실행 속도를 가질 수 있게 되었다.
+
+### PyPy
+PyPy는 파이썬으로 만들어진 파이썬 인터프리터다. 일반적으로 파이썬 인터프리터를 다시 한번 파이썬으로 구현한 것이기에 속도가 매우 느릴거라 생각하지만 실제 PyPy는 [스피드 센터](http://speed.pypy.org/)에서 볼 수 있듯 CPython보다 빠르다.
+
+### 실행 추적 JIT 컴파일
+메소드 단위로 최적화 하는 전통적인 JIT과 다르게 런타임에서 자주 실행되는 루프를 최적화한다.
+
+### RPython(Restricted Python)
+[RPython](https://rpython.readthedocs.io/en/latest/index.html)은 이런 실행 추적 JIT 컴파일을 C로 구현해 툴체인을 포함한다. 그래서 RPython으로 인터프리터를 작성하고 툴체인으로 힌트를 추가하면 인터프리터에 실행추적 JIT 컴파일러를 빌드한다. 참고로 RPython은 PyPy 프로젝트 팀이 만든 일종의 인터프리터 제작 프레임워크(언어)다. 동적 언어인 Python에서 표준 라이브러리와 문법에 제약을 가해 변수의 정적 컴파일이 가능하도록 RPython을 만들었으며, 동적 언어 인터프리터를 구현하는데 사용된다.
+
+이렇게 언어 사양(파이썬 언어 규칙, BF 언어 규칙 등)과 구현(실제 인터프리터 제작)을 분리함으로써 어떤 동적 언어에 대해서라도 자동으로 JIT(Just-in-Time) 컴파일러를 생성할 수 있게 되었다.
+
+#### Reference
+* [RPython 공식 레퍼런스](https://rpython.readthedocs.io/en/latest/)
+* [PyPy - wikipedia](https://en.wikipedia.org/wiki/PyPy)
+* [PyPy가 CPython보다 빠를 수 있는 이유 - memorable](https://memorable.link/link/188)
+* [PyPy와 함께 인터프리터 작성하기](https://www.haruair.com/blog/1882)
+* [알파희 - PyPy/RPython으로 20배 빨라지는 아희 JIT 인터프리터](https://www.slideshare.net/YunWonJeong/pypyrpython-20-jit)
+* [PyPy가 CPython보다 빠를 수 있는 이유 - 홍민희](https://blog.hongminhee.org/2011/05/02/5124874464/)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-3-python)
 
