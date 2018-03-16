@@ -8,7 +8,7 @@
 <div align=center>
 
 [![author](https://img.shields.io/badge/author-jbee-ff69b4.svg?style=flat-square)](http://friendly-belief.surge.sh/)
-[![CONTRIBUTORS](https://img.shields.io/badge/contributors-14-green.svg?style=flat-square)](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/master/CONTRIBUTING.md)
+[![CONTRIBUTORS](https://img.shields.io/badge/contributors-15-green.svg?style=flat-square)](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/master/CONTRIBUTING.md)
 [![LICENSE](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/master/LICENSE)
 [![HitCount](http://hits.dwyl.io/JaeYeopHan/Interview_Question_for_Beginner.svg)](http://hits.dwyl.io/JaeYeopHan/Interview_Question_for_Beginner)
 
@@ -330,7 +330,8 @@
 
 | |Contributor|Description|
 |---|---|---|
-| |[yongjai](https://github.com/Yongjai)|`New Resources`: iOS 관련 면접 질문 추가|
+| |[JungWinter](https://github.com/JungWinter)|`New resource`: **Part 2- Python**|
+| |[yongjai](https://github.com/Yongjai)|`New Resources`: **Part 3 - iOS**|
 | |[joshua-qa](https://github.com/joshua-qa)|`New resource`: 알고리즘 연습 사이트 추가|
 | |[yoonsubKim](https://github.com/yoonsubKim)|`New resource`: **Part 1 - 운영체제**|
 | |[joeunha](https://github.com/joeunha)|`Fix typo`|
@@ -344,7 +345,6 @@
 | |[KSH-code](https://github.com/KSH-code)|`New resource`: DP 내용 추가|
 | |[rationality6](https://github.com/rationality6)|`New resource`: 알고리즘 연습 사이트 추가|
 | |[hun-a](https://github.com/hun-a)|`Fix typo`|
-| |[JungWinter](https://github.com/JungWinter)|`New resource`: **Part 2- Python**|
 
 </br>
 
