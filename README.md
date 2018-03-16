@@ -29,6 +29,7 @@
 * [Part 2. Language](#part-2-language)
   * [Java](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Java)
   * [JavaScript](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
+  * [Python](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Python)
 * [Part 3. 분야별 정리](#part-3-분야별)
   * [FrontEnd](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
   * [iOS](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
@@ -228,6 +229,20 @@
 * [Interview Algorithm Question in JavaScript (영어)](https://github.com/kennymkchan/interview-questions-in-javascript)
   * JavaScript와 관련된 인터뷰 관련 내용들을 정리해놓은 자료입니다.
 
+</br>
+
+## :gem: Python [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Python)
+* Generator
+* 클래스를 상속했을 때 메서드 실행 방식
+* GIL과 그로인한 성능 문제
+* GC 작동 방식
+* Celery
+* PyPy가 CPython보다 빠른 이유
+* 메모리 누수가 발생할 수 있는 경우
+
+#### 추가 자료
+* [asyncio와 놀아보기](https://tech.ssut.me/2015/07/09/python-3-play-with-asyncio/)
+* [metaclasses 이해하기](https://tech.ssut.me/2017/03/24/understanding-python-metaclasses/)
 
 </br>
 
@@ -329,6 +344,7 @@
 | |[KSH-code](https://github.com/KSH-code)|`New resource`: DP 내용 추가|
 | |[rationality6](https://github.com/rationality6)|`New resource`: 알고리즘 연습 사이트 추가|
 | |[hun-a](https://github.com/hun-a)|`Fix typo`|
+| |[JungWinter](https://github.com/JungWinter)|`New resource`: **Part 2- Python**|
 
 </br>
 
