@@ -314,7 +314,7 @@
 => 각종 언어, CS 기초에 대한 interview 질문들이 정리되어 있습니다. (영어)
 * [coding-interview-university](https://github.com/jwasham/coding-interview-university/blob/master/translations/README-ko.md)  
 => (한국어 version) 구글 인터뷰를 준비하면서 정리한 자료가 한국어로 번역되어 있는 자료입니다.
-* [코딩 인터뷰 완전분석](http://www.yes24.com/24/Goods/44305533?Acode=101)
+* [코딩 인터뷰 완전분석](http://www.yes24.com/24/Goods/44305533?Acode=101)  
 => (도서) 코딩 인터뷰에 관련된 도서 중 가장 유명한 책이라고 생각되는데요, 최근 개정판이 발간되었습니다.
 * [tech-interview-handbook Github repository](https://github.com/yangshun/tech-interview-handbook)  
 => (영어) 코딩 인터뷰에 관련되어 정리되어있는 respository 입니다.
