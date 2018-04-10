@@ -2,6 +2,7 @@
 * [코딩 테스트를 위한 Tip](#코딩-테스트를-위한-tip)
 * [문제 해결을 위한 전략적 접근](#문제-해결을-위한-전략적-접근)
 * [Sorting Algorithm](#sorting-algorithm)
+* [Prime Number Algorithm](#Prime-Number-Algorithm)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
