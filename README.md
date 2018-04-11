@@ -14,7 +14,7 @@
 
 
 <a href="https://github.com/JaeYeopHan/Interview_Question_for_Beginner/graphs/contributors"><img src="https://opencollective.com/interview_question_for_beginner/contributors.svg?width=890"></a>
-
+> 해당 Repository에 기여를 해주신 분들입니다. 감사합니다. :pray:
 
 </div>
 
@@ -326,33 +326,6 @@
 ---
 
 </br>
-
-</br>
-
-## Detail Contribute [(contributors)](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/graphs/contributors)
-해당 Repository에 기여를 해주신 분들입니다. 감사합니다. :pray:
-
-| |Contributor|Description|
-|---|---|---|
-| |[JungWinter](https://github.com/JungWinter)|`New resource`: **Part 2- Python**|
-| |[yongjai](https://github.com/Yongjai)|`New Resources`: **Part 3 - iOS**|
-| |[joshua-qa](https://github.com/joshua-qa)|`New resource`: 알고리즘 연습 사이트 추가|
-| |[yoonsubKim](https://github.com/yoonsubKim)|`New resource`: **Part 1 - 운영체제**|
-| |[joeunha](https://github.com/joeunha)|`Fix typo`|
-| |[jhleed](https://github.com/jhleed)|`Fix typo`|
-| |[StiKuan](https://github.com/StiKuan)|`New resource`: **Part 2 - Java**|
-| |[hb1love](https://github.com/hb1love)|`New resource`: **Part 1 - 운영체제**|
-| |[keyakoto](https://github.com/keyakoto)|`New resource`: 알고리즘 연습 사이트 추가|
-| |[getsolaris](https://github.com/getsolaris)|`New resource`: 알고리즘 연습 사이트 추가|
-| |[yunitto](https://github.com/yunitto)|`Fix typo`|
-| |[bactoria](https://github.com/bactoria)|`Fix inaccurate information`|
-| |[KSH-code](https://github.com/KSH-code)|`New resource`: DP 내용 추가|
-| |[rationality6](https://github.com/rationality6)|`New resource`: 알고리즘 연습 사이트 추가|
-| |[hun-a](https://github.com/hun-a)|`Fix typo`|
-
-</br>
-
-#### [HOW TO CONTRIBUTE](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/master/CONTRIBUTING.md)
 
 </br>
 
