@@ -14,9 +14,10 @@
 
 
 <a href="https://github.com/JaeYeopHan/Interview_Question_for_Beginner/graphs/contributors"><img src="https://opencollective.com/interview_question_for_beginner/contributors.svg?width=890"></a>
-> 해당 Repository에 기여를 해주신 분들입니다. 감사합니다. :pray:
 
 </div>
+
+> 해당 Repository에 기여를 해주신 분들입니다. 감사합니다. :pray:
 
 </br>
 
