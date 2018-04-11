@@ -191,6 +191,7 @@
 * 코딩 테스트를 위한 Tip
 * 문제 해결을 위한 전략적 접근
 * Sorting Algorithm
+* Prime Number Algorithm
 
 </br>
 

@@ -142,7 +142,7 @@ GIL은 스레드에서 사용되는 Lock을 인터프리터 레벨로 확장한 
 </br>
 
 ## GC 작동 방식
-파이썬에선 기본적으로 [garbage collection](https://docs.python.org/3/glossary.html#term-garbage-collection)(가비지 컬렉션)과 [reference counting](https://docs.python.org/3/glossary.html#term-reference-count)(레퍼런스 카운팅)을 통해 할당 된 메모리를 관리한다. 기본적으로 참조 횟수가 0이된 객체를 메모리에서 해제하는 레퍼런스 카운팅 방식을 사용하지만, 참조 횟수가 0은 아니지만 도달할 수 없지만 상태인 reference cycles(순환 참조)가 발생했을 때는 가비지 컬렉션으로 그 상황을 해결한다.
+파이썬에선 기본적으로 [garbage collection](https://docs.python.org/3/glossary.html#term-garbage-collection)(가비지 컬렉션)과 [reference counting](https://docs.python.org/3/glossary.html#term-reference-count)(레퍼런스 카운팅)을 통해 할당 된 메모리를 관리한다. 기본적으로 참조 횟수가 0이된 객체를 메모리에서 해제하는 레퍼런스 카운팅 방식을 사용하지만, 참조 횟수가 0은 아니지만 도달할 수 없는 상태인 reference cycles(순환 참조)가 발생했을 때는 가비지 컬렉션으로 그 상황을 해결한다.
 
 > 엄밀히 말하면 레퍼런스 카운팅 방식을 통해 객체를 메모리에서 해제하는 행위가 가비지 컬렉션의 한 형태지만 여기서는 순환 참조가 발생했을 때 cyclic garbage collector를 통한 **가비지 컬렉션**과 **레퍼런스 카운팅**을 통한 가비지 컬렉션을 구분했다.
 
