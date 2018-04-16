@@ -39,7 +39,6 @@
   * [FrontEnd](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
   * [iOS](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
 * [그 외 좋은 자료 추천](#그-외-좋은-자료)
-* [Detail Contribute](#detail-contribute)
 
 </br>
 
