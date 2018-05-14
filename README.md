@@ -233,7 +233,6 @@
 * [ECMAScript6 정리](https://jaeyeophan.github.io/categories/ECMAScript6)
 * [Interview Algorithm Question in JavaScript (영어)](https://github.com/kennymkchan/interview-questions-in-javascript)
   * JavaScript와 관련된 인터뷰 관련 내용들을 정리해놓은 자료입니다.
-
 </br>
 
 ## :gem: Python [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Python)
@@ -279,6 +278,8 @@
 * [Front-end Interview (영어)](http://thatjsdude.com/interview/index.html)
 * [Front-end Checklist](https://github.com/thedaviddias/Front-End-Checklist)
   * 면접 시 물어보기 가장 좋은 것들이 '기본'에 대한 내용이라고 생각되는데요, 그 '기본'에 대해 체크리스트 형식으로 잘 정리되어 있는 문서를 공유합니다.
+* [Front-end Interview Handbook (한국어)](https://github.com/yangshun/front-end-interview-handbook/tree/master/Translations/Korean)
+  
 
 </br>
 
