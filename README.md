@@ -197,7 +197,7 @@
 ## :bulb: Algorithm (알고리즘) [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
 
 * 손코딩 및 코딩 테스트 대비  
-  => 대부분의 내용이 코드이기 때문에 별도의 [Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
+  => 대부분의 내용이 코드이기 때문에 별도의 [Java Algorithm Training Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
 * 코딩 테스트를 위한 Tip
 * 문제 해결을 위한 전략적 접근
 * Sorting Algorithm
