@@ -186,6 +186,10 @@
     * Document Model
     * Column Model
 
+#### 추가자료
+
+* [DBMS는 어떻게 트랜잭션을 관리할까?](https://d2.naver.com/helloworld/407507)
+
 </br>
 
 ## :bulb: Design Pattern [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/DesignPattern)
