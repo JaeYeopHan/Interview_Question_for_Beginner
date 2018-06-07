@@ -23,23 +23,23 @@
 
 ## :memo: Table of Contents
 
-* [What is this?](#what-is-this?)
-* [Part 1. CS](#part-1-전산-기초)
-  * [개발상식](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
-  * [자료구조](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
-  * [네트워크](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Network)
-  * [운영체제](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/OS)
-  * [데이터베이스](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Database)
-  * [디자인패턴](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/DesignPattern)
-  * [알고리즘](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
-* [Part 2. Language](#part-2-language)
-  * [Java](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Java)
-  * [JavaScript](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
-  * [Python](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Python)
-* [Part 3. 분야별 정리](#part-3-분야별)
-  * [FrontEnd](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
-  * [iOS](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
-* [그 외 좋은 자료 추천](#그-외-좋은-자료)
+- [What is this?](#what-is-this?)
+- [Part 1. CS](#part-1-전산-기초)
+  - [개발상식](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
+  - [자료구조](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
+  - [네트워크](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Network)
+  - [운영체제](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/OS)
+  - [데이터베이스](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Database)
+  - [디자인패턴](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/DesignPattern)
+  - [알고리즘](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
+- [Part 2. Language](#part-2-language)
+  - [Java](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Java)
+  - [JavaScript](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
+  - [Python](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Python)
+- [Part 3. 분야별 정리](#part-3-분야별)
+  - [FrontEnd](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
+  - [iOS](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
+- [그 외 좋은 자료 추천](#그-외-좋은-자료)
 
 </br>
 
@@ -67,145 +67,146 @@
 
 ## :bulb: 개발상식 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
 
-* 객체 지향 프로그래밍이란 무엇인가?
-* RESTFul API 란?
-* TDD 란 무엇이며 어떠한 장점이 있는가?
-* 함수형 프로그래밍이란?
-* MVC 패턴이란 무엇인가?
-* Git 과 GitHub 에 대해서
+- 객체 지향 프로그래밍이란 무엇인가?
+- RESTFul API 란?
+- TDD 란 무엇이며 어떠한 장점이 있는가?
+- 함수형 프로그래밍이란?
+- MVC 패턴이란 무엇인가?
+- Git 과 GitHub 에 대해서
 
 </br>
 
 ## :bulb: 자료구조 [Link](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
 
-* Array vs LinkedList
-* Stack and Queue
-* Tree
-  * Binary Tree
-  * Full Binary Tree
-  * Complete Binary Tree
-  * BST(Binary Search Tree)
-* Binary Heap
-* Red-Black Tree
-  * 정의
-  * 특징
-  * 삽입
-  * 삭제
-* HashTable
-  * hash function
-  * Resolve Collision
-    * Open Addressing
-    * Separate Chaining
-  * Resize
-* Graph
-  * Graph 용어 정리
-  * Graph 구현
-  * Graph 탐색
-  * Minimum Spanning Tree
-    * Kruskal algorithm
-    * Prim algorithm
+- Array vs LinkedList
+- Stack and Queue
+- Tree
+  - Binary Tree
+  - Full Binary Tree
+  - Complete Binary Tree
+  - BST(Binary Search Tree)
+- Binary Heap
+- Red-Black Tree
+  - 정의
+  - 특징
+  - 삽입
+  - 삭제
+- HashTable
+  - hash function
+  - Resolve Collision
+    - Open Addressing
+    - Separate Chaining
+  - Resize
+- Graph
+  - Graph 용어 정리
+  - Graph 구현
+  - Graph 탐색
+  - Minimum Spanning Tree
+    - Kruskal algorithm
+    - Prim algorithm
 
 </br>
 
 ## :bulb: 네트워크 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Network)
 
-* GET, POST 방식의 차이점
-* TCP 3-way-handshake
-* TCP 와 UDP 의 차이점
-* HTTP 와 HTTPS 의 차이점
-  * HTTP 의 문제점들
-* DNS round robin 방식
-* 웹 통신의 큰 흐름
+- GET, POST 방식의 차이점
+- TCP 3-way-handshake
+- TCP 와 UDP 의 차이점
+- HTTP 와 HTTPS 의 차이점
+  - HTTP 의 문제점들
+- DNS round robin 방식
+- 웹 통신의 큰 흐름
 
 </br>
 
 ## :bulb: 운영체제 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/OS)
 
-* 프로세스와 스레드의 차이
-* 스케줄러의 종류
-  * 장기 스케줄러
-  * 단기 스케줄러
-  * 중기 스케줄러
-* CPU 스케줄러
-  * FCFS
-  * SJF
-  * SRT
-  * Priority scheduling
-  * RR
-* 동기와 비동기의 차이
-* 멀티스레드
-  * 장점과 단점
-* 프로세스 동기화
-  * Critical Section
-  * 해결책
-* 메모리 관리 전략
-  * 메모리 관리 배경
-  * Paging
-  * Segmentation
-* 가상 메모리
-  * 배경
-  * 가상 메모리가 하는 일
-  * Demand Paging(요구 페이징)
-  * 페이지 교체 알고리즘
-* 캐시의 지역성
-  * Locality
-  * Caching line
+- 프로세스와 스레드의 차이
+- 스케줄러의 종류
+  - 장기 스케줄러
+  - 단기 스케줄러
+  - 중기 스케줄러
+- CPU 스케줄러
+  - FCFS
+  - SJF
+  - SRT
+  - Priority scheduling
+  - RR
+- 동기와 비동기의 차이
+- 멀티스레드
+  - 장점과 단점
+- 프로세스 동기화
+  - Critical Section
+  - 해결책
+- 메모리 관리 전략
+  - 메모리 관리 배경
+  - Paging
+  - Segmentation
+- 가상 메모리
+  - 배경
+  - 가상 메모리가 하는 일
+  - Demand Paging(요구 페이징)
+  - 페이지 교체 알고리즘
+- 캐시의 지역성
+  - Locality
+  - Caching line
 
 </br>
 
 ## :bulb: 데이터베이스 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Database)
 
-* 데이터베이스
-  * 데이터베이스를 사용하는 이유
-  * 데이터베이스 성능
-* Index
-  * Index 란 무엇인가
-  * Index 의 자료구조
-  * Primary index vs Secondary index
-  * Composite index
-  * Index 의 성능과 고려해야할 사항
-* 정규화에 대해서
-  * 정규화 탄생 배경
-  * 정규화란 무엇인가
-  * 정규화의 종류
-  * 정규화의 장단점
-* Transaction
-  * 트랜잭션(Transaction)이란 무엇인가?
-  * 트랜잭션과 Lock
-  * 트랜잭션의 특성
-  * 트랜잭션을 사용할 때 주의할 점
-* Statement vs PrepareStatement
-* NoSQL
-  * 정의
-  * CAP 이론
-    * 일관성
-    * 가용성
-    * 네트워크 분할 허용성
-  * 저장방식에 따른 분류
-    * Key-Value Model
-    * Document Model
-    * Column Model
+- 데이터베이스
+  - 데이터베이스를 사용하는 이유
+  - 데이터베이스 성능
+- Index
+  - Index 란 무엇인가
+  - Index 의 자료구조
+  - Primary index vs Secondary index
+  - Composite index
+  - Index 의 성능과 고려해야할 사항
+- 정규화에 대해서
+  - 정규화 탄생 배경
+  - 정규화란 무엇인가
+  - 정규화의 종류
+  - 정규화의 장단점
+- Transaction
+  - 트랜잭션(Transaction)이란 무엇인가?
+  - 트랜잭션과 Lock
+  - 트랜잭션의 특성
+  - 트랜잭션의 상태
+  - 트랜잭션을 사용할 때 주의할 점
+- Statement vs PrepareStatement
+- NoSQL
+  - 정의
+  - CAP 이론
+    - 일관성
+    - 가용성
+    - 네트워크 분할 허용성
+  - 저장방식에 따른 분류
+    - Key-Value Model
+    - Document Model
+    - Column Model
 
 #### 추가자료
 
-* [DBMS는 어떻게 트랜잭션을 관리할까?](https://d2.naver.com/helloworld/407507)
+- [DBMS 는 어떻게 트랜잭션을 관리할까?](https://d2.naver.com/helloworld/407507)
 
 </br>
 
 ## :bulb: Design Pattern [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/DesignPattern)
 
-* Singleton
+- Singleton
 
 </br>
 
 ## :bulb: Algorithm (알고리즘) [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
 
-* 손코딩 및 코딩 테스트 대비  
+- 손코딩 및 코딩 테스트 대비  
   => 대부분의 내용이 코드이기 때문에 별도의 [Java Algorithm Training Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
-* 코딩 테스트를 위한 Tip
-* 문제 해결을 위한 전략적 접근
-* Sorting Algorithm
-* Prime Number Algorithm
+- 코딩 테스트를 위한 Tip
+- 문제 해결을 위한 전략적 접근
+- Sorting Algorithm
+- Prime Number Algorithm
 
 </br>
 
@@ -221,52 +222,52 @@
 
 ## :gem: Java [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Java)
 
-* JVM 에 대해서 / GC 의 원리
-* Collection
-* Annotation
-* Generic
-* final
-* Overriding vs Overloading
-* Access Modifier
-* Wrapper class
-* Multi-Thread 환경에서의 개발
+- JVM 에 대해서 / GC 의 원리
+- Collection
+- Annotation
+- Generic
+- final
+- Overriding vs Overloading
+- Access Modifier
+- Wrapper class
+- Multi-Thread 환경에서의 개발
 
 #### 추가 자료
 
-* [Java 기본서 비교](http://asfirstalways.tistory.com/146)
+- [Java 기본서 비교](http://asfirstalways.tistory.com/146)
 
 </br>
 
 ## :gem: JavaScript [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
 
-* JavaScript Event Loop
-* Hoisting
-* Closure
-* this 에 대해서
-* Promise
+- JavaScript Event Loop
+- Hoisting
+- Closure
+- this 에 대해서
+- Promise
 
 #### 추가 자료
 
-* [JavaScript 기본서 비교](http://asfirstalways.tistory.com/246)
-* [ECMAScript6 정리](https://jaeyeophan.github.io/categories/ECMAScript6)
-* [Interview Algorithm Question in JavaScript (영어)](https://github.com/kennymkchan/interview-questions-in-javascript)
-  * JavaScript 와 관련된 인터뷰 관련 내용들을 정리해놓은 자료입니다.
+- [JavaScript 기본서 비교](http://asfirstalways.tistory.com/246)
+- [ECMAScript6 정리](https://jaeyeophan.github.io/categories/ECMAScript6)
+- [Interview Algorithm Question in JavaScript (영어)](https://github.com/kennymkchan/interview-questions-in-javascript)
+  - JavaScript 와 관련된 인터뷰 관련 내용들을 정리해놓은 자료입니다.
     </br>
 
 ## :gem: Python [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Python)
 
-* Generator
-* 클래스를 상속했을 때 메서드 실행 방식
-* GIL 과 그로인한 성능 문제
-* GC 작동 방식
-* Celery
-* PyPy 가 CPython 보다 빠른 이유
-* 메모리 누수가 발생할 수 있는 경우
+- Generator
+- 클래스를 상속했을 때 메서드 실행 방식
+- GIL 과 그로인한 성능 문제
+- GC 작동 방식
+- Celery
+- PyPy 가 CPython 보다 빠른 이유
+- 메모리 누수가 발생할 수 있는 경우
 
 #### 추가 자료
 
-* [asyncio 와 놀아보기](https://tech.ssut.me/2015/07/09/python-3-play-with-asyncio/)
-* [metaclasses 이해하기](https://tech.ssut.me/2017/03/24/understanding-python-metaclasses/)
+- [asyncio 와 놀아보기](https://tech.ssut.me/2015/07/09/python-3-play-with-asyncio/)
+- [metaclasses 이해하기](https://tech.ssut.me/2017/03/24/understanding-python-metaclasses/)
 
 </br>
 
@@ -282,43 +283,43 @@
 
 ## :large_orange_diamond: Front-End [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
 
-* 브라우저의 작동 원리
-* Document Object Model
-  * Event bubbling and Capturing
-  * Event delegation
-* CORS
-* 크로스 브라우징
-* 웹 성능과 관련된 Issues
-* 서버 사이드 렌더링 vs 클라이언트 사이드 렌더링
-* CSS Methodology
-* normalize.css vs reset.css
+- 브라우저의 작동 원리
+- Document Object Model
+  - Event bubbling and Capturing
+  - Event delegation
+- CORS
+- 크로스 브라우징
+- 웹 성능과 관련된 Issues
+- 서버 사이드 렌더링 vs 클라이언트 사이드 렌더링
+- CSS Methodology
+- normalize.css vs reset.css
 
 #### 추가 자료
 
-* [신입 프론트엔드 개발자가 되려면 무엇을 학습해야 하나요?](https://medium.com/@Jbee_/%EC%8B%A0%EC%9E%85-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EB%90%98%EB%A0%A4%EB%A9%B4-%EB%AC%B4%EC%97%87%EC%9D%84-%ED%95%99%EC%8A%B5%ED%95%B4%EC%95%BC-%ED%95%98%EB%82%98%EC%9A%94-1dd59a14e084)
-* [Front-end-Developer-Interview-Questions (한국어)](https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Korean)
-* [Front-end Interview (영어)](http://thatjsdude.com/interview/index.html)
-* [Front-end Checklist](https://github.com/kesuskim/Front-End-Checklist)
-  * 면접 시 물어보기 가장 좋은 것들이 '기본'에 대한 내용이라고 생각되는데요, 그 '기본'에 대해 체크리스트 형식으로 잘 정리되어 있는 문서를 공유합니다.
-* [Front-end Interview Handbook (한국어)](https://github.com/yangshun/front-end-interview-handbook/tree/master/Translations/Korean)
+- [신입 프론트엔드 개발자가 되려면 무엇을 학습해야 하나요?](https://medium.com/@Jbee_/%EC%8B%A0%EC%9E%85-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EB%90%98%EB%A0%A4%EB%A9%B4-%EB%AC%B4%EC%97%87%EC%9D%84-%ED%95%99%EC%8A%B5%ED%95%B4%EC%95%BC-%ED%95%98%EB%82%98%EC%9A%94-1dd59a14e084)
+- [Front-end-Developer-Interview-Questions (한국어)](https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Korean)
+- [Front-end Interview (영어)](http://thatjsdude.com/interview/index.html)
+- [Front-end Checklist](https://github.com/kesuskim/Front-End-Checklist)
+  - 면접 시 물어보기 가장 좋은 것들이 '기본'에 대한 내용이라고 생각되는데요, 그 '기본'에 대해 체크리스트 형식으로 잘 정리되어 있는 문서를 공유합니다.
+- [Front-end Interview Handbook (한국어)](https://github.com/yangshun/front-end-interview-handbook/tree/master/Translations/Korean)
 
 </br>
 
 ## :large_orange_diamond: iOS [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
 
-* App Life Cycle
-* View Life Cycle
-* Delegate vs Block vs Notification
-* Memory Management
-* assign vs weak
-* Frame vs Bounds
-* 기타 질문
+- App Life Cycle
+- View Life Cycle
+- Delegate vs Block vs Notification
+- Memory Management
+- assign vs weak
+- Frame vs Bounds
+- 기타 질문
 
 #### 추가 자료
 
-* [iOS 면접 질문 정리 사이트 1](https://github.com/MaximAbramchuck/awesome-interview-questions#objective-c)
-* [iOS 면접 질문 정리 사이트 2](https://github.com/MaximAbramchuck/awesome-interview-questions#ios)
-* [Swift 를 공부하기 위한 정보 링크 모음 레포](https://github.com/ClintJang/awesome-swift-korean-lecture)
+- [iOS 면접 질문 정리 사이트 1](https://github.com/MaximAbramchuck/awesome-interview-questions#objective-c)
+- [iOS 면접 질문 정리 사이트 2](https://github.com/MaximAbramchuck/awesome-interview-questions#ios)
+- [Swift 를 공부하기 위한 정보 링크 모음 레포](https://github.com/ClintJang/awesome-swift-korean-lecture)
 
 </br>
 
@@ -332,19 +333,19 @@
 
 ## 그 외 좋은 자료
 
-* [미세먼지 같은 면접 팁](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Tip)
-* [주니어 개발자를 위한 취업 정보](https://github.com/jojoldu/junior-recruit-scheduler)
-* [mission-peace/interview repository](https://github.com/mission-peace/interview)  
+- [미세먼지 같은 면접 팁](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Tip)
+- [주니어 개발자를 위한 취업 정보](https://github.com/jojoldu/junior-recruit-scheduler)
+- [mission-peace/interview repository](https://github.com/mission-peace/interview)  
   => 각종 알고리즘에 대한 코드와 동영상 강의 링크를 제공합니다. (영어)
-* [awesome-interview-questions](https://github.com/MaximAbramchuck/awesome-interview-questions)  
+- [awesome-interview-questions](https://github.com/MaximAbramchuck/awesome-interview-questions)  
   => 각종 언어, CS 기초에 대한 interview 질문들이 정리되어 있습니다. (영어)
-* [coding-interview-university](https://github.com/jwasham/coding-interview-university/blob/master/translations/README-ko.md)  
+- [coding-interview-university](https://github.com/jwasham/coding-interview-university/blob/master/translations/README-ko.md)  
   => (한국어 version) 구글 인터뷰를 준비하면서 정리한 자료가 한국어로 번역되어 있는 자료입니다.
-* [코딩 인터뷰 완전분석](http://www.yes24.com/24/Goods/44305533?Acode=101)  
+- [코딩 인터뷰 완전분석](http://www.yes24.com/24/Goods/44305533?Acode=101)  
   => (도서) 코딩 인터뷰에 관련된 도서 중 가장 유명한 책이라고 생각되는데요, 최근 개정판이 발간되었습니다.
-* [tech-interview-handbook Github repository](https://github.com/yangshun/tech-interview-handbook)  
+- [tech-interview-handbook Github repository](https://github.com/yangshun/tech-interview-handbook)  
   => (영어) 코딩 인터뷰에 관련되어 정리되어있는 respository 입니다.
-* [A perfect guide for cracking a javascript interview a developers perspective](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)  
+- [A perfect guide for cracking a javascript interview a developers perspective](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)  
   => [@JayJin](https://github.com/milooy)님이 추천하신 자바스크립트 인터뷰 아티클입니다.
 
 </br>
