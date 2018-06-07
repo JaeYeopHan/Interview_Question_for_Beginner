@@ -241,7 +241,7 @@ Transaction은 다음의 ACID라는 4가지 특성을 만족해야 한다.
 </br>
 
 ### 트랜잭션의 상태
-![트랜잭션 상태 다이어그램](https://user-images.githubusercontent.com/36795031/41017098-503058b8-698e-11e8-9189-96fa8254583d.png)
+![트랜잭션 상태 다이어그램](/Database/images/transaction-status.png)
 
 #### Active
 트랜잭션의 활동 상태. 트랜잭션이 실행중이며 동작중인 상태를 말한다.
