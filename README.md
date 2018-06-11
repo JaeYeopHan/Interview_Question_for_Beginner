@@ -24,6 +24,7 @@
 ## :memo: Table of Contents
 
 - [What is this?](#what-is-this?)
+- [면접에서 받았던 질문들](#면접에서-받았던-질문들)
 - [Part 1. CS](#part-1-전산-기초)
   - [개발상식](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
   - [자료구조](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
@@ -47,7 +48,7 @@
 
 # What is this?
 
-예비 개발자들의 기술 면접 준비를 위한 자료를 정리해놓은 Repository 입니다. 개발이라는 분야를 모두 담지는 못했습니다. 그저 가이드라인으로 참고해주시면 감사하겠습니다. 또한 제가 개인적으로 면접을 준비하면서 정리한 내용이라 잘못된 부분이 있을 수 있습니다. 이런 부분들에 대해서는 `Pull Request` or `Issue`로 참여해주시면 정말 감사하겠습니다. 주제와 관련된 좋은 참고 자료를 추가하는 것도 가능합니다. 해당 Repository 에서 학습을 하시다가 생기는 질문은 `Issue`에 올려주세요!
+예비 개발자들 또는 개발자들의 기술 면접 준비를 위한 자료를 정리해놓은 저장소입니다. 개발이라는 분야를 모두 담지는 못했습니다. 그저 가이드라인으로 참고해주시면 감사하겠습니다. 또한 제가 개인적으로 면접을 준비하면서 정리한 내용이라 잘못된 부분이 있을 수 있습니다. 이런 부분들에 대해서는 `Pull Request` or `Issue`로 참여해주시면 정말 감사하겠습니다. 주제와 관련된 좋은 참고 자료를 추가하는 것도 가능합니다. 해당 Repository 에서 학습을 하시다가 생기는 질문은 `Issue`에 올려주세요!
 
 > 취준생 여러분의 건승을 기원합니다 :thumbsup:
 
@@ -60,6 +61,12 @@
 </br>
 
 </br>
+
+---
+
+### [면접에서 받았던 질문들](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/issues/59)
+
+해당 Issue 에서 실제로 받았던 면접 질문들을 공유할 수 있습니다.
 
 ---
 
