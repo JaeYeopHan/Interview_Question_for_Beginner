@@ -101,19 +101,20 @@ Notification 은 이벤트에 대해 여러 리스너가 있을 때 사용하면
 * https://github.com/Yongjai/TIL/blob/master/iOS/Objective-C/MemoryManagement.md/
 
 * 스위프트는 ARC로 메모리 관리를 한다.
-* ARC : 자동 참조 계수(ARC: Automatic Reference Counting)를 뜻하며, 인스턴스가 더 이상 필요없을 때 사용된 메모리를 자동으로 해제해준다.
-* 강한 순환 참조 : 강환 순환 참조는 ARC로 메모리를 관리할 때 발생할 수 있는 문제이다. 두 개의 객체가 서로 강한 참조를 하는 경우 발생할 수 있다.
-* 강한 순환 참조의 해결법 : 서로 강한 참조를 하는 경우 발생한다면, 둘 중 하나의 강한 참조를 변경해주면 된다. 강한 참조를 **약한(weak) 참조** 혹은 **미소유(unowned) 참조**로 변경하면 강한 순환 참조 문제를 해결할 수 있다. 약한 참조는 옵셔널일 때 사용하고, 미소유 참조는 옵셔널이 아닐 때 사용한다.
+  * ARC : 자동 참조 계수(ARC: Automatic Reference Counting)를 뜻하며, 인스턴스가 더 이상 필요없을 때 사용된 메모리를 자동으로 해제해준다.
+  * 강한 순환 참조 : 강환 순환 참조는 ARC로 메모리를 관리할 때 발생할 수 있는 문제이다. 두 개의 객체가 서로 강한 참조를 하는 경우 발생할 수 있다.
+  * 강한 순환 참조의 해결법 : 서로 강한 참조를 하는 경우 발생한다면, 둘 중 하나의 강한 참조를 변경해주면 된다. 강한 참조를 **약한(weak) 참조** 혹은 **미소유(unowned) 참조**로 변경하면 강한 순환 참조 문제를 해결할 수 있다. 약한 참조는 옵셔널일 때 사용하고, 미소유 참조는 옵셔널이 아닐 때 사용한다.
 
 **Reference**
 
 * 애플 공식문서
- * [애플 개발문서 Language Guide - Automatic Reference Counting](https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html#//apple_ref/doc/uid/TP40014097-CH20-ID48)
+  * [애플 개발문서 Language Guide - Automatic Reference Counting](https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html#//apple_ref/doc/uid/TP40014097-CH20-ID48)
+
 
 * 블로그
- * [메모리 관리 ARC](http://jhyejun.com/blog/memory-management-arc)
- * [weak와 unowned의 사용법](http://jhyejun.com/blog/how-to-use-weak-and-unowned)
- * [클로저에서의 강한 순환 참조](http://jhyejun.com/blog/strong-reference-cycles-in-closure)
+  * [메모리 관리 ARC](http://jhyejun.com/blog/memory-management-arc)
+  * [weak와 unowned의 사용법](http://jhyejun.com/blog/how-to-use-weak-and-unowned)
+  * [클로저에서의 강한 순환 참조](http://jhyejun.com/blog/strong-reference-cycles-in-closure)
 
 </br>
 
