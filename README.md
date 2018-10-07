@@ -273,8 +273,8 @@
 
 #### 추가 자료
 
-- [asyncio 와 놀아보기](https://tech.ssut.me/2015/07/09/python-3-play-with-asyncio/)
-- [metaclasses 이해하기](https://tech.ssut.me/2017/03/24/understanding-python-metaclasses/)
+- [asyncio 와 놀아보기](https://tech.ssut.me/python-3-play-with-asyncio/)
+- [metaclasses 이해하기](https://tech.ssut.me/understanding-python-metaclasses/)
 
 </br>
 

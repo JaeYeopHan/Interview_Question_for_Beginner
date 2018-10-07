@@ -135,7 +135,7 @@ HTTPS 의 SSL 에서는 공통키 암호화 방식과 공개키 암호화 방식
 평문 통신에 비해서 암호화 통신은 CPU 나 메모리 등 리소스가 많이 필요하다. 통신할 때마다 암호화를 하면 많은 리소스를 소비하기 때문에 서버 한 대당 처리할 수 있는 리퀘스트의 수가 줄어들게 된다. 그렇기 때문에 민감한 정보를 다룰 때만 HTTPS 에 의한 암호화 통신을 사용한다.
 
 _cf) HTTP 2.0 이 발전되면서 HTTPS 가 HTTP 보다 빠르다는 사실이 나왔는데요, 다음 링크를 통해 보다 자세한 내용을 확인하실 수 있습니다._  
-관련 링크 : [HTTPS 가 HTTP 보다 빠르다.](https://tech.ssut.me/2017/05/07/https-is-faster-than-http/)
+관련 링크 : [HTTPS 가 HTTP 보다 빠르다.](https://tech.ssut.me/https-is-faster-than-http/)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-3-network)
 
