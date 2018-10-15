@@ -299,6 +299,59 @@ Javascript 에서는 대부분의 작업들이 비동기로 이루어진다. 콜
 
 비동기 코드를 작성하는 새로운 방법이다. Javascript 개발자들이 훌륭한 비동기 처리 방안이 Promise 로 만족하지 못하고 더 훌륭한 방법을 고안 해낸 것이다(사실 async/await 는 promise 기반). 절차적 언어에서 작성하는 코드와 같이 사용법도 간단하고 이해하기도 쉽다. function 키워드 앞에 async 를 붙여주면 되고 function 내부의 promise 를 반환하는 비동기 처리 함수 앞에 await 를 붙여주기만 하면 된다. async/await 의 가장 큰 장점은 Promise 보다 비동기 코드의 겉모습을 더 깔끔하게 한다는 것이다. 이 것은 es8 의 공식 스펙이며 node8LTS 에서 지원된다(바벨이 async/await 를 지원해서 곧바로 쓸수 있다고 한다!).
 
+* `promise`로 구현
+
+```js
+function makeRequest() {
+    return getData()
+        .then(data => {
+            if(data) {
+                if (data.needMoreRequest) {
+                  return makeMoreRequest(data)
+                    .then(moreData => {
+                        console.log(moreData);
+                        return moreData;
+                    }).catch((error) => {
+                      console.log('Error while makeMoreRequest', error);
+                    });
+                } else {
+                  console.log(data);
+                  return data;
+                }
+            } else {
+                return 'No Data';
+            }
+        }).catch((error) => {
+          console.log('Error while getData', error);
+        });
+}
+```
+
+* `async/await` 구현
+
+```js
+async function makeRequest() { 
+    try {
+      const data = await getData();
+        if(data) {
+          if (data.needMoreRequest) {
+            const moreData = await makeMoreRequest(data);
+            console.log(moreData);
+            return moreData;
+          } else {
+            console.log(data);
+            return data;
+          }
+      } else {
+          return 'No Data';
+      }
+    } catch (error) {
+        console.log('Error while getData', error);
+    }
+}
+```
+
+
 #### Reference
 
 * https://medium.com/@kiwanjung/%EB%B2%88%EC%97%AD-async-await-%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%A0%84%EC%97%90-promise%EB%A5%BC-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-955dbac2c4a4
