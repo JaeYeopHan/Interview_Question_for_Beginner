@@ -305,21 +305,17 @@ Javascript 에서는 대부분의 작업들이 비동기로 이루어진다. 콜
 function makeRequest() {
     return getData()
         .then(data => {
-            if(data) {
-                if (data.needMoreRequest) {
-                  return makeMoreRequest(data)
-                    .then(moreData => {
-                        console.log(moreData);
-                        return moreData;
-                    }).catch((error) => {
+            if(data && data.needMoreRequest) {
+                return makeMoreRequest(data)
+                  .then(moreData => {
+                      console.log(moreData);
+                      return moreData;
+                  }).catch((error) => {
                       console.log('Error while makeMoreRequest', error);
-                    });
-                } else {
-                  console.log(data);
-                  return data;
-                }
+                  });
             } else {
-                return 'No Data';
+                console.log(data);
+                return data;
             }
         }).catch((error) => {
           console.log('Error while getData', error);
@@ -333,17 +329,13 @@ function makeRequest() {
 async function makeRequest() { 
     try {
       const data = await getData();
-        if(data) {
-          if (data.needMoreRequest) {
-            const moreData = await makeMoreRequest(data);
-            console.log(moreData);
-            return moreData;
-          } else {
-            console.log(data);
-            return data;
-          }
+      if(data && data.needMoreRequest) {
+          const moreData = await makeMoreRequest(data);
+          console.log(moreData);
+          return moreData;
       } else {
-          return 'No Data';
+          console.log(data);
+          return data;
       }
     } catch (error) {
         console.log('Error while getData', error);
