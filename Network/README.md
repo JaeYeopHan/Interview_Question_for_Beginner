@@ -1,6 +1,6 @@
 # Part 1-3 Network
 
-* [GET, POST 비교](#http의-get과-post-비교)
+* [HTTP 의 GET 과 POST 비교](#http의-get과-post-비교)
 * [TCP 3-way-handshake](#tcp-3-way-handshake)
 * [TCP 와 UDP 의 비교](#tcp와-udp의-비교)
 * [HTTP 와 HTTPS](#http와-https)
