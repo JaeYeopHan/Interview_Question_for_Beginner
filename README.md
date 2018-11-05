@@ -270,6 +270,7 @@
 - Celery
 - PyPy 가 CPython 보다 빠른 이유
 - 메모리 누수가 발생할 수 있는 경우
+- Duck Typing
 
 #### 추가 자료
 
