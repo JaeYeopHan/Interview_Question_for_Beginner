@@ -3,7 +3,7 @@
 * [JavaScript Event Loop](#javascript-event-loop)
 * [Hoisting](#hoisting)
 * [Closure](#closure)
-* [this 에 대해서](#this에-대해서)
+* [this 에 대해서](#this-에-대해서)
 * [Promise](#promise)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
