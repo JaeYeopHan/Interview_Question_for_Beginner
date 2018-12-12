@@ -387,6 +387,8 @@ OS 는 Counting/Binary 세마포를 구분한다
 
 ### Segmentation(세그멘테이션)
 
+(http://baked-corn.tistory.com/18?category=718232)[세그멘테이션]
+
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-4-운영체제)
 
 ---
