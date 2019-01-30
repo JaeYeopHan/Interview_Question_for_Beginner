@@ -77,7 +77,7 @@
 4.  세운 계획에 대해 검증을 해본다. 수도 코드 작성도 해당될 수 있고 문제 출제자에게 의견을 물어볼 수도 있다.
 5.  세운 계획으로 문제를 해결해본다. 해결이 안 된다면 앞선 과정을 되짚어본다.
 
-### 생각할 때,
+### 생각할 때
 
 * 비슷한 문제를 생각해본다.
 * 단순한 방법으로 시작하여 점진적으로 개선해나간다.
@@ -398,6 +398,7 @@ O(N!) : 크기가 N 인 순열
 * http://koistudy.net
 * https://www.codewars.com
 * https://app.codility.com/programmers/
+* http://euler.synap.co.kr/
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#algorithm)
 
