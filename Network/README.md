@@ -2,7 +2,7 @@
 
 * [HTTP 의 GET 과 POST 비교](#http의-get과-post-비교)
 * [TCP 3-way-handshake](#tcp-3-way-handshake)
-* [TCP 와 UDP 의 비교](#tcp와-udp의-비교)
+* [TCP와 UDP의 비교](#tcp와-udp의-비교)
 * [HTTP 와 HTTPS](#http와-https)
   * HTTP 의 문제점들
 * [DNS Round Robin 방식](#dns-round-robin-방식)
@@ -12,7 +12,7 @@
 
 </br>
 
-## HTTP 의 GET 과 POST 비교
+## HTTP의 GET과 POST 비교
 
 둘 다 HTTP 프로토콜을 이용해서 서버에 무엇인가를 요청할 때 사용하는 방식이다. 하지만 둘의 특징을 제대로 이해하여 기술의 목적에 맞게 알맞은 용도에 사용해야한다.
 
@@ -45,7 +45,7 @@ _그렇다면 이러한 특성을 이해한 뒤에는 어디에 적용되는지�
 
 </br>
 
-## TCP 와 UDP 의 비교
+## TCP와 UDP의 비교
 
 ### UDP
 
@@ -72,7 +72,7 @@ _그렇다면 이러한 특성을 이해한 뒤에는 어디에 적용되는지�
 
 </br>
 
-## HTTP 와 HTTPS
+## HTTP와 HTTPS
 
 ### HTTP 의 문제점
 
