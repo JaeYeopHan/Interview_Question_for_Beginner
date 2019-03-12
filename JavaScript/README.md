@@ -69,10 +69,10 @@ foo( );
 var foo = function( ) {
   console.log(‘hello’);
 };
-// console> Syntax Error
+// console> Uncaught TypeError: foo is not a function
 ```
 
-이 두번째 예제의 함수 표현은 함수 리터럴을 할당하는 구조이기 때문에 호이스팅 되지 않으며 그렇기 때문에 `Syntax Error`를 발생시킨다.
+이 두번째 예제의 함수 표현은 함수 리터럴을 할당하는 구조이기 때문에 호이스팅 되지 않으며 그렇기 때문에 런타임 환경에서 `Type Error`를 발생시킨다.
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-2-javascript)
 
