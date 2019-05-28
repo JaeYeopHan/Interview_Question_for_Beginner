@@ -305,7 +305,7 @@
 #### 추가 자료
 
 - [신입 프론트엔드 개발자가 되려면 무엇을 학습해야 하나요?](https://jbee.io/essay/for_junior_frontend_developer/)
-- [Front-end-Developer-Interview-Questions (한국어)](https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Korean)
+- [Front-end-Developer-Interview-Questions (한국어)](https://h5bp.org/Front-end-Developer-Interview-Questions/translations/korean/)
 - [Front-end Interview (영어)](http://thatjsdude.com/interview/index.html)
 - [Front-end Checklist](https://github.com/kesuskim/Front-End-Checklist)
   - 면접 시 물어보기 가장 좋은 것들이 '기본'에 대한 내용이라고 생각되는데요, 그 '기본'에 대해 체크리스트 형식으로 잘 정리되어 있는 문서를 공유합니다.
