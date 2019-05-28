@@ -356,15 +356,15 @@
 - [주니어 개발자를 위한 취업 정보](https://github.com/jojoldu/junior-recruit-scheduler)
 - [mission-peace/interview repository](https://github.com/mission-peace/interview)  
   => 각종 알고리즘에 대한 코드와 동영상 강의 링크를 제공합니다. (영어)
-- [awesome-interview-questions](https://github.com/MaximAbramchuck/awesome-interview-questions)
+- [awesome-interview-questions](https://github.com/MaximAbramchuck/awesome-interview-questions)  
   => 각종 언어, CS 기초에 대한 interview 질문들이 정리되어 있습니다. (영어)
-- [coding-interview-university](https://github.com/jwasham/coding-interview-university/blob/master/translations/README-ko.md)
+- [coding-interview-university](https://github.com/jwasham/coding-interview-university/blob/master/translations/README-ko.md)  
   => (한국어 version) 구글 인터뷰를 준비하면서 정리한 자료가 한국어로 번역되어 있는 자료입니다.
-- [코딩 인터뷰 완전분석](http://www.yes24.com/24/Goods/44305533?Acode=101)
+- [코딩 인터뷰 완전분석](http://www.yes24.com/24/Goods/44305533?Acode=101)  
   => (도서) 코딩 인터뷰에 관련된 도서 중 가장 유명한 책이라고 생각되는데요, 최근 개정판이 발간되었습니다.
-- [tech-interview-handbook Github repository](https://github.com/yangshun/tech-interview-handbook)
+- [tech-interview-handbook Github repository](https://github.com/yangshun/tech-interview-handbook)  
   => (영어) 코딩 인터뷰에 관련되어 정리되어있는 respository 입니다.
-- [A perfect guide for cracking a javascript interview a developers perspective](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
+- [A perfect guide for cracking a javascript interview a developers perspective](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)  
   => [@JayJin](https://github.com/milooy)님이 추천하신 자바스크립트 인터뷰 아티클입니다.
 
 </br>
