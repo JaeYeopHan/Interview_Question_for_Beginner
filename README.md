@@ -209,7 +209,7 @@
 
 ## :bulb: Algorithm (알고리즘) [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
 
-- 손코딩 및 코딩 테스트 대비 
+- 손코딩 및 코딩 테스트 대비
   => 대부분의 내용이 코드이기 때문에 별도의 [Java Algorithm Training Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
 - 코딩 테스트를 위한 Tip
 - 문제 해결을 위한 전략적 접근
@@ -354,7 +354,7 @@
 
 - [미세먼지 같은 면접 팁](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Tip)
 - [주니어 개발자를 위한 취업 정보](https://github.com/jojoldu/junior-recruit-scheduler)
-- [mission-peace/interview repository](https://github.com/mission-peace/interview)
+- [mission-peace/interview repository](https://github.com/mission-peace/interview)  
   => 각종 알고리즘에 대한 코드와 동영상 강의 링크를 제공합니다. (영어)
 - [awesome-interview-questions](https://github.com/MaximAbramchuck/awesome-interview-questions)
   => 각종 언어, CS 기초에 대한 interview 질문들이 정리되어 있습니다. (영어)
