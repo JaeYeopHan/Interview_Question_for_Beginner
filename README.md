@@ -40,6 +40,7 @@
 - [Part 3. 분야별 정리](#part-3-분야별)
   - [FrontEnd](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
   - [iOS](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
+  - [Machine Running](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/MachineRunning)
 - [그 외 좋은 자료 추천](#그-외-좋은-자료)
 
 </br>
