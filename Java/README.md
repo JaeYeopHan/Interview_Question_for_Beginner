@@ -1,21 +1,21 @@
 # Part 2-1 Java
 
-* [Part 2-1 Java](#part-2-1-java)
-  * [JVM 에 대해서, GC 의 원리](#jvm----gc)
-  * [Collection](#collection)
-  * [Annotation](#annotation)
-    * [Reference](#reference)
-  * [Generic](#generic)
-  * [final keyword](#final-keyword)
-  * [Overriding vs Overloading](#overriding-vs-overloading)
-  * [Access Modifier](#access-modifier)
-  * [Wrapper class](#wrapper-class)
-    * [AutoBoxing](#autoboxing)
-  * [Multi-Thread 환경에서의 개발](#multi-thread)
-    * [Field member](#field-member)
-    * [동기화(Synchronized)](#synchronized)
-    * [ThreadLocal](#threadlocal)
-      * [Personal Recommendation](#personal-recommendation)
+- [Part 2-1 Java](#part-2-1-java)
+  - [JVM 에 대해서, GC 의 원리](#jvm-%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-gc-%EC%9D%98-%EC%9B%90%EB%A6%AC)
+  - [Collection](#collection)
+  - [Annotation](#annotation)
+      - [Reference](#reference)
+  - [Generic](#generic)
+  - [final keyword](#final-keyword)
+  - [Overriding vs Overloading](#overriding-vs-overloading)
+  - [Access Modifier](#access-modifier)
+  - [Wrapper class](#wrapper-class)
+    - [AutoBoxing](#autoboxing)
+  - [Multi-Thread 환경에서의 개발](#multi-thread-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EA%B0%9C%EB%B0%9C)
+    - [Field member](#field-member)
+    - [동기화(Synchronized)](#%EB%8F%99%EA%B8%B0%ED%99%94synchronized)
+    - [ThreadLocal](#threadlocal)
+      - [Personal Recommendation](#personal-recommendation)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
@@ -36,8 +36,8 @@
 
 Java Collection 에는 `List`, `Map`, `Set` 인터페이스를 기준으로 여러 구현체가 존재한다. 이에 더해 `Stack`과 `Queue` 인터페이스도 존재한다. 왜 이러한 Collection 을 사용하는 것일까? 그 이유는 다수의 Data 를 다루는데 표준화된 클래스들을 제공해주기 때문에 DataStructure 를 직접 구현하지 않고 편하게 사용할 수 있기 때문이다. 또한 배열과 다르게 객체를 보관하기 위한 공간을 미리 정하지 않아도 되므로, 상황에 따라 객체의 수를 동적으로 정할 수 있다. 이는 프로그램의 공간적인 효율성 또한 높여준다.
 
-* List
-  `List` 인터페이스를 직접 `@Override`를 통해 사용자가 정의하여 사용할 수도 있으며, 대표적인 구현체로는 `ArrayList`가 존재한다. 이는 기존에 있었던 `Vector`를 개선한 것이다. DataStructure 부분에서 설명한 Array 라고 생각하면 쉽지만 내부적으로는 `Red-Black tree`로 구성되어 있다. 이외에도 `LinkedList` 등의 구현체가 있다.
+* List  
+  `List` 인터페이스를 직접 `@Override`를 통해 사용자가 정의하여 사용할 수도 있으며, 대표적인 구현체로는 `ArrayList`가 존재한다. 이는 기존에 있었던 `Vector`를 개선한 것이다. 이외에도 `LinkedList` 등의 구현체가 있다.
 * Map  
   대표적인 구현체로 `HashMap`이 존재한다. (밑에서 살펴볼 멀티스레드 환경에서의 개발 부분에서 HashTable 과의 차이점에 대해 살펴본다.) key-value 의 구조로 이루어져 있으며 Map 에 대한 구체적인 내용은 DataStructure 부분의 hashtable 과 일치한다. key 를 기준으로 중복된 값을 저장하지 않으며 순서를 보장하지 않는다. key 에 대해서 순서를 보장하기 위해서는 `LinkedHashMap`을 사용한다.
 * Set  
