@@ -40,7 +40,7 @@
 - [Part 3. 분야별 정리](#part-3-분야별)
   - [FrontEnd](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
   - [iOS](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
-  - [Machine Running](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/MachineRunning)
+  - [Machine Learning](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/MachineLearning)
 - [그 외 좋은 자료 추천](#그-외-좋은-자료)
 
 </br>
@@ -209,7 +209,7 @@
 
 ## :bulb: Algorithm (알고리즘) [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
 
-- 손코딩 및 코딩 테스트 대비
+- 손코딩 및 코딩 테스트 대비 
   => 대부분의 내용이 코드이기 때문에 별도의 [Java Algorithm Training Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
 - 코딩 테스트를 위한 Tip
 - 문제 해결을 위한 전략적 접근
@@ -332,7 +332,7 @@
 
 </br>
 
-## :large_orange_diamond: Machine Running [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/MachineRunning)
+## :large_orange_diamond: Machine Learning [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/MachineLearning)
 
 - Cost Function
 
