@@ -228,7 +228,7 @@ n 개의 원소를 가진 배열을 정렬할 때, i 번째를 정렬할 순서�
 
 ### Quick Sort
 
-Sorting 기법 중 가장 빠르다고 해서 quick 이라는 이름이 붙여졌다. 하지만 Worst Case 에서는 시간복잡도가 O(n^2)가 나올 수도 있다. 하지만 `constant factor`가 작아서 속도가 빠르다.
+Sorting 기법 중 가장 빠르다고 해서 quick 이라는 이름이 붙여졌다. **하지만 Worst Case 에서는 시간복잡도가 O(n^2)가 나올 수도 있다.** 하지만 `constant factor`가 작아서 속도가 빠르다.
 
 `Quick Sort` 역시 `Divide and Conquer` 전략을 사용하여 Sorting 이 이루어진다. Divide 과정에서 `pivot`이라는 개념이 사용된다. 입력된 배열에 대해 오름차순으로 정렬한다고 하면 이 pivot 을 기준으로 좌측은 pivot 으로 설정된 값보다 작은 값이 위치하고, 우측은 큰 값이 위치하도록 `partition`된다. 이렇게 나뉜 좌, 우측 각각의 배열을 다시 재귀적으로 Quick Sort 를 시키면 또 partition 과정이 적용된다.이 때 한 가지 주의할 점은 partition 과정에서 pivot 으로 설정된 값은 다음 재귀과정에 포함시키지 않아야 한다. 이미 partition 과정에서 정렬된 자신의 위치를 찾았기 때문이다.
 
@@ -246,7 +246,7 @@ Sorting 기법 중 가장 빠르다고 해서 quick 이라는 이름이 붙여�
 
 | Space Complexity | Time Complexity |
 | :--------------: | :-------------: |
-|       O(1)       |    O(nlogn)     |
+|       O(log(n))       |    O(nlogn)     |
 
 #### [code](https://github.com/JaeYeopHan/algorithm_basic_java/blob/master/src/test/java/sort/QuickSort.java)
 
