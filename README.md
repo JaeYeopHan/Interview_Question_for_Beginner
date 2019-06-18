@@ -6,6 +6,10 @@
 
 # Technical Interview Guidelines for beginners
 
+<a href="https://twitter.com/JbeeLjyhanll">
+<img alt="Twitter: JbeeLjyhanll" src="https://img.shields.io/twitter/follow/JbeeLjyhanll.svg?style=social" target="_blank" />
+</a>
+
 <div align=center>
 
 [![author](https://img.shields.io/badge/author-jbee-ff69b4.svg?style=flat-square)](https://jbee.io/about)
@@ -337,9 +341,8 @@
 - Cost Function
 
 #### 추가 자료
+
 - [모두를 위한 머신러닝/딥러닝 강의](http://hunkim.github.io/ml/)
-
-
 
 </br>
 
