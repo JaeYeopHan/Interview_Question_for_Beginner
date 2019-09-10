@@ -75,6 +75,13 @@
 
 ---
 
+
+### [회사에 궁금한 점이 있으신가요?](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Reverse_Interview)
+
+인터뷰를 마치고 한번씩은 반드시 들어봤을 질문입니다. 이 때 어떠한 질문을 하면 좋을까요? 적절한 질문들을 정리해둔 Reverse Interview 목록입니다.
+
+---
+
 # Part 1. 전산 기초
 
 ## :bulb: 개발상식 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
