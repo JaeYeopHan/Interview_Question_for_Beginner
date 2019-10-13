@@ -28,8 +28,8 @@
 ## :memo: Table of Contents
 
 - [What is this?](#what-is-this?)
-- [Questions from interview](# questions from interview)
-- [Part 1. CS](# part-1-computer-based)
+- [Questions from interview](#questions from interview)
+- [Part 1. CS](#part-1-computer-based)
   - [Common sense of development](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
   - [Data Structure](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
   - [Network](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Network)
@@ -41,11 +41,11 @@
   - [Java](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Java)
   - [JavaScript](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
   - [Python](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Python)
-- [Part 3. Arrangement by Sector](# part-3- Sector)
+- [Part 3. Arrangement by Sector](#part-3- Sector)
   - [FrontEnd](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
   - [iOS](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
   - [Machine Learning](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/MachineLearning)
-- [Recommended other good material](# other-good-material)
+- [Recommended other good material](#other-good-material)
 
 </br>
 
