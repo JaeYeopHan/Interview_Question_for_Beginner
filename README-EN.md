@@ -28,24 +28,24 @@
 ## :memo: Table of Contents
 
 - [What is this?](#what-is-this?)
-- [Questions from interview] (# questions from interview)
-- [Part 1. CS] (# part-1-computer-based)
-  - [Common sense of development] (https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
-  - [Data Structure] (https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
-  - [Network] (https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Network)
-  - [Operating System] (https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/OS)
-  - [Database] (https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Database)
-  - [Design Pattern] (https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/DesignPattern)
-  - [Algorithm] (https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
+- [Questions from interview](# questions from interview)
+- [Part 1. CS](# part-1-computer-based)
+  - [Common sense of development](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
+  - [Data Structure](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
+  - [Network](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Network)
+  - [Operating System](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/OS)
+  - [Database](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Database)
+  - [Design Pattern](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/DesignPattern)
+  - [Algorithm](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
 - [Part 2. Language](#part-2-language)
   - [Java](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Java)
   - [JavaScript](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
   - [Python](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Python)
-- [Part 3. Arrangement by Sector] (# part-3- Sector)
+- [Part 3. Arrangement by Sector](# part-3- Sector)
   - [FrontEnd](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
   - [iOS](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
   - [Machine Learning](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/MachineLearning)
-- [Recommended other good material] (# other-good-material)
+- [Recommended other good material](# other-good-material)
 
 </br>
 
@@ -61,7 +61,7 @@ It is a repository of materials for prospective developers or developers for tec
 
 ##### :pray: [HOW TO CONTRIBUTE](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/master/CONTRIBUTING.md)
 
-#####: star: This store grows with PR and star.
+##### :star: This store grows with PR and star.
 
 </br>
 
@@ -69,14 +69,14 @@ It is a repository of materials for prospective developers or developers for tec
 
 ---
 
-### [Questions I Interviewed] (https://github.com/JaeYeopHan/Interview_Question_for_Beginner/issues/59)
+### [Questions I Interviewed](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/issues/59)
 
 You can share the interview questions you actually received in the issue.
 
 ---
 
 
-### [Do you have questions about your company?] (Https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Reverse_Interview)
+### [Do you have questions about your company?](Https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Reverse_Interview)
 
 After the interview, I must have heard this question. What question should I ask? This is a list of Reverse Interviews that lists the appropriate questions.
 
@@ -84,7 +84,7 @@ After the interview, I must have heard this question. What question should I ask
 
 # Part 1. Computational Basics
 
-## bulb: Development common sense [Link] (https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
+## :bulb: Development common sense [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
 
 - What is object-oriented programming?
 - What is the RESTFul API?
@@ -95,7 +95,7 @@ After the interview, I must have heard this question. What question should I ask
 
 </br>
 
-##: bulb: data structure [Link] (https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
+## :bulb: data structure [Link](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
 
 - Array vs LinkedList
 - Stack and Queue
@@ -126,7 +126,7 @@ After the interview, I must have heard this question. What question should I ask
 </br>
 
 
-##: bulb: Network [Link] (https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Network)
+## :bulb: Network [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Network)
 
 - Difference between GET and POST
 - TCP 3-way-handshake
@@ -138,7 +138,7 @@ After the interview, I must have heard this question. What question should I ask
 
 </br>
 
-##: bulb: Operating system [Link] (https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/OS)
+## :bulb: Operating system [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/OS)
 
 - Difference between process and thread
 - Type of scheduler
@@ -172,7 +172,7 @@ After the interview, I must have heard this question. What question should I ask
 
 </br>
 
-##: bulb: database [Link] (https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Database)
+## :bulb: database [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Database)
 
 - Database
   - Why use a database
@@ -208,17 +208,17 @@ After the interview, I must have heard this question. What question should I ask
 
 #### Additional Resources
 
-- [How does a DBMS manage transactions?] (Https://d2.naver.com/helloworld/407507)
+- [How does a DBMS manage transactions?](Https://d2.naver.com/helloworld/407507)
 
 </br>
 
-##: bulb: Design Pattern [Link] (https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/DesignPattern)
+## :bulb: Design Pattern [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/DesignPattern)
 
 - Singleton
 
 </br>
 
-##: bulb: Algorithm [Link] (https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
+## :bulb: Algorithm [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
 
 - Prepare for hand coding and coding test
   => Since most of the content is code, save it in a separate Java Algorithm Training Repository (https://github.com/JaeYeopHan/algorithm_basic_java).
@@ -229,7 +229,7 @@ After the interview, I must have heard this question. What question should I ask
 
 </br>
 
-<sup> [(Back to Contents)] (# technical-interview-guidelines-for-beginners) </ sup>
+<sup>[(Back to Contents)](#technical-interview-guidelines-for-beginners)</sup>
 
 </br>
 
@@ -239,7 +239,7 @@ After the interview, I must have heard this question. What question should I ask
 
 # Part 2. Language
 
-##: gem: Java [Link] (https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Java)
+## :gem: Java [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Java)
 
 - About the JVM / GC Principle
 - Collection
@@ -253,11 +253,11 @@ After the interview, I must have heard this question. What question should I ask
 
 #### Additional Resources
 
-- [Comparison of Java Basics] (http://asfirstalways.tistory.com/146)
+- [Comparison of Java Basics](http://asfirstalways.tistory.com/146)
 
 </br>
 
-##: gem: JavaScript [Link] (https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
+## :gem: JavaScript [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
 
 - JavaScript Event Loop
 - Hoisting
@@ -267,13 +267,13 @@ After the interview, I must have heard this question. What question should I ask
 
 #### Additional Resources
 
-- [Compare JavaScript Basics] (http://asfirstalways.tistory.com/246)
-- [ECMAScript6 Cleanup] (https://jaeyeophan.github.io/categories/ECMAScript6)
-- [Interview Algorithm Question in JavaScript] (https://github.com/kennymkchan/interview-questions-in-javascript)
+- [Compare JavaScript Basics](http://asfirstalways.tistory.com/246)
+- [ECMAScript6 Cleanup](https://jaeyeophan.github.io/categories/ECMAScript6)
+- [Interview Algorithm Question in JavaScript](https://github.com/kennymkchan/interview-questions-in-javascript)
   - This is a collection of information related to interviews related to JavaScript.
     </br>
 
-##: gem: Python [Link] (https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Python)
+## :gem: Python [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Python)
 
 - Generator
 - Method execution when inheriting class
@@ -286,12 +286,12 @@ After the interview, I must have heard this question. What question should I ask
 
 #### Additional Resources
 
-- [play with asyncio] (https://tech.ssut.me/python-3-play-with-asyncio/)
-- [Understanding metaclasses] (https://tech.ssut.me/understanding-python-metaclasses/)
+- [play with asyncio](https://tech.ssut.me/python-3-play-with-asyncio/)
+- [Understanding metaclasses](https://tech.ssut.me/understanding-python-metaclasses/)
 
 </br>
 
-<sup> [(Back to Contents)] (# technical-interview-guidelines-for-beginners) </ sup>
+<sup>[(Back to Contents)](#technical-interview-guidelines-for-beginners)</sup>
 
 </br>
 
@@ -301,7 +301,7 @@ After the interview, I must have heard this question. What question should I ask
 
 # Part 3. By Field
 
-##: large_orange_diamond: Front-End [Link] (https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
+## :large_orange_diamond: Front-End [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
 
 - How browsers work
 - Document Object Model
@@ -316,16 +316,16 @@ After the interview, I must have heard this question. What question should I ask
 
 #### Additional Resources
 
-- [What do I need to learn to be a new frontend developer?] (Https://jbee.io/essay/for_junior_frontend_developer/)
-- [Front-end-Developer-Interview-Questions (English)] (https://h5bp.org/Front-end-Developer-Interview-Questions/translations/korean/)
-- [Front-end Interview (English)] (http://thatjsdude.com/interview/index.html)
-- [Front-end Checklist] (https://github.com/kesuskim/Front-End-Checklist)
+- [What do I need to learn to be a new frontend developer?](Https://jbee.io/essay/for_junior_frontend_developer/)
+- [Front-end-Developer-Interview-Questions (English)](https://h5bp.org/Front-end-Developer-Interview-Questions/translations/korean/)
+- [Front-end Interview (English)](http://thatjsdude.com/interview/index.html)
+- [Front-end Checklist](https://github.com/kesuskim/Front-End-Checklist)
   - I think the best things to ask at the interview are about 'Basic', and I'm sharing a well-organized document in a checklist.
-- [Front-end Interview Handbook (Korean)] (https://github.com/yangshun/front-end-interview-handbook/tree/master/Translations/Korean)
+- [Front-end Interview Handbook (Korean)](https://github.com/yangshun/front-end-interview-handbook/tree/master/Translations/Korean)
 
 </br>
 
-##: large_orange_diamond: iOS [Link] (https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
+## :large_orange_diamond: iOS [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
 
 - App Life Cycle
 - View Life Cycle
@@ -337,23 +337,23 @@ After the interview, I must have heard this question. What question should I ask
 
 #### Additional Resources
 
-- [iOS interview question cleanup site 1] (https://github.com/MaximAbramchuck/awesome-interview-questions#objective-c)
-- [iOS Interview Question Cleanup Site 2] (https://github.com/MaximAbramchuck/awesome-interview-questions#ios)
-- [Ref link collection for studying Swift] (https://github.com/ClintJang/awesome-swift-korean-lecture)
+- [iOS interview question cleanup site 1](https://github.com/MaximAbramchuck/awesome-interview-questions#objective-c)
+- [iOS Interview Question Cleanup Site 2](https://github.com/MaximAbramchuck/awesome-interview-questions#ios)
+- [Ref link collection for studying Swift](https://github.com/ClintJang/awesome-swift-korean-lecture)
 
 </br>
 
-##: large_orange_diamond: Machine Learning [Link] (https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/MachineLearning)
+## :large_orange_diamond: Machine Learning [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/MachineLearning)
 
 - Cost Function
 
 #### Additional Resources
 
-- [Machine Learning / Deep Learning Lesson] (http://hunkim.github.io/ml/)
+- [Machine Learning / Deep Learning Lesson](http://hunkim.github.io/ml/)
 
 </br>
 
-<sup> [(Back to Contents)] (# technical-interview-guidelines-for-beginners) </ sup>
+<sup>[(Back to Contents)](#technical-interview-guidelines-for-beginners)</sup>
 
 </br>
 
@@ -363,20 +363,20 @@ After the interview, I must have heard this question. What question should I ask
 
 ## Other good resources
 
-- [Interview tips like fine dust] (https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Tip)
-- [Employment Information for Junior Developers] (https://github.com/jojoldu/junior-recruit-scheduler)
-- [mission-peace / interview repository] (https://github.com/mission-peace/interview)
+- [Interview tips like fine dust](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Tip)
+- [Employment Information for Junior Developers](https://github.com/jojoldu/junior-recruit-scheduler)
+- [mission-peace / interview repository](https://github.com/mission-peace/interview)
   => Links to code and video lessons for various algorithms. (English)
-- [awesome-interview-questions] (https://github.com/MaximAbramchuck/awesome-interview-questions)
+- [awesome-interview-questions](https://github.com/MaximAbramchuck/awesome-interview-questions)
   => Here are some interview questions about various languages ​​and CS basics. (English)
-- [coding-interview-university] (https://github.com/jwasham/coding-interview-university/blob/master/translations/README-en.md)
+- [coding-interview-university](https://github.com/jwasham/coding-interview-university/blob/master/translations/README-en.md)
   => (Korean version) In preparation for the Google interview, the data are translated into Korean.
-- [Complete analysis of coding interview] (http://www.yes24.com/24/Goods/44305533?Acode=101)
+- [Complete analysis of coding interview](http://www.yes24.com/24/Goods/44305533?Acode=101)
   => (Book) I think it's the most famous book in a coding interview. A recent revision has been published.
-- [tech-interview-handbook Github repository] (https://github.com/yangshun/tech-interview-handbook)
+- [tech-interview-handbook Github repository](https://github.com/yangshun/tech-interview-handbook)
   => This is a respository that is related to coding interviews.
 - A perfect guide for cracking a javascript interview a developers perspective. )
-  => [@JayJin] (https://github.com/milooy) 's recommended JavaScript interview article.
+  => [@JayJin](https://github.com/milooy) 's recommended JavaScript interview article.
 </br>
 
 ---
@@ -387,4 +387,4 @@ After the interview, I must have heard this question. What question should I ask
 
 ### LICENSE
 
-[MIT] (https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/master/LICENSE)
+[MIT](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/master/LICENSE)
