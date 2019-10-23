@@ -108,16 +108,23 @@ Fibonacci 수열을 예로 들어보면,
 ```
 top-down
 f (int n) {
- if n == 0: return 0
- elif n == 1: return 1
- else: return f(n-2) + f(n-1)
+  if n == 0 : return 0
+  elif n == 1: return 1
+  if dp[n] has value : return dp[n]
+  else : dp[n] = f(n-2) + f(n-1)
+         return dp[n]
 }
 ```
 
 ```
 bottom-up
-for (i = 2; i <= n; i++) {
- f[i] = f[i-2] + f[i-1]
+f (int n){
+  f[0] = 0
+  f[1] = 1
+  for (i = 2; i <= n; i++) {
+   f[i] = f[i-2] + f[i-1]
+  }
+  return f[n]
 }
 ```
 
