@@ -291,6 +291,18 @@
 
 </br>
 
+## :gem: SQL [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/SQL)
+
+- JOIN
+- Sub Query
+
+#### 추가 자료
+
+- [JOIN](http://wiki.gurubee.net/pages/viewpage.action?pageId=26743902)
+- [Sub Query](http://wiki.gurubee.net/pages/viewpage.action?pageId=26744146)
+
+</br>
+
 <sup>[(목차로 돌아가기)](#technical-interview-guidelines-for-beginners)</sup>
 
 </br>
