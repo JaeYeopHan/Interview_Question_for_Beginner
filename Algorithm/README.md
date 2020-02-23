@@ -9,7 +9,7 @@
 
 ## 코딩 테스트를 위한 Tip
 
-> Translate this article: [How-to-rock-an-algorithms-interview](http://www.palantir.com/2011/09/how-to-rock-an-algorithms-interview/)
+> Translate this article: [How to Rock an Algorithms Interview](https://web.archive.org/web/20110929132042/http://blog.palantir.com/2011/09/26/how-to-rock-an-algorithms-interview/)
 
 ### 1. 칠판에 글쓰기를 시작하십시오.
 
@@ -165,7 +165,7 @@ greedy 는 각 단계마다 지금 당장 가장 좋은 방법만을 선택하�
 
 ## Sorting Algorithm
 
-Sorting 알고리즘은 크게 Comparisons 방식과 non-Comparisons 방식으로 나눌 수 있다.
+Sorting 알고리즘은 크게 Comparisons 방식과 n\Non-Comparisons 방식으로 나눌 수 있다.
 
 ### Comparisons Sorting Algorithm (비교 방식 알고리즘)
 
@@ -387,7 +387,9 @@ Count Sort 는 말 그대로 몇 개인지 개수를 세어 정렬하는 방식�
 #### Time Complexity
 
 O(1) < O(log N) < O(N) < O(N log N) < O(N^2) < O(N^3)
+
 O(2^N) : 크기가 N 인 집합의 부분 집합
+
 O(N!) : 크기가 N 인 순열
 
 #### 알고리즘 문제 연습 사이트
