@@ -9,7 +9,7 @@
 
 ## 코딩 테스트를 위한 Tip
 
-> Translate this article: [How-to-rock-an-algorithms-interview](http://www.palantir.com/2011/09/how-to-rock-an-algorithms-interview/)
+> Translate this article: [How to Rock an Algorithms Interview](https://web.archive.org/web/20110929132042/http://blog.palantir.com/2011/09/26/how-to-rock-an-algorithms-interview/)
 
 ### 1. 칠판에 글쓰기를 시작하십시오.
 
@@ -24,8 +24,8 @@
 때로는 문제의 세부 사항을 검토하고 해결책이 당신에게 나올 것을 기대하는 것이 유용합니다 (이것이 상향식 접근법 일 것입니다). 그러나 다른 알고리즘에 대해서도 생각해 볼 수 있으며 각각의 알고리즘이 당신 앞의 문제에 적용되는지를 질문 할 수 있습니다 (하향식 접근법). 이러한 방식으로 참조 프레임을 변경하면 종종 즉각적인 통찰력을 얻을 수 있습니다. 다음은 면접에서 요구하는 문제의 절반 이상을 해결하는 데 도움이되는 알고리즘 기법입니다.
 
 * Sorting (plus searching / binary search)
-* Divide-and-conquer
-* Dynamic programming / memoization
+* Divide and Conquer
+* Dynamic Programming / Memoization
 * Greediness
 * Recursion
 * Algorithms associated with a specific data structure (which brings us to our fourth suggestion...)
@@ -165,7 +165,7 @@ greedy 는 각 단계마다 지금 당장 가장 좋은 방법만을 선택하�
 
 ## Sorting Algorithm
 
-Sorting 알고리즘은 크게 Comparisons 방식과 non-Comparisons 방식으로 나눌 수 있다.
+Sorting 알고리즘은 크게 Comparisons 방식과 Non-Comparisons 방식으로 나눌 수 있다.
 
 ### Comparisons Sorting Algorithm (비교 방식 알고리즘)
 
@@ -387,7 +387,9 @@ Count Sort 는 말 그대로 몇 개인지 개수를 세어 정렬하는 방식�
 #### Time Complexity
 
 O(1) < O(log N) < O(N) < O(N log N) < O(N^2) < O(N^3)
+
 O(2^N) : 크기가 N 인 집합의 부분 집합
+
 O(N!) : 크기가 N 인 순열
 
 #### 알고리즘 문제 연습 사이트

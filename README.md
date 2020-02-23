@@ -3,14 +3,14 @@
 ![](/assets/images/tech_interview_main.png)
 
 </div>
-****
-# Technical Interview Guidelines for beginners
+
+# Technical Interview Guidelines for Beginners
+
+<div align=center>
 
 <a href="https://twitter.com/JbeeLjyhanll">
 <img alt="Twitter: JbeeLjyhanll" src="https://img.shields.io/twitter/follow/JbeeLjyhanll.svg?style=social" target="_blank" />
 </a>
-
-<div align=center>
 
 [![author](https://img.shields.io/badge/author-jbee-ff69b4.svg?style=flat-square)](https://jbee.io/about)
 [![CONTRIBUTORS](https://img.shields.io/badge/contributors-47-green.svg?style=flat-square)](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/master/CONTRIBUTING.md)
@@ -97,21 +97,21 @@
 
 ## :bulb: 자료구조 [Link](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
 
-- Array vs LinkedList
+- Array vs Linked List
 - Stack and Queue
 - Tree
   - Binary Tree
   - Full Binary Tree
   - Complete Binary Tree
-  - BST(Binary Search Tree)
+  - BST (Binary Search Tree)
 - Binary Heap
 - Red-Black Tree
   - 정의
   - 특징
   - 삽입
   - 삭제
-- HashTable
-  - hash function
+- Hash Table
+  - Hash Function
   - Resolve Collision
     - Open Addressing
     - Separate Chaining
@@ -164,7 +164,7 @@
 - 가상 메모리
   - 배경
   - 가상 메모리가 하는 일
-  - Demand Paging(요구 페이징)
+  - Demand Paging (요구 페이징)
   - 페이지 교체 알고리즘
 - 캐시의 지역성
   - Locality
@@ -194,7 +194,7 @@
   - 트랜잭션의 특성
   - 트랜잭션의 상태
   - 트랜잭션을 사용할 때 주의할 점
-- Statement vs PrepareStatement
+- Statement vs PreparedStatement
 - NoSQL
   - 정의
   - CAP 이론
@@ -220,7 +220,7 @@
 
 ## :bulb: Algorithm (알고리즘) [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
 
-- 손코딩 및 코딩 테스트 대비  
+- 손코딩 및 코딩 테스트 대비
   => 대부분의 내용이 코드이기 때문에 별도의 [Java Algorithm Training Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
 - 코딩 테스트를 위한 Tip
 - 문제 해결을 위한 전략적 접근
@@ -269,7 +269,7 @@
 
 - [JavaScript 기본서 비교](http://asfirstalways.tistory.com/246)
 - [ECMAScript6 정리](https://jaeyeophan.github.io/categories/ECMAScript6)
-- [Interview Algorithm Question in JavaScript (영어)](https://github.com/kennymkchan/interview-questions-in-javascript)
+- [Interview Algorithm Questions in JavaScript (영어)](https://github.com/kennymkchan/interview-questions-in-javascript)
   - JavaScript 와 관련된 인터뷰 관련 내용들을 정리해놓은 자료입니다.
     </br>
 
@@ -305,7 +305,7 @@
 
 - 브라우저의 작동 원리
 - Document Object Model
-  - Event bubbling and Capturing
+  - Event Bubbling and Capturing
   - Event delegation
 - CORS
 - 크로스 브라우징
@@ -317,11 +317,11 @@
 #### 추가 자료
 
 - [신입 프론트엔드 개발자가 되려면 무엇을 학습해야 하나요?](https://jbee.io/essay/for_junior_frontend_developer/)
-- [Front-end-Developer-Interview-Questions (한국어)](https://h5bp.org/Front-end-Developer-Interview-Questions/translations/korean/)
+- [Front-end Developer Interview Questions (한국어)](https://h5bp.org/Front-end-Developer-Interview-Questions/translations/korean/)
 - [Front-end Interview (영어)](http://thatjsdude.com/interview/index.html)
 - [Front-end Checklist](https://github.com/kesuskim/Front-End-Checklist)
   - 면접 시 물어보기 가장 좋은 것들이 '기본'에 대한 내용이라고 생각되는데요, 그 '기본'에 대해 체크리스트 형식으로 잘 정리되어 있는 문서를 공유합니다.
-- [Front-end Interview Handbook (한국어)](https://github.com/yangshun/front-end-interview-handbook/tree/master/Translations/Korean)
+- [Front End Interview Handbook (한국어)](https://github.com/yangshun/front-end-interview-handbook/tree/master/Translations/Korean)
 - [React 구조에 대한 고민 시리즈](https://jbee.io/react/react-0-intro/)
 
 </br>
@@ -366,18 +366,18 @@
 
 - [미세먼지 같은 면접 팁](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Tip)
 - [주니어 개발자를 위한 취업 정보](https://github.com/jojoldu/junior-recruit-scheduler)
-- [mission-peace/interview repository](https://github.com/mission-peace/interview)  
-  => 각종 알고리즘에 대한 코드와 동영상 강의 링크를 제공합니다. (영어)
-- [awesome-interview-questions](https://github.com/MaximAbramchuck/awesome-interview-questions)  
-  => 각종 언어, CS 기초에 대한 interview 질문들이 정리되어 있습니다. (영어)
-- [coding-interview-university](https://github.com/jwasham/coding-interview-university/blob/master/translations/README-ko.md)  
-  => (한국어 version) 구글 인터뷰를 준비하면서 정리한 자료가 한국어로 번역되어 있는 자료입니다.
-- [코딩 인터뷰 완전분석](http://www.yes24.com/24/Goods/44305533?Acode=101)  
-  => (도서) 코딩 인터뷰에 관련된 도서 중 가장 유명한 책이라고 생각되는데요, 최근 개정판이 발간되었습니다.
-- [tech-interview-handbook Github repository](https://github.com/yangshun/tech-interview-handbook)  
-  => (영어) 코딩 인터뷰에 관련되어 정리되어있는 respository 입니다.
-- [A perfect guide for cracking a javascript interview a developers perspective](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)  
-  => [@JayJin](https://github.com/milooy)님이 추천하신 자바스크립트 인터뷰 아티클입니다.
+- [mission-peace/interview](https://github.com/mission-peace/interview)
+  - 각종 알고리즘에 대한 코드와 동영상 강의 링크를 제공합니다. (영어)
+- [awesome-interview-questions](https://github.com/MaximAbramchuck/awesome-interview-questions)
+  - 각종 언어, CS 기초에 대한 interview 질문들이 정리되어 있습니다. (영어)
+- [coding-interview-university](https://github.com/jwasham/coding-interview-university/blob/master/translations/README-ko.md)
+  - 구글 인터뷰를 준비하면서 정리한 자료가 한국어로 번역되어 있는 자료입니다. (한국어 version)
+- [코딩 인터뷰 완전분석](http://www.yes24.com/24/Goods/44305533?Acode=101)
+  - (도서) 코딩 인터뷰에 관련된 도서 중 가장 유명한 책이라고 생각되는데요, 최근 개정판이 발간되었습니다.
+- [tech-interview-handbook](https://github.com/yangshun/tech-interview-handbook)
+  - 코딩 인터뷰에 관련되어 정리되어있는 respository 입니다. (영어)
+- [A perfect guide for cracking a JavaScript interview (A developer's perspective)](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
+  - [@JayJin](https://github.com/milooy)님이 추천하신 자바스크립트 인터뷰 아티클입니다.
 
 </br>
 
@@ -387,6 +387,6 @@
 
 </br>
 
-### LICENSE
+### License
 
 [MIT](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/master/LICENSE)

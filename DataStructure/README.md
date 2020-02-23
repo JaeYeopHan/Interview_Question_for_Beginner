@@ -1,20 +1,20 @@
 # Part 1-2 DataStructure
 
-* [Array vs LinkedList](#array-vs-linkedlist)
+* [Array vs Linked List](#array-vs-linkedlist)
 * [Stack and Queue](#stack-and-queue)
 * [Tree](#tree)
   * Binary Tree
   * Full Binary Tree
   * Complete Binary Tree
-  * BST(Binary Search Tree)
+  * BST (Binary Search Tree)
 * [Binary Heap](#binary-heap)
 * [Red Black Tree](#red-black-tree)
   * 정의
   * 특징
   * 삽입
   * 삭제
-* [HashTable](#hashtable)
-  * hash function
+* [Hash Table](#hashtable)
+  * Hash Function
   * Resolve Collision
     * Open Addressing
     * Separate Chaining
@@ -31,7 +31,7 @@
 
 </br>
 
-## Array vs LinkedList
+## Array vs Linked List
 
 ### Array
 
@@ -41,18 +41,18 @@
 
 삽입의 경우도 마찬가지이다. 만약 첫번째 자리에 새로운 원소를 추가하고자 한다면 모든 원소들의 인덱스를 1 씩 shift 해줘야 하므로 이 경우도 O(n)의 시간을 요구하게 된다.
 
-### LinkedList
+### Linked List
 
 이 부분에 대한 문제점을 해결하기 위한 자료구조가 linked list 이다. 각각의 원소들은 자기 자신 다음에 어떤 원소인지만을 기억하고 있다. 따라서 이 부분만 다른 값으로 바꿔주면 삭제와 삽입을 O(1) 만에 해결할 수 있는 것이다.
 
-하지만 LinkedList 역시 한 가지 문제가 있다. 원하는 위치에 삽입을 하고자 하면 원하는 위치를 Search 과정에 있어서 첫번째 원소부터 다 확인해봐야 한다는 것이다. Array 와는 달리 논리적 저장 순서와 물리적 저장 순서가 일치하지 않기 때문이다. 이것은 일단 삽입하고 정렬하는 것과 마찬가지이다. 이 과정 때문에, 어떠한 원소를 삭제 또는 추가하고자 했을 때, 그 원소를 찾기 위해서 O(n)의 시간이 추가적으로 발생하게 된다.
+하지만 Linked List 역시 한 가지 문제가 있다. 원하는 위치에 삽입을 하고자 하면 원하는 위치를 Search 과정에 있어서 첫번째 원소부터 다 확인해봐야 한다는 것이다. Array 와는 달리 논리적 저장 순서와 물리적 저장 순서가 일치하지 않기 때문이다. 이것은 일단 삽입하고 정렬하는 것과 마찬가지이다. 이 과정 때문에, 어떠한 원소를 삭제 또는 추가하고자 했을 때, 그 원소를 찾기 위해서 O(n)의 시간이 추가적으로 발생하게 된다.
 
 결국 linked list 자료구조는 search 에도 O(n)의 time complexity 를 갖고, 삽입, 삭제에 대해서도 O(n)의 time complexity 를 갖는다. 그렇다고 해서 아주 쓸모없는 자료구조는 아니기에, 우리가 학습하는 것이다. 이 Linked List 는 Tree 구조의 근간이 되는 자료구조이며, Tree 에서 사용되었을 때 그 유용성이 드러난다.
 
 #### Personal Recommendation
 
-* Array 를 기반으로한 LinkedList 구현
-* ArrayList 를 기반으로한 LinkedList 구현
+* Array 를 기반으로한 Linked List 구현
+* ArrayList 를 기반으로한 Linked List 구현
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-2-datastructure)
 
@@ -109,7 +109,7 @@
 
 </br>
 
-### BST(Binary Search Tree)
+### BST (Binary Search Tree)
 
 효율적인 탐색을 위해서는 어떻게 찾을까만 고민해서는 안된다. 그보다는 효율적인 탐색을 위한 저장방법이 무엇일까를 고민해야 한다. 이진 탐색 트리는 이진 트리의 일종이다. 단 이진 탐색 트리에는 데이터를 저장하는 규칙이 있다. 그리고 그 규칙은 특정 데이터의 위치를 찾는데 사용할 수 있다.
 
@@ -135,9 +135,9 @@
 
 자료구조의 일종으로 Tree 의 형식을 하고 있으며, Tree 중에서도 배열에 기반한 `Complete Binary Tree`이다. 배열에 트리의 값들을 넣어줄 때, 0 번째는 건너뛰고 1 번 index 부터 루트노드가 시작된다. 이는 노드의 고유번호 값과 배열의 index 를 일치시켜 혼동을 줄이기 위함이다. `힙(Heap)`에는 `최대힙(max heap)`, `최소힙(min heap)` 두 종류가 있다.
 
-`Max Heap`이란, 각 노드의 값이 해당 children 의 값보다 **크거나 같은** `complete binary tree`를 말한다. ( Min heap 은 그 반대이다.)
+`Max Heap`이란, 각 노드의 값이 해당 children 의 값보다 **크거나 같은** `complete binary tree`를 말한다. ( Min Heap 은 그 반대이다.)
 
-`Max heap`에서는 Root node 에 있는 값이 제일 크므로, 최대값을 찾는데 소요되는 연산의 time complexity 이 O(1)이다. 그리고 `complete binary tree`이기 때문에 배열을 사용하여 효율적으로 관리할 수 있다. (즉, random access 가 가능하다. Min heap 에서는 최소값을 찾는데 소요되는 연산의 time complexity 가 O(1)이다.) 하지만 heap 의 구조를 계속 유지하기 위해서는 제거된 루트 노드를 대체할 다른 노드가 필요하다. 여기서 heap 은 맨 마지막 노드를 루트 노드로 대체시킨 후, 다시 heapify 과정을 거쳐 heap 구조를 유지한다. 이런 경우에는 결국 O(log n)의 시간복잡도로 최대값 또는 최소값에 접근할 수 있게 된다.
+`Max Heap`에서는 Root node 에 있는 값이 제일 크므로, 최대값을 찾는데 소요되는 연산의 time complexity 이 O(1)이다. 그리고 `complete binary tree`이기 때문에 배열을 사용하여 효율적으로 관리할 수 있다. (즉, random access 가 가능하다. Min heap 에서는 최소값을 찾는데 소요되는 연산의 time complexity 가 O(1)이다.) 하지만 heap 의 구조를 계속 유지하기 위해서는 제거된 루트 노드를 대체할 다른 노드가 필요하다. 여기서 heap 은 맨 마지막 노드를 루트 노드로 대체시킨 후, 다시 heapify 과정을 거쳐 heap 구조를 유지한다. 이런 경우에는 결국 O(log n)의 시간복잡도로 최대값 또는 최소값에 접근할 수 있게 된다.
 
 #### Personal Recommendation
 
@@ -159,7 +159,7 @@ Red-Black Tree 는 다음의 성질들을 만족하는 BST 이다.
 2.  Root node 의 색깔은 `Black`이다.
 3.  각 leaf node 는 `black`이다.
 4.  어떤 노드의 색깔이 `red`라면 두 개의 children 의 색깔은 모두 black 이다.
-5.  각 노드에 대해서 노드로부터 descendant leaves 까지의 단순 경로는 모두 같은 수의 black nodes 들을 포함하고 있다. 이를 해당 노드의 `Black-Height`라고 한다.  
+5.  각 노드에 대해서 노드로부터 descendant leaves 까지의 단순 경로는 모두 같은 수의 black nodes 들을 포함하고 있다. 이를 해당 노드의 `Black-Height`라고 한다.
     _cf) Black-Height: 노드 x 로부터 노드 x 를 포함하지 않은 leaf node 까지의 simple path 상에 있는 black nodes 들의 개수_
 
 ### Red-Black Tree 의 특징
@@ -188,7 +188,7 @@ Java Collection 에서 ArrayList 도 내부적으로 RBT 로 이루어져 있고
 
 </br>
 
-## HashTable
+## Hash Table
 
 `hash`는 내부적으로 `배열`을 사용하여 데이터를 저장하기 때문에 빠른 검색 속도를 갖는다. 특정한 값을 Search 하는데 데이터 고유의 `인덱스`로 접근하게 되므로 average case 에 대하여 Time Complexity 가 O(1)이 되는 것이다.(항상 O(1)이 아니고 average case 에 대해서 O(1)인 것은 collision 때문이다.) 하지만 문제는 이 인덱스로 저장되는 `key`값이 불규칙하다는 것이다.
 
@@ -196,11 +196,11 @@ Java Collection 에서 ArrayList 도 내부적으로 RBT 로 이루어져 있고
 
 </br>
 
-### hash function
+### Hash Function
 
 '특별한 알고리즘'이란 것을 통해 고유한 인덱스 값을 설정하는 것이 중요해보인다. 위에서 언급한 '특별한 알고리즘'을 `hash method` 또는 `해시 함수(hash function)`라고 하고 이 메소드에 의해 반환된 데이터의 고유 숫자 값을 `hashcode`라고 한다. 저장되는 값들의 key 값을 `hash function`을 통해서 **작은 범위의 값들로** 바꿔준다.
 
-하지만 어설픈 `hash function`을 통해서 key 값들을 결정한다면 동일한 값이 도출될 수가 있다. 이렇게 되면 동일한 key 값에 복수 개의 데이터가 하나의 테이블에 존재할 수 있게 되는 것인데 이를 `Collision` 이라고 한다.  
+하지만 어설픈 `hash function`을 통해서 key 값들을 결정한다면 동일한 값이 도출될 수가 있다. 이렇게 되면 동일한 key 값에 복수 개의 데이터가 하나의 테이블에 존재할 수 있게 되는 것인데 이를 `Collision` 이라고 한다.
 _Collision : 서로 다른 두 개의 키가 같은 인덱스로 hashing(hash 함수를 통해 계산됨을 의미)되면 같은 곳에 저장할 수 없게 된다._
 
 #### 그렇다면 좋은 `hash function`는 어떠한 조건들을 갖추고 있어야 하는가?
@@ -225,11 +225,11 @@ Collision 이 많아질 수록 Search 에 필요한 Time Complexity 가 O(1)에�
 
 공개 주소 방식이라고도 불리는 이 알고리즘은 Collision 이 발생하면 데이터를 저장할 장소를 찾아 헤맨다. Worst Case 의 경우 비어있는 버킷을 찾지 못하고 탐색을 시작한 위치까지 되돌아 올 수 있다. 이 과정에서도 여러 방법들이 존재하는데, 다음 세 가지에 대해 알아보자.
 
-1.  Linear Probing  
+1.  Linear Probing
     순차적으로 탐색하며 비어있는 버킷을 찾을 때까지 계속 진행된다.
-2.  Quadratic probing  
+2.  Quadratic probing
     2 차 함수를 이용해 탐색할 위치를 찾는다.
-3.  Double hashing probing  
+3.  Double hashing probing
     하나의 해쉬 함수에서 충돌이 발생하면 2 차 해쉬 함수를 이용해 새로운 주소를 할당한다. 위 두 가지 방법에 비해 많은 연산량을 요구하게 된다.
 
 </br>
@@ -238,16 +238,16 @@ Collision 이 많아질 수록 Search 에 필요한 Time Complexity 가 O(1)에�
 
 일반적으로 Open Addressing 은 Separate Chaining 보다 느리다. Open Addressing 의 경우 해시 버킷을 채운 밀도가 높아질수록 Worst Case 발생 빈도가 더 높아지기 때문이다. 반면 Separate Chaining 방식의 경우 해시 충돌이 잘 발생하지 않도록 보조 해시 함수를 통해 조정할 수 있다면 Worst Case 에 가까워 지는 빈도를 줄일 수 있다. Java 7 에서는 Separate Chaining 방식을 사용하여 HashMap 을 구현하고 있다. Separate Chaining 방식으로는 두 가지 구현 방식이 존재한다.
 
-* **연결 리스트를 사용하는 방식(Linked List)**  
+* **연결 리스트를 사용하는 방식(Linked List)**
   각각의 버킷(bucket)들을 연결리스트(Linked List)로 만들어 Collision 이 발생하면 해당 bucket 의 list 에 추가하는 방식이다. 연결 리스트의 특징을 그대로 이어받아 삭제 또는 삽입이 간단하다. 하지만 단점도 그대로 물려받아 작은 데이터들을 저장할 때 연결 리스트 자체의 오버헤드가 부담이 된다. 또 다른 특징으로는, 버킷을 계속해서 사용하는 Open Address 방식에 비해 테이블의 확장을 늦출 수 있다.
 
-* **Tree 를 사용하는 방식 (Red-Black Tree)**  
+* **Tree 를 사용하는 방식 (Red-Black Tree)**
   기본적인 알고리즘은 Separate Chaining 방식과 동일하며 연결 리스트 대신 트리를 사용하는 방식이다. 연결 리스트를 사용할 것인가와 트리를 사용할 것인가에 대한 기준은 하나의 해시 버킷에 할당된 key-value 쌍의 개수이다. 데이터의 개수가 적다면 링크드 리스트를 사용하는 것이 맞다. 트리는 기본적으로 메모리 사용량이 많기 때문이다. 데이터 개수가 적을 때 Worst Case 를 살펴보면 트리와 링크드 리스트의 성능 상 차이가 거의 없다. 따라서 메모리 측면을 봤을 때 데이터 개수가 적을 때는 링크드 리스트를 사용한다.
 
-**_데이터가 적다는 것은 얼마나 적다는 것을 의미하는가?_**  
+**_데이터가 적다는 것은 얼마나 적다는 것을 의미하는가?_**
 앞에서 말했듯이 기준은 하나의 해시 버킷에 할당된 key-value 쌍의 개수이다. 이 키-값 쌍의 개수가 6 개, 8 개를 기준으로 결정한다. 기준이 두 개 인것이 이상하게 느껴질 수 있다. 7 은 어디로 갔는가? 링크드 리스트의 기준과 트리의 기준을 6 과 8 로 잡은 것은 변경하는데 소요되는 비용을 줄이기 위함이다.
 
-**_한 가지 상황을 가정해보자._**  
+**_한 가지 상황을 가정해보자._**
 해시 버킷에 **6 개** 의 key-value 쌍이 들어있었다. 그리고 하나의 값이 추가되었다. 만약 기준이 6 과 7 이라면 자료구조를 링크드 리스트에서 트리로 변경해야 한다. 그러다 바로 하나의 값이 삭제된다면 다시 트리에서 링크드 리스트로 자료구조를 변경해야 한다. 각각 자료구조로 넘어가는 기준이 1 이라면 Switching 비용이 너무 많이 필요하게 되는 것이다. 그래서 2 라는 여유를 남겨두고 기준을 잡아준 것이다. 따라서 데이터의 개수가 6 개에서 7 개로 증가했을 때는 링크드 리스트의 자료구조를 취하고 있을 것이고 8 개에서 7 개로 감소했을 때는 트리의 자료구조를 취하고 있을 것이다.
 
 #### `Open Address` vs `Separate Chaining`
@@ -282,12 +282,12 @@ _cf) 트리 또한 그래프이며, 그 중 사이클이 허용되지 않는 그
 
 ### 그래프 관련 용어 정리
 
-#### Undirected Graph 와 Directed Graph(Digraph)
+#### Undirected Graph 와 Directed Graph (Digraph)
 
 말 그대로 정점과 간선의 연결관계에 있어서 방향성이 없는 그래프를 Undirected Graph 라 하고,
 간선에 방향성이 포함되어 있는 그래프를 Directed Graph 라고 한다.
 
-* Directed Graph(Digraph)
+* Directed Graph (Digraph)
 
 ```
 V = {1, 2, 3, 4, 5, 6}
@@ -317,11 +317,11 @@ Directed Graph 에서는 간선에 방향성이 존재하기 때문에 Degree �
 
 ### 그래프를 구현하는 두 방법
 
-#### 인접 행렬(adjacent matrix) : 정방 행렬을 사용하는 방법
+#### 인접 행렬 (adjacent matrix) : 정방 행렬을 사용하는 방법
 
 해당하는 위치의 value 값을 통해서 vertex 간의 연결 관계를 O(1) 으로 파악할 수 있다. Edge 개수와는 무관하게 V^2 의 Space Complexity 를 갖는다. Dense graph 를 표현할 때 적절할 방법이다.
 
-#### 인접 리스트(adjacent list) : 연결 리스트를 사용하는 방법
+#### 인접 리스트 (adjacent list) : 연결 리스트를 사용하는 방법
 
 vertex 의 adjacent list 를 확인해봐야 하므로 vertex 간 연결되어있는지 확인하는데 오래 걸린다. Space Complexity 는 O(E + V)이다. Sparse graph 를 표현하는데 적당한 방법이다.
 
@@ -331,12 +331,12 @@ vertex 의 adjacent list 를 확인해봐야 하므로 vertex 간 연결되어�
 
 그래프는 정점의 구성 뿐만 아니라 간선의 연결에도 규칙이 존재하지 않기 때문에 탐색이 복잡하다. 따라서 그래프의 모든 정점을 탐색하기 위한 방법은 다음의 두 가지 알고리즘을 기반으로 한다.
 
-#### 깊이 우선 탐색(Depth First Search: DFS)
+#### 깊이 우선 탐색 (Depth First Search: DFS)
 
 그래프 상에 존재하는 임의의 한 정점으로부터 연결되어 있는 한 정점으로만 나아간다라는 방법을 우선으로 탐색한다. 일단 연결된 정점으로 탐색하는 것이다. 연결할 수 있는 정점이 있을 때까지 계속 연결하다가 더이상 연결되지 않은 정점이 없으면 바로 그 전 단계의 정점으로 돌아가서 연결할 수 있는 정점이 있는지 살펴봐야 할 것이다. 갔던 길을 되돌아 오는 상황이 존재하는 미로찾기처럼 구성하면 되는 것이다. 어떤 자료구조를 사용해야할까? 바로 Stack 이다.
 **Time Complexity : O(V+E) … vertex 개수 + edge 개수**
 
-#### 너비 우선 탐색(Breadth First Search: BFS)
+#### 너비 우선 탐색 (Breadth First Search: BFS)
 
 그래프 상에 존재하는 임의의 한 정점으로부터 연결되어 있는 모든 정점으로 나아간다. Tree 에서의 Level Order Traversal 형식으로 진행되는 것이다. BFS 에서는 자료구조로 Queue 를 사용한다. 연락을 취할 정점의 순서를 기록하기 위한 것이다.
 우선, 탐색을 시작하는 정점을 Queue 에 넣는다.(enqueue) 그리고 dequeue 를 하면서 dequeue 하는 정점과 간선으로 연결되어 있는 정점들을 enqueue 한다.
@@ -374,5 +374,6 @@ Graph 의 각 vertex 에 `set-id`라는 것을 추가적으로 부여한다. 그
 
 </br>
 
-_DataStructure.end_  
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-2-datastructure)
+
+_DataStructure.end_
