@@ -1,6 +1,6 @@
 # Part 1-2 DataStructure
 
-* [Array vs Linked List](#array-vs-linkedlist)
+* [Array vs Linked List](#array-vs-linked-list)
 * [Stack and Queue](#stack-and-queue)
 * [Tree](#tree)
   * Binary Tree
@@ -13,7 +13,7 @@
   * 특징
   * 삽입
   * 삭제
-* [Hash Table](#hashtable)
+* [Hash Table](#hash-table)
   * Hash Function
   * Resolve Collision
     * Open Addressing
