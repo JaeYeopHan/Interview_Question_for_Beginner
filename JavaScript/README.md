@@ -147,7 +147,7 @@ var myObject = {
   }
 };
 myObject.sayName();
-// console> Object {name: "foo"}
+// console> Object {name: "foo", sayName: sayName()}
 ```
 
 </br>
