@@ -6,7 +6,7 @@
 * [TDD 란 무엇이며 어떠한 장점이 있는가](#tdd)
 * [함수형 프로그래밍](#함수형-프로그래밍)
 * [MVC 패턴이란 무엇인가?](http://asfirstalways.tistory.com/180)
-* [Git 과 GitHub 에 대해서](#git과-github에-대해서)
+* [Git 과 GitHub 에 대해서](#git-과-github-에-대해서)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
