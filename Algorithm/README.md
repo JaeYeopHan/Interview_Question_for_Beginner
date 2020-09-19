@@ -177,7 +177,7 @@ n 개의 원소를 가진 배열을 정렬할 때, In-place sort 로 인접한 �
 
 | Space Complexity | Time Complexity |
 | :--------------: | :-------------: |
-|       O(1)       |     O(n^2)      |
+|       O(n)       |     O(n^2)      |
 
 #### [code](https://github.com/JaeYeopHan/algorithm_basic_java/blob/master/src/test/java/sort/BubbleSort.java)
 
@@ -189,7 +189,7 @@ n 개의 원소를 가진 배열을 정렬할 때, 계속해서 바꾸는 것이
 
 | Space Complexity | Time Complexity |
 | :--------------: | :-------------: |
-|       O(1)       |     O(n^2)      |
+|       O(n)       |     O(n^2)      |
 
 #### [code](https://github.com/JaeYeopHan/algorithm_basic_java/blob/master/src/test/java/sort/SelectionSort.java)
 
@@ -201,7 +201,7 @@ n 개의 원소를 가진 배열을 정렬할 때, i 번째를 정렬할 순서�
 
 | Space Complexity | Time Complexity |
 | :--------------: | :-------------: |
-|       O(1)       |     O(n^2)      |
+|       O(n)       |     O(n^2)      |
 
 #### [code](https://github.com/JaeYeopHan/algorithm_basic_java/blob/master/src/test/java/sort/InsertionSort.java)
 
@@ -229,7 +229,7 @@ n 개의 원소를 가진 배열을 정렬할 때, i 번째를 정렬할 순서�
 
 | Space Complexity | Time Complexity |
 | :--------------: | :-------------: |
-|       O(1)       |    O(nlogn)     |
+|       O(n)       |    O(nlogn)     |
 
 </br>
 
@@ -293,12 +293,12 @@ Count Sort 는 말 그대로 몇 개인지 개수를 세어 정렬하는 방식�
 
 |   Algorithm    | Space Complexity | (average) Time Complexity | (worst) Time Complexity |
 | :------------: | :--------------: | :-----------------------: | :---------------------: |
-|  Bubble sort   |       O(1)       |          O(n^2)           |         O(n^2)          |
-| Selection sort |       O(1)       |          O(n^2)           |         O(n^2)          |
-| Insertion sort |       O(1)       |          O(n^2)           |         O(n^2)          |
+|  Bubble sort   |       O(n)       |          O(n^2)           |         O(n^2)          |
+| Selection sort |       O(n)       |          O(n^2)           |         O(n^2)          |
+| Insertion sort |       O(n)       |          O(n^2)           |         O(n^2)          |
 |   Merge sort   |       O(n)       |         O(nlogn)          |        O(nlogn)         |
-|   Heap sort    |       O(1)       |         O(nlogn)          |        O(nlogn)         |
-|   Quick sort   |       O(1)       |         O(nlogn)          |         O(n^2)          |
+|   Heap sort    |       O(n)       |         O(nlogn)          |        O(nlogn)         |
+|   Quick sort   |       O(n)       |         O(nlogn)          |         O(n^2)          |
 |   Count sort   |       O(n)       |           O(n)            |          O(n)           |
 |   Radix sort   |       O(n)       |           O(n)            |          O(n)           |
 
