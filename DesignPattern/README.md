@@ -87,6 +87,85 @@ public class Singleton {
 
 _cf) `volatile` : 컴파일러가 특정 변수에 대해 옵티마이져가 캐싱을 적용하지 못하도록 하는 키워드이다._
 
+static 변수는 인스턴스 생성없이 클래스의 이름을 사용하여 바로 접근할 수 있다는 장점을 가지고 있다. 그렇기 때문에 프로그램 시작과 함께 메모리상에 올라가게 되는데 이 때 CPU 부하를 줄이기 위해 `Lazy Initialization`을 사용하기도한다.
+
+```java
+public class Singleton {
+    private static Singleton singletonObject = null;
+
+    private Singleton() {}
+
+    public static Singleton getSingletonObject() {
+        if (singletonObject == null) {
+            singletonObject = new Singleton();
+        }
+        return singletonObject;
+    }
+}
+```
+
+지금까지 소개한 방법들은 모두 멀티 스레드 환경에서의 위험성을 가지고 있다. 멀티 스레드 환경에서도 하나의 인스턴스만을 가지고 있다는것을 보장하기 위해 다음과 같은 방법으로 사용한다.
+
+```java
+class SingleObject {
+    private SingleObject() {
+    }
+
+    private static class Singleton {
+        private static final SingleObject instance = new SingleObject();
+    }
+
+    public static SingleObject getInstance() {
+        return Singleton.instance;
+    }
+}
+```
+
+위 클래스는 Lazy Initialization이고, 내부에 있는 static class가 처음에 호출될 때 한번만 초기화 된다. 또한 아래와 같이 `Enum`을 생성해 멀티 스레드에 안전한 싱글톤을 사용하기도한다.
+
+```java
+enum SingleObject {
+    INSTANCE;
+
+    public static SingleObject getInstance() {
+        return INSTANCE;
+    }
+}
+```
+
+하지만 이 방법도 문제가 없는것은 아니다. 다른 방법으로 싱글톤의 인스턴스를 마음대로 생성할 수 있기 때문이다.
+
+```java
+class UsingReflectionToDestroySingleton {
+    public static void main(String[] args) {
+        SingleObject instance = SingleObject.getInstance();
+        SingleObject instance2 = null;
+
+        try {
+            Constructor[] constructors = SingleObject.class.getDeclaredConstructors();
+            for (Constructor constructor : constructors) {
+                constructor.setAccessible(true);
+                instance2 = (SingleObject) constructor.newInstance();
+            }
+        } catch (Exception e) {
+
+        }
+
+        System.out.println(instance.hashCode());
+        System.out.println(instance2.hashCode());
+
+    }
+}
+```
+
+위 코드를 실행하면 서로 다른 메모리값을 가지고 있는 싱글톤이 생성된걸 볼 수 있다. 위 방법은 리플렉션을 사용하여 생성자를 호출하는 방식인데 생성자를 호출하면 throw를 날리는 방법으로 막을 수 있다.
+
+```java
+private SingletonObject() {
+    throw AccessDeniedException("Access Denied Exception")
+}
+```
+
 #### Reference
 
 * http://asfirstalways.tistory.com/335
