@@ -167,7 +167,7 @@ private SingletonObject() {
 ```
 
 ## MVC, MVP, MVVM
-이 세가지 패턴에는 M(Model) - V(View)라는 공통점이있다. 결국에는 이 관계를 어떻게 처리하냐에 따라 어떤 패턴의 장단점이 나타난다.
+이 세가지 패턴에는 M(Model) - V(View)라는 공통점이있다. 결국에는 이 관계를 어떻게 처리하냐에 따라 패턴의 장단점이 나타난다.
 
 ### M(Model) - V(View)
 모델이란 프로그램내에서 사용되는 데이터를 나타낸다. 데이터베이스, 상수, 변수 등을 가지고 있으며 로직에 따라 데이터의 정보가 달라진다.
@@ -183,11 +183,187 @@ private SingletonObject() {
 
 ### VM(ViewModel)
 뷰모델은 뷰를 위한 모델이라고할 수 있다. MVVM은 뷰에서 입력을 받으며 이를 뷰모델에 알려준다. 그러면 뷰모델을 로직을 통해 모델을 업데이트한다.
-그러면 뷰를 어떻게 업데이트하느냐인대 뷰는 뷰모델을 선택하여 선택된 뷰모델을 지켜보고있다. 그래서 모델에 업데이트가 일어나는 순간을 캐치해서 뷰도 같이 업데이트가 진핸된다. 이를 데이터바인딩이라고 한다. 뷰와 모델에 관계를 완전히 끊어냈지만 처음 입문하기 어렵다는 단점이있다.
+그러면 뷰를 어떻게 업데이트하느냐인대 뷰는 뷰모델을 선택하여 선택된 뷰모델을 지켜보고있다. 그래서 모델에 업데이트가 일어나는 순간을 캐치해서 뷰도 같이 업데이트가 진행된다. 이를 데이터바인딩이라고 한다. 뷰와 모델에 관계를 완전히 끊어냈지만 처음 입문하기 어렵다는 단점이있다.
+
+## 그외 알아두면 좋은 패턴
+### Factory Pattern
+객체의 생성을 위임하는 패턴
+
+```java
+class FactoryClass {
+    public Animal newInstace(String name) {
+        switch (name) {
+            case "dog":
+                return new Dog();
+            case "cat":
+                return new Cat();
+            default:
+                throw AccessDeniedException("unknown name");
+        }
+    }
+}
+```
+
+### Strategy Pattern
+행위를 클래스로 캡슐화해 동적으로 행위를 자유롭게 바꿀 수 있게 해주는 패턴
+
+```java
+// 공통으로 사용하는 행위 분리
+public abstract class Move {
+    String move();
+}
+
+// 공통 행위를 상속받아 구현
+class Tiger extends Move {
+    private String name;
+
+    public Tiger(String name) {
+        this.name = name;
+    }
+
+    public void doMove() {
+        System.out.println(getName() + " " + move());
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String move() {
+        return "Fly";
+    }
+}
+
+class Bird extends Move {
+    private String name;
+
+    public Bird(String name) {
+        this.name = name;
+    }
+
+    public void doMove() {
+        System.out.println(getName() + " " + move());
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String move() {
+        return "Walk";
+    }
+}
+```
+
+### Adapter Pattern
+서로 호환이 되지 않는 클래스를 인터페이스를 통해 같은 방법으로 사용하는 패턴
+
+```java
+// 기존에 사용하던 엔진 클래스
+public static void main(String[] args) {
+    MyEngine engine = new MyEngine();
+
+    engine.add(1);
+    engine.add(2);
+    engine.add(3);
+    engine.printAll();
+    engine.delete(1);
+    engine.printAll();
+    engine.print(1);
+    engine.printAll();
+}
+
+// 다른 엔진 클래스를 기존과 같이 사용하려면 불필요한 변경이 필요
+public static void main(String[] args) {
+    AEngine aEngine = new AEngine();
+
+    engine.add(1);
+    engine.add(2);
+    engine.add(3);
+    for (int i = 0; i < engine.getSize(); i++) {
+        engine.print(i);
+    }
+    System.out.println();
+    engine.delete(1);
+    for (int i = 0; i < engine.getSize(); i++) {
+        engine.print(i);
+    }
+    System.out.println();
+    engine.print(1);
+    for (int i = 0; i < engine.getSize(); i++) {
+        engine.print(i);
+    }
+    System.out.println();
+}
+
+// 서로의 기능을 통일 시키기위한 인터페이스
+interface EngineInterface {
+    public void print(int index);
+    public void printAll();
+    public void add(int data);
+    public void delete(int index);
+    public int getSize();
+}
+
+// 위 인터페이스를 구현하면서 새로운 엔진을 생성자로 받아 필요한 기능을 구현
+class AdapterEngine implements EngineInterface {
+    AEngine engine;
+
+    public AdapterEngine(AEngine engine) {
+        this.engine = engine;
+    }
+
+    @Override
+    public void print(int index) {
+        engine.print(index);
+    }
+
+    @Override
+    public void printAll() {
+        for (int i = 0; i < engine.getSize(); i++) {
+            engine.print(i);
+        }
+        System.out.println();
+    }
+
+    @Override
+    public void add(int data) {
+        engine.add(data);
+    }
+
+    @Override
+    public void delete(int index) {
+        engine.delete(index);
+    }
+
+    @Override
+    public int getSize() {
+        return engine.getSize();
+    }
+}
+
+// 결과적으로 최소한의 변경으로 같은 행위를 할 수 있음
+public static void main(String [] args) {
+    AEngine aEngine = new AEngine();
+    EngineInterface engine = new AdapterEngine(aEngine);
+
+    engine.add(1);
+    engine.add(2);
+    engine.add(3);
+    engine.printAll();
+    engine.delete(1);
+    engine.printAll();
+    engine.print(1);
+    engine.printAll();
+}
+```
 
 #### Reference
 
 * http://asfirstalways.tistory.com/335
+* https://gmlwjd9405.github.io/2018/07/06/strategy-pattern.html
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-6-design-pattern)
 
