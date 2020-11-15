@@ -1,5 +1,6 @@
 # Part 1-1 Development common sense
 
+* [좋은 코드란 무엇인가](#좋은-코드란-무엇인가)
 * [객체 지향 프로그래밍이란 무엇인가](#object-oriented-programming)
   * 객체 지향 개발 원칙은 무엇인가?
 * [RESTful API 란](#restful-api)
@@ -11,6 +12,16 @@
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
 </br>
+
+## 좋은 코드란 무엇인가
+
+‘좋은 코드란?‘이라고 구글링해보면 많은 검색 결과가 나온다. 나도 그렇고 다들 궁금했던듯하다. ‘좋은 코드’란 녀석은 정체도, 실체도 없이 이 세상에 떠돌고 있다. 모두가 ‘좋은 코드’의 기준이 조금씩 다르고 각각의 경험을 기반으로 좋은 코드를 정의하고 있다. 세간에 좋은 코드의 정의는 정말 많다.
+
+- 읽기 쉬운 코드
+- 중복이 없는 코드
+- 테스트가 용이한 코드
+
+등등… 더 읽어보기 > https://jbee.io/etc/what-is-good-code/
 
 ## Object Oriented Programming
 

@@ -1,15 +1,14 @@
 # Part 3-1 Front-End
 
 * [브라우저의 동작 원리](#브라우저의-동작-원리)
-* Document Object Model(작성중)
-  * Event bubbling and Capturing
-  * Event delegation
+* [Document Object Model](#Document-Object-Model)
 * [CORS](#cors)
 * [크로스 브라우징](#크로스-브라우징)
 * [웹 성능과 관련된 Issues](#웹-성능과-관련된-issue-정리)
 * [서버 사이드 렌더링 vs 클라이언트 사이드 렌더링](#서버-사이드-렌더링-vs-클라이언트-사이드-렌더링)
 * [CSS Methodology](#css-methodology)
 * [normalize.css vs reset.css](#normalize-vs-reset)
+* [그 외 프론트엔드 개발 환경 관련](#그-외-프론트엔드-개발-환경-관련)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
@@ -30,6 +29,22 @@
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-1-front-end)
 
 </br>
+
+## Document Object Model
+
+웹에서는 수많은 이벤트(Event)가 발생하고 흐른다.
+
+- 브라우저(user agent)로부터 발생하는 이벤트
+- 사용자의 행동(interaction)에 의해 발생하는 이벤트
+- DOM의 ‘변화’로 인해 발생하는 이벤트
+
+발생하는 이벤트는 그저 자바스크립트 객체일 뿐이다. 브라우저의 Event interface에 맞춰 구현된 객체인 것이다.
+
+여러 DOM Element로 구성된 하나의 웹 페이지는 Window를 최상위로 하는 트리를 생성하게 된다. 결론부터 말하자면 이벤트는 이벤트 각각이 갖게 되는 전파 경로(propagation path)를 따라 전파된다. 그리고 이 전파 경로는 DOM Tree 구조에서 Element의 위상(hierarchy)에 의해 결정이 된다.
+
+### Reference
+
+- [스펙 살펴보기: Document Object Model Event](https://jbee.io/web/about-event-in-the-web/)
 
 ## CORS
 
@@ -213,6 +228,13 @@
 `normalize.css`는 브라우저 간 일관된 스타일링을 목표로 한다. `<H1>~<H6>`과 같은 요소는 브라우저간에 일관된 방식으로 굵게 표시됩니다. 추가적인 디자인에 필요한 style 만 CSS 로 작성해주면 된다.
 
 즉, `normalize.css`는 모든 것을 "해제"하기보다는 유용한 기본값을 보존하는 것이다. 예를 들어, sup 또는 sub 와 같은 요소는 `normalize.css`가 적용된 후 바로 기대하는 스타일을 보여준다. 반면 `reset.css`를 포함하면 시각적으로 일반 텍스트와 구별 할 수 없다. 또한 normalize.css 는 reset.css 보다 넓은 범위를 가지고 있으며 HTML5 요소의 표시 설정, 양식 요소의 글꼴 상속 부족, pre-font 크기 렌더링 수정, IE9 의 SVG 오버플로 및 iOS 의 버튼 스타일링 버그 등에 대한 이슈를 해결해준다.
+
+### 그 외 프론트엔드 개발 환경 관련
+
+- 웹팩(webpack)이란?
+  - https://joshua1988.github.io/webpack-guide/webpack/what-is-webpack.html#%EC%9B%B9%ED%8C%A9%EC%9D%B4%EB%9E%80
+- 바벨과 폴리필이란?
+  - (작성중)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-1-front-end)
 

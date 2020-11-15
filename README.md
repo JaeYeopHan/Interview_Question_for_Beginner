@@ -86,6 +86,7 @@
 
 ## :bulb: 개발상식 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
 
+- 좋은 코드란 무엇인가?
 - 객체 지향 프로그래밍이란 무엇인가?
 - RESTFul API 란?
 - TDD 란 무엇이며 어떠한 장점이 있는가?
@@ -314,6 +315,7 @@
 - 서버 사이드 렌더링 vs 클라이언트 사이드 렌더링
 - CSS Methodology
 - normalize.css vs reset.css
+- 그 외 프론트엔드 개발 환경 관련
 
 #### 추가 자료
 
