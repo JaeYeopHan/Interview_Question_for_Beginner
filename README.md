@@ -75,7 +75,6 @@
 
 ---
 
-
 ### [회사에 궁금한 점이 있으신가요?](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Reverse_Interview)
 
 인터뷰를 마치고 한번씩은 반드시 들어봤을 질문입니다. 이 때 어떠한 질문을 하면 좋을까요? 적절한 질문들을 정리해둔 Reverse Interview 목록입니다.
@@ -135,6 +134,7 @@
   - HTTP 의 문제점들
 - DNS round robin 방식
 - 웹 통신의 큰 흐름
+- Connection Timeout과 Read Timeout
 
 </br>
 
