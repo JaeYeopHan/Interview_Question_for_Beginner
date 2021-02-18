@@ -11,7 +11,7 @@
 * [CPU 스케줄러](#cpu-스케줄러)
   * FCFS
   * SJF
-  * SRT
+  * SRTF
   * Priority scheduling
   * RR
 * [동기와 비동기의 차이](#동기와-비동기의-차이)
@@ -196,7 +196,7 @@ _스케줄링 대상은 Ready Queue 에 있는 프로세스들이다._
 
 </br>
 
-### SRT(Shortest Remaining time First)
+### SRTF(Shortest Remaining Time First)
 
 #### 특징
 
