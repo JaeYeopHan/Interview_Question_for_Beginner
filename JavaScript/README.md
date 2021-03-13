@@ -175,7 +175,7 @@ myObj.func1();
 // console> func2's this.value: 100
 ```
 
-`func1`에서의 `this`는 **상황 1** 과 같다. 그렇기 때문에 `myObj`가 `this`로 바인딩되고 `myObj`의 `value`인 1 이 console 에 찍히게 된다. 하지만 `func`는 **상황 2** 로 해석해야 한다. `A.B`구조에서 `A`가 없기 때문에 함수 내부에서 `this`가 전역 객체를 참조하게 되고 `value`는 100 이 되는 것이다.
+`func1`에서의 `this`는 **상황 1** 과 같다. 그렇기 때문에 `myObj`가 `this`로 바인딩되고 `myObj`의 `value`인 1 이 console 에 찍히게 된다. 하지만 `func2`는 **상황 2** 로 해석해야 한다. `A.B`구조에서 `A`가 없기 때문에 함수 내부에서 `this`가 전역 객체를 참조하게 되고 `value`는 100 이 되는 것이다.
 
 </br>
 
