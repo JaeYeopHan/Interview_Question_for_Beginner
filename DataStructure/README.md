@@ -211,7 +211,7 @@ _Collision : 서로 다른 두 개의 키가 같은 인덱스로 hashing(hash �
 
 Collision 이 많아질 수록 Search 에 필요한 Time Complexity 가 O(1)에서 O(n)에 가까워진다. 어설픈 `hash function`는 hash 를 hash 답게 사용하지 못하도록 한다. 좋은 `hash function`를 선택하는 것은 hash table 의 성능 향상에 필수적인 것이다.
 
-따라서 hashing 된 인덱스에 이미 다른 값이 들어 있다면 세 데이터를 저장할 다른 위치를 찾은 뒤에야 저장할 수 있는 것이다. 따라서 충돌 해결은 필수이며 그 방법들에 대해 알아보자.
+따라서 hashing 된 인덱스에 이미 다른 값이 들어 있다면 새 데이터를 저장할 다른 위치를 찾은 뒤에야 저장할 수 있는 것이다. 따라서 충돌 해결은 필수이며 그 방법들에 대해 알아보자.
 
 </br>
 
