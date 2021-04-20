@@ -15,7 +15,6 @@
 [![author](https://img.shields.io/badge/author-jbee-ff69b4.svg?style=flat-square)](https://jbee.io/about)
 [![CONTRIBUTORS](https://img.shields.io/badge/contributors-75-green.svg?style=flat-square)](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/master/CONTRIBUTING.md)
 [![LICENSE](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/master/LICENSE)
-[![HitCount](http://hits.dwyl.io/JaeYeopHan/Interview_Question_for_Beginner.svg)](http://hits.dwyl.io/JaeYeopHan/Interview_Question_for_Beginner)
 
 <a href="https://github.com/JaeYeopHan/Interview_Question_for_Beginner/graphs/contributors"><img src="https://opencollective.com/interview_question_for_beginner/contributors.svg?width=720"></a>
 
