@@ -1,6 +1,6 @@
 <div align=center>
 
-![](/assets/images/tech_interview_main.png)
+# 안녕하세유
 
 </div>
 
@@ -73,7 +73,6 @@
 해당 Issue 에서 실제로 받았던 면접 질문들을 공유할 수 있습니다.
 
 ---
-
 
 ### [회사에 궁금한 점이 있으신가요?](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Reverse_Interview)
 
