@@ -366,6 +366,7 @@
 
 ## 그 외 좋은 자료
 
+- [소프트웨어 엔지니어의 이력서](https://jbee.io/essay/swe-resume/)
 - [미세먼지 같은 면접 팁](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Tip)
 - [주니어 개발자를 위한 취업 정보](https://github.com/jojoldu/junior-recruit-scheduler)
 - [mission-peace/interview](https://github.com/mission-peace/interview)
