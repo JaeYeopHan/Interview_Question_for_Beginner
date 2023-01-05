@@ -111,7 +111,7 @@ OOP 로 코드를 작성하면 이미 작성한 코드에 대한 재사용성이
 
 ### 단점은 뭐가 있을까?
 
-1.  사용할 수 있는 메소드가 4 가지 밖에 없다.
+1.  사용할 수 있는 메소드가 한정적이다.
 2.  분산환경에는 부적합하다.
 3.  HTTP 통신 모델에 대해서만 지원한다.
 
@@ -119,6 +119,7 @@ OOP 로 코드를 작성하면 이미 작성한 코드에 대한 재사용성이
 
 ##### Reference
 
+* [우아한 테크톡 - REST-API](https://www.youtube.com/watch?v=Nxi8Ur89Akw)
 * [REST API 제대로 알고 사용하기 - TOAST](http://meetup.toast.com/posts/92)
 * [바쁜 개발자들을 위한 RESTFul api 논문 요약](https://blog.npcode.com/2017/03/02/%EB%B0%94%EC%81%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%93%A4%EC%9D%84-%EC%9C%84%ED%95%9C-rest-%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD/)
 * [REST 아키텍처를 훌륭하게 적용하기 위한 몇 가지 디자인 팁 - spoqa](https://spoqa.github.io/2012/02/27/rest-introduction.html)
