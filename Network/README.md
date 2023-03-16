@@ -1,12 +1,12 @@
 # Part 1-3 Network
 
-* [HTTP 의 GET 과 POST 비교](#http의-get과-post-비교)
-* [TCP 3-way-handshake](#tcp-3-way-handshake)
-* [TCP와 UDP의 비교](#tcp와-udp의-비교)
-* [HTTP 와 HTTPS](#http와-https)
-  * HTTP 의 문제점들
-* [DNS Round Robin 방식](#dns-round-robin-방식)
-* [웹 통신의 큰 흐름](#웹-통신의-큰-흐름)
+- [HTTP 의 GET 과 POST 비교](#http의-get과-post-비교)
+- [TCP 3-way-handshake](#tcp-3-way-handshake)
+- [TCP와 UDP의 비교](#tcp와-udp의-비교)
+- [HTTP 와 HTTPS](#http와-https)
+  - HTTP 의 문제점들
+- [DNS Round Robin 방식](#dns-round-robin-방식)
+- [웹 통신의 큰 흐름](#웹-통신의-큰-흐름)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
@@ -39,7 +39,7 @@ _그렇다면 이러한 특성을 이해한 뒤에는 어디에 적용되는지�
 
 #### Reference
 
-* http://asfirstalways.tistory.com/356
+- http://asfirstalways.tistory.com/356
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-3-network)
 
@@ -65,8 +65,8 @@ _그렇다면 이러한 특성을 이해한 뒤에는 어디에 적용되는지�
 
 #### Reference
 
-* http://d2.naver.com/helloworld/47667
-* http://asfirstalways.tistory.com/327
+- http://d2.naver.com/helloworld/47667
+- http://asfirstalways.tistory.com/327
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-3-network)
 
@@ -76,9 +76,9 @@ _그렇다면 이러한 특성을 이해한 뒤에는 어디에 적용되는지�
 
 ### HTTP 의 문제점
 
-* HTTP 는 평문 통신이기 때문에 도청이 가능하다.
-* 통신 상대를 확인하지 않기 때문에 위장이 가능하다.
-* 완전성을 증명할 수 없기 때문에 변조가 가능하다.
+- HTTP 는 평문 통신이기 때문에 도청이 가능하다.
+- 통신 상대를 확인하지 않기 때문에 위장이 가능하다.
+- 완전성을 증명할 수 없기 때문에 변조가 가능하다.
 
 _위 세 가지는 다른 암호화하지 않은 프로토콜에도 공통되는 문제점들이다._
 
@@ -138,8 +138,7 @@ HTTPS 의 SSL 에서는 공통키 암호화 방식과 공개키 암호화 방식
 
 #### Reference
 
-* https://tech.ssut.me/https-is-faster-than-http/
-
+- https://tech.ssut.me/https-is-faster-than-http/
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-3-network)
 
@@ -235,10 +234,10 @@ _우리가 Chrome 을 실행시켜 주소창에 특정 URL 값을 입력시키�
 
 #### Personal Recommendation
 
-* (도서) [성공과 실패를 결정하는 1% 네트워크 원리](http://www.yes24.com/24/Goods/17286237?Acode=101)
-* (도서) [그림으로 배우는 Http&Network basic](http://www.yes24.com/24/Goods/15894097?Acode=101)
-* (도서) [HTTP 완벽 가이드](http://www.yes24.com/24/Goods/15381085?Acode=101)
-* Socket programming (Multi-chatting program)
+- (도서) [성공과 실패를 결정하는 1% 네트워크 원리](http://www.yes24.com/24/Goods/17286237?Acode=101)
+- (도서) [그림으로 배우는 Http&Network basic](http://www.yes24.com/24/Goods/15894097?Acode=101)
+- (도서) [HTTP 완벽 가이드](http://www.yes24.com/24/Goods/15381085?Acode=101)
+- Socket programming (Multi-chatting program)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-3-network)
 
