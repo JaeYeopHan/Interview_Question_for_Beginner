@@ -1,12 +1,12 @@
 # Part 1-3 Network
 
-* [HTTP 의 GET 과 POST 비교](#http의-get과-post-비교)
-* [TCP 3-way-handshake](#tcp-3-way-handshake)
-* [TCP와 UDP의 비교](#tcp와-udp의-비교)
-* [HTTP 와 HTTPS](#http와-https)
-  * HTTP 의 문제점들
-* [DNS Round Robin 방식](#dns-round-robin-방식)
-* [웹 통신의 큰 흐름](#웹-통신의-큰-흐름)
+- [HTTP 의 GET 과 POST 비교](#http의-get과-post-비교)
+- [TCP 3-way-handshake](#tcp-3-way-handshake)
+- [TCP와 UDP의 비교](#tcp와-udp의-비교)
+- [HTTP 와 HTTPS](#http와-https)
+  - HTTP 의 문제점들
+- [DNS Round Robin 방식](#dns-round-robin-방식)
+- [웹 통신의 큰 흐름](#웹-통신의-큰-흐름)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
@@ -39,7 +39,7 @@ _그렇다면 이러한 특성을 이해한 뒤에는 어디에 적용되는지�
 
 #### Reference
 
-* http://asfirstalways.tistory.com/356
+- http://asfirstalways.tistory.com/356
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-3-network)
 
@@ -65,8 +65,8 @@ _그렇다면 이러한 특성을 이해한 뒤에는 어디에 적용되는지�
 
 #### Reference
 
-* http://d2.naver.com/helloworld/47667
-* http://asfirstalways.tistory.com/327
+- http://d2.naver.com/helloworld/47667
+- http://asfirstalways.tistory.com/327
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-3-network)
 
@@ -76,9 +76,9 @@ _그렇다면 이러한 특성을 이해한 뒤에는 어디에 적용되는지�
 
 ### HTTP 의 문제점
 
-* HTTP 는 평문 통신이기 때문에 도청이 가능하다.
-* 통신 상대를 확인하지 않기 때문에 위장이 가능하다.
-* 완전성을 증명할 수 없기 때문에 변조가 가능하다.
+- HTTP 는 평문 통신이기 때문에 도청이 가능하다.
+- 통신 상대를 확인하지 않기 때문에 위장이 가능하다.
+- 완전성을 증명할 수 없기 때문에 변조가 가능하다.
 
 _위 세 가지는 다른 암호화하지 않은 프로토콜에도 공통되는 문제점들이다._
 
@@ -138,8 +138,7 @@ HTTPS 의 SSL 에서는 공통키 암호화 방식과 공개키 암호화 방식
 
 #### Reference
 
-* https://tech.ssut.me/https-is-faster-than-http/
-
+- https://tech.ssut.me/https-is-faster-than-http/
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-3-network)
 
@@ -149,13 +148,13 @@ HTTPS 의 SSL 에서는 공통키 암호화 방식과 공개키 암호화 방식
 
 ### DNS Round Robin 방식의 문제점
 
-1.  서버의 수 만큼 공인 IP 주소가 필요함
+1.  서버의 수 만큼 공인 IP 주소가 필요함. <br/>
     부하 분산을 위해 서버의 대수를 늘리기 위해서는 그 만큼의 공인 IP 가 필요하다.
 
-2.  균등하게 분산되지 않음
+2.  균등하게 분산되지 않음. <br/>
     모바일 사이트 등에서 문제가 될 수 있는데, 스마트폰의 접속은 캐리어 게이트웨이 라고 하는 프록시 서버를 경유 한다. 프록시 서버에서는 이름변환 결과가 일정 시간 동안 캐싱되므로 같은 프록시 서버를 경유 하는 접속은 항상 같은 서버로 접속된다. 또한 PC 용 웹 브라우저도 DNS 질의 결과를 캐싱하기 때문에 균등하게 부하분산 되지 않는다. DNS 레코드의 TTL 값을 짧게 설정함으로써 어느 정도 해소가 되지만, TTL 에 따라 캐시를 해제하는 것은 아니므로 반드시 주의가 필요하다.
 
-3.  서버가 다운되도 확인 불가
+3.  서버가 다운되도 확인 불가. <br/>
     DNS 서버는 웹 서버의 부하나 접속 수 등의 상황에 따라 질의결과를 제어할 수 없다. 웹 서버의 부하가 높아서 응답이 느려지거나 접속수가 꽉 차서 접속을 처리할 수 없는 상황인 지를 전혀 감지할 수가 없기 때문에 어떤 원인으로 다운되더라도 이를 검출하지 못하고 유저들에게 제공한다. 이때문에 유저들은 간혹 다운된 서버로 연결이 되기도 한다. DNS 라운드 로빈은 어디까지나 부하분산 을 위한 방법이지 다중화 방법은 아니므로 다른 S/W 와 조합해서 관리할 필요가 있다.
 
 _Round Robin 방식을 기반으로 단점을 해소하는 DNS 스케줄링 알고리즘이 존재한다. (일부만 소개)_
@@ -235,10 +234,10 @@ _우리가 Chrome 을 실행시켜 주소창에 특정 URL 값을 입력시키�
 
 #### Personal Recommendation
 
-* (도서) [성공과 실패를 결정하는 1% 네트워크 원리](http://www.yes24.com/24/Goods/17286237?Acode=101)
-* (도서) [그림으로 배우는 Http&Network basic](http://www.yes24.com/24/Goods/15894097?Acode=101)
-* (도서) [HTTP 완벽 가이드](http://www.yes24.com/24/Goods/15381085?Acode=101)
-* Socket programming (Multi-chatting program)
+- (도서) [성공과 실패를 결정하는 1% 네트워크 원리](http://www.yes24.com/24/Goods/17286237?Acode=101)
+- (도서) [그림으로 배우는 Http&Network basic](http://www.yes24.com/24/Goods/15894097?Acode=101)
+- (도서) [HTTP 완벽 가이드](http://www.yes24.com/24/Goods/15381085?Acode=101)
+- Socket programming (Multi-chatting program)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-3-network)
 
