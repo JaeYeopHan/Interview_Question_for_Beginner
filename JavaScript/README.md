@@ -6,6 +6,7 @@
 * [this 에 대해서](#this-에-대해서)
 * [Promise](#promise)
 * [Arrow Function](#arrow-function)
+* [Functional Programming](https://www.frontendinterviewquestions.com/interview-questions/what-is-functional-programming-in-javascript)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
