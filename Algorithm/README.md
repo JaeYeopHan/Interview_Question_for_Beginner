@@ -337,7 +337,7 @@ Count Sort 는 말 그대로 몇 개인지 개수를 세어 정렬하는 방식�
 
 ## Prime Number Algorithm
 
-소수란 양의 약수를 딱 두 개만 갖는 자연수를 소수라 부른다. 2, 3, 5, 7, 11, …이 그런 수들인데, 소수를 판별하는 방법으로 첫번째 어떤 수 N 이 소수인지 판별하기 위해서는 N 을 2 부터 N 보다 1 작은 수까지 나누어서 나머지가 0 인 경우가 있는지 검사하는 방법과 두번째로 `에라토스테네스의 체`를 사용할 수 있다.
+소수란 양의 약수를 딱 두 개만 갖는 자연수를 소수라 부른다. 2, 3, 5, 7, 11, …이 그런 수들인데, 소수를 판별하는 방법으로 첫 번째로 임의의 양의 정수 N 이 소수인지 판별하기 위해서는 N 을 2 부터 N 보다 1 작은 수까지 나누어서 나머지가 0 인 경우가 있는지 검사하는 방법과 두 번째로 `에라토스테네스의 체`를 사용할 수 있다.
 
 ### 에라토스테네스의 체 [Eratosthenes’ sieve]
 
@@ -401,9 +401,9 @@ Count Sort 는 말 그대로 몇 개인지 개수를 세어 정렬하는 방식�
 
 | Space Complexity | Time Complexity |
 | :--------------: | :-------------: |
-|       O(n)       |   O(loglogn)    |
+|       O(n)       |   O(nloglogn)   |
 
-#### [code](https://github.com/alstn2468/BaekJoon_Online_Judge/blob/master/1900~1999/1929.c)
+#### [code](http://boj.kr/90930351636e46f7842b1f017eec831b)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#algorithm)
 
