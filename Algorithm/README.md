@@ -337,7 +337,36 @@ Count Sort 는 말 그대로 몇 개인지 개수를 세어 정렬하는 방식�
 
 ## Prime Number Algorithm
 
-소수란 양의 약수를 딱 두 개만 갖는 자연수를 소수라 부른다. 2, 3, 5, 7, 11, …이 그런 수들인데, 소수를 판별하는 방법으로 첫 번째로 임의의 양의 정수 N 이 소수인지 판별하기 위해서는 N 을 2 부터 N 보다 1 작은 수까지 나누어서 나머지가 0 인 경우가 있는지 검사하는 방법과 두 번째로 `에라토스테네스의 체`를 사용할 수 있다.
+소수란 양의 약수를 딱 두 개만 갖는 자연수를 소수라 부른다. 2, 3, 5, 7, 11, …이 그런 수들인데, 소수를 판별하는 방법으로 첫 번째로 3보다 크거나 같은 임의의 양의 정수 N이 소수인지 판별하기 위해서는 N 을 2 부터 N 보다 1 작은 수까지 나누어서 나머지가 0 인 경우가 있는지 검사하는 방법과 두 번째로 `에라토스테네스의 체`를 사용할 수 있다.  
+
+아래 코드는 2부터 N - 1까지를 순회하며 소수인지 판별하는 코드와 2부터 √N까지 순회하며 소수인지 판별하는 코드이다.
+```cpp
+// Time complexity: O(N)
+bool is_prime(int N) {
+    if(N == 1) return false;
+    for(int i = 2; i < N - 1; ++i) {
+        if(N % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+```
+
+```cpp
+// Time complexity: O(√N)
+bool is_prime(int N) {
+    if(N == 1) return false;
+    for(long long i = 2; i * i <= N; ++i) { // 주의) i를 int로 선언하면 i*i를 계산할 때 overflow가 발생할 수 있다.
+        if(N % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+```
+
+
 
 ### 에라토스테네스의 체 [Eratosthenes’ sieve]
 
