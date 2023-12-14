@@ -2,12 +2,13 @@
 
 * [Generator](#generator)
 * [클래스를 상속했을 때 메서드 실행 방식](#클래스를-상속했을-때-메서드-실행-방식)
-* [GIL 과 그로인한 성능 문제](#gil-과-그로인한-성능-문제)
+* [GIL 과 그로 인한 성능 문제](#gil-과-그로-인한-성능-문제)
 * [GC 작동 방식](#gc-작동-방식)
 * [Celery](#celery)
-* [PyPy 가 CPython 보다 빠른 이유](#pypy가-cpython보다-빠른-이유)
+* [PyPy 가 CPython 보다 빠른 이유](#pypy-가-cpython-보다-빠른-이유)
 * [메모리 누수가 발생할 수 있는 경우](#메모리-누수가-발생할-수-있는-경우)
 * [Duck Typing](#Duck-Typing)
+* [Timsort : Python의 내부 sort](#timsort--python의-내부-sort)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
@@ -127,7 +128,7 @@ Python 2.3 이후 위 이미지와 같은 상속을 시도하려하면 `TypeErro
 
 </br>
 
-## GIL 과 그로인한 성능 문제
+## GIL 과 그로 인한 성능 문제
 
 GIL 때문에 성능 문제가 대두되는 경우는 압축, 정렬, 인코딩 등 수행시간에 CPU 의 영향이 큰 작업(CPU bound)을 멀티 스레드로 수행하도록 한 경우다. 이 땐 GIL 때문에 멀티 스레드로 작업을 수행해도 싱글 스레드일 때와 별반 차이가 나지 않는다. 이를 해결하기 위해선 멀티 스레드는 파일, 네트워크 IO 같은 IO bound 프로그램에 사용하고 멀티 프로세스를 활용해야한다.
 
