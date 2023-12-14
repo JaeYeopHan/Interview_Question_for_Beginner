@@ -8,6 +8,7 @@
 * [PyPy 가 CPython 보다 빠른 이유](#pypy-가-cpython-보다-빠른-이유)
 * [메모리 누수가 발생할 수 있는 경우](#메모리-누수가-발생할-수-있는-경우)
 * [Duck Typing](#Duck-Typing)
+* [Timsort : Python의 내부 sort](#timsort--python의-내부-sort)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)
 
