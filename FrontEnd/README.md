@@ -44,7 +44,7 @@
 
 ### Reference
 
-- [스펙 살펴보기: Document Object Model Event](https://jbee.io/web/about-event-in-the-web/)
+- [스펙 살펴보기: Document Object Model Event](https://www.jbee.io/articles/web/%EC%8A%A4%ED%8E%99%20%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0:%20Document%20Object%20Model%20Event)
 
 ## CORS
 
