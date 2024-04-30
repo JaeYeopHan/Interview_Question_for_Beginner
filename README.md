@@ -29,21 +29,21 @@
 - [What is this?](#what-is-this)
 - [면접에서 받았던 질문들](#면접에서-받았던-질문들)
 - [Part 1. CS](#part-1-전산-기초)
-  - [개발상식](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
-  - [자료구조](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
-  - [네트워크](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Network)
-  - [운영체제](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/OS)
-  - [데이터베이스](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Database)
-  - [디자인패턴](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/DesignPattern)
-  - [알고리즘](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
+  - [개발상식](./Development_common_sense)
+  - [자료구조](./DataStructure)
+  - [네트워크](./Network)
+  - [운영체제](./master/OS)
+  - [데이터베이스](./master/Database)
+  - [디자인패턴](./DesignPattern)
+  - [알고리즘](./Algorithm)
 - [Part 2. Language](#part-2-language)
-  - [Java](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Java)
-  - [JavaScript](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
-  - [Python](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Python)
+  - [Java](./Java)
+  - [JavaScript](./JavaScript)
+  - [Python](./Python)
 - [Part 3. 분야별 정리](#part-3-분야별)
-  - [FrontEnd](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
-  - [iOS](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
-  - [Machine Learning](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/MachineLearning)
+  - [FrontEnd](./FrontEnd)
+  - [iOS](./iOS)
+  - [Machine Learning](./MachineLearning)
 - [그 외 좋은 자료 추천](#그-외-좋은-자료)
 
 </br>
@@ -83,7 +83,7 @@
 
 # Part 1. 전산 기초
 
-## :bulb: 개발상식 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Development_common_sense)
+## :bulb: 개발상식 [Link](./Development_common_sense)
 
 - 좋은 코드란 무엇인가?
 - 객체 지향 프로그래밍이란 무엇인가?
@@ -95,7 +95,7 @@
 
 </br>
 
-## :bulb: 자료구조 [Link](https://github.com/JaeYeopHan/for_beginner/tree/master/DataStructure)
+## :bulb: 자료구조 [Link](./DataStructure)
 
 - Array vs Linked List
 - Stack and Queue
@@ -126,7 +126,7 @@
 
 </br>
 
-## :bulb: 네트워크 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Network)
+## :bulb: 네트워크 [Link](./Network)
 
 - GET, POST 방식의 차이점
 - TCP 3-way-handshake
@@ -138,7 +138,7 @@
 
 </br>
 
-## :bulb: 운영체제 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/OS)
+## :bulb: 운영체제 [Link](./OS)
 
 - 프로세스와 스레드의 차이
 - 스케줄러의 종류
@@ -172,7 +172,7 @@
 
 </br>
 
-## :bulb: 데이터베이스 [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Database)
+## :bulb: 데이터베이스 [Link](./Database)
 
 - 데이터베이스
   - 데이터베이스를 사용하는 이유
@@ -212,13 +212,13 @@
 
 </br>
 
-## :bulb: Design Pattern [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/DesignPattern)
+## :bulb: Design Pattern [Link](./DesignPattern)
 
 - Singleton
 
 </br>
 
-## :bulb: Algorithm (알고리즘) [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
+## :bulb: Algorithm (알고리즘) [Link](./Algorithm)
 
 - 손코딩 및 코딩 테스트 대비
   => 대부분의 내용이 코드이기 때문에 별도의 [Java Algorithm Training Repository](https://github.com/JaeYeopHan/algorithm_basic_java)에 저장합니다.
@@ -239,7 +239,7 @@
 
 # Part 2. Language
 
-## :gem: Java [Link](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Java)
+## :gem: Java [Link](./Java)
 
 - JVM 에 대해서 / GC 의 원리
 - Collection
@@ -257,7 +257,7 @@
 
 </br>
 
-## :gem: JavaScript [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
+## :gem: JavaScript [Link](./JavaScript)
 
 - JavaScript Event Loop
 - Hoisting
@@ -273,7 +273,7 @@
   - JavaScript 와 관련된 인터뷰 관련 내용들을 정리해놓은 자료입니다.
     </br>
 
-## :gem: Python [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Python)
+## :gem: Python [Link](./Python)
 
 - Generator
 - 클래스를 상속했을 때 메서드 실행 방식
@@ -302,7 +302,7 @@
 
 # Part 3. 분야별
 
-## :large_orange_diamond: Front-End [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/FrontEnd)
+## :large_orange_diamond: Front-End [Link](./FrontEnd)
 
 - 브라우저의 작동 원리
 - Document Object Model
@@ -328,7 +328,7 @@
 
 </br>
 
-## :large_orange_diamond: iOS [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
+## :large_orange_diamond: iOS [Link](./iOS)
 
 - App Life Cycle
 - View Life Cycle
@@ -346,7 +346,7 @@
 
 </br>
 
-## :large_orange_diamond: Machine Learning [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/MachineLearning)
+## :large_orange_diamond: Machine Learning [Link](./MachineLearning)
 
 - Cost Function
 
@@ -392,4 +392,4 @@
 
 ### License
 
-[MIT](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/master/LICENSE)
+[MIT](./LICENSE)
