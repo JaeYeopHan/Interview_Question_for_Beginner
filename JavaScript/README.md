@@ -22,10 +22,14 @@
 </br>
 
 ## Critical Rendering Path
+Critical Rendering Path(CRP)는 브라우저가 서버로부터 HTML 응답을 받아 화면을 그리기 위해 실행하는 과정입니다.
 
+#### Reference
 * [What is critical rendering path?](https://www.frontendinterviewquestions.com/interview-questions/what-is-critical-rendering-path)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-2-javascript)
+
+</br>
 
 ## Hoisting
 
