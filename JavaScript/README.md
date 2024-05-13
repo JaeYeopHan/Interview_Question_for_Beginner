@@ -1,6 +1,7 @@
 # Part 2-2 JavaScript
 
 * [JavaScript Event Loop](#javascript-event-loop)
+* [Critical Rendering Path](#critical-rendering-path)
 * [Hoisting](#hoisting)
 * [Closure](#closure)
 * [this 에 대해서](#this-에-대해서)
@@ -20,13 +21,15 @@
 
 </br>
 
+## Critical Rendering Path
+
+* [What is critical rendering path?](https://www.frontendinterviewquestions.com/interview-questions/what-is-critical-rendering-path)
+
+[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-2-2-javascript)
+
 ## Hoisting
 
 _ES6 문법이 표준화가 되면서 크게 신경쓰지 않아도 되는 부분이 되었지만, JavaScript 라는 언어의 특성을 가장 잘 보여주는 특성 중 하나이기에 정리했습니다._
-
-## Critical Rendering Path
-
-[What is critical rendering path?](https://www.frontendinterviewquestions.com/interview-questions/what-is-critical-rendering-path)
 
 ### 정의
 
