@@ -14,6 +14,8 @@
 
 ## 브라우저의 동작 원리
 
+브라우저의 동작 원리는 Critical Rendering Path(CRP)라고도 불립니다.
+아래는 브라우저가 서버로부터 HTML 응답을 받아 화면을 그리기 위해 실행하는 과정입니다.
 1.  HTML 마크업을 처리하고 DOM 트리를 빌드한다. (**"무엇을"** 그릴지 결정한다.)
 2.  CSS 마크업을 처리하고 CSSOM 트리를 빌드한다. (**"어떻게"** 그릴지 결정한다.)
 3.  DOM 및 CSSOM 을 결합하여 렌더링 트리를 형성한다. (**"화면에 그려질 것만"** 결정)
@@ -25,6 +27,7 @@
 * [Naver D2 - 브라우저의 작동 원리](http://d2.naver.com/helloworld/59361)
 * [Web fundamentals - Critical-rendering-path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=ko)
 * [브라우저의 Critical path (한글)](http://m.post.naver.com/viewer/postView.nhn?volumeNo=8431285&memberNo=34176766)
+* [What is critical rendering path?](https://www.frontendinterviewquestions.com/interview-questions/what-is-critical-rendering-path)
 
 [뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-3-1-front-end)
 
