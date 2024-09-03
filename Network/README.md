@@ -20,6 +20,18 @@
 
 우선 GET 방식은 요청하는 데이터가 `HTTP Request Message`의 Header 부분에 url 이 담겨서 전송된다. 때문에 url 상에 `?` 뒤에 데이터가 붙어 request 를 보내게 되는 것이다. 이러한 방식은 url 이라는 공간에 담겨가기 때문에 전송할 수 있는 데이터의 크기가 제한적이다. 또 보안이 필요한 데이터에 대해서는 데이터가 그대로 url 에 노출되므로 `GET`방식은 적절하지 않다. (ex. password)
 
+<<<
+"우선 GET 방식은 요청하는 데이터가 `HTTP Request Message`의 Header 부분에 url 이 담겨서 전송된다."
+이 문장이 잘못되었다고 생각합니다.
+url이 담기는 부분은 HTTP Message의 Header Line이 아니라, Request Line이 맞지 않나요?
+
+ex)
+GET /index.html HTTP/1.1 ← 요청 데이터 = /index.html, 해당 라인은 Request Line
+Host: www.example.com
+User-Agent: ...
+Accept: ...
+>>>
+
 ### POST
 
 POST 방식의 request 는 `HTTP Request Message`의 Body 부분에 데이터가 담겨서 전송된다. 때문에 바이너리 데이터를 요청하는 경우 POST 방식으로 보내야 하는 것처럼 데이터 크기가 GET 방식보다 크고 보안면에서 낫다.(하지만 보안적인 측면에서는 암호화를 하지 않는 이상 고만고만하다.)
